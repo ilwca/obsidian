@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"548c3cc0c6622d94","x":-360,"y":-320,"width":840,"height":600,"color":"4","type":"text","text":"**Gramáticas irrestrita**"},
+		{"id":"b7733703b65d6e41","x":-300,"y":-240,"width":720,"height":440,"color":"1","type":"text","text":"**Gramaticas Sensiveis ao Contexto**"},
+		{"id":"a393750527b53b72","x":-220,"y":-160,"width":500,"height":280,"color":"6","type":"text","text":"**Gramaticas Livres de contexto**"},
+		{"id":"9adb70f147d9e89e","x":-140,"y":-80,"width":340,"height":120,"color":"3","type":"text","text":"**Gramaticas Regulares**"}
+	],
+	"edges":[
+		{"id":"a68b4b9f33a80281","fromNode":"9adb70f147d9e89e","fromSide":"right","toNode":"a393750527b53b72","toSide":"right"},
+		{"id":"18568e9722a9a18d","fromNode":"9adb70f147d9e89e","fromSide":"right","toNode":"a393750527b53b72","toSide":"right"}
+	]
+}

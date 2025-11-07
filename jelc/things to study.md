@@ -1,0 +1,4 @@
+ - ways to render 
+	- SSR, SCR, SPA
+ - Metadados
+ - NEXT.js
