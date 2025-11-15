@@ -1,4 +1,0 @@
-- [ ] ler artigo
-- [x] criar template
-- [ ] implementar em codigo
-- [ ] escrever arigo

@@ -1,13 +1,12 @@
-
+"Embora este método seja aplicável ao problema definido aqui, ele é desenvolvido de forma geral neste artigo. No entanto, consiste em apenas duas operações de ordenação realizadas no conjunto total de tarefas e um máximo de n(n+1)/2 adições e comparações. Consequentemente, este método será computacionalmente viável para problemas muito grandes e pode ser executado manualmente." JM Moore
 # Algoritmo de Moore-Hodgson
-Este algoritmo minimiza o número de tarefas atrasadas de uma máquina. Ou seja ele encontra a programação ótima para o problema clássico.
-
-Segundo Moore Hodgson, o algoritmo usa duas operações de ordenação somente, por isso é viável para $n$ muito grandes.
+Este algoritmo minimiza o número de tarefas atrasadas de uma máquina. Ou seja ele encontra a programação ótima para o problema clássico. Segundo Moore Hodgson, o algoritmo usa duas operações de comparação e ordenação, por isso é viável para $n$ muito grandes.
 
 Para denotarmo uma lista de um inteiro positivo, denotamos  como _\[ l ]_  para uma ${ 1, 2, . . . , l }$   
 
 Uma tarefa é dada por um numero de tarefas $n$ denotado por $1, 2, . . ., n$  (par ser identificada pelo índice). Cada tarefa, dada por $j$ tem um tempo de execução $Pj > 0$ e uma data de vencimento dada por $Dj$ também positiva.   
-A programação deste problema consiste na permutação destes $n$ problemas. dada uma programação $S$, seu tempo de conclusão é dado por $Cj$ , que consiste no tempo de execução de $Pj$ mais os tempos de execução dos que antecedem $j$. Uma tarefa $j$ é considerada atrasada se $Cj > d_j$. O objetivo é encontrar uma programação $S$ que minimize o numero de tarefas atrasadas.  Isto é um NP-difícil em geral, porem o algoritmo de Moore-Hodgson resolve em tempo polinomial $O(n log n)$ na prática, mas $O(n²)$ na implementação básica.
+A programação deste problema consiste na permutação destes $n$ problemas. dada uma programação $S$, seu tempo de conclusão é dado por $Cj$ , que consiste no tempo de execução de $Pj$ mais os tempos de execução dos que antecedem $j$. Uma tarefa $j$ é considerada atrasada se $Cj > d_j$. 
+O objetivo é encontrar uma programação $S$ que minimize o numero de tarefas atrasadas.  Isto é um NP-difícil em geral, porem o algoritmo de Moore-Hodgson resolve em tempo polinomial $O(n log n)$ na prática, mas $O(n²)$ na implementação básica.
 
 $j$ → Tarefa.
 $p_j$ → Tempo de execução da tarefa $j$.
@@ -31,4 +30,4 @@ $C_j$ : \[4, 5, 11, 14, 20, 28, 35, 45].
 
 Desta forma, temos um atraso em  $d_3$ , pois o $C_3$ > $d_3$ , ou seja, validade da tarefa 3 é de 9 e ele é terminado em 11.
 
-Então 
+Então é feita uma leitura na lista $p_j$ pois a tarefa com o maior tempo de processamento será removida. Neste caso, $p_3$ é o maior tempo de processamento.  Então esta é a parte **Gulosa** do algoritmo, está em remover o maior $p_j$ quando o $C_j > d_j$  .

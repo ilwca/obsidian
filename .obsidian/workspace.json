@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PAA/Greedy algorithm.md",
+                "file": "ccomp/PAA/todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Greedy algorithm"
+              "title": "todo"
             }
           }
         ],
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -189,8 +190,10 @@
   "lastOpenFiles": [
     "ccomp/PAA/Greedy algorithm.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
-    "ccomp/PAA/todo - Artigo.md",
+    "ccomp/PAA/todo.md",
     "ccomp/PAA/Análise de Complexidade.md",
+    "ccomp/PAA/Gossary.md",
+    "ccomp/PAA/prova.md",
     "utils/Divisão e conquista.md",
     "utils/English Vocabulary.md",
     "ccomp/IA/notes-ia.md",
@@ -211,11 +214,9 @@
     "utils/img/theta.png",
     "utils/img",
     "utils/Não confirmado 529789.crdownload",
-    "ccomp/PAA/prova.md",
     "Untitled.base",
     "Untitled 1.base",
     "2025-10-25.md",
-    "ccomp/PAA/Gossary.md",
     "LIS.md",
     "[[.md",
     "COMP/PAA/utils",
