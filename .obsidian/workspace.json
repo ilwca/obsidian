@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PAA/todo.md",
+                "file": "utils/English Vocabulary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "todo"
+              "title": "English Vocabulary"
             }
           }
         ],
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -188,9 +187,9 @@
   },
   "active": "c460fce98005f22b",
   "lastOpenFiles": [
+    "ccomp/PAA/todo.md",
     "ccomp/PAA/Greedy algorithm.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
-    "ccomp/PAA/todo.md",
     "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Gossary.md",
     "ccomp/PAA/prova.md",
