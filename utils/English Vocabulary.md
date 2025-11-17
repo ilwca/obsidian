@@ -5,5 +5,5 @@ drawbacks → desvantagens
 household → doméstico
 play a key role → "ter um papel importante"
 upconming → "por vir"
-
+although → embora
 
