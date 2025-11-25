@@ -7,3 +7,5 @@ play a key role → "ter um papel importante"
 upconming → "por vir"
 although → embora
 ehance → aprimorar
+behavior → comportamento
+appliances → eletrodomesticos
