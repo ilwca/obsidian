@@ -57,5 +57,8 @@ O Greatest Comun Divisor, que é o maior divisor comum entre os pesos dos itens 
 Então o GDC muda a maneira/medida que o produto vai ser analisado para diminuir a complexidade 
 
 $$V[i, j] = \begin{cases} \max(V[i-1, j], \quad v_{i} + V[i-1, j - \frac{w_{i}}{\text{GCD}(w)}]), & \text{se } w_{i} \le j \cdot \text{GCD}(w) \\ V[i-1, j], & \text{se } w_{i} > j \cdot \text{GCD}(w) \end{cases}$$
+## Método usando binary splitting
 
-# Complexidade O(N $\cdot$ )
+$V[k, j]=\begin{cases} \max(V[k-1,j], \quad v_{i}+V[k-1, j - w'_k] & \text{se } w'_{k} \le j \\ V[k-1, j], & \text{se} w'_{i} > j \end{cases}$
+
+# Complexidade O(N $\cdot$ W)

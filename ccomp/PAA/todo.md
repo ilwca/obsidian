@@ -166,3 +166,12 @@ Essa seção é útil para deixar a parte de “Materiais e Métodos” mais lim
 ## 7. Referências
 
 Formato ABNT ou o que o template AJCEAM pedir.
+
+
+
+
+## O que mudar
+
+-  Adicionar um slide que mostre o por que da redução da complexidade, explicando o que é e como  funciona a decomposição binária e a outra forma de redução de complexidade usando o GCD
+-  O slide deve ser depois do "Análise de complexidade"
+-  Case tenha alcançado o limite de slides, remova o de "Ambiente computacional"

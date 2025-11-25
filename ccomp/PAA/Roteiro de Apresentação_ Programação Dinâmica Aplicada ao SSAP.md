@@ -329,3 +329,26 @@ Todas essas referências estão disponíveis e podem ser acessadas para aprofund
 Esta apresentação oferece uma jornada completa do conceito teórico de Programação Dinâmica até sua aplicação prática em um problema de varejo real. O equilíbrio entre teoria e prática, combinado com exemplos concretos, deve tornar o conteúdo acessível e envolvente para a audiência.
 
 Boa apresentação!
+
+
+
+
+---
+
+# Dynamic Programin
+## Exemplo Numérico
+aqui, vamos fazer um exemplificação em um cenário bem reduzido, somente para o entendimento de como funciona.
+Então como já dito, estamos buscando o maior lucro com o espaco de 50.
+
+temos 3 itens, que segundo o nosso algoritmo a alocação ótima seria, 2 cópias do item 1 e uma cópia do item 3 
+
+## Analise de complexidade
+Agora vamos fazer uma analise da complexidade da função original e de métodos usados para a redução da complexidade.
+
+O(N · C · max(bi))
+
+max(b_i) torna o algoritmo muito custoso qunado se trata de produtos com uma alta quantidade de copias, sendo esse o cenário comum para atacadistas.
+
+
+
+==otimização funciona bem porque produtos da mesma categoria têm larguras padronizadas.
