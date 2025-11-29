@@ -9,3 +9,5 @@ although → embora
 ehance → aprimorar
 behavior → comportamento
 appliances → eletrodomesticos
+lay → deitar
+rise → ascender / crescimento
