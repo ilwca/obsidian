@@ -8,8 +8,9 @@ upconming → "por vir"
 although → embora
 ehance → aprimorar
 behavior → comportamento
-appliances → eletrodomesticos
+appliances → eletrodomésticos
 lay → deitar
 rise → ascender / crescimento
-struggle → luta
 improvement → melhoria
+seek → procurar
+willing → disposta

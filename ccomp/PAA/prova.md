@@ -178,3 +178,120 @@ funcao sceduling(lista[])
 			fim_atual = lista[i].f_i
 ```
 
+
+## Questão 2
+Contagem de recorrências em uma lista de tamanho $n$ usando programação dinâmica.
+
+```pseudo
+funcao countFreq(list)
+	mid = len(list)//2
+	esquerda = list[:mid]
+	direita = list[mid:]
+	
+	if len(lista) == 1:
+		return {list[0]:1}
+	else
+		countFreq(esquerda)
+		countFreq(direita)
+	
+	return merge(esquerda, direita)
+	
+
+function merge(listA, listB)
+	
+	result[] = listA[]
+	
+	for i in listB:
+		if i in listB
+			result[i] += listB[i]
+		else
+			result[i] = listB[i]
+	
+	return resultado
+
+```
+
+
+A **complexidade** é dada por:
+
+função recursiva: $T(n) = 2T(n/2)$
+função de merge: $O(n/2) + O(n/2) = O(n)$
+
+portanto complexidade assintótica total: $T(n) = 2T(n/2) + O(n)$
+
+utilizando o teorema mestre, dado por:
+
+$aT(n/b) + f(n)$ 
+$2T(n/2) + O(n)$
+
+portanto:
+a = 2 
+b = 2
+$f(n)$ = n
+
+então
+
+$n^{log_b^a} = n^{log_2^2} = n¹$
+
+caso 2 do teorema Mestre. Então
+
+$\theta(n log n)$ é complexidade total.
+
+## Exercício
+Período mais lucrativo
+a partir de uma lista $L = [2, -3, 4, -1, 2, -5, 6]$. Determinar qual foi o período mais lucrativo usando **divisão e conquista**.
+
+```pseudo
+funcao countFreq(list)
+	mid = len(list)//2
+	esquerda = list[:mid]
+	direita = list[mid:]
+	
+	if len(lista) == 1:
+		return list[0]
+	else
+		countFreq(esquerda)
+		countFreq(direita)
+	
+	return merge(esquerda, direita)
+	
+merge(mapA, mapB)
+	first = 0
+	second = 0
+	for i in mapA
+		first +=mapA[i]
+	
+	for i in mapB
+		second +=mapB[i]
+	
+	if firt > second
+		return "periodo 1 mais lucrativo"
+	else
+		return "periodo 2 mais lucrativo"
+```
+
+
+## Questão 3
+
+Problema da partição minima.
+dado um $S$ de $n$ números positivos, encontrar um $S_1$ e $S_2$  tal que, a diferença entre eles seja a mínima possível.
+Para isso, determinamos um $T = \sum S$
+portanto, $S_1$ e $S_2$ tem que ser o mais próximo possível de $T/2$.
+Então determinamos um $dp[i][j]$ composto por:
+$i$ : 0 a $length(S)$
+$j$ : 0 a $T/2$ 
+
+### Exemplo
+$S=\{1,3,4\}$ 
+formar a tabela $dp[i[j]$ onde:
+$i$ : 0 a 3
+$j$ : 0 a 4
+
+$dp[i][j]$ = é possível formar o valor $j$ usando os primeiros $i$ elementos.
+
+| $i / j$   | 0   | 1   | 2   | 3   | 4   |
+| --------- | --- | --- | --- | --- | --- |
+| 0 (0)     | 1   | 0   | 0   | 0   | 0   |
+| 1 (1)     | 1   | 1   | 0   | 0   | 0   |
+| 2 (1,3)   | 1   | 1   | 0   | 1   | 0   |
+| 3 (1,3,4) | 1   | 1   | 0   | 1   | 1   |
