@@ -11,3 +11,5 @@ behavior → comportamento
 appliances → eletrodomesticos
 lay → deitar
 rise → ascender / crescimento
+struggle → luta
+improvement → melhoria

@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PAA/prova.md",
+                "file": "utils/English Vocabulary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "prova"
+              "title": "English Vocabulary"
             }
           },
           {
@@ -243,6 +243,7 @@
   },
   "active": "e242b3c6575ebf49",
   "lastOpenFiles": [
+    "ccomp/PAA/prova.md",
     "utils/English Vocabulary.md",
     "ccomp/IA/Q-Learning.md",
     "notes Eng. Software.md",
@@ -255,7 +256,6 @@
     "ccomp/PAA/todo.md",
     "ccomp/PAA/Dynamic Programin.md",
     "ccomp/PAA/Greedy algorithm.md",
-    "ccomp/PAA/prova.md",
     "ccomp/IA/Kmeans.md",
     "ccomp/IA/notes-ia.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
