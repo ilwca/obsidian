@@ -14,3 +14,6 @@ rise → ascender / crescimento
 improvement → melhoria
 seek → procurar
 willing → disposta
+done so yet → "feito isso ainda"
+drown → afogar
+oar → remo
