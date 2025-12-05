@@ -36,8 +36,6 @@ sendo _f(n)_ o numero de comparações feitas ate encontrar o valor _k_
 A análise assintótica é uma maneira de descrever o comportamento limitante de uma função, que na análise de algoritmos estamos interessados no caso de entradas grandes, quando n → **∞**.
 
 ## Notações ( O, Ω, θ)
-### Big O 
-Análise de pior caso, limite superior
 
 ### Omega Ω
 Análise de melhor caso, limite inferior
@@ -124,14 +122,15 @@ Quantidade de memória usada pelo algoritmo de acordo com o tamanho da entrada.
 
 ## Notação Big O (O)
 
+**revisando** BigO não é uma igualdade, mas sim uma dominância de desigualdade.
 Pela definição do big O temos que sua notação é:
 
-O(g(n)) / O(c.g(n))
+$f(n) = O(g(n))⇔ ∃c > 0, ∃n_0 / f(n)\leq cg(n),\forall n \geq n_0$      
 
-Então para definir a notação do big O de uma função _f(n)_ se deve encontrar um c > 0 e n > 0, tal que O(n) > _f(n)_.
+Então para definir a notação do bigO de uma função $f(n)$ se deve encontrar um $c > 0$ e $n > 0$, tal que $O(n) > f(n)$.
 
 **Exemplo 1:**
-Prove que f(n) = 25n+18 e g(n) = n
+Prove que f$(n) = 25n+18$ e $g(n) = n$
 
 	Então f(n) ≤ O(g(n))
 
@@ -246,7 +245,7 @@ Assim, existe um n, tal que n > 100. Portanto, conclui-se que
 ## Notação Theta θ
 Seja duas funções _f(n)_ e _g(n)_ não negativas, dizemos que _f(n)_ está na ordem de _g(n)_ e escrevemos _f(n)_ = θ(_g(n)_) ou _f(n)_ ∈ θ(_g(n)_). Então existem constantes c¹ e c² > 0 e n° > 0, tal que:
 
-	c¹ · g(n) ≤ f(n) ≥ c² · g(n)      ∀n > n°
+	$c_1 \cdot g(n) \leq f(n) \leq c_2 \cdot g(n)$
 
 ![[theta.png]]
 
@@ -297,6 +296,14 @@ dividindo as desigualdades por n²:
 	c¹ ≤ 6n ≤ c²
 
 Assim provamos que _f(n)_ ∉ θ(n²) para um limite superior, pois não há um c¹ finito que seja superior a _f(n)_ para um  _n_  suficientemente grande.
+
+
+
+---
+## Teorema mestre
+o toerema mestre e usada para definirmos a complexidade assintotica de um algoritmo a partir do seu custo T(n).
+
+o teorema mestre tem 3 casos para a classifcacao de complexidade.
 
 
 *****
@@ -452,16 +459,108 @@ para a analise do tempo de execução:
 	
 
 
+---
+
+## Exercicios
+
+## 📝 **Questão de Treino – Análise de Complexidade, Big-O e Θ**
+
+Considere o seguinte algoritmo em pseudocódigo:
+
+```text
+Algoritmo Exemplo(n):
+1. s ← 0
+2. para i = 1 até n:
+3.     para j = 1 até i:
+4.         s ← s + 1
+5. para k = 1 até n:
+6.     para m = 1 até n:
+7.         s ← s + 1
+8. retorne s
+```
+
+### (a) Encontre a **função de custo T(n)** que representa o número de operações executadas no pior caso.
+
+---
+
+### (b) Determine a **complexidade assintótica em Big-O**.
+
+---
+
+### (c) Determine a **classe Θ(T(n))**.
+
+---
+
+### (d) Justifique formalmente por que a complexidade encontrada em (b) pertence a Θ da letra (c).
+
+---
+## Resposta
+### A)
+do primeiro bloco for temos O(n²/2)
+e no segundo temos: O(n²)
+
+de complexidade total teremos:
+$T(n) = \frac{3}{2}n^2 + \frac{1}{2}n$
+
+### B)
+Complexidade assintótica bigO
+$O(g(n))$
+$f(n) = \frac{3}{2}n^2 + \frac{1}{2}n  =  g(n²)$
+
+$O(n) = c \cdot g(n)$
+
+então
+$\exists c > 0$ e $\exists n \mid f(n) \leq c \cdot g(n), \forall n > n_0$ 
+
+$= \frac{3}{2}n² + \frac{1}{2}n \leq c\cdot n²$
+
+então, para c = 2 e n =, temos 
+
+$\frac{3}{2}n² + \frac{1}{2}n \leq2n²$
+
+portanto
+
+$f(n) \in O(n²)$ 
+
+### C)
+determine o $\theta(T(n))$ 
+
+$c_1 \cdot g(n) \leq f(n) \leq c_2 \cdot g(n)$ 
+
+então
+
+$\exists c_1 > 0, \exists c_2 > 0 \text{e} \exists n_0 \mid c_1g(n) \leq f(n) \leq c_2g(n), \forall n>n_0$
+
+Desta forma, tomando $c_1 = 1$ e $c_2 = 2$ para $n_0 = 1$
+
+$n² \leq \frac{3}{2}n² + \frac{1}{2}n \leq2n²$
+
+portanto $f(n) \in \theta(n²)$
 
 
 
 
+```
 
+funcao 2 algo(n)
 
+if n = 1 then
+	return 1
+endif
+for i ← 1 to 8 do
+	z ← algo(n/2)
+enfdor
+for i ← 1 to n³ do
+	z ← o 
+endfor
+```
 
+Defina T(n) como o numero total de vezes que a atribuição z ← 0 é executada por algo(n)(contando todas as chamadas recursivas, nao apenas a chamada inicial) Desconsidere qualquer outro custo.
 
+a) Escreva a reconrrencia que define T(n) e indique claramente a condicao de base.
+b) Prove diretamente que T(n) $\in \Omega(n³ \log n)$ (Sem usar teorema mestre).   
+c) substitua o "8" do primeiro laco por "7", obtenha a nova recorrencia e mostr diretamente que, nesse caso, T(n) $\in$ O(n³).
 
+**A)** $T(n) = 8T(n/2) + O(n³)$ 
 
-
-
- 
+**B)** temos que provar agora o limite inferior da funcao.

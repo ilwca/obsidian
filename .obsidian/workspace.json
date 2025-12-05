@@ -4,95 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "7e93b3ac7cc3a002",
+        "id": "106e1e2165463fb5",
         "type": "tabs",
         "children": [
           {
-            "id": "673a13fa96b65a9a",
+            "id": "5f1b0378410e8164",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+                "file": "ccomp/PAA/prova-II.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Divide and conquer - Atividade PAA"
+              "title": "prova-II"
             }
           },
           {
-            "id": "c460fce98005f22b",
+            "id": "e720b1121ba265d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/IA/notes-ia.md",
+                "file": "ccomp/PAA/Análise de Complexidade.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "notes-ia"
-            }
-          },
-          {
-            "id": "31329317d2db8a9e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ccomp/Compiladores/Gramáticas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Gramáticas"
-            }
-          },
-          {
-            "id": "93e7946dcadc7756",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ccomp/Compiladores/todo - compiladores.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "todo - compiladores"
-            }
-          },
-          {
-            "id": "e242b3c6575ebf49",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "utils/English Vocabulary.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "English Vocabulary"
-            }
-          },
-          {
-            "id": "45e93a3bb4fe294e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ccomp/IA/Q-Learning.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Q-Learning"
+              "title": "Análise de Complexidade"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -241,25 +185,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "e242b3c6575ebf49",
+  "active": "e720b1121ba265d7",
   "lastOpenFiles": [
-    "ccomp/PAA/prova.md",
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+    "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "ccomp/PAA/todo.md",
-    "utils/English Vocabulary.md",
+    "ccomp/PAA/Análise de Complexidade.md",
+    "ccomp/PAA/prova-I.md",
+    "ccomp/PAA/prova-II.md",
+    "ccomp/IA/notes-ia.md",
+    "ccomp/Compiladores/Gramáticas.md",
+    "ccomp/Compiladores/todo - compiladores.md",
+    "ccomp/IA/Kmeans.md",
     "ccomp/IA/Q-Learning.md",
+    "notacoes assintoticas.md",
+    "ccomp/PAA/Dynamic Programin.md",
+    "SPAM Classification.md",
+    "utils/English Vocabulary.md",
     "notes Eng. Software.md",
     "README.md",
-    "Untitled.md",
-    "ccomp/Compiladores/todo - compiladores.md",
-    "ccomp/Compiladores/Gramáticas.md",
     "ccomp/Compiladores/Anotações.md",
-    "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
-    "ccomp/PAA/Dynamic Programin.md",
     "ccomp/PAA/Greedy algorithm.md",
-    "ccomp/IA/Kmeans.md",
-    "ccomp/IA/notes-ia.md",
-    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
-    "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Gossary.md",
     "utils/Divisão e conquista.md",
     "ccomp/IA/notes-ia",
@@ -280,8 +226,6 @@
     "utils/Não confirmado 529789.crdownload",
     "Untitled.base",
     "Untitled 1.base",
-    "2025-10-25.md",
-    "LIS.md",
     "COMP/PAA/utils",
     "utils/Captura de tela de 2025-09-26 17-45-38.png",
     "Pasted image 20250922175438.png",

@@ -1,4 +1,4 @@
-hg
+
   4 - Considere   o seguinte algoritmo, chamado count, cujo o input é um numero inteiro positivo n:
 
 ```pseudocodigo
@@ -20,7 +20,7 @@ function finds(A, S)
 			for(k=j+1, k<(len(A)), k++)
 				if(A[i] + A[j] + A[k] == S)
 					return A[i], A[j], A[k];
-					
+	
 	return false;
 ```
 
@@ -254,7 +254,7 @@ funcao countFreq(list)
 		countFreq(direita)
 	
 	return merge(esquerda, direita)
-	
+				
 merge(mapA, mapB)
 	first = 0
 	second = 0

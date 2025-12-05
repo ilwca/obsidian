@@ -1,14 +1,20 @@
 
 Neste projetos estaremos treinando uma rede neural para a classificação de mensagens de e-mail como spam e não spam.
-
-Para isto, vamos uma base de dados chamada "Spam Email Classification Dataset" disponível no [kaggle](https://www.kaggle.com/datasets/purusinghvi/email-spam-classification-dataset). Esta base de dados conta com mais de 75 mil mensagens.
-Apesar de grande, o dataset contem apensa duas colunas, a de "text" que contem a mensagem a ser analisada e a do "label", que é um valor binário, indicando **0 para ham** e **1 para spam** da respectiva mensagem.
-
+## Problema
+por dia recebemos dezenas de mensagens indesejadas, seja ligacoes ou mensagens.
+segundo o against data um cidadao americano recebe em media cerca de 1825 mensagens de spam por ano, que e equivalente a 5 mensagens de SPAM por dia.
 ## spam
 spam são mensagens  classificadas como não desejadas, que são enviadas para uma grande quantidade de pessoas simultâneamente buscando promover algo.
 
 ## ham 
 O oposto de spam's são as ham's que são mensagens de colegas de trabalhos, amigos entre outros.
+
+## Solucao
+com isto, treinamos um modelos de inteligencia artifical para classificar estas mensagens recebidas como desejadas ou nao desejadas(SPAM ou HAM). Para isso teriamos que usar uma grande amostra de dados para que o modelo baseie seu aprendizado
+
+Para isto, usamos uma base de dados chamada "Spam Email Classification Dataset" disponível no [kaggle](https://www.kaggle.com/datasets/purusinghvi/email-spam-classification-dataset). Esta base de dados conta com mais de 75 mil mensagens.
+Apesar de grande, o dataset contem apensa duas colunas, a de "text" que contem a mensagem a ser analisada e a do "label", que é um valor binário, indicando **0 para ham** e **1 para spam** da respectiva mensagem.
+
 
 # Target
 O target é uma variável alvo, ou seja, é ela que queremos prever. Neste caso nosso alvo é a variável "label", pois buscamos acertar se a mensagem que está em "text" é spam ou não.
@@ -72,6 +78,8 @@ Todas elas com a mesma proporção de Spams e Hams, devido ao ` stratify = y `.
 # Treinamento do Modelo 
 Agora iremos ajustar as definições e treinar o modelo usando uma rede neural MLP (MultiLayer Perceptron) que sera alimentado com os dados da nossa matriz de pesos.
 
+## MLP
+
 ```python
 mlp = MLPClassifier(
     hidden_layer_sizes=(100, 50), #camada oculta com 100 e 50 neuronios
@@ -88,3 +96,13 @@ Com todas as definições feitas, a linha:
 ` mlp.fit(X_train, y_train)`
 ... faz o treinamento do modelo.
 
+## ReLU
+Rectified Linear Unit, o ReLU e a nossa funcao de ativiacao, basicamente ela determina o quento do sinal de um neoronio vai passar para o outro.
+- se **x < 0** → saida  = o
+- se **x ≥ 0** → saida = x
+
+entao, de grosso modo, a funcao relu "mata" valores negativos e repassa valores positivos.
+porem isso pode acarretar no problema de morte de neuronios, que se um neuronio se receber muito valores negativos suas funcoes serao zeradas e ele so passara valores negativos, entao o gradiente vira 0 e o neuronio nunca mais aprende, ele "morre".
+
+### Vanishin Gradient
+Este e um problema de achatamento do gradiente fazendo com que os neuronios da entrada tenham os valores aproximados de 0, assim repassando o gradinte inteiro a ficar mais "achatado".
