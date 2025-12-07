@@ -295,3 +295,34 @@ $dp[i][j]$ = é possível formar o valor $j$ usando os primeiros $i$ elementos.
 | 1 (1)     | 1   | 1   | 0   | 0   | 0   |
 | 2 (1,3)   | 1   | 1   | 0   | 1   | 0   |
 | 3 (1,3,4) | 1   | 1   | 0   | 1   | 1   |
+
+
+
+# Prova II (REAL)
+
+**1- Desenvolva uma algoritmo Guloso** para o ajuste de troco.
+
+entrada $V = \{ 100, 50, 20, 10, 5, 2, 1 \}$
+
+**A)** Apresentar algorimo guloso para este.
+**B)** Aplique o algorimo ao  valor V = 289
+
+### Resposta
+A) 
+```
+function CashRetur(V, target)
+	mergeSort(V, -1) # ordenar vator de moedas de forma decrescente
+	valor_atual = 0
+	solucao = 0
+	
+	for i in V:
+		if valor_atual + V[i] <= target   #escolha local, visando maior de V[]
+			solucao.append(V[i])  #adiciona valor ao final de Solucao[]
+			valor_atual += V[i]
+			i = 0
+	
+	return solucao[]
+```
+
+
+	

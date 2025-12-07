@@ -301,12 +301,121 @@ Assim provamos que _f(n)_ ∉ θ(n²) para um limite superior, pois não há um 
 
 ---
 ## Teorema mestre
-o toerema mestre e usada para definirmos a complexidade assintotica de um algoritmo a partir do seu custo T(n).
+o teorema mestre e usada para definirmos a complexidade assintótica de um algoritmo a partir do seu custo T(n), ou seja, seu custo recursivo +  custo externo.
 
-o teorema mestre tem 3 casos para a classifcacao de complexidade.
+### Ideia central do teorema
+ele compara:
+- O custo total das chamadas recursivas:
+## $n^{log_b^a}$
+
+com
+- O custo fora da função recursiva
+###  $f(n)$
+
+e decide quem **Domina**, a função com  maior custo, tem a complexidade assintótica.
+
+
+Para isso, existem 3 casos. Definimos
+
+### $d = log_b^a$
+
+agora compare com a função $f(n)$ com  ${n^d}$
+
+---
+### Caso I
+
+recursão domina:
+
+$f(n) \in O(n^{d-ε})$
+
+resultado:
+
+$T(n) \in \Theta(n^d)$
+
+Exemplo:
+$T(n) = 8T(n/2) + n²$
+$d = log_2 8 = 3$
+
+Usaremos $n^d$ = $n³$
+
+como $n² < n³$, então:
+
+$T(n) \in \Theta(n³)$
+
+---
+
+### Caso II
+
+$f(n) \in \Theta(n^d log^{k+1}n)$
+
+Exemplo clássico:
+$T(n) = 2T(n/2)+n$
+$d=\log_22=1$
+$f(n) = n \rightarrow T(n) \in \Theta(n\log n)$ 
+
+aplicado no caso, teremos:
+$T(n) \in \Theta(n^d \log¹ n)$ onde k é o grua de $f(n)$
+portanto:
+$T(n) \in \Theta(n \log n)$
 
 
 *****
+
+### Caso III 
+$f(n) \in \Omega(n^{d-ε})$
+
+com condicao de regularidade:
+
+$af(n/b) ≤ cf(n), c < 1$
+
+resultado:
+
+$T(n) \in \Theta(f(n))$
+
+exemplo:
+
+$T(n) = 2T(n/2)+n² \rightarrow T(n) \in \Theta(n²)$
+
+---
+- $T(n)=4T(n/2)+n$
+- $T(n)=2T(n/2)+nlogn$
+- $T(n)=3T(n/3)+n$
+
+1-
+a = 4
+b = 2
+f(n) =n
+
+$\log_2 4 = 2$
+$n^d = n²$
+
+como $n² > n$. Caso 1, predominância da recorrência.
+
+$T(n) \in \Theta(n²)$
+
+2- 
+a = 2
+b = 2
+f(n) = n log n
+
+$d=\log_2​2=1$
+
+caso de empate
+$T(n)∈Θ(nlogn)$
+
+3- 
+a= 3
+b = 3
+f(n) = n²
+
+$d=\log_33=1$
+
+custo externo domina
+$T(n)∈Θ(n2)$
+
+
+
+
 
 # Algoritmos iterativos
 
@@ -538,7 +647,7 @@ $n² \leq \frac{3}{2}n² + \frac{1}{2}n \leq2n²$
 portanto $f(n) \in \theta(n²)$
 
 
-
+d
 
 ```
 

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PAA/Análise de Complexidade.md",
+                "file": "utils/English Vocabulary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Análise de Complexidade"
+              "title": "English Vocabulary"
             }
           }
         ],
@@ -187,19 +187,19 @@
   },
   "active": "e720b1121ba265d7",
   "lastOpenFiles": [
+    "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+    "ccomp/PAA/Dynamic Programin.md",
+    "ccomp/PAA/prova-II.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "ccomp/PAA/todo.md",
-    "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/prova-I.md",
-    "ccomp/PAA/prova-II.md",
     "ccomp/IA/notes-ia.md",
     "ccomp/Compiladores/Gramáticas.md",
     "ccomp/Compiladores/todo - compiladores.md",
     "ccomp/IA/Kmeans.md",
     "ccomp/IA/Q-Learning.md",
     "notacoes assintoticas.md",
-    "ccomp/PAA/Dynamic Programin.md",
     "SPAM Classification.md",
     "utils/English Vocabulary.md",
     "notes Eng. Software.md",

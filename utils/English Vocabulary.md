@@ -17,3 +17,4 @@ willing → disposta
 done so yet → "feito isso ainda"
 drown → afogar
 oar → remo
+aimed → focado/mirado
