@@ -18,3 +18,6 @@ done so yet → "feito isso ainda"
 drown → afogar
 oar → remo
 aimed → focado/mirado
+"put off" → adiar
+concerns → preocupações
+conscius → consciência
