@@ -51,21 +51,30 @@
             "id": "c8e3a946c7a13e8b",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "helpti/helpti.canvas",
-                "viewState": {
-                  "x": 807.2262626817079,
-                  "y": -156.57344714127447,
-                  "zoom": -0.3333333333333333
-                }
+                "file": "utils/English Vocabulary.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
+              "icon": "lucide-file",
+              "title": "English Vocabulary"
+            }
+          },
+          {
+            "id": "e49ba6aade3fb32b",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "helpti/helpti.md"
+              },
+              "icon": "excalidraw-icon",
               "title": "helpti"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -211,13 +220,18 @@
       "templates:Inserir templates": false,
       "command-palette:Abrir paleta de comando": false,
       "canvas:Create new canvas": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "c8e3a946c7a13e8b",
+  "active": "6c011cb0f5844fd0",
   "lastOpenFiles": [
-    "utils/English Vocabulary.md",
     "helpti/helpti.canvas",
+    "helpti/helpti.md",
+    "SPAM Classification.md",
+    "Excalidraw",
+    "utils/English Vocabulary.md",
     "Sem título.md",
     "helpti",
     "ccomp/PAA/Análise de Complexidade.md",
@@ -233,7 +247,6 @@
     "ccomp/IA/Kmeans.md",
     "ccomp/IA/Q-Learning.md",
     "notacoes assintoticas.md",
-    "SPAM Classification.md",
     "notes Eng. Software.md",
     "README.md",
     "ccomp/Compiladores/Anotações.md",
@@ -245,7 +258,6 @@
     "utils/h.chomsky.canvas",
     "utils/Gramatica BNF.md",
     "utils/LIS e LCS.md",
-    "goals/goals.md",
     "goals",
     "ccomp/Redes",
     "utils/img/image01.png",
@@ -256,7 +268,6 @@
     "utils/Não confirmado 529789.crdownload",
     "Untitled.base",
     "Untitled 1.base",
-    "COMP/PAA/utils",
     "utils/Captura de tela de 2025-09-26 17-45-38.png",
     "Pasted image 20250922175438.png",
     "Complexidade.png"
