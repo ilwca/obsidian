@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"7cd197f5ee22ce7a","x":-125,"y":-30,"width":250,"height":60,"type":"text","text":"Landing Page"},
+		{"id":"dfd87b40abadc647","x":240,"y":-30,"width":250,"height":60,"type":"text","text":"login"},
+		{"id":"3b074fc3ed9ba1c9","x":580,"y":-190,"width":250,"height":60,"type":"text","text":"cliente"},
+		{"id":"91bd2037101edd7c","x":580,"y":-30,"width":250,"height":60,"type":"text","text":"empresa"},
+		{"id":"6ee51a5c5b9817d9","type":"text","text":"Tecnico","x":580,"y":110,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"2eacc3f7f12688e1","fromNode":"7cd197f5ee22ce7a","fromSide":"right","toNode":"dfd87b40abadc647","toSide":"left"},
+		{"id":"ed42e33316d42510","fromNode":"dfd87b40abadc647","fromSide":"right","toNode":"91bd2037101edd7c","toSide":"left"},
+		{"id":"7ac2cb61603259e0","fromNode":"dfd87b40abadc647","fromSide":"right","toNode":"3b074fc3ed9ba1c9","toSide":"left"},
+		{"id":"141930f4f9f77b20","fromNode":"dfd87b40abadc647","fromSide":"right","toNode":"6ee51a5c5b9817d9","toSide":"left"}
+	]
+}

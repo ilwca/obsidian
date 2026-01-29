@@ -51,14 +51,17 @@
             "id": "c8e3a946c7a13e8b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "utils/English Vocabulary.md",
-                "mode": "source",
-                "source": false
+                "file": "helpti/helpti.canvas",
+                "viewState": {
+                  "x": 807.2262626817079,
+                  "y": -156.57344714127447,
+                  "zoom": -0.3333333333333333
+                }
               },
-              "icon": "lucide-file",
-              "title": "English Vocabulary"
+              "icon": "lucide-layout-dashboard",
+              "title": "helpti"
             }
           }
         ],
@@ -85,7 +88,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de ficheiros"
             }
           },
           {
@@ -202,17 +205,21 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
+      "switcher:Abrir Quick Switcher": false,
+      "graph:Abrir Visualização de diagrama de grafo": false,
+      "daily-notes:Abrir nota de hoje": false,
+      "templates:Inserir templates": false,
+      "command-palette:Abrir paleta de comando": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
       "bases:Create new base": false
     }
   },
   "active": "c8e3a946c7a13e8b",
   "lastOpenFiles": [
+    "utils/English Vocabulary.md",
+    "helpti/helpti.canvas",
+    "Sem título.md",
+    "helpti",
     "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "ccomp/PAA/Dynamic Programin.md",
@@ -227,7 +234,6 @@
     "ccomp/IA/Q-Learning.md",
     "notacoes assintoticas.md",
     "SPAM Classification.md",
-    "utils/English Vocabulary.md",
     "notes Eng. Software.md",
     "README.md",
     "ccomp/Compiladores/Anotações.md",
@@ -241,11 +247,9 @@
     "utils/LIS e LCS.md",
     "goals/goals.md",
     "goals",
-    "ccomp/Redes/REDES - slide.md",
     "ccomp/Redes",
     "utils/img/image01.png",
     "utils/img/osi-tcp-ip.png",
-    "note.md",
     "utils/img/Complexidade.png",
     "utils/img/theta.png",
     "utils/img",
@@ -255,8 +259,6 @@
     "COMP/PAA/utils",
     "utils/Captura de tela de 2025-09-26 17-45-38.png",
     "Pasted image 20250922175438.png",
-    "Complexidade.png",
-    "COMP/PAA 1",
-    "Sem título.canvas"
+    "Complexidade.png"
   ]
 }

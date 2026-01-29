@@ -24,3 +24,4 @@ conscius → consciência
 avoid → Evitar - "evitar completamente que algo aconteca"
 went out → saius
 hardly → "quase nao" / "mal havia..."
+
