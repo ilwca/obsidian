@@ -1,4 +1,4 @@
-## 📋 **PLANO DE REESTRUTURAÇÃO DO COMPILADOR**
+ ## 📋 **PLANO DE REESTRUTURAÇÃO DO COMPILADOR**
 
 Seu projeto já tem muitas peças, mas precisa de reorganização para seguir o pipeline do slide:
 

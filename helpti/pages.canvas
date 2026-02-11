@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"b5e0a95d2af5f5a9","type":"text","text":"**CHAMADOS** \n- chamados","x":-220,"y":-240,"width":250,"height":102},
+		{"id":"74c128403ce2e482","type":"text","text":"**DASHBOARD** \n\n- dados chamados\n- financeiro\n- historico","x":140,"y":-240,"width":250,"height":180},
+		{"id":"4092860c5d24c144","type":"text","text":"**PERFIL** \n\n- User Role\n- Cliente ID (empresa Relacionada)\n- Editar Dados","x":540,"y":-240,"width":320,"height":180}
+	],
+	"edges":[]
+}
