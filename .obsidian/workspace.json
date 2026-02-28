@@ -65,16 +65,46 @@
             "id": "e49ba6aade3fb32b",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "helpti/helpti.md"
+                "file": "jelc/things to study.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "helpti"
+              "icon": "lucide-file",
+              "title": "things to study"
+            }
+          },
+          {
+            "id": "ae265e1bfbb4fa48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "jelc/documento de Adesão.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "documento de Adesão"
+            }
+          },
+          {
+            "id": "c456526298683544",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "jelc/documento de Adesão.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "documento de Adesão"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -203,14 +233,23 @@
               "icon": "lucide-list",
               "title": "Sumário de IDK"
             }
+          },
+          {
+            "id": "bf28868f2c49d20e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -225,14 +264,15 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "6c011cb0f5844fd0",
+  "active": "c456526298683544",
   "lastOpenFiles": [
-    "helpti/helpti.canvas",
+    "jelc/documento de Adesão.md",
+    "jelc/things to study.md",
     "helpti/helpti.md",
+    "helpti/helpti.canvas",
     "SPAM Classification.md",
     "Excalidraw",
     "utils/English Vocabulary.md",
-    "Sem título.md",
     "helpti",
     "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
