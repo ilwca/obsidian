@@ -179,14 +179,45 @@ pois ∀n>1 _f(n)_ ≤ c
 
 **portanto _f(n)_ ∈ O(g(n))**
 
+# ==Macete!==
+dado uma função $T(n)15n³+n²+4$, então $T(n) \in O(n³)$.
+para isso devemos definir um $c>0$ e $n_0>0$, tal que $T(n) \in O(n³)$
 
+Podemos analisar cada fator do polinômio $T(n)$ e do outro lado colocar um valor respectivo de grau $g(n)$ do outro lado. como $g(n) = n³$, então fazemos:
+$$T(n)=15n³+n²+4 \in O(n³)$$
+Isolando os termos:
+$$ 15n³ \leq 15n³$$
+$$n² \leq n³$$
+$$4 \leq 4n³$$
+Assim, do outro lado da igualdade teremos sempre termos de grau 3, deste modo, é possível soma-los...
+
+$$15n³+n³+4n³$$
+$$ = 20n³$$
+Portanto, achamos assim uma constante $c$ que atende a cota superior para $T(n)$. Então, assumimos $c = 20$ e $n_0=1$. Deste modo $\forall n>n_0 T(n)\leq O(n³)$ 
+
+Por fim, podemos afirmar que
+$$T(n) \in O(n³)$$
+
+
+### Ex. 2
+verificar se $2^{2n} \in O(2^n)$.
+
+**afirmação**: $2^{2n} \notin O(2^n)$
+
+Por contradição, se dividirmos ambos os lados por $2^n$ teremos:
+$$2^{2n}\leq2nc$$
+$$2^n\leq c$$
+portanto
+$$2^{2n}\notin O(2^n)$$
+
+---
 ## Notação Omega Ω
-Seja duas funções não negativas _f(n)_ e _g(n)_ podemos dizer que _f(n)_ está na ordem Ω de _g(n)_ se escrevermos _f(n)_ = Ω(_g(n)_) ou _f(n)_ ∈ Ω(_g(n)_),  se existem constantes _c_ e _n_ tal que c > 0  e n° > 0. 
-Assim tendo _f(n)_ > 0 e _f(n)_ ≥ c · _g(n)_ para todo n ≥ n°.
+Seja duas funções não negativas $f(n)$ e $g(n)$ podemos dizer que $f(n)$ está na ordem $Ω$ de $g(n)$ se escrevermos $f(n)$ = $Ω(g(n))$ ou $f(n) ∈ Ω(g(n))$,  se existem constantes _c_ e _n_ tal que $c > 0$  e $n_0 > 0$.
+Assim tendo $f(n) > 0$ e f(n) ≥ c · _g(n)_ para todo n ≥ n°.
 
 Ou seja, fazer a prova contraria de **BIG O**  tendo:
 
-	f(n) ≥ c · g(n)
+$$f(n) ≥ c · g(n)$$
 
 **Exemplo 1:**
 Prove que se T(n) = 15n³ + n² + 4, então T(n) = Ω(n³)
