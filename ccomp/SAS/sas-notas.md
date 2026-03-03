@@ -52,13 +52,18 @@ Método de ataque onde alguém faz uso da persuasão, muitas vezes abusando da i
 
 # 02/03
 
+# Hashes Criptográficos
+Um algoritmo de hash criptográfico é uma função matemática cujo o resultado é um valor de tamanho fixo, gerado a partir de uma entrada de tamanho arbitrário.
+Dado seu atributo de unidirecionalidade, a partir de seu resultado é impraticável produzir o parâmetro de entrada.
+_Ou seja, impossível obter o conteúdo que foi utilizado na geração daquele hash._
+
 
 ## Esteganografia
-E a pratica de ocultar informacoes secrretas dentro de outrops arquivos (imagnes, textos...), tornando a mensagem oculta invisivel ou indetectavel para quem nao sabe da sua existencia
+E a pratica de ocultar informações secretas dentro de outros arquivos (imagnes, textos...), tornando a mensagem oculta invisível ou indetectável para quem não sabe da sua existência.
 
 ## Criptografia
 - termo de origem graga que significa "escrita secreta"
-- Permite dois individuos troquem mensagens confidenciais por um canal inseguro
+		- Permite dois individuos troquem mensagens confidenciais por um canal inseguro
 - A mensagem so podera ser revelada com a presenca de uma chave secreta, conhecida apensa pelo remetente e pelo destinatario (usuarios autorizados)
 
 Diferente da esteganografia, na criptografia as pessoas sabem que ha um conteudo escondido.
@@ -92,6 +97,7 @@ O custo para quebrar é maior que o valor da informação codificada e o tempo d
 
 
 # Tipos de Cifras
+![[diagrama-cript.png]]
 ### Cifras Clássicas
 - Transposição
 - Substituição
@@ -119,6 +125,13 @@ Uma pequena palavra sendo cifrada bit por bit:
 
 ![[text-ascii.png]]
 
+### Cifra de Bloco
+A maioria dos métodos de criptografia usa método de cifra de bloco, como: DES, BlowFish, RC5, 3-DES, etc...
+
+As entradas são blocos de texto plano e uma chave **k**. As entradas são divididas no meio em dois blocos, o $L_0$ e o $R_0$. Estas duas metades passam por $N$ rodadas de processamento e são combinadas ao final para produzir um bloco de texto cifrado.  
+![[cifra-de-bloco.svg.png]]
+
+
 ## A E S - Advanced Encryption Standard
 Padrão atualmente usado em criptografias simétricas, composto por:
 - Substituições
@@ -130,3 +143,33 @@ Contendo chaves de tamanhos variáveis:
 Os modos de operação mais adotados são:
 - Eletronic CodeBook
 - Cipher Blocj Chaining
+
+
+## Tipos de Cifras Simétricas
+- AES
+- DES 
+- RC4
+
+Comparativo entre elas:
+
+| **Nome**                 | **Classificação**        |
+| ------------------------ | ------------------------ |
+| DES (com variante 3-DES) | Cifra simétrica de BLOCO |
+| AES                      | Cifra simétrica de BLOCO |
+| RC-4                     | Cifra simétrica de FLUXO |
+
+
+## ...Revisando Cifras Simétricas
+### Vantagens
+- Hardware de baixo custo
+- Facilidade de uso e implementação
+- Rapidez e uso geral
+### Desvantagens
+- Distribuição e armazenamento das *chaves* (problema de troca inicial de chaves)
+- Não garante *autenticidade* ou *não*-*repúdio*
+### Modos
+- Bloco
+- Fluxo
+
+
+# Cifras Assimétricas

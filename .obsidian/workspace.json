@@ -107,12 +107,14 @@
             "id": "adf7405aa8a0efc5",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "utils/img/XOR.png"
+                "file": "ccomp/SAS/sas-notas.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "XOR"
+              "icon": "lucide-file",
+              "title": "sas-notas"
             }
           }
         ],
@@ -276,19 +278,22 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "6c011cb0f5844fd0",
+  "active": "adf7405aa8a0efc5",
   "lastOpenFiles": [
+    "notacoes assintoticas.md",
     "ccomp/SAS/sas-notas.md",
+    "Sem título.md",
+    "utils/img/diagrama-cript.png",
+    "utils/img/cifra-de-bloco.svg.png",
+    "utils/img/XOR.png",
     "utils/img/text-ascii.png",
     "utils/Captura de tela 2026-03-02 204931.png",
     "Captura de tela 2026-03-02 204931.png",
-    "utils/img/XOR.png",
     "utils/img/XOR.png.crdownload",
     "ccomp/TG/tg-notas.md",
     "ccomp/PAA/prova-II PAA.md",
     "ccomp/Redes/REDES - slide.md",
     "ccomp/TG/Grafos.md",
-    "Sem título.md",
     "utils/img/tipo-aresta.png",
     "utils/img/Captura de tela 2026-02-28 224054.png",
     "utils/img/5-star.png",
@@ -315,7 +320,6 @@
     "ccomp/Compiladores/todo - compiladores.md",
     "ccomp/IA/Kmeans.md",
     "ccomp/IA/Q-Learning.md",
-    "notacoes assintoticas.md",
     "notes Eng. Software.md",
     "ccomp/IA/notes-ia",
     "ccomp/IA",
@@ -323,8 +327,6 @@
     "goals",
     "ccomp/Redes",
     "utils/img/image01.png",
-    "utils/img/osi-tcp-ip.png",
-    "utils/img/Complexidade.png",
     "utils/img"
   ]
 }
