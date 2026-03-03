@@ -107,14 +107,12 @@
             "id": "adf7405aa8a0efc5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "ccomp/TG/Grafos.md",
-                "mode": "source",
-                "source": false
+                "file": "utils/img/XOR.png"
               },
-              "icon": "lucide-file",
-              "title": "Grafos"
+              "icon": "lucide-image",
+              "title": "XOR"
             }
           }
         ],
@@ -175,8 +173,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -264,8 +261,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -280,30 +276,37 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "adf7405aa8a0efc5",
+  "active": "6c011cb0f5844fd0",
   "lastOpenFiles": [
+    "ccomp/SAS/sas-notas.md",
+    "utils/img/text-ascii.png",
+    "utils/Captura de tela 2026-03-02 204931.png",
+    "Captura de tela 2026-03-02 204931.png",
+    "utils/img/XOR.png",
+    "utils/img/XOR.png.crdownload",
+    "ccomp/TG/tg-notas.md",
+    "ccomp/PAA/prova-II PAA.md",
+    "ccomp/Redes/REDES - slide.md",
+    "ccomp/TG/Grafos.md",
+    "Sem título.md",
     "utils/img/tipo-aresta.png",
     "utils/img/Captura de tela 2026-02-28 224054.png",
-    "ccomp/TG/notas.md",
-    "ccomp/TG/Grafos.md",
     "utils/img/5-star.png",
     "ccomp/TG",
     "jelc/documento de Adesão.md",
     "jelc/things to study.md",
     "helpti/helpti-fluxo.md",
     "helpti/pages.canvas",
-    "ccomp/SAS/Notas.md",
     "ccomp/SAS",
     "helpti/helpti.md",
     "helpti/helpti.canvas",
     "SPAM Classification.md",
-    "Excalidraw",
+    "excalidraw",
     "utils/English Vocabulary.md",
     "helpti",
     "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "ccomp/PAA/Dynamic Programin.md",
-    "ccomp/PAA/prova-II.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "ccomp/PAA/todo.md",
     "ccomp/PAA/prova-I.md",
@@ -314,8 +317,6 @@
     "ccomp/IA/Q-Learning.md",
     "notacoes assintoticas.md",
     "notes Eng. Software.md",
-    "README.md",
-    "ccomp/Compiladores/Anotações.md",
     "ccomp/IA/notes-ia",
     "ccomp/IA",
     "utils/h.chomsky.canvas",
@@ -324,11 +325,6 @@
     "utils/img/image01.png",
     "utils/img/osi-tcp-ip.png",
     "utils/img/Complexidade.png",
-    "utils/img/theta.png",
-    "utils/img",
-    "utils/Não confirmado 529789.crdownload",
-    "utils/Captura de tela de 2025-09-26 17-45-38.png",
-    "Pasted image 20250922175438.png",
-    "Complexidade.png"
+    "utils/img"
   ]
 }
