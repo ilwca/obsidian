@@ -165,7 +165,7 @@ Comparativo entre elas:
 - Facilidade de uso e implementação
 - Rapidez e uso geral
 ### Desvantagens
-- Distribuição e armazenamento das *chaves* (problema de troca inicial de chaves)
+- Distribuição e armazenamento das chaves (problema de troca inicial de chaves)
 - Não garante *autenticidade* ou *não*-*repúdio*
 ### Modos
 - Bloco
@@ -173,3 +173,15 @@ Comparativo entre elas:
 
 
 # Cifras Assimétricas
+As cifras assimétricas tem como intuito resolver o problema da *Troca de chaves*.
+Dois interlocutores (A e B) querem trocar mensagens via rede. As mensagens secretas devem ser cifradas, então antes de iniciar a comunicação eles devem definir uma chave em comum. 
+
+_como definir uma chave comum através da rede (ambiente inseguro)?_
+
+_Existem funções matemáticas que permitam que A e B combinem uma chave através de um meio inseguro de comunicação?_
+
+![[criptografiaassimetrica.png]]
+
+
+### Problema da Troca de Chaves
+Resolvido em 1976 e publicado por Withfiel Diffie, Martin Hellman e Ralph Merkle, criando o esquema de troca de chaves D-H, o primeiro algoritmo a resolver o problema da substituição de chaves estabelecendo uma chave secreta comum, que pode ser usada com canais inseguros (*sniffing*), com o problema de ser mais lenta que a cifra Simétrica.
