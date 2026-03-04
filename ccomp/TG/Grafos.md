@@ -12,7 +12,7 @@ Denota-se o grau de um vértice (grua$(v)$), a quantidade de vértices adjacente
 
 ---
 
-## Caminho ou Passeio
+# Caminho ou Passeio
 Denominamos caminho ou passeio quando em uma sequencia de vértices, como $v_1, v_2, v_3, v_4$, é possível sair de $v_1$ e chegar a $v_4$ sendo ligado por arestas, exemplo:
 $$v_1 \rightarrow v_2 \rightarrow v_3 \rightarrow v_4$$ Então, dizemos que $v_1$ *alcança* $v_4$, com um *comprimento* do caminho igual a 3. Pois, se o caminho envolve $k$ vértices, o comprimento é dado por $k-1$ que é o número de arestas, ou seja, o comprimento é a contagem de arestas e não dos vértices envolvidos. 
 
@@ -30,3 +30,20 @@ ciclos, são caminhos que contêm pelo menos 3 vértices e tem final no mesmo v�
 $$v_1 \rightarrow v_3  \rightarrow v_7 \rightarrow v_1 $$
 Se o caminho for simples, o ciclo $v_1,...v_k,v_{k-1}$ também é denominado ciclo *simples* ou *elementar*.
 
+## Caminho Hamiltoniano
+Um caminho que passe por cada vértice do grafo exatamente uma vez é chamado de Hamiltoniano.
+$$v_1 \rightarrow v_3 \rightarrow v_4 \rightarrow v_2$$
+Note, que as arestas de $V(E)$ denominadas de $v_k$ não se repetem, sendo esta a propriedade essencial de um caminho Hamiltoniano .
+
+## Caminho Euleriano
+Diferentemente, um caminho ou ciclo que contenha *exatamente uma vez* cada *aresta* do grafo é denominado euleriano.
+$$v_1 \rightarrow v_3 \rightarrow v_4 \rightarrow v_2$$
+Nesta caso, o que deve ser exclusivo são as arestas do caminho ou ciclo $E(G)$, acima sendo representadas como "$\rightarrow$", mas também podem ser denotadas como $e_i$.
+
+### Caminho Euleriano
+Um **caminho euleriano** é **se e somente se** possui apenas **dois** vértices de grau ímpar. 
+### Ciclo Euleriano
+Enquanto um **ciclo é euleriano se não possuí vértices de grau ímpar**.
+
+
+Se um grafo $G$ é euleriano e hamiltoniano ele e chamado de hamiltoniano e euleriano respectivamente.
