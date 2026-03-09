@@ -210,10 +210,27 @@ $$2^n\leq c$$
 portanto
 $$2^{2n}\notin O(2^n)$$
 
+
+### Ex. 3
+prove que $f=O(n²)$
+
+com $f(n)=3n²+5n+7$
+
+diretamente, temos:
+$$3n²+5n+7 \leq c . n²$$
+dividindo ambos os lados por $n²$
+teremos:
+
+$$\frac{7}{n²}+\frac{5}{n}+3 \leq c$$
+com um $n_0>1$ a função $f(n)$ passa a diminuir infinitamente, então teremos este lado da igualdade maior em $n_0=1$. assim podemos definirmos $c=15$ atenderemos a dominância.
+
+$$\therefore 3n²+5n+7 \leq 15n² \ \forall n \geq n_0$$ 
+
 ---
 ## Notação Omega Ω
 Seja duas funções não negativas $f(n)$ e $g(n)$ podemos dizer que $f(n)$ está na ordem $Ω$ de $g(n)$ se escrevermos $f(n)$ = $Ω(g(n))$ ou $f(n) ∈ Ω(g(n))$,  se existem constantes _c_ e _n_ tal que $c > 0$  e $n_0 > 0$.
-Assim tendo $f(n) > 0$ e f(n) ≥ c · _g(n)_ para todo n ≥ n°.
+Assim tendo $f(n) > 0$ e $f(n) ≥ c · g(n)$ para todo $n ≥ n_0$.
+
 
 Ou seja, fazer a prova contraria de **BIG O**  tendo:
 
