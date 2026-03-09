@@ -73,7 +73,7 @@ Em um grafo também é possível aplicar algumas operações. Seja um grafo $G(V
 Denomina-se *complemento* de um grafo $G(V,E$) ao grafo $\bar{G}$ , o qual possui o mesmo conjunto $V$ do que $G$, e tal que para todo par de vértices distintos $(v,w)\in V$, tem se que $(v,w)$ e aresta de $\bar{G}$ se e somente se $(v,w)$ não for de $G$.
 
 ## Grafo Completo
-Um grafo e completo quando existe uma aresta entre cada par de seus vértices. Utiliza-se a notação $K_n$ para designar um grado completo com $n$ vértices.
+Um grafo e completo quando existe uma aresta entre cada par de seus vértices. Utiliza-se a notação $K_n$ para designar um grado completo com $n$ vértices. Ou seja, cada vértice desse grafo e ligado a todos os outros vértices desse grafo, desta forma, todos os vértices tem grau $n-1$.
 ![[grafro-completo.png]]
 
 o numero máximo de arestas de um grafo com $n$ vértices e denotado como $(\frac{n}{2})$ ou seja $\frac{n(n-1)}{2}$ .
