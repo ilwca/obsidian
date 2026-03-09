@@ -185,3 +185,50 @@ _Existem funções matemáticas que permitam que A e B combinem uma chave atrav�
 
 ### Problema da Troca de Chaves
 Resolvido em 1976 e publicado por Withfiel Diffie, Martin Hellman e Ralph Merkle, criando o esquema de troca de chaves D-H, o primeiro algoritmo a resolver o problema da substituição de chaves estabelecendo uma chave secreta comum, que pode ser usada com canais inseguros (*sniffing*), com o problema de ser mais lenta que a cifra Simétrica.
+
+---
+
+# 09/03
+### Privacidade e Internet - temas que não se misturam
+constante fornecimento de dados para fontes publicas e provadas aplicações captura dados de usuários sem autorização.
+- Stalker- expressão em lingual inglesa cuja a tradução se assemelha a "perseguidor"
+- reconhecimento facial em tempo real
+- sequestros digitais
+- fontes de informação OSINT(Open Source Inteligence)
+
+## Direito ao Esquecimento
+Direito que uma pessoa possui de não permitir que um fato ainda que verídico, ocorrido em determinado momento de sua vida, seja exposto ao publico em geral, causando-lhe sofrimento ou transtorno.
+No brasil o direito ao esquecimento possui assento constitucional e legal, considerando que uma consequência do direito a vida privada (privacidade), intimidade e honra, assegurados pela CF/88.
+
+## Redes Descentralizadas - P2P (Peer to Peer)
+Arquitetura de redes de computadores onde cada um dos pontos ou nós da rede funciona tanto como cliente quanto como servidor, permitindo compartilhamentos de serviços e dados sem a necessidade de um servidor central
+Uma rede P2P possui constantemente, uma imensa quantidade de usuários conectados em alta atividade de trocas de arquivos(incluindo associados a praticas delitivas)
+Empresas de mídia e órgão de inteligência cibernética vem distribuindo arquivos falsos em redes de compartilhamento, objetivando proteger o arquivo original de ser distribuído ilegalmente ou para monitorar usuários.
+
+## HTTP e HTTPS
+**HTTP** - Define dentre outras formalidades, como são requisitadas as paginas da Web, como são enviados os dados que o usuário insere m formulários e como o servidor envia mensagens para o navegador do usuário. 
+No entanto como o http é um protocolo baseado em texto, ou seja, toda a informação transmitida esta em texto claro, os dados do usuário e do servidor podem ser interceptados oi alterados no meio do caminho.
+
+### Spoofing
+Spoofing e uma técnica usada para mascarar ou falsificar informações de identificação em comunicações eletrônicas. Pode incluir a falsificação de endereços MAC, IP, e-mails, números de telefone ou qualquer outro dado de identificação. O objetivo e enganar os destinatários e faze-los acreditarem que as comunicações são legitimas, permitindo ataques como: phishing, roubo de informações ou distribuição de malware.
+
+## Proxy
+Em redes de  computadores, um proxy ("procurador", "representante") é um servidor( um sistema de computador ou uma aplicação) que age como um intermediário para requisições de clientes solicitando recursos de outros servidores.
+
+Diferente das VPN's os proxies não criptografam o trafego, podendo deixa-lo vulnerável a riscos de segurança. Não são uma boa opção para ambientes P2P, pois não ocultam toda sua atividade do seu provedor de internet.
+
+## Rede Privada Virtual - VPN
+A Rede de comunicações privada construída sobre uma rede de comunicações publica. Prove um canal de comunicações seguro entre dispositivos.
+Serviço de rede intermediário entre o usuário e a internet, que oferece ferramentas adicionais de criptografia e navegação sigilosa. Cria conexão segura e criptografada, que pode ser considerada como um túnel, entre o cliente e um servidor operando pelo serviço VPN. Ferramenta extremamente poderosa para a segurança das informações pessoais. Forma mais solida, segura e simples de prover considerável nível de privacidade e anonimato.
+Quando adequadamente implementados, estes protocolos podem assegurar comunicações seguras através de redes de computadores.
+
+## Projeto TOR (The Onion Router)
+Marinha norte americana como o objetivo de proteger as comunicaoes do governo.
+Redireciona o trafego de internet através de uma rede de servidores voluntários, distribuidos pelo mundo (mais de oito mil servidores).
+Garantir o anonimato e consequentemente a privacidade. Usuário poderá acessar paginas mesmo que estejam censuradas em seu pais e garantir que o seu trafego não será interceptado por terceiros. Vos a todas as pessoas ao longo do mundo, seja para lutar contra regimes ditatoriais empregados insatisfeitos com suas empresas, denuncia de autoridades de corrupção, entre muitos outros casos. !_6 nós ate a conexão com o serviço._
+### Bloquear TOR Browser
+O navegador TOR não pode ser bloqueado impedindo trafego, pois nos TOP geralmente usam  a porta TCP 443(HTTPS)
+Para bloquear o navegador TOR e necessários encontrar IP's dos nos TOR ativos.
+
+
+
