@@ -45,5 +45,46 @@ Um **caminho euleriano** é **se e somente se** possui apenas **dois** vértices
 ### Ciclo Euleriano
 Enquanto um **ciclo é euleriano se não possuí vértices de grau ímpar**.
 
+#### Teorema
+"Um grafo $G$ conexo possui ciclo euleriano se e somente se todo vértice de $G$ possuir grau par"
+#### Prova
+Dado um grafo $G$ com todos o vértices de grau par:
+- existe pelo menos um ciclo simples $C_1$.
+- remove-se do grafo as arestas de $C_1$ (e ignora-se vértices isolados).
+- O grafo restante continua tendo todos os vértices de grau par. _alguns casos, numero impares de arestas são removidas, mas os vértices continuam com grau par._
+- Se ainda houver arestas, existe um novo ciclo simples $C_2$.
+- Repete-se o processo ate que não reste nenhuma aresta.
+- As arestas ficam particionadas em ciclos simples.
+- Como o grafo original e conexo, esses ciclos compartilham vértices.
+- Pela fusão sucessiva dos ciclos obtém-se um ciclo euleriano.
+
 
 Se um grafo $G$ é euleriano e hamiltoniano ele e chamado de hamiltoniano e euleriano respectivamente.
+
+## Distância
+Denomina se distancia $d(v,w)$ entre dois vértices de um grafo ao comprimento do menor caminho entre $v$ e $w$. _conta somente de arestas!_
+
+## Operações em Grafos
+Em um grafo também é possível aplicar algumas operações. Seja um grafo $G(V, E)$, e uma aresta $e\in E$  Denota-se $G$ o grafo obtido de exclusão da aresta $e$. Se $v,w$ e um par de vértices não adjacentes em $G$, a notação $G+(v,w)$ representa o grafo obtida da criação da aresta ligando $v$ e $w$ Analogamente, dado um $v \in V$ um vértice de $G$, o grafo $G-v$  denota o grafo obtido pela remoção deste vértices e a todas as arestas a ele ligadas.
+![[operacoes-grafos.png]]
+
+
+## Complemento
+Denomina-se *complemento* de um grafo $G(V,E$) ao grafo $\bar{G}$ , o qual possui o mesmo conjunto $V$ do que $G$, e tal que para todo par de vértices distintos $(v,w)\in V$, tem se que $(v,w)$ e aresta de $\bar{G}$ se e somente se $(v,w)$ não for de $G$.
+
+## Grafo Completo
+Um grafo e completo quando existe uma aresta entre cada par de seus vértices. Utiliza-se a notação $K_n$ para designar um grado completo com $n$ vértices.
+![[grafro-completo.png]]
+
+o numero máximo de arestas de um grafo com $n$ vértices e denotado como $(\frac{n}{2})$ ou seja $\frac{n(n-1)}{2}$ .
+aplicando ao grafo $k_5$ teremos $\frac{5\cdot4}{2}= 10$.
+
+## Grafo Bipartido
+Um grafo é um grafo bipartido cujos vértices podem ser divididos em dois conjuntos separados. Ou seja onde $G(V,E)$ e $V$ pode ser dividido em $V_1$ e $V_2$. podendo tambem ser denotado como $G(V_1\cup V_2,E)$ 
+$$V = V_1 \cup V_2$$
+
+de modo que:
+- todas as arestas ligam um vértice de $V_1$ a um vértice de $V_2$ _(em caso de um **bipartido Completo)_.
+- **nenhuma aresta liga vértices dentro do mesmo conjunto**
+Um grafo bipartido completo e denotado como $K_{n1,n2}$ e obviamente possui $n_1$ e $n_2$ arestas, sendo $n_1=|V_1|$ e $n_2=|V_2|$, como nas imagens a seguir.
+![[grafo-bipartido.png]]

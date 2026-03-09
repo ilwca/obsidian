@@ -31,3 +31,6 @@ Em todo grafo, a quantidade de vértices de grau impar é sempre par!
 um grafo é euleriano, quando o vértice de origem e de destino são os mesmo e **todos** os vértices contem grau par.
 
 # Grau do Vértice
+
+---
+# 05/03
