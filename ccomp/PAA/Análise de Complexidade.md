@@ -289,6 +289,22 @@ Assim, existe um n, tal que n > 100. Portanto, conclui-se que
 
 ****_f(n)_ ∉ Ω(n²)****
 
+### Ex3:
+Mostrar que $f(n) = 100n \notin \Omega(n²)$ 
+
+por definição temos que $f(n) = 100n \notin \Omega(n²)$ se $\exists c > 0 | \exists n_0>1$ de modo que:
+$$f(n)\geq c\cdot g(n)\hspace{2cm}\forall n>n_0$$
+
+manipulando a expressão:
+$$100n \geq c\cdot n²$$
+dividindo por $n²$
+$$\frac{100}{n} \geq c$$
+com $f(n)$ tendendo ao infinito a medida que $n$ aumenta, temos que:
+$$f(n) = 100n \notin \Omega(n²)$$
+NAO PERTENCE.
+
+
+---
 
 ## Notação Theta θ
 Seja duas funções _f(n)_ e _g(n)_ não negativas, dizemos que _f(n)_ está na ordem de _g(n)_ e escrevemos _f(n)_ = θ(_g(n)_) ou _f(n)_ ∈ θ(_g(n)_). Então existem constantes c¹ e c² > 0 e n° > 0, tal que:
@@ -344,6 +360,21 @@ dividindo as desigualdades por n²:
 	c¹ ≤ 6n ≤ c²
 
 Assim provamos que _f(n)_ ∉ θ(n²) para um limite superior, pois não há um c¹ finito que seja superior a _f(n)_ para um  _n_  suficientemente grande.
+
+
+### Ex2.
+Mostre que se $g(n)=\frac{1}{2}n²-2n$, então $g(n)=\theta(n²)$.
+
+por definição temos que:
+$$\exists c_1, c_2 > 0 | c_1\cdot g(n) \leq f(n) \leq c_2\cdot g(n)$$
+para um $n_0>0$
+
+$$ c_1\cdot n² \leq \frac{1}{2}n²-2n \leq c_2\cdot n²$$
+dividindo por $n²$
+$$c_1\leq \frac{1}{2}-\frac{2}{n} \leq c_2$$
+.
+.
+.
 
 
 
