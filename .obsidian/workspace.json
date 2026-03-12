@@ -79,18 +79,16 @@
             "id": "8bf978db05aa5e5a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "ccomp/PAA/Análise de Complexidade.md",
-                "mode": "source",
-                "source": false
+                "file": "utils/img/Wheel_graphs.svg"
               },
-              "icon": "lucide-file",
-              "title": "Análise de Complexidade"
+              "icon": "lucide-image",
+              "title": "Wheel_graphs"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -250,33 +248,38 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "8bf978db05aa5e5a",
+  "active": "e49ba6aade3fb32b",
   "lastOpenFiles": [
-    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+    "ccomp/TG/tg-notas.md",
+    "utils/Divisão e conquista.md",
+    "utils/ComprovanteMatricula.pdf",
+    "helpti/pages.canvas",
+    "helpti/helpti-fluxo.md",
+    "ccomp/TG/Grafos.md",
+    "utils/img/Wheel_graphs.svg",
+    "utils/img/XOR.png",
+    "utils/img/tipo-aresta.png",
+    "utils/img/theta.png",
+    "utils/img/text-ascii.png",
+    "utils/img/osi-tcp-ip.png",
+    "utils/img/operacoes-grafos.png",
+    "utils/img/image01.png",
+    "utils/img/grafro-completo.png",
+    "utils/img/grafo-bipartido.png",
+    "utils/img/Não confirmado 772173.crdownload",
     "ccomp/PAA/Análise de Complexidade.md",
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "ccomp/PAA/Greedy algorithm.md",
     "ccomp/PAA/Dynamic Programin.md",
     "ccomp/SAS/sas-notas.md",
-    "ccomp/TG/Grafos.md",
     "sim.md",
-    "utils/img/grafo-bipartido.png",
-    "utils/img/Captura de tela 2026-03-08 223918.png",
-    "utils/img/grafro-completo.png",
-    "utils/img/Captura de tela 2026-03-08 221304.png",
-    "utils/Captura de tela 2026-03-08 221304.png",
-    "Captura de tela 2026-03-08 221304.png",
     "ccomp/TG/Demonstração.md",
-    "ccomp/TG/tg-notas.md",
     "ccomp/PAA/prova-II PAA.md",
     "ccomp/PAA/prova-I.md",
-    "utils/img/operacoes-grafos.png",
     "README.md",
     "excalidraw/Drawing 2026-03-04 10.48.16.excalidraw.md",
-    "helpti/helpti-fluxo.md",
-    "helpti/pages.canvas",
     "Excalidraw/Drawing 2026-03-04 10.48.16.excalidraw.md",
-    "utils/img/criptografiaassimetrica.png",
     "utils/img/criptografiaassimetrica.png.crdownload",
     "jelc/things to study.md",
     "chaves.md",
@@ -284,8 +287,6 @@
     "ccomp/PAA/Glossary.md",
     "ccomp/PAA/todo.md",
     "notacoes assintoticas.md",
-    "utils/img/diagrama-cript.png",
-    "utils/img/cifra-de-bloco.svg.png",
     "utils/img/XOR.png.crdownload",
     "ccomp/Redes/REDES - slide.md",
     "ccomp/TG",
@@ -297,8 +298,6 @@
     "helpti",
     "ccomp/IA/notes-ia",
     "ccomp/IA",
-    "utils/h.chomsky.canvas",
-    "goals",
-    "ccomp/Redes"
+    "utils/h.chomsky.canvas"
   ]
 }

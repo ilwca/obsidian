@@ -42,8 +42,8 @@ Nesta caso, o que deve ser exclusivo são as arestas do caminho ou ciclo $E(G)$,
 
 ### Caminho Euleriano
 Um **caminho euleriano** é **se e somente se** possui apenas **dois** vértices de grau ímpar. 
-### Ciclo Euleriano
-Enquanto um **ciclo é euleriano se não possuí vértices de grau ímpar**.
+### Circuito Euleriano
+Enquanto um **ciclo é euleriano se não possuí vértices de grau ímpar**. Ou seja, todos os vértices tem grau par.
 
 #### Teorema
 "Um grafo $G$ conexo possui ciclo euleriano se e somente se todo vértice de $G$ possuir grau par"

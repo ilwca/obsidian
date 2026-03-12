@@ -557,8 +557,7 @@ então
 
 se `c = 4` e `n° = 1`, temos:
 
-	3n - 1 ≤ 4n  ∀n > 1
-
+$3n - 1 ≤ 4n \hspace{2cm} ∀n > 1$
 Portanto as constantes satisfazem a condição, podemos concluir que:
 
 C(n) ∈ O(n)
@@ -581,11 +580,11 @@ Algoritmo exemplo(A[1..n])
 
 ``soma ← soma + A[j]`` → (n(n+1)/2) no pior caso.
 
-1 + n + 1  + n(n+1)/2) + n + (n(n+1)/2) 
+$1 + n + 1  + n(n+1)/2) + n + (n(n+1)/2)$
 
-2n + 2 + 2((n(n+1)/2))
+$2n + 2 + 2((n(n+1)/2))$
 
-∴ _C(n)_= (n² + n)/2 + 2n + 2
+$∴C(n)= (n² + n)/2 + 2n + 2$
 
 ou seja C(n) ∈ O(n²)
 
@@ -621,9 +620,9 @@ função contar_processos(n):
 
 portanto: 
 
-	1 + (n + 1) + (n + 1) + (n² + n)/2 + 1
+$1 + (n + 1) + (n + 1) + (n² + n)/2 + 1$
 
-∴ _C(n)_ = (n² + n)/2 + 2n + 4
+$∴ C(n) = (n² + n)/2 + 2n + 4$
 
 
 *****
