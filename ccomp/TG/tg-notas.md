@@ -62,7 +62,7 @@ Grafos que seu núcleo tem possui um grafo completo de tamanho $k_n$.
 
 ## Clique
 Denomina-se clique de um grafo $G$, um subgrafo de $G$ que seja completo.
-![[]]
+
 
 
 
@@ -81,13 +81,22 @@ Os problemas de **Otimização** podem derivar em mais dois subproblemas
 Seja um conjunto $S'\subset S$. Diz-se que $S'$ e maximal em relação a uma certa propriedade $P$.
 
 ### Maximal
-maximal é denotado pelo conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$,. Ou seja, $S'$ deve ser o **maior** conjunto possível que atenta a $P$ para ser maximal.  
+maximal é denotado pelo conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$,. Ou seja, $S'$ deve ser o **maior** conjunto possível que atenta a $P$ para ser maximal.
+$S'$ pode ser maximal e não ser máximo. Pode existir um outro conjunto $S''$ que contenha **ou** **não** $S'$ e que satisfaça a propriedade $P$.
 
-Então, caso exista um $S' \subseteq S''$ que seja máximo.
-
+### Revisando
+Para um conjunto ser maximal ele deve:
+- Atender a propriedade  $P$;
+- Ser o **maior** conjunto a fazer isso para ser maximal e máximo;
 ### Minimal
-De mesmo modo, denomina-se minimal um conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$
+De mesmo modo, denomina-se minimal um conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$. De mesmo modo, $S'$ pode ser minimal e não ser mínimo.
 
+### Revisando
+Para um conjunto ser minimal ele deve:
+- Atender a propriedade $P$;
+- Ser o **menor** conjunto a fazer isso
+
+Todos os problemas que envolvem maximizacao e minimizacao sao vistos de forma mais aprofundada em [[Grafos]].
 ## Corte de Vértices
 por definição, o Corte de vértices é o conjunto mínimo de vértices a serem removidos de modo que o grafo fique desconexo.
 

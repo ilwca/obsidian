@@ -70,8 +70,7 @@ Em um grafo também é possível aplicar algumas operações. Seja um grafo $G(V
 
 
 ## Complemento
-Denomina-se *complemento* de um grafo $G(V,E$) ao grafo $\bar{G}$ , o qual possui o mesmo conjunto $V$ do que $G$, e tal que para todo par de vértices distintos $(v,w)\in V$, tem se que $(v,w)$ e aresta de $\bar{G}$ se e somente se $(v,w)$ não for de $G$.
-
+Denomina-se *complemento* de um grafo $G(V,E$) ao grafo $\bar{G}$ , o qual possui o mesmo conjunto $V$ do que $G$, e tal que para todo par de vértices distintos $(v,w)\in V$, tem se que $(v,w)$ e aresta de $\bar{G}$ se e somente se $(v,w)$ não for de $G$. 
 ## Grafo Completo
 Um grafo e completo quando existe uma aresta entre cada par de seus vértices. Utiliza-se a notação $K_n$ para designar um grado completo com $n$ vértices. Ou seja, cada vértice desse grafo e ligado a todos os outros vértices desse grafo, desta forma, todos os vértices tem grau $n-1$.
 ![[grafro-completo.png]]
@@ -88,3 +87,152 @@ de modo que:
 - **nenhuma aresta liga vértices dentro do mesmo conjunto**
 Um grafo bipartido completo e denotado como $K_{n1,n2}$ e obviamente possui $n_1$ e $n_2$ arestas, sendo $n_1=|V_1|$ e $n_2=|V_2|$, como nas imagens a seguir.
 ![[grafo-bipartido.png]]
+
+
+
+## Problemas Computacionais
+Os problemas computacionais podem ser classificados em três tipos:
+- Localização
+- Decisão
+- Otimização
+
+Os problemas de **Otimização** podem derivar em mais dois subproblemas
+### Otimização
+- Maximização
+- Minimização
+
+# Conjuntos Minimal e Maximal
+Seja um conjunto $S'\subset S$. Diz-se que $S'$ e maximal em relação a uma certa propriedade $P$.
+
+### Maximal
+maximal é denotado pelo conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$,. Ou seja, $S'$ deve ser o **maior** conjunto possível que atenta a $P$ para ser maximal.
+$S'$ pode ser maximal e não ser máximo. Pode existir um outro conjunto $S''$ que contenha **ou** **não** $S'$ e que satisfaça a propriedade $P$.
+
+### Revisando
+Para um conjunto ser maximal ele deve:
+- Atender a propriedade  $P$;
+- Ser o **maior** conjunto a fazer isso para ser maximal e máximo;
+### Minimal
+De mesmo modo, denomina-se minimal um conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$. De mesmo modo, $S'$ pode ser minimal e não ser mínimo.
+
+### Revisando
+Para um conjunto ser minimal ele deve:
+- Atender a propriedade $P$;
+- Ser o **menor** conjunto a fazer isso
+
+### Lembrando:
+- **minimal** → remover qualquer vértice faz perder $P$.
+- **maximal** → não é possível adicionar vértices sem perder $P$.
+
+
+# Problemas de Maximização e Minimização
+Os problemas a seguir são problemas de minimização ou de minimização
+- [[#Conjunto Dominante]]
+- [[#Conjunto Independente]]
+- [[#Clique]]
+- [[#Corte de Vértices]]
+- [[#Corte de Arestas]]
+- [[#Emparelhamento]]
+- [[#Cobertura por Vértices]]
+
+## Conjunto Dominante
+Um conjunto $S$ é considerado dominante se todas os vértices estão em $S$ ou todo vértice tem um vizinho contido em $S$.
+
+## Conjunto Independente
+Um par de vértices (se houver) é independente se e somente se não são adjacentes, ou seja, não possuem arestas entre si.
+Por definição temos que:
+$$\forall v,w \in S, (v,w)\notin E$$
+Ou seja, para todos os vértices de $S$, eles são independentes se não houver arestas entre eles, **caso haja dois vértices**.
+pois caso $S=\{v\}$ esta atendendo a propriedade de independência. 
+de mesmo modo se $S=\{w\}$, $S$ também atende a propriedade de independência.
+
+
+# Clique
+Uma clique e um subconjunto de um grafo $G$ de modo que este subconjunto seja completo. Assim como no conjunto $\{2, 3, 4, 6\}$ do grafo (a) da imagem a seguir.
+![[grafo-complemento.png]]
+O conjunto citado forma uma clique de tamanho 4, ou seja, esta e a cardinalidade deste conjunto.
+
+## Corte de Vértices
+Seja um grafo $G(V,E)$ conexo. O corte de vértices de $G$ é um subconjunto minimal de vértices $V' \subseteq V$ cujo sua remoção de $G$, causa a desconexão de $G$, tornando-o um grafo desconexo.
+ou seja, a operação mínima qualquer que seja **relacionada a um vértice** sendo $V'-G$ tornando $G$ desconexo e denominada de corte de vértices.
+Exemplo, ao excluir os vértice 1 em $\bar{G}$ aumenta seu numero de componentes para 3. se desconsiderarmos o vértice 6, a principio, isso tornaria o grafo desconexo, atendendo a definição, pois criaríamos mais um componente ao grafo, que seria o vértice 4. desta forma, teríamos os componentes $\{2,3,5\}$ e $\{4\}$.
+
+## Corte de Arestas
+Analogamente ao Corte de vértices, para um grafo $G$, exista um conjunto minimal de arestas $E'$ de modo que $G-E'$ causando a desconexão de $G$. Ou seja, a operação minimal qualquer que seja relacionada a uma vértice. por exemplo, se considerarmos o grafo da figura 2.7(a).
+$$E'=\{(5,6), (5,4)\}$$
+Este seria um conjunto minimal de corte de arestas.
+$$E'=\{(4,5), (4,6), (4,2), (4,3)\}$$
+Este também seria um conjunto minimal de corte de arestas com relação ao vértice 4.
+
+## Emparelhamento
+ Sega um grafo $G$, emparelhamento e um conjunto de arestas com extremidades distintas duas a duas em que não possuem vértices em comum.
+
+## Cobertura por Vértices
+dado um grafo $G(V, E)$, a cobertura por vértices consiste em um subconjunto de vértices $C \subseteq V$, de modo que cara aresta tenha extremidade em um vértice de $C$, sempre buscando a cardinalidade mínima do conjunto.
+
+![[6n-graf.svg.png]]
+
+
+Considerando o grafo acima, buscamos um conjunto minimal de $C$ que cubra todos os vértices de $V$. Assim, podemos propor:
+$$C_1=\{4,2\}$$
+ou 
+$$C_2=\{4,1\}$$
+
+a seguir, exercícios envolvendo maximal e minimal...
+
+---
+# Exercícios 
+## Ex.1 Conjunto Independente
+
+Considere o grafo $G$:
+
+Visualmente ele seria algo assim:
+```
+A ----- B  
+ \    /  
+   C ----- D ----- E
+```
+A propriedade PPP será:
+
+$P(S):S$ eˊ um conjunto independente.
+
+ou seja, **nenhum par de vértices de $S$ possui aresta entre si**.
+
+Analise os conjuntos abaixo.
+
+### Conjuntos candidatos
+-  $S_1 = \{A,D\}$
+- $S_2 = \{B,E\}$    
+- $S_3 = \{A,D,E\}$
+- $S_4 = \{B,D\}$
+
+### Perguntas
+
+Para cada conjunto:
+- Ele satisfaz a propriedade $P$?  
+- Ele é **minimal**?  
+- Ele é **maximal**?
+
+### Resposta
+
+-  $S_1 = \{A,D\}$ $\rightarrow$ satisfaz $P$ e maximal 
+- $S_2 = \{B,E\}$ $\rightarrow$ satisfaz $P$ e maximal
+- $S_3 = \{A,D,E\}$ $\rightarrow$ **não** satisfaz $P$.
+- $S_4 = \{B,D\}$ $\rightarrow$ satisfaz $P$ e maximal
+## Ex.2 — Conjunto Dominante
+
+Agora considere a propriedade:
+
+$P(S):S$ eˊ um conjunto dominante
+ou seja:
+
+todo vértice **está em $S$** ou é **vizinho de algum vértice de $S$**.
+### Pergunta
+Encontre **um conjunto dominante minimal**.
+
+### Resposta
+conjuntos dominantes:
+$S_1=\{C, E\}$
+$S_2=\{D, A\}$
+$S_3=\{D, B\}$
+---

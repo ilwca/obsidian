@@ -15,7 +15,7 @@ ccomp/
 └── Redes/
 ```  
 
-cada diretório de matéria será composto por anotações em arquivos `.md` escritos usando o software [obisdian](obsidian.md), feito justamente para anotações e estudos.
+cada diretório de matéria será composto por anotações em arquivos `.md` escritos usando o software [Obsidian](https://obsidian.md/) , feito justamente para anotações e estudos.
 Algumas ressalvas, como anexos que estarão em outros diretórios como o ...
 
 # utils
