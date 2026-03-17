@@ -231,4 +231,64 @@ O navegador TOR não pode ser bloqueado impedindo trafego, pois nos TOP geralmen
 Para bloquear o navegador TOR e necessários encontrar IP's dos nos TOR ativos.
 
 
+---
+
+# 16/03
+
+## Portas
+Software ou processo servindo de ponto final de comunicações em um sistema operacional hospedeiro.
+Identifica aplicações e processos de um computador. A porta é identificada por um numero de 16 bits. E adicionado a um endereço de IP do computador, completando o endereço de destino para uma sessão de comunicação.
+Pacotes de dados são encaminhados através da rede para um endereço IP de destino, e em seguida, ao atingir o computador de destino, são encaminhadas para o processo específico ligado ao número de porta de destino.
+
+Aplicações e execuções de serviços comuns costumam ser especificamente reservadas, números bem conhecidos de porta para receber solicitações de serviços das maquinas.
+As primeiras  1024 portas são reservadas ("Well Known Ports"). Geralmente, estão reservadas para os processos sistema (daemon) ou aos programas executados por utilizadores privilegiados.
+Tradicionalmente associados aos protocolos TCP e UDP da camada de transporte.
+
+## Verificando Estado de Portas
+netstat (estatísticas de rede) ferramenta utilitária de rede de linha de comando que exibe conexões de rede TCP e UDP, tabelas de roteamento e estatísticas de protocolo de rede.
+
+## NetCat
+Utilitário de rede capaz de enviar e receber dados através de conexões de rede , usando protocolo TCP.
+Ferramenta de depuração e exploração de rede rica em recursos. Permite a abertura de portas (listening) e tunelamento de comunicações.
+
+## Bind Shells & Reverse Shells
+redireciona operações shell para um host de destino. Útil para execução remota de comandos em hosts comprometidos. Comum em backdoors.
+![[bind-shells.png]]
+![[reverse-shells.jpg]]
+
+
+## Nmap
+Utilitário para mapeamento de rede e auditoria de segurança, utilizado por profissionais de segurança cibernética e iniciantes para auditar e descobrir portas abertas locais e remotas, alem de hosts e infromações de rede.
+Ideal para identificar serviços ou servidores em uma rede.
+### Recursos
+Os recursos que o Nmap incluem:
+- **Descoberta de Hosts** - Identificando hosts na rede
+- **Scanner de Portas** - Mostrando as portas TCP e UDP abertas
+- **Detecção de versão** - interrogando serviços na rede para determinar a aplicações e o número da versão.
+- **Detecção de sistema operacional** - Remotamente determina o sistema operacional e as características de hardware do host(ex:windows).
+- **Detecção de vulnerabilidades** - Executando scripts atomizados.
+
+
+## IDS - Intrusion Detection System
+Monitora ambientes computacionais em busca de eventos que possam violar regras de segurança. Dentre esses eventos, destacam-se programas realizando atividade que fogem ao seu comportamento comum, malwares (trojans e worms), e invasões de nós.
+Funciona coletando dados, armazenando-os e analisando (em tempo real) padrões de comportamentais, fluxo de dados, horários, dentre outros. Com essas informações, aliado ao conhecimento prévio de padrões de ataque é possível discernir se o evento em questão é um evento malicioso ou não.
+Existem modelos baseado em host e outro baseado em rede. A coleta de dados é feita de variadas formas, desde mecanismo de entrada e saída, como mouse e teclado, a arquivos salvos em seus computadores; tabelas de regras, etc. Também é possível analisar a camada de rede do protocolo TCP/IP e analisar o tipo de fluxo, pacotes que entram e saem conexões estabelecidas, dentre outros.
+
+### Diferença de IDS e IPS
+Um IDS passivo é projetado para detectar ameaças e informar ao administrados da rede sobre a atividade maliciosa detectada.
+Os sistema de prevenção de intrusão (IPS), por outro lado, representa o comportamento de um IDS ativo, ou seja, é projetado com o objetivo de bloquear automaticamente a atividade maliciosa, seja por configuração de firewalls e computadores ou outras tecnicas, como encerramento de conexão via envio de pacores reset.
+[SNORT](https://www.snort.org) - Open Source Network-based instruction detection/prevention (IDS/IPS)
+
+
+## CVE - Commom Vulnerabilities and Exposures
+Base de dados internacional e publica para troca de informações sobre falhas de seguranca.
+Seu objetivo e padronizar nomes para todas as vulnerabilidades e exposições.
+
+## Honey Pots (Potes de Mel)
+Usados para enganar hacker exponto vulnerabilidades conhecidas deliberadamente. Uma vez que o hacker ache um pote de mel, é comum que esse hacker fique em torno desse pote por algum tempo. Durante esse tempo, pode-se catalogar as atividades do hacker para descobrir suas ações tecnicas. Geralmente possui servicos comuns em execução http(80) tcp(21), entre outros. Pode tambem haver a configuração do firewall para redirecionar o trafego em algumas portas para um pote de mel, onde o intruso estará pensando que esta se conectando a um servidor real.
+Como o pote de mel deve parecer real, devem ser criados alguns arquivos de dados contas de usuários, entre outros, todos FALSOS, para garantir que o hacker pense que se trata mesmo de um sistema real, o que fara com que o hacker se coise.
+
+
+
+
 
