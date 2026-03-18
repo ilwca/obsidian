@@ -13,96 +13,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PAA/prova-II.md",
+                "file": "ccomp/PAA/prova-II PAA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "prova-II"
+              "title": "prova-II PAA"
             }
           },
           {
             "id": "e720b1121ba265d7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "utils/English Vocabulary.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".gitignore",
+                "bFile": ".gitignore",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "English Vocabulary"
-            }
-          },
-          {
-            "id": "cb51ba667b13dbd2",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.3"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.3"
-            }
-          },
-          {
-            "id": "c8e3a946c7a13e8b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "utils/English Vocabulary.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "English Vocabulary"
-            }
-          },
-          {
-            "id": "e49ba6aade3fb32b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "helpti/helpti-fluxo.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "helpti-fluxo"
-            }
-          },
-          {
-            "id": "5881aafef34a7386",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "utils/English Vocabulary.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "English Vocabulary"
-            }
-          },
-          {
-            "id": "1f829ab4529c550e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ccomp/SAS/sas-notas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "sas-notas"
+              "icon": "diff",
+              "title": "Diff: .gitignore  (Working Tree)"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -125,7 +58,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de arquivos"
+              "title": "Explorador de ficheiros"
             }
           },
           {
@@ -175,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COMP/PAA/Análise de Complexidade.md",
+                "file": "ccomp/TG/Grafos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Análise de Complexidade"
+              "title": "Backlinks para Grafos"
             }
           },
           {
@@ -194,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COMP/PAA/Divide and conquer - Atividade PAA.md",
+                "file": "ccomp/TG/Grafos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Divide and conquer - Atividade PAA"
+              "title": "Links externos de Grafos"
             }
           },
           {
@@ -223,17 +156,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COMP/PAA/IDK.md",
+                "file": "ccomp/TG/Grafos.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de IDK"
+              "title": "Índice de Grafos"
             }
           },
           {
-            "id": "d416e12f00668310",
+            "id": "bf28868f2c49d20e",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -251,66 +184,67 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir a troca rápida": false,
-      "graph:Abrir visualização em gráfico": false,
-      "canvas:Criar novo canvas": false,
-      "daily-notes:Abrir a nota de hoje": false,
-      "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false,
+      "canvas:Criar novo Canvas": false,
       "bases:Criar nova base": false,
+      "switcher:Abrir Quick Switcher": false,
+      "graph:Abrir Visualização de diagrama de grafo": false,
+      "daily-notes:Abrir nota de hoje": false,
+      "templates:Inserir templates": false,
+      "command-palette:Abrir paleta de comando": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "1f829ab4529c550e",
+  "active": "5f1b0378410e8164",
   "lastOpenFiles": [
-    "ccomp/TG/Grafos.md",
     "utils/img/reverse-shells.jpg",
     "utils/img/bind-shells.png",
+    "ccomp/TG/Grafos.md",
     "ccomp/TG/tg-notas.md",
-    "jelc/documento de Adesão.md",
     "README.md",
-    "ccomp/TG/notas.md",
-    "utils/img/tipo-aresta.png",
-    "utils/img/text-ascii.png",
-    "utils/img/operacoes-grafos.png",
-    "utils/img/grafro-completo.png",
-    "utils/img/grafo-complemento.png",
-    "utils/img/grafo-bipartido.png",
-    "utils/img/diagrama-cript.png",
-    "utils/img/criptografiaassimetrica.png",
-    "ccomp/PAA/prova-II PAA.md",
-    "ccomp/PAA/Glossary.md",
-    "ccomp/PAA/Análise de Complexidade.md",
-    "utils/img/Não confirmado 262877.crdownload",
-    "ccomp/PAA/Dynamic Programin.md",
-    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
-    "ccomp/TG",
-    "utils/h.chomsky.canvas",
-    "utils/ComprovanteMatricula.pdf",
-    "ccomp/SAS/Notas.md",
+    "obsidian.md",
     "utils/English Vocabulary.md",
-    "ccomp/SAS",
-    "Goals/Goals.md",
-    "helpti/helpti-fluxo.md",
+    "utils/img/6n-graf.svg.png",
+    "utils/img/Não confirmado 432953.crdownload",
+    "utils/img/grafo-complemento.png",
+    "utils/img/Captura de tela 2026-03-14 134203.png",
+    "utils/Divisão e conquista.md",
+    "utils/ComprovanteMatricula.pdf",
     "helpti/pages.canvas",
-    "ccomp/Compiladores/todo - compiladores.md",
-    "ccomp/Compiladores/Gramáticas.md",
-    "ccomp/Compiladores/Anotações.md",
-    "ccomp/Redes/REDES - slide.md",
-    "Excalidraw/Drawing 2026-02-03 12.15.29.excalidraw.md",
-    "Excalidraw/Drawing 2026-02-03 12.15.38.excalidraw.md",
+    "helpti/helpti-fluxo.md",
+    "utils/img/Wheel_graphs.svg",
+    "utils/img/XOR.png",
+    "utils/img/tipo-aresta.png",
+    "utils/img/theta.png",
+    "utils/img/text-ascii.png",
+    "utils/img/osi-tcp-ip.png",
+    "utils/img/Não confirmado 772173.crdownload",
+    "ccomp/PAA/Análise de Complexidade.md",
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
-    "ccomp/PAA/prova-II.md",
-    "ccomp/PAA/prova-I.md",
     "ccomp/PAA/Greedy algorithm.md",
-    "ccomp/PAA/Gossary.md",
-    "Excalidraw",
+    "ccomp/PAA/Dynamic Programin.md",
+    "ccomp/SAS/sas-notas.md",
+    "sim.md",
+    "ccomp/TG/Demonstração.md",
+    "ccomp/PAA/prova-II PAA.md",
+    "ccomp/PAA/prova-I.md",
+    "excalidraw/Drawing 2026-03-04 10.48.16.excalidraw.md",
+    "Excalidraw/Drawing 2026-03-04 10.48.16.excalidraw.md",
+    "utils/img/criptografiaassimetrica.png.crdownload",
+    "jelc/things to study.md",
+    "chaves.md",
+    "ccomp/PAA/Glossary.md",
+    "ccomp/PAA/todo.md",
+    "notacoes assintoticas.md",
+    "utils/img/XOR.png.crdownload",
+    "ccomp/Redes/REDES - slide.md",
+    "ccomp/TG",
+    "ccomp/SAS",
     "helpti/helpti.canvas",
+    "excalidraw",
     "helpti",
     "ccomp/IA/notes-ia",
-    "ccomp/IA",
-    "goals",
-    "ccomp/Redes"
+    "utils/h.chomsky.canvas"
   ]
 }
