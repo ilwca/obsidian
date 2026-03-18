@@ -1,4 +1,4 @@
-[[h.chomsky.canvas|h.chomsky]]
+![[h.chomsky.canvas|h.chomsky]]
 
 
 Uma gramática é formada por uma quadrupla. G = (V T P S )

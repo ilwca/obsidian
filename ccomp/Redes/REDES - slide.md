@@ -36,7 +36,7 @@ O protocolo ethernet é o padrão da camada 2, que define como os dados sao form
 
 - **Velocidade Comuns** : 10Mbps (BASE-T), 100Mbps (BASE-T), 1Gbps(Gigabit ethernet), 10Gbps (10 Gigabit ethernet).
 
-- **Meio Fisico**: cabos de par trançado (CAT6), Fibra ótica ou comunicação sem fio (WIFI).
+- **Meio Físico**: cabos de par trançado (CAT6), Fibra ótica ou comunicação sem fio (WIFI).
 
 - **Responsabilidade**: Entrega de quadros na mesma LAN usando endereço MAC.
 
