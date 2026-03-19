@@ -235,4 +235,8 @@ conjuntos dominantes:
 $S_1=\{C, E\}$
 $S_2=\{D, A\}$
 $S_3=\{D, B\}$
+
 ---
+
+## Arvore
+Denomina-se arvore $T(V, E)$ um grafo conexo e acíclico. Se um vértice deste grafo possui grau $\leq 1,$ então $v$ e uma folha. Caso contrario, $v$ e um vértice interior.
