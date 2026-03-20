@@ -39,14 +39,12 @@
             "id": "4c772072bf6b83ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "ccomp/TG/Grafos.md",
-                "mode": "source",
-                "source": false
+                "file": "subido/Drawing 2026-03-18 10.18.08.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "Grafos"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-03-18 10.18.08.excalidraw"
             }
           }
         ],
@@ -213,7 +211,20 @@
   },
   "active": "4c772072bf6b83ee",
   "lastOpenFiles": [
+    "utils/img/tecnicas_demonstracao.pdf",
+    "utils/img/Não confirmado 680286.crdownload",
     "ccomp/TG/Grafos.md",
+    "utils/img/grafo-isomorfo.png",
+    "utils/img/XOR.png",
+    "utils/Divisão e conquista.md",
+    "utils/img/Wheel_graphs.svg",
+    "utils/img/tipo-aresta.png",
+    "utils/img/theta.png",
+    "utils/img/text-ascii.png",
+    "utils/img/reverse-shells.jpg",
+    "utils/img/osi-tcp-ip.png",
+    "utils/img/operacoes-grafos.png",
+    "utils/img/image01.png",
     "subido/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "ccomp/TG/tg-notas.md",
     "Excalidraw/Drawing 2026-03-18 10.18.08.excalidraw.md",
@@ -229,38 +240,25 @@
     "utils/h.chomsky.canvas",
     "utils/Gramatica BNF.md",
     "utils/English Vocabulary.md",
-    "utils/Divisão e conquista.md",
-    "utils/img/5-star.png",
     "ccomp/Compiladores/Gramáticas.md",
     "ccomp/Compiladores/Anotações.md",
     "ccomp/IA/Kmeans.md",
     "subido",
     "ccomp/PAA/todo.md",
     "ccomp/PAA/prova-II PAA.md",
-    "utils/img/reverse-shells.jpg",
-    "utils/img/bind-shells.png",
     "obsidian.md",
-    "utils/img/6n-graf.svg.png",
     "utils/img/Não confirmado 432953.crdownload",
-    "utils/img/grafo-complemento.png",
-    "utils/img/Captura de tela 2026-03-14 134203.png",
     "utils/ComprovanteMatricula.pdf",
     "helpti/pages.canvas",
     "helpti/helpti-fluxo.md",
-    "utils/img/Wheel_graphs.svg",
-    "utils/img/XOR.png",
-    "utils/img/tipo-aresta.png",
-    "utils/img/theta.png",
     "utils/img/Não confirmado 772173.crdownload",
     "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "ccomp/PAA/Greedy algorithm.md",
-    "ccomp/PAA/Dynamic Programin.md",
     "utils/img/criptografiaassimetrica.png.crdownload",
     "utils/img/XOR.png.crdownload",
     "ccomp/TG",
-    "ccomp/SAS",
     "helpti/helpti.canvas"
   ]
 }

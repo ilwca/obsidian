@@ -8,7 +8,7 @@ As vezes podemos encontrar alguns tipos exóticos de arestas que também são va
 
 
 ## Grau
-Denota-se o grau de um vértice (grua$(v)$), a quantidade de vértices adjacentes de um $v \in V$. Um grafo $G(V, E)$ tem grau regular de $r$, quando o grau de todos os vértices e igual a $r$. Um vértice que possui grau zero é chamado _isolado_.
+Denota-se o grau de um vértice (grau$(v)$), a quantidade de vértices adjacentes de um $v \in V$. Um grafo $G(V, E)$ tem grau regular de $r$, quando o grau de todos os vértices e igual a $r$. Um vértice que possui grau zero é chamado _isolado_.
 
 ---
 
@@ -35,15 +35,18 @@ Um caminho que passe por cada vértice do grafo exatamente uma vez é chamado de
 $$v_1 \rightarrow v_3 \rightarrow v_4 \rightarrow v_2$$
 Note, que as arestas de $V(E)$ denominadas de $v_k$ não se repetem, sendo esta a propriedade essencial de um caminho Hamiltoniano .
 
+### Ciclo Hamiltoniano
+Um ciclo é um caminho denotado por $C$ de modo que  $C \subseteq V$, onde cada vértice é visitado somente uma vez, o vértice de destino é igual ao vértice de origem, ou seja, $v_1 = v_k$, onde $k \geq 3$. exemplo:
+$$v_1 \rightarrow v_2 \rightarrow v_3 \rightarrow v_1$$
+
 ## Caminho Euleriano
 Diferentemente, um caminho ou ciclo que contenha *exatamente uma vez* cada *aresta* do grafo é denominado euleriano.
 $$v_1 \rightarrow v_3 \rightarrow v_4 \rightarrow v_2$$
 Nesta caso, o que deve ser exclusivo são as arestas do caminho ou ciclo $E(G)$, acima sendo representadas como "$\rightarrow$", mas também podem ser denotadas como $e_i$.
 
-### Caminho Euleriano
-Um **caminho euleriano** é **se e somente se** possui apenas **dois** vértices de grau ímpar. 
+Um **caminho euleriano** é **se e somente se** possui apenas **dois** vértices de grau ímpar. No caso acima, percebe-se que somente $v_1$ e $v_2$  possuem grau impar e o restante par. 
 ### Circuito Euleriano
-Enquanto um **ciclo é euleriano se não possuí vértices de grau ímpar**. Ou seja, todos os vértices tem grau par.
+Um **ciclo é euleriano se não possuí vértices de grau ímpar**. Ou seja, todos os vértices tem grau par.
 
 #### Teorema
 "Um grafo $G$ conexo possui ciclo euleriano se e somente se todo vértice de $G$ possuir grau par"
@@ -62,7 +65,7 @@ Dado um grafo $G$ com todos o vértices de grau par:
 Se um grafo $G$ é euleriano e hamiltoniano ele e chamado de hamiltoniano e euleriano respectivamente.
 
 ## Distância
-Denomina se distancia $d(v,w)$ entre dois vértices de um grafo ao comprimento do menor caminho entre $v$ e $w$. _conta somente de arestas!_
+Denomina se distancia $d(v,w)$ entre dois vértices de um grafo ao comprimento do menor caminho entre $v$ e $w$. (se tratando de arestas), Ou seja, quantas arestas há de $v$ a $w$.
 
 ## Operações em Grafos
 Em um grafo também é possível aplicar algumas operações. Seja um grafo $G(V, E)$, e uma aresta $e\in E$  Denota-se $G$ o grafo obtido de exclusão da aresta $e$. Se $v,w$ e um par de vértices não adjacentes em $G$, a notação $G+(v,w)$ representa o grafo obtida da criação da aresta ligando $v$ e $w$ Analogamente, dado um $v \in V$ um vértice de $G$, o grafo $G-v$  denota o grafo obtido pela remoção deste vértices e a todas as arestas a ele ligadas.
@@ -226,7 +229,7 @@ Agora considere a propriedade:
 $P(S):S$ eˊ um conjunto dominante
 ou seja:
 
-todo vértice **está em $S$** ou é **vizinho de algum vértice de $S$**.
+todo vértice **está em $S$** ou é **vizinho de algum vértice de $S$**.z
 ### Pergunta
 Encontre **um conjunto dominante minimal**.
 
@@ -235,6 +238,13 @@ conjuntos dominantes:
 $S_1=\{C, E\}$
 $S_2=\{D, A\}$
 $S_3=\{D, B\}$
+
+
+## Ex3. 
+Dado um grafo $G(V,E)$, visualmente :
+![[grafo-isomorfo.png]]
+
+
 
 ---
 
