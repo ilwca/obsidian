@@ -39,12 +39,14 @@
             "id": "4c772072bf6b83ee",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "subido/Drawing 2026-03-18 10.18.08.excalidraw.md"
+                "file": "ccomp/TG/Grafos.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-03-18 10.18.08.excalidraw"
+              "icon": "lucide-file",
+              "title": "Grafos"
             }
           }
         ],
@@ -211,6 +213,9 @@
   },
   "active": "4c772072bf6b83ee",
   "lastOpenFiles": [
+    "utils/img/grafo-arvore-geradora.png",
+    "utils/img/Não confirmado 788159.crdownload",
+    "subido/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "utils/img/tecnicas_demonstracao.pdf",
     "utils/img/Não confirmado 680286.crdownload",
     "ccomp/TG/Grafos.md",
@@ -225,7 +230,6 @@
     "utils/img/osi-tcp-ip.png",
     "utils/img/operacoes-grafos.png",
     "utils/img/image01.png",
-    "subido/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "ccomp/TG/tg-notas.md",
     "Excalidraw/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "subido/Notas de Curso.md",
@@ -257,8 +261,6 @@
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "ccomp/PAA/Greedy algorithm.md",
     "utils/img/criptografiaassimetrica.png.crdownload",
-    "utils/img/XOR.png.crdownload",
-    "ccomp/TG",
     "helpti/helpti.canvas"
   ]
 }

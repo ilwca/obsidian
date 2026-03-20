@@ -91,7 +91,8 @@ de modo que:
 Um grafo bipartido completo e denotado como $K_{n1,n2}$ e obviamente possui $n_1$ e $n_2$ arestas, sendo $n_1=|V_1|$ e $n_2=|V_2|$, como nas imagens a seguir.
 ![[grafo-bipartido.png]]
 
-
+### Teorema 
+Um grafo $G$ é bipartido, se e somente se, $G$ não possui ciclo de tamanho ímpar.
 
 ## Problemas Computacionais
 Os problemas computacionais podem ser classificados em três tipos:
@@ -151,7 +152,7 @@ de mesmo modo se $S=\{w\}$, $S$ também atende a propriedade de independência.
 
 
 # Clique
-Uma clique e um subconjunto de um grafo $G$ de modo que este subconjunto seja completo. Assim como no conjunto $\{2, 3, 4, 6\}$ do grafo (a) da imagem a seguir.
+Uma clique e um subconjunto de um grafo $G$ de modo que este subconjunto seja um [[#Grafo Completo]]. Assim como no conjunto $\{2, 3, 4, 6\}$ do grafo (a) da imagem a seguir.
 ![[grafo-complemento.png]]
 O conjunto citado forma uma clique de tamanho 4, ou seja, esta e a cardinalidade deste conjunto.
 
@@ -248,5 +249,19 @@ Dado um grafo $G(V,E)$, visualmente :
 
 ---
 
-## Arvore
+## Árvore
 Denomina-se arvore $T(V, E)$ um grafo conexo e acíclico. Se um vértice deste grafo possui grau $\leq 1,$ então $v$ e uma folha. Caso contrario, $v$ e um vértice interior.
+
+Caso o grafo  $T$ seja desconexo e acíclico, este é uma floresta. Pode-se provar por indução que toda arvore com $n$ vértices, possui $n-1$ arestas.
+
+### Caracterização
+Um grafo $T$ é uma arvore, se e somente se, existe somente um único caminho entre cada par de vértices.
+
+## Centro
+A _excentricidade_ de um vértice $v \in V$ é a distancia máxima entre este e qualquer outro $w \in V$. É denominado o _centro_ do grafo, o conjunto de $v \in V$ de excentricidade mínima.
+
+## Subgrafo Gerador
+Dado um grafo $G$, o subgrafo gerador é denotado por $G_1(V_1, E_1)$ de modo que $V_1 = V$ onde $E_1$ é o conjunto mínimo de arestas que mantenha $G_1$ conexo. Quando $G_1$ é uma arvore, este pode ser denotado como [[#Árvore Geradora]].
+## Árvore Geradora
+considerando um grafo $G$ conexo, para a obtenção de uma arvore geradora, considera-se um $e$ de modo que $G-e$ seja conexo. A repetição desta subtração ate que não haja mais $e$ que seja possível subtrair de $G$ de modo que esta ainda seja conexo, origina uma **arvore geradora**.
+Ou seja, a arvore geradora e a versão mínima de arestas de $G$ que ainda o mantêm conexo.
