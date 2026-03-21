@@ -39,14 +39,12 @@
             "id": "4c772072bf6b83ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "ccomp/TG/Grafos.md",
-                "mode": "source",
-                "source": false
+                "file": "subido/Drawing 2026-03-18 10.18.08.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "Grafos"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-03-18 10.18.08.excalidraw"
             }
           }
         ],
@@ -213,12 +211,13 @@
   },
   "active": "4c772072bf6b83ee",
   "lastOpenFiles": [
+    "subido/Notas de Curso.md",
+    "subido/Drawing 2026-03-18 10.18.08.excalidraw.md",
+    "ccomp/TG/Grafos.md",
     "utils/img/grafo-arvore-geradora.png",
     "utils/img/Não confirmado 788159.crdownload",
-    "subido/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "utils/img/tecnicas_demonstracao.pdf",
     "utils/img/Não confirmado 680286.crdownload",
-    "ccomp/TG/Grafos.md",
     "utils/img/grafo-isomorfo.png",
     "utils/img/XOR.png",
     "utils/Divisão e conquista.md",
@@ -229,10 +228,8 @@
     "utils/img/reverse-shells.jpg",
     "utils/img/osi-tcp-ip.png",
     "utils/img/operacoes-grafos.png",
-    "utils/img/image01.png",
     "ccomp/TG/tg-notas.md",
     "Excalidraw/Drawing 2026-03-18 10.18.08.excalidraw.md",
-    "subido/Notas de Curso.md",
     "Excalidraw/Drawing 2026-03-17 22.51.46.excalidraw.md",
     "Sem título.base",
     "Sem título 1.base",
