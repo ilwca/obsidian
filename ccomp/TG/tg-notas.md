@@ -11,17 +11,10 @@ Portanto, um grafo pode ser denotado por G=(V, E), sendo:
 **V** → Conjunto de vértices. ex:  $\{v_1, v_2, v_3,..., n\}$
 **E** → Conjunto de Arestas. ex: $\{e_1, e_2, e_3,..., m\}$
 
-
 portanto, definimos a cardinalidade, dos vértices de um grafo como:
 $$|V(G)| = n$$
 e de mesmo modo para o conjunto de Arestas.
-$$|E(G|=m$$
-
-considerando o grafo:
-![[5-star.png]]
-
-
-
+$$|E(G)|=m$$
 
 ## Grafo atravessável
 um grafo é atravessável, se e somente se, contêm somente **dois** vértices de paridade ímpar.

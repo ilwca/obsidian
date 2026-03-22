@@ -25,15 +25,17 @@ Desta forma, passamos por cada vértice uma única vez.
 No trajeto os vértices podem se repetir, porem, as aresta não. Exemplo:
 $$v_2 \rightarrow v_3 \rightarrow v_7 \rightarrow v_6 \rightarrow v_2 \rightarrow v_1 \rightarrow v_5$$Percebe-se que $v_2$ aparece duas vezes, porem, por meio de arestas diferentes, sendo a primeira em $(v_2, v_3)$ e na outra por $(v_6, v_2)$ ou $(v_2, v_1)$.
 
+## Caminho Hamiltoniano
+Um caminho que passe por cada vértice do grafo exatamente uma vez é chamado de Hamiltoniano.
+$$v_1 \rightarrow v_3 \rightarrow v_4 \rightarrow v_2$$
+Note, que os vértices $V(G)$ denominadas de $v_k$ não se repetem, sendo esta a propriedade essencial de um caminho Hamiltoniano .
+
 ## Ciclo
 ciclos, são caminhos que contêm pelo menos 3 vértices e tem final no mesmo vértice de origem, por exemplo:
 $$v_1 \rightarrow v_3  \rightarrow v_7 \rightarrow v_1 $$
 Se o caminho for simples, o ciclo $v_1,...v_k,v_{k-1}$ também é denominado ciclo *simples* ou *elementar*.
 
-## Caminho Hamiltoniano
-Um caminho que passe por cada vértice do grafo exatamente uma vez é chamado de Hamiltoniano.
-$$v_1 \rightarrow v_3 \rightarrow v_4 \rightarrow v_2$$
-Note, que as arestas de $V(E)$ denominadas de $v_k$ não se repetem, sendo esta a propriedade essencial de um caminho Hamiltoniano .
+Grafos ciclo são denotados por $C_n$ onde $n$ é o numero de arestas que compõem aquele ciclo.
 
 ### Ciclo Hamiltoniano
 Um ciclo é um caminho denotado por $C$ de modo que  $C \subseteq V$, onde cada vértice é visitado somente uma vez, o vértice de destino é igual ao vértice de origem, ou seja, $v_1 = v_k$, onde $k \geq 3$. exemplo:
@@ -47,7 +49,8 @@ Nesta caso, o que deve ser exclusivo são as arestas do caminho ou ciclo $E(G)$,
 Um **caminho euleriano** é **se e somente se** possui apenas **dois** vértices de grau ímpar. No caso acima, percebe-se que somente $v_1$ e $v_2$  possuem grau impar e o restante par. 
 ### Circuito Euleriano
 Um **ciclo é euleriano se não possuí vértices de grau ímpar**. Ou seja, todos os vértices tem grau par.
-
+![[grafo-C-euleriano.png]]
+Este é um exemplo de um grafo que possui **ciclo euleriano** e **não possui ciclo hamiltoniano**, devido a repetição do vértice 3.
 #### Teorema
 "Um grafo $G$ conexo possui ciclo euleriano se e somente se todo vértice de $G$ possuir grau par"
 #### Prova
@@ -60,7 +63,6 @@ Dado um grafo $G$ com todos o vértices de grau par:
 - As arestas ficam particionadas em ciclos simples.
 - Como o grafo original e conexo, esses ciclos compartilham vértices.
 - Pela fusão sucessiva dos ciclos obtém-se um ciclo euleriano.
-
 
 Se um grafo $G$ é euleriano e hamiltoniano ele e chamado de hamiltoniano e euleriano respectivamente.
 
@@ -75,14 +77,14 @@ Em um grafo também é possível aplicar algumas operações. Seja um grafo $G(V
 ## Complemento
 Denomina-se *complemento* de um grafo $G(V,E$) ao grafo $\bar{G}$ , o qual possui o mesmo conjunto $V$ do que $G$, e tal que para todo par de vértices distintos $(v,w)\in V$, tem se que $(v,w)$ e aresta de $\bar{G}$ se e somente se $(v,w)$ não for de $G$. 
 ## Grafo Completo
-Um grafo e completo quando existe uma aresta entre cada par de seus vértices. Utiliza-se a notação $K_n$ para designar um grado completo com $n$ vértices. Ou seja, cada vértice desse grafo e ligado a todos os outros vértices desse grafo, desta forma, todos os vértices tem grau $n-1$.
+Um grafo e completo quando existe uma aresta entre cada par de seus vértices. Utiliza-se a notação $K_n$ para designar um grafo completo com $n$ vértices. Ou seja, cada vértice desse grafo e ligado a todos os outros vértices desse grafo, desta forma, todos os vértices tem grau $n-1$.
 ![[grafro-completo.png]]
 
 o numero máximo de arestas de um grafo com $n$ vértices e denotado como $(\frac{n}{2})$ ou seja $\frac{n(n-1)}{2}$ .
 aplicando ao grafo $k_5$ teremos $\frac{5\cdot4}{2}= 10$.
 
 ## Grafo Bipartido
-Um grafo é um grafo bipartido cujos vértices podem ser divididos em dois conjuntos separados. Ou seja onde $G(V,E)$ e $V$ pode ser dividido em $V_1$ e $V_2$. podendo tambem ser denotado como $G(V_1\cup V_2,E)$ 
+Um grafo é um grafo bipartido cujos vértices podem ser divididos em dois conjuntos separados. Ou seja onde $G(V,E)$ e $V$ pode ser dividido em $V_1$ e $V_2$. podendo também ser denotado como $G(V_1\cup V_2,E)$ 
 $$V = V_1 \cup V_2$$
 
 de modo que:
@@ -90,7 +92,7 @@ de modo que:
 - **nenhuma aresta liga vértices dentro do mesmo conjunto**
 Um grafo bipartido completo e denotado como $K_{n1,n2}$ e obviamente possui $n_1$ e $n_2$ arestas, sendo $n_1=|V_1|$ e $n_2=|V_2|$, como nas imagens a seguir.
 ![[grafo-bipartido.png]]
-
+Na imagem acima temos um grafo bipartido completo $K_{2,3}$, que se a notação de $K_{|V_1|,|V_2|}$.
 ### Teorema 
 Um grafo $G$ é bipartido, se e somente se, $G$ não possui ciclo de tamanho ímpar.
 
@@ -109,16 +111,15 @@ Os problemas de **Otimização** podem derivar em mais dois subproblemas
 Seja um conjunto $S'\subset S$. Diz-se que $S'$ e maximal em relação a uma certa propriedade $P$.
 
 ### Maximal
-maximal é denotado pelo conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$,. Ou seja, $S'$ deve ser o **maior** conjunto possível que atenta a $P$ para ser maximal.
+maximal é denotado pelo conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$,. Ou seja, $S'$ deve ser o **maior** conjunto que atenta a $P$ para ser maximal.
 $S'$ pode ser maximal e não ser máximo. Pode existir um outro conjunto $S''$ que contenha **ou** **não** $S'$ e que satisfaça a propriedade $P$.
-
 ### Revisando
 Para um conjunto ser maximal ele deve:
 - Atender a propriedade  $P$;
 - Ser o **maior** conjunto a fazer isso para ser maximal e máximo;
+
 ### Minimal
 De mesmo modo, denomina-se minimal um conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$. De mesmo modo, $S'$ pode ser minimal e não ser mínimo.
-
 ### Revisando
 Para um conjunto ser minimal ele deve:
 - Atender a propriedade $P$;
@@ -146,15 +147,14 @@ Um conjunto $S$ é considerado dominante se todas os vértices estão em $S$ ou 
 Um par de vértices (se houver) é independente se e somente se não são adjacentes, ou seja, não possuem arestas entre si.
 Por definição temos que:
 $$\forall v,w \in S, (v,w)\notin E$$
-Ou seja, para todos os vértices de $S$, eles são independentes se não houver arestas entre eles, **caso haja dois vértices**.
+Ou seja, para todos os vértices de $S$, eles são independentes se não houver arestas entre eles, **caso haja dois vértices**, pois um conjunto unitário também e independente.
 pois caso $S=\{v\}$ esta atendendo a propriedade de independência. 
 de mesmo modo se $S=\{w\}$, $S$ também atende a propriedade de independência.
-
 
 # Clique
 Uma clique e um subconjunto de um grafo $G$ de modo que este subconjunto seja um [[#Grafo Completo]]. Assim como no conjunto $\{2, 3, 4, 6\}$ do grafo (a) da imagem a seguir.
 ![[grafo-complemento.png]]
-O conjunto citado forma uma clique de tamanho 4, ou seja, esta e a cardinalidade deste conjunto.
+O conjunto citado forma uma clique de tamanho 4, ou seja, esta é a cardinalidade deste conjunto.
 
 ## Corte de Vértices
 Seja um grafo $G(V,E)$ conexo. O corte de vértices de $G$ é um subconjunto minimal de vértices $V' \subseteq V$ cujo sua remoção de $G$, causa a desconexão de $G$, tornando-o um grafo desconexo.
@@ -177,7 +177,7 @@ dado um grafo $G(V, E)$, a cobertura por vértices consiste em um subconjunto de
 ![[6n-graf.svg.png]]
 
 
-Considerando o grafo acima, buscamos um conjunto minimal de $C$ que cubra todos os vértices de $V$. Assim, podemos propor:
+Considerando o grafo acima, buscamos um conjunto minimal de $S$ que cubra todos os vértices de $V$. Assim, podemos propor:
 $$C_1=\{4,2\}$$
 ou 
 $$C_2=\{4,1\}$$
@@ -188,9 +188,7 @@ a seguir, exercícios envolvendo maximal e minimal...
 # Exercícios 
 ## Ex.1 Conjunto Independente
 
-Considere o grafo $G$:
-
-Visualmente ele seria algo assim:
+Considere o grafo $G$ que visualmente ele seria algo assim:
 ```
 A ----- B  
  \    /  
@@ -255,8 +253,13 @@ Denomina-se arvore $T(V, E)$ um grafo conexo e acíclico. Se um vértice deste g
 Caso o grafo  $T$ seja desconexo e acíclico, este é uma floresta. Pode-se provar por indução que toda arvore com $n$ vértices, possui $n-1$ arestas.
 
 ### Caracterização
-Um grafo $T$ é uma arvore, se e somente se, existe somente um único caminho entre cada par de vértices.
-
+Um grafo $T$ é uma arvore, se e somente se, existe somente um único caminho entre cada par de vértices. Esta é uma das caracterizações de uma arvore, pois ela pode ser caracterizada como:
+- $G$ é uma arvore
+- $G$ é conexo e $|E(G)|$ e mínimo
+- Existe somente um caminho entre cada par de vértices de $G$
+- $G$ e acíclico é $|E(G)| = |V|-1$
+- $G$ e conexo é $|E(G)| = |V|-1$
+- A adição de uma aresta em $G$ gera somente um ciclo.
 ## Centro
 A _excentricidade_ de um vértice $v \in V$ é a distancia máxima entre este e qualquer outro $w \in V$. É denominado o _centro_ do grafo, o conjunto de $v \in V$ de excentricidade mínima.
 
