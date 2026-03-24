@@ -43,8 +43,8 @@
               "state": {
                 "file": "subido/Drawing 2026-03-18 10.18.08.excalidraw.md"
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-03-18 10.18.08.excalidraw"
+              "icon": "lucide-ghost",
+              "title": "excalidraw"
             }
           },
           {
@@ -67,12 +67,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/TG/Grafos.md",
+                "file": "ccomp/SAS/sas-notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Grafos"
+              "title": "sas-notas"
             }
           }
         ],
@@ -99,7 +99,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de ficheiros"
+              "title": "Explorador de arquivos"
             }
           },
           {
@@ -212,8 +212,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           }
         ],
@@ -226,22 +226,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:Criar novo Canvas": false,
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
       "bases:Criar nova base": false,
-      "switcher:Abrir Quick Switcher": false,
-      "graph:Abrir Visualização de diagrama de grafo": false,
-      "daily-notes:Abrir nota de hoje": false,
-      "templates:Inserir templates": false,
-      "command-palette:Abrir paleta de comando": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
   "active": "cf9d7d42493b5cce",
   "lastOpenFiles": [
+    "ccomp/TG/Grafos.md",
     "utils/img/grafo-C-euleriano.png",
     "ccomp/TG/tg-notas.md",
-    "ccomp/TG/Grafos.md",
     "subido/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "README.md",
     "subido/Notas de Curso.md",
@@ -258,7 +258,6 @@
     "utils/img/text-ascii.png",
     "utils/img/reverse-shells.jpg",
     "utils/img/osi-tcp-ip.png",
-    "utils/img/operacoes-grafos.png",
     "Excalidraw/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "Excalidraw/Drawing 2026-03-17 22.51.46.excalidraw.md",
     "Sem título.base",

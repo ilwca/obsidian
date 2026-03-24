@@ -10,7 +10,8 @@
 
 **confiabilidade**: a informação sera somente acessível para indivíduos entidades ou processos devidamente autorizados. 
 
-`Um agente externo pode oferecer uma AMEAÇA a um sistema que se encontra em estado de vulnerabilidade, podendo efetuar um ataque. por isso é importante haver mecanismos de CONTROLE sobre as vulnerabilidades para minimizar a PROBABILIDADE de chances de falha e IMPACTOS indesejados.
+`Um agente externo pode oferecer uma AMEAÇA a um sistema que se encontra em estado de vulnerabilidade, podendo efetuar um ataque. por isso é importante haver mecanismos de CONTROLE sobre as vulnerabilidades para minimizar a PROBABILIDADE de chances de falha e IMPACTOS indesejados.`
+
 
 ## Vulnerabilidades
 
@@ -226,7 +227,7 @@ Quando adequadamente implementados, estes protocolos podem assegurar comunicaç�
 Marinha norte americana como o objetivo de proteger as comunicaoes do governo.
 Redireciona o trafego de internet através de uma rede de servidores voluntários, distribuidos pelo mundo (mais de oito mil servidores).
 Garantir o anonimato e consequentemente a privacidade. Usuário poderá acessar paginas mesmo que estejam censuradas em seu pais e garantir que o seu trafego não será interceptado por terceiros. Vos a todas as pessoas ao longo do mundo, seja para lutar contra regimes ditatoriais empregados insatisfeitos com suas empresas, denuncia de autoridades de corrupção, entre muitos outros casos. !_6 nós ate a conexão com o serviço._
-### Bloquear TOR Browser
+### Bloquear TOR BrowserVM
 O navegador TOR não pode ser bloqueado impedindo trafego, pois nos TOP geralmente usam  a porta TCP 443(HTTPS)
 Para bloquear o navegador TOR e necessários encontrar IP's dos nos TOR ativos.
 
@@ -289,6 +290,64 @@ Usados para enganar hacker exponto vulnerabilidades conhecidas deliberadamente. 
 Como o pote de mel deve parecer real, devem ser criados alguns arquivos de dados contas de usuários, entre outros, todos FALSOS, para garantir que o hacker pense que se trata mesmo de um sistema real, o que fara com que o hacker se coise.
 
 
+# 23/03
+
+## Obtendo o IP
+usado o comando apos descobrir o IP da maquina alvo.
+
+`sudo netdiscover -i vboxnet0 -r 192.168.56.0/24` 
+
+vamos destrinchar cada argumento...:
+
+`netdiscover`: ferramenta utilizada para descobrir
+
+`-i`: i de interface que sera pesquisada, pois temos varias interfaces de rede, como:
+- `wlan0` - interface lan de wifi.
+- `eth0` - interface ethernet de rede cabeada.
+- `vboxnet0` - interface da maquina virtual.
+
+`vboxnet0`: Quando a VM sobe, ela emula uma rede virtual que sera conectada pela VM criada, sendo a vboxnet, que fica fixa conectada no host. 
+
+`-r`: O parâmetro `-r`especifica a range da busca, como já obtemos os primeiros 24 dos 34 bits do ip, vamos especificar com os primeiros bits iniciais para estabelecer a range, sendo estes...
+
+`192.168.56`: Como sabemos que a maquina alvo esta na mesma rede virtual  (vlan) da nossa maquina hosta na vbox, especificamos com estes 24 bits do IP.
+
+isso dará uma lista das maquina no mesmo host, ou seja, que estão usando o mesma faixa de IP 192.168.56.*
+
+Após obter a lista com os IP acima, (exemplo: `192.168.56.101`) usaremos o [[#Nmap]] obter relatório completo da maquina alvo, usando o comando:
+
+## Descobrindo Portas 
+
+`sudo nmap -A 192.168.56.101`
+com este relatório teremos quais portas da maquinas estão abertas, como:
+- 21 - FTP
+- 80 - HTTP
+Caso tivermos uma porta `21/tcp` aberta, indica que temos um servidor http aberto e uma conexão ftp. 
+Com esta conexão ftp podemos ver qual serviço esta utilizando e qual a versão, como exemplo `vsftpd 2.3.4` que podemos verificar as vulnerabilidades de sua versão usando o **Exploit-DB** ou o comando `searchsploit` com o comando `searchsploit vsftpd 2.3.4`.
+Outra alternativa muito escalável seria usar o **MSF CONSOLE**.
+Usando o comando `msfconsole`. Ele conta com mais de 2.000 exploits catalogados, além de **Payloads**.
+
+## Payloads
+Payloads são códigos maliciosos executados na maquina alvo depois que a brecha foi explorada e a conexão estabelecida em casos de portas abertas como acabamos de usar.
+
+dentro do msfconsole, use o comando `search vsftpd 2.3.4`para consultar os exploits disponíveis para esta versão de serviço. 
+use o exploit `unix/ftp/vsftpd_234_backdoor` para atacar esta versão.
+
+`msf exploit (unix/ftp/vsftpd_234_backdoor)`
+
+Dentro do msconsole, podemos usar o comando `show payloads`para mostrar os payloads disponíveis para usar.
 
 
+## Força Bruta
+Para descobrirmos o usuario e senha usando forca bruta, usaremos o `auxiliary(scanner/ftp/ftp_login` do msfconsole. definiremos alguns parametros como:
+```
+use auxiliary/scanner/ftp/ftp_login 
+set RHOSTS 192.168.56.102 # -> IP alvo
+set USER_FILE /root/usuarios.txt # -> arquivo de usuarios.txt
+set PASS_FILE /root/senhas.txt set THREADS 4 
+set BRUTEFORCE_SPEED 2 set STOP_ON_SUCCESS true # -> parar quando acessado
+set VERBOSE true # -> mostrar passos
+run
+```
 
+desta form ele cruzara todos os usuários com todas as senhas, até que encontre o login ou falhe.
