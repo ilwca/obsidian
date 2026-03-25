@@ -643,12 +643,10 @@ para a analise do tempo de execução:
 -  Determinar o T(n°)
 - T(n) é uma soma de varias ocorrências de T(m) mais a soma das outras instruções efetuadas 
 
-	
-
 
 ---
 
-## Exercicios
+## Exercícios
 
 ## 📝 **Questão de Treino – Análise de Complexidade, Big-O e Θ**
 
