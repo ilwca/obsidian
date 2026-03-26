@@ -99,3 +99,62 @@ por definição, é o conjunto mínimo de arestas que ao serem removidas geram u
 
 ## Componente Conexos
 Componentes conexos são subgrafos maximais de $G$ 
+
+
+---
+# 26/03
+
+
+## Grafos Planares
+Um grafo $G$ é planar se e somente se atende a propriedade de $m\leq 3n-6$. como já vimos anteriormente, temos $|V(G)|=n$ e $|E(G)|=m$.
+
+Como exemplo, os grafos $K_{3,5}$ e $K_5$ são planares?
+
+Analisando $K_5$, temos que:
+$|V(K_5)|=5$
+$|E(K_{5})|=10$
+
+aplicando na condição, temos que:
+$$m\leq 3n-6$$
+$$10\leq 3\cdot5-6$$
+$$10\leq 9$$
+como não atende a condição necessária, também não é suficiente.
+
+Analisando $K_{3,3}$, temos que:
+$|V(K_{3,3})|=6$
+$|E(K_{3,3})|=9$
+Aplicando na condição, temos que:
+$$m\leq 3n-6$$
+$$9\leq 3 \cdot 6 - 6$$
+$$9\leq 12$$
+Então, $K_{3,3}$ atende a condição necessária, **porém isso não é suficiente**
+Pois para o grafo ser **planar** tem que atender também a propriedade:
+
+$$2m\geq4(m-n+2)$$
+$$2m\geq 4m- 4n + 8$$
+==Resolver!!
+
+## Grafo Bicoloríveis
+se $G$ possui uma k-coloração, então o grafo é k-colorível.
+
+## Ciclos Hamiltonianos
+Um grafo é hamiltoniano se possui ciclo hamiltoniano. Ciclos hamiltonianos é um ciclo que sai de um grafo de origem, percorre todos os vértices e volta para o vértice original. 
+$$v_1 \rightarrow v_2 \rightarrow v_3 \rightarrow v_1$$
+## Grafos biconexos
+Um grafo $G$ é biconexo se e somente se torna desconexo a partir da remoção de 2 vértices.
+
+**Todo grafo biconexo é hamiltoniano, porém, nem todos biconexo é hamiltoniano**
+
+## Grafos Direcionados
+Até então, examinamos grafos não direcionados. Estes são compostos por conjuntos de arestas $E$, formado por arestas $e_i$ que são pares não ordenados, sendo $e_i(v,w) = e_i(w,v)$.
+Porém em grafos direcionados, sendo conhecidos também por **Digrafos** as arestas possuem direção única, sendo $e_i(v,w) \neq e_i(w,v)$. pois agora as arestas são direcionadas.
+$$v \rightarrow w$$
+![[grafo-direcionado.png]]
+
+Desta forma é justo pensar em graus de saída e graus de entradas, que são denotados como:
+$d^+(v)$ = grau de saída
+$d^-(v)$ = grau de entrada
+
+### Grafo subjascente
+Caso retiremos o sentido das arestas, teremos um grafo subjascente.
+### Fracamente conexo 

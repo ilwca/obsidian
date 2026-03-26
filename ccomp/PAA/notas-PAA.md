@@ -49,3 +49,4 @@ $$n \cdot c_2 + c_1 = O(n)$$
 ## Exercício 2.
 Relação de recorrência:
 $$T(n) = \begin{cases} 1 & \text{se } n=1\\ 2T(n-1)+1 &\text{se }n\geq 2\end{cases}$$
+	
