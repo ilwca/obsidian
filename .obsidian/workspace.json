@@ -53,12 +53,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/TG/tg-notas.md",
+                "file": "ccomp/TG/Grafos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tg-notas"
+              "title": "Grafos"
             }
           }
         ],
@@ -224,8 +224,8 @@
   },
   "active": "ad87aa6f0d58797a",
   "lastOpenFiles": [
-    "ccomp/TG/Grafos.md",
     "ccomp/TG/tg-notas.md",
+    "ccomp/TG/Grafos.md",
     "utils/img/grafo-direcionado.png",
     "utils/img/Não confirmado 12223.crdownload",
     "ccomp/PAA/notas-PAA.md",

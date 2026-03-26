@@ -11,6 +11,12 @@ As vezes podemos encontrar alguns tipos exóticos de arestas que também são va
 ## Grau
 Denota-se o grau de um vértice (grau$(v)$), a quantidade de vértices adjacentes de um $v \in V$. Um grafo $G(V, E)$ tem grau regular de $r$, quando o grau de todos os vértices e igual a $r$. Um vértice que possui grau zero é chamado _isolado_.
 
+### Formas de Representação
+Grafos podem ser representados por diversas formas, como:
+- Vetores
+- Matrizes (Adjacência, LaPlaciana)
+- Listas encadeadas (de adjacência)
+
 ---
 
 # Caminho ou Passeio
@@ -67,6 +73,8 @@ Dado um grafo $G$ com todos o vértices de grau par:
 
 Se um grafo $G$ é euleriano e hamiltoniano ele e chamado de hamiltoniano e euleriano respectivamente.
 
+## Grafo Atravessável
+Um grafo é atravessável, se e somente se possui exatamente dois vértices de paridade par.
 ## Distância
 Denomina se distancia $d(v,w)$ entre dois vértices de um grafo ao comprimento do menor caminho entre $v$ e $w$. (se tratando de arestas), Ou seja, quantas arestas há de $v$ a $w$.
 
@@ -269,3 +277,6 @@ Dado um grafo $G$, o subgrafo gerador é denotado por $G_1(V_1, E_1)$ de modo qu
 ## Árvore Geradora
 considerando um grafo $G$ conexo, para a obtenção de uma arvore geradora, considera-se um $e$ de modo que $G-e$ seja conexo. A repetição desta subtração ate que não haja mais $e$ que seja possível subtrair de $G$ de modo que esta ainda seja conexo, origina uma **arvore geradora**.
 Ou seja, a arvore geradora e a versão mínima de arestas de $G$ que ainda o mantêm conexo.
+
+---
+# Planaridade
