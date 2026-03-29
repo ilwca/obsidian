@@ -280,3 +280,10 @@ Ou seja, a arvore geradora e a versão mínima de arestas de $G$ que ainda o man
 
 ---
 # Planaridade
+ seja $G$ um grafo e $R$ a representação geométrica de $G$ em um plano $P$. A representação $R$ e chamada *plana* quando não a interseção entre os vértices, a não ser que seja por meio de uma aresta. Deste modo, um grafo é planar quando for *plano*.
+ ![[grafo-planar.png]]
+Tomando como exemplo o grafo $K_4$ acima, temos que a figura (a) não e plana, pois há um cruzamento de arestas. Por outro lado o grafo isomorfo apresentado em (b) e (c) é planar.
+
+Percebe-se que cada ciclo (normalmente de cardinalidade 3) em $K_4$ gera um $f$ , como representado em (b). Cada aresta divide dois planos e cada plano (interno), está limitado por no mínimo 3 arestas exceto a face externa.
+
+**Todo grafo planar** atende a condição $n+f=m+2$, sendo assim também conhecida pela formula de Euler como $n-m+f = 2$.

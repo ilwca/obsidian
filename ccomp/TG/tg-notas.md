@@ -104,7 +104,6 @@ Componentes conexos são subgrafos maximais de $G$
 ---
 # 26/03
 
-
 ## Grafos Planares
 Um grafo $G$ é planar se e somente se atende a propriedade de $m\leq 3n-6$. como já vimos anteriormente, temos $|V(G)|=n$ e $|E(G)|=m$.
 

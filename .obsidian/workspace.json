@@ -60,9 +60,37 @@
               "icon": "lucide-file",
               "title": "Grafos"
             }
+          },
+          {
+            "id": "af9e7cbcc345ddb9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ccomp/TG/Grafos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Grafos"
+            }
+          },
+          {
+            "id": "470e946d602f472b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ccomp/TG/Grafos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Grafos"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -222,33 +250,40 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ad87aa6f0d58797a",
+  "active": "470e946d602f472b",
   "lastOpenFiles": [
-    "ccomp/TG/tg-notas.md",
+    "utils/grafos-planaridade.md",
     "ccomp/TG/Grafos.md",
+    "ccomp/TG/tg-notas.md",
+    "utils/img/grafo-planar.png",
+    "utils/img/Captura de tela 2026-03-29 002522.png",
+    "utils/Captura de tela 2026-03-29 002522.png",
+    "Captura de tela 2026-03-29 002522.png",
+    "Drawing 2026-03-28 22.37.08.excalidraw.md",
+    "Drawing 2026-03-28 22.28.51.excalidraw.md",
+    "Drawing 2026-03-28 22.29.45.excalidraw.md",
+    "Excalidraw",
+    "ccomp/SAS/sas-notas.md",
+    "ccomp/PAA/Análise de Complexidade.md",
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+    "ccomp/PAA/Dynamic Programin.md",
+    "ccomp/PE/pe-notas.md",
+    "ccomp/PE",
     "utils/img/grafo-direcionado.png",
     "utils/img/Não confirmado 12223.crdownload",
     "ccomp/PAA/notas-PAA.md",
-    "ccomp/PAA/Dynamic Programin.md",
-    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
-    "ccomp/PAA/Análise de Complexidade.md",
     "utils/img/paa-fatorial.png",
     "utils/img/paa-fatoriaç.png",
     "utils/img/Captura de tela 2026-03-24 145209.png",
     "utils/Captura de tela 2026-03-24 145209.png",
     "Captura de tela 2026-03-24 145209.png",
     "ccomp/PAA/todo.md",
-    "ccomp/SAS/sas-notas.md",
-    "utils/img/grafo-C-euleriano.png",
     "subido/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "README.md",
     "subido/Notas de Curso.md",
-    "utils/img/grafo-arvore-geradora.png",
     "utils/img/Não confirmado 788159.crdownload",
     "utils/img/tecnicas_demonstracao.pdf",
     "utils/img/Não confirmado 680286.crdownload",
-    "utils/img/grafo-isomorfo.png",
-    "utils/img/XOR.png",
     "utils/Divisão e conquista.md",
     "Excalidraw/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "Excalidraw/Drawing 2026-03-17 22.51.46.excalidraw.md",
@@ -261,16 +296,9 @@
     "utils/h.chomsky.canvas",
     "utils/Gramatica BNF.md",
     "utils/English Vocabulary.md",
-    "ccomp/Compiladores/Gramáticas.md",
-    "ccomp/Compiladores/Anotações.md",
-    "ccomp/IA/Kmeans.md",
     "subido",
-    "ccomp/PAA/prova-II PAA.md",
-    "obsidian.md",
     "utils/img/Não confirmado 432953.crdownload",
-    "utils/ComprovanteMatricula.pdf",
     "helpti/pages.canvas",
-    "utils/img/Não confirmado 772173.crdownload",
     "helpti/helpti.canvas"
   ]
 }
