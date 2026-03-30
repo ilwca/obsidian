@@ -1,4 +1,4 @@
-
+	
 Um grafo e denotado por um $G(V, E)$, que e um conjunto finito e não vazio de vértices, denotados por V. Dizemos que o grafo e trivial ou não orientado quando $|V|=1$.
 Quando isso, o numero de vértices pode ser dado por: $V = \{v_1, v_2, v_3, . . ., n\}$.
 O conjunto $E$, denota as arestas de G. Cada aresta $e \in E$, e é composta pelo par de vértices $e=(v,w)$ ou $e=(v_i , v_k)$. Neste caso, $v$ e $w$ estão nas extremidades das arestas, e são denominados **adjacentes**. Por fim, denotamos o conjunto de arestas como $E\{e_1, e_2, e_3, . . ., m\}$.
@@ -9,7 +9,9 @@ As vezes podemos encontrar alguns tipos exóticos de arestas que também são va
 
 
 ## Grau
-Denota-se o grau de um vértice (grau$(v)$), a quantidade de vértices adjacentes de um $v \in V$. Um grafo $G(V, E)$ tem grau regular de $r$, quando o grau de todos os vértices e igual a $r$. Um vértice que possui grau zero é chamado _isolado_.
+Denota-se o grau de um vértice (grau$(v)$), a quantidade de vértices adjacentes de um $v \in V$. Um grafo $G(V, E)$ tem grau regular de $r$, quando o grau de todos os vértices e igual a $r$. Um vértice que possui grau zero é chamado _isolado_. Desta forma denotamos:
+$\delta(G) \rightarrow$ Grau mínimo de $G$.
+$\Delta(G)\rightarrow$ Grau máximo de $G$.
 
 ### Formas de Representação
 Grafos podem ser representados por diversas formas, como:
@@ -168,7 +170,7 @@ O conjunto citado forma uma clique de tamanho 4, ou seja, esta é a cardinalidad
 ## Corte de Vértices
 Seja um grafo $G(V,E)$ conexo. O corte de vértices de $G$ é um subconjunto minimal de vértices $V' \subseteq V$ cujo sua remoção de $G$, causa a desconexão de $G$, tornando-o um grafo desconexo.
 ou seja, a operação mínima qualquer que seja **relacionada a um vértice** sendo $V'-G$ tornando $G$ desconexo e denominada de corte de vértices.
-Exemplo, ao excluir os vértice 1 em $\bar{G}$ aumenta seu numero de componentes para 3. se desconsiderarmos o vértice 6, a principio, isso tornaria o grafo desconexo, atendendo a definição, pois criaríamos mais um componente ao grafo, que seria o vértice 4. desta forma, teríamos os componentes $\{2,3,5\}$ e $\{4\}$.
+Exemplo, ao excluir os vértice 1 em $\bar{G}$ aumenta seu numero de componentes para 3. se desconsiderarmos o vértice 6, a principio, isso tornaria o grafo desconexo, atendendo a definição, pois criaríamos mais um componente ao grafo, que seria o vértice 4. desta forma, teríamos os componentes $\{2,3,5\}$ e $\{4\}$. Este problema esta relacionado a [[#conectividade]].
 
 ## Corte de Arestas
 Analogamente ao Corte de vértices, para um grafo $G$, exista um conjunto minimal de arestas $E'$ de modo que $G-E'$ causando a desconexão de $G$. Ou seja, a operação minimal qualquer que seja relacionada a uma vértice. por exemplo, se considerarmos o grafo da figura 2.7(a).
@@ -278,6 +280,15 @@ Dado um grafo $G$, o subgrafo gerador é denotado por $G_1(V_1, E_1)$ de modo qu
 considerando um grafo $G$ conexo, para a obtenção de uma arvore geradora, considera-se um $e$ de modo que $G-e$ seja conexo. A repetição desta subtração ate que não haja mais $e$ que seja possível subtrair de $G$ de modo que esta ainda seja conexo, origina uma **arvore geradora**.
 Ou seja, a arvore geradora e a versão mínima de arestas de $G$ que ainda o mantêm conexo.
 
+## Conectividade
+A conectividade esta diretamente relacionada ao [[#Corte de Vértices]] e o [[#Corte de Arestas]], que, dado um grafo $G$ consistem em um conjunto minimal de vértices e arestas $V'$ e $E'$ de modo que $G-V'$ ou $G-E'$ cause a desconexão de $G$.
+**Conectividade de vértices** denotado por $c_v$ , consiste no corte de menor cardinalidade em $G$ que gere um grafo desconexo ou trivial.
+**Conectividade de Arestas** analogamente ao corte de vértices é o $c_e$ sendo o conjunto de arestas de cardinalidade mínima que cause a desconexão ou trivialidade de $G$.
+Para todo grafo vale que $c_v \leq c_e$, , ou seja, o numero do corte de vértices, sempre será menor ou igual ao numero do corte de arestas.
+
+Um grafo $G$ é _**k-conexo**_  em vértice ou arestas quando $k$ é o numero mínimo de cortes (respectivo a arestas ou vértices) para a desconexão de $G$. Ou seja, não existe corte de vértices < $k$ para um grafo _k-conexo_. De mesmo modo, não existe um corte de arestas < $k$ para um grafo _k-conexo_.
+
+
 ---
 # Planaridade
  seja $G$ um grafo e $R$ a representação geométrica de $G$ em um plano $P$. A representação $R$ e chamada *plana* quando não a interseção entre os vértices, a não ser que seja por meio de uma aresta. Deste modo, um grafo é planar quando for *plano*.
@@ -287,3 +298,6 @@ Tomando como exemplo o grafo $K_4$ acima, temos que a figura (a) não e plana, p
 Percebe-se que cada ciclo (normalmente de cardinalidade 3) em $K_4$ gera um $f$ , como representado em (b). Cada aresta divide dois planos e cada plano (interno), está limitado por no mínimo 3 arestas exceto a face externa.
 
 **Todo grafo planar** atende a condição $n+f=m+2$, sendo assim também conhecida pela formula de Euler como $n-m+f = 2$.
+
+
+
