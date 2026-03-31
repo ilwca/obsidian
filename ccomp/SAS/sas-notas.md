@@ -351,3 +351,82 @@ run
 ```
 
 desta form ele cruzara todos os usuários com todas as senhas, até que encontre o login ou falhe.
+
+
+---
+
+# 30/03
+
+## Elevação de Privilégios
+### Vulnerabilidade 
+uma vulnerabilidade e um defeito ou problema presenta na especificação ou implementação, configuração ou operação de um software, hardware ou sistema, que possa ser explorado para violar as propriedades de segurança do mesmo.
+
+### Elevação ou Escalonamento 
+elevação de privilégios consiste no ato de explorar vulnerabilidades ou deficiências de configuração em sistemas operacionais ou aplicativos de software para obter acesso a recursos que normalmente são protegidos.
+Pode ser classificado em duas categorias:
+- **Escalonamento Vertical**: Um usuário ou aplicativo de privilegio inferior acessa funções ou conteúdos reservados para usuários ou aplicativos de privilegio superior: (usuários -> super usuário).
+- **Escalonamento Horizontal**: Ocorre quando um usuário normal acessa funções ou conteúdos reservados para usuários de mesmo nível de privilegio: (usuários -> usuário).
+
+A elevação de privilégios frequentemente se faz necessária apos a obtenção de acesso não autorizado a um determinado alvo.
+Empreendida em duas etapas:
+- Enumeração (identificar informações acerca do sistema alvo);
+- Exploração (Abusar de vulnerabilizardes porventura existentes).
+
+Podem ser obtidas através da exploração de:
+- Forca bruta em hashes de senhas de baixa complexidade
+- Arquivos provativos de autenticação (id_rsa)
+- Vulnerabilidades do hardware (chipset)
+- Vulnerabilidade  de  kernel
+- Vulnerabilidade de aplicações
+- Permissões de sudo
+- Tarefas agendadas
+- Permissões SUID
+
+### **Enumeração** de operações do sistema operacional Kernel Linux...
+Identificar informações acerca do sistema:
+```Qterminal
+$ uname -a
+$ cat /etc/issue
+$ cat /proc/version
+```
+
+Identificar informações acerca dos usuários:
+```Qterminal
+$ id
+$ whoami
+$ sudo -l
+$ groups
+$ cat /etc/passwd
+$ cat /etc/shadow
+$ cat /etc/group
+```
+
+Identificar arquivos de diretodios de historicos:
+```Qterminal
+$ cat ~/.bash_history
+$ cat ~/.mysql_history 
+```
+
+Identificar informações de pacotes vulneráveis:
+```Qterminal
+$ dpkg -l
+$ mysql --version
+$ sudo --version
+$ snap --version
+```
+
+Ferramentas usadas para automatização destas...:
+- LinPEAS
+- LinENUM
+
+### forca bruta em hashes de senhas de baixa complexidade.
+arquivos que armazenam credenciais de usuários:
+`/etc/passwd`
+`/etc/shadow`
+
+
+Comando de gerar  chave ssh usando algoritmo rsa
+`ssh-keygen -t rsa`
+
+
+
