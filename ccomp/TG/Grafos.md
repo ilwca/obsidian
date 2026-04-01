@@ -298,6 +298,26 @@ Tomando como exemplo o grafo $K_4$ acima, temos que a figura (a) não e plana, p
 Percebe-se que cada ciclo (normalmente de cardinalidade 3) em $K_4$ gera um $f$ , como representado em (b). Cada aresta divide dois planos e cada plano (interno), está limitado por no mínimo 3 arestas exceto a face externa.
 
 **Todo grafo planar** atende a condição $n+f=m+2$, sendo assim também conhecida pela formula de Euler como $n-m+f = 2$.
+### Formula de Euler
+A formular de Euler e usada para manipulação e descobrimento de numero de faces, arestas ou vértices de um grafo completo. **O número de faces** pode ser denotado como:
+$$f=m-n+2$$
 
+### Grafo $K_n$ Planar
+Deste modo, observa-se que  quanto maior a quantidade de arestas de um grafo, mais difícil e atender a condição de planaridade. Então, de fato, existe um numero máximo de aresta de um grafo planar, dado pelo seguinte lema:
 
+Seja um grafo planar. Então $m\leq 3n-6$.
 
+Isso e dado pela condição de que cada face e delimitada por no mínimo 3 arestas, e cada aresta pertence a exatamente duas faces.
+![[Excalidraw/grafos-planaridade|grafos-planaridade]]
+
+Como cada aresta esta em dois planos $f$, ela sempre e contada 2x, como mostra na imagem acima na descrição de cada face. por isso $2m$.
+Percebe-se também, que o numero total de arestas das faces e de $12$. resultado que pode ser descrito como 3x o numero de faces. Por isso $3f$.
+Deste modo temos a notação $2m\leq3f$.
+
+Aplicando na formula de Euler:
+$$f=m-n+2\Rightarrow \frac{2}{3}m \geq m-n+2 \Rightarrow m \leq3n-6$$
+Por isso o numero de arestas de um grafo planar e delimitado por:
+$$m\leq3n-6$$
+### Grafo $K_{i,j}$ Planar
+Diferente de uma grafo planar completo, em um [[#Grafo Bipartido]] seu menor ciclo tem tamanho 4. Ou seja, cada plano $f$ é delimitado por no mínimo 4 arestas e sempre um numero par de arestas. Além disso, cada aresta pertence exatamente a duas faces. logo:
+$$2m\geq4f$$ 

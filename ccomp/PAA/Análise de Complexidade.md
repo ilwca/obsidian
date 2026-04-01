@@ -380,7 +380,7 @@ $$c_1\leq \frac{1}{2}-\frac{2}{n} \leq c_2$$
 
 ---
 ## Teorema mestre
-o teorema mestre e usada para definirmos a complexidade assintótica de um algoritmo a partir do seu custo T(n), ou seja, seu custo recursivo +  custo externo.
+o teorema mestre e usada para definirmos a complexidade assintótica de um algoritmo a partir do seu custo $T(n)$, ou seja, seu custo recursivo +  custo externo.
 
 ### Ideia central do teorema
 ele compara:

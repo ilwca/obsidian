@@ -1,3 +1,4 @@
+
 # 24/03
 
 ## Recorrência
@@ -49,4 +50,11 @@ $$n \cdot c_2 + c_1 = O(n)$$
 ## Exercício 2.
 Relação de recorrência:
 $$T(n) = \begin{cases} 1 & \text{se } n=1\\ 2T(n-1)+1 &\text{se }n\geq 2\end{cases}$$
-	
+
+
+# Teorema Mestre
+Teorema mestre e um metodo usado para determinar a complexidade assintotica de uma recorrência. exemplo de recorrência:
+
+$$T(n)=aT(\frac{n}{b})+f(n)$$
+sejam $a\geq1$ e $b>1$, duas constantes, seja $f(n)$ uma função, e seja $T(n)$ uma recorrencia definida pela função acima.
+
