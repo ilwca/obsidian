@@ -66,7 +66,7 @@ Este é um exemplo de um grafo que possui **ciclo euleriano** e **não possui ci
 Dado um grafo $G$ com todos o vértices de grau par:
 - existe pelo menos um ciclo simples $C_1$.
 - remove-se do grafo as arestas de $C_1$ (e ignora-se vértices isolados).
-- O grafo restante continua tendo todos os vértices de grau par. _alguns casos, numero impares de arestas são removidas, mas os vértices continuam com grau par._
+- O grafo restante continua tendo todos os vértices de grau par. _(alguns casos, numero impares de arestas são removidas, mas os vértices continuam com grau par.)_
 - Se ainda houver arestas, existe um novo ciclo simples $C_2$.
 - Repete-se o processo ate que não reste nenhuma aresta.
 - As arestas ficam particionadas em ciclos simples.
@@ -76,7 +76,7 @@ Dado um grafo $G$ com todos o vértices de grau par:
 Se um grafo $G$ é euleriano e hamiltoniano ele e chamado de hamiltoniano e euleriano respectivamente.
 
 ## Grafo Atravessável
-Um grafo é atravessável, se e somente se possui exatamente dois vértices de paridade par.
+Um grafo é atravessável se e possível percorrer todas as suas arestas exatamente uma vez. Isso só é possível se todos os vértices tem grau par ou exatamente dois vértices tem grau par.
 ## Distância
 Denomina se distancia $d(v,w)$ entre dois vértices de um grafo ao comprimento do menor caminho entre $v$ e $w$. (se tratando de arestas), Ou seja, quantas arestas há de $v$ a $w$.
 
@@ -97,16 +97,16 @@ aplicando ao grafo $k_5$ teremos $\frac{5\cdot4}{2}= 10$.
 ## Grafo Bipartido
 Um grafo é um grafo bipartido cujos vértices podem ser divididos em dois conjuntos separados. Ou seja onde $G(V,E)$ e $V$ pode ser dividido em $V_1$ e $V_2$. podendo também ser denotado como $G(V_1\cup V_2,E)$ 
 $$V = V_1 \cup V_2$$
-
 de modo que:
 - todas as arestas ligam um vértice de $V_1$ a um vértice de $V_2$ _(em caso de um **bipartido Completo)_.
 - **nenhuma aresta liga vértices dentro do mesmo conjunto**
-Um grafo bipartido completo e denotado como $K_{n1,n2}$ e obviamente possui $n_1$ e $n_2$ arestas, sendo $n_1=|V_1|$ e $n_2=|V_2|$, como nas imagens a seguir.
+Um grafo bipartido completo e denotado como $K_{n1,n2}$ e obviamente possui $n_1$ e $n_2$ vértices, sendo $n_1=|V_1|$ e $n_2=|V_2|$, como nas imagens a seguir.
 ![[grafo-bipartido.png]]
 Na imagem acima temos um grafo bipartido completo $K_{2,3}$, que se a notação de $K_{|V_1|,|V_2|}$.
 ### Teorema 
 Um grafo $G$ é bipartido, se e somente se, $G$ não possui ciclo de tamanho ímpar.
 
+---
 ## Problemas Computacionais
 Os problemas computacionais podem ser classificados em três tipos:
 - Localização
@@ -284,7 +284,7 @@ Ou seja, a arvore geradora e a versão mínima de arestas de $G$ que ainda o man
 A conectividade esta diretamente relacionada ao [[#Corte de Vértices]] e o [[#Corte de Arestas]], que, dado um grafo $G$ consistem em um conjunto minimal de vértices e arestas $V'$ e $E'$ de modo que $G-V'$ ou $G-E'$ cause a desconexão de $G$.
 **Conectividade de vértices** denotado por $c_v$ , consiste no corte de menor cardinalidade em $G$ que gere um grafo desconexo ou trivial.
 **Conectividade de Arestas** analogamente ao corte de vértices é o $c_e$ sendo o conjunto de arestas de cardinalidade mínima que cause a desconexão ou trivialidade de $G$.
-Para todo grafo vale que $c_v \leq c_e$, , ou seja, o numero do corte de vértices, sempre será menor ou igual ao numero do corte de arestas.
+Para todo grafo vale que $c_v \leq c_e$, , ou seja, o número do corte de vértices, sempre será menor ou igual ao numero do corte de arestas.
 
 Um grafo $G$ é _**k-conexo**_  em vértice ou arestas quando $k$ é o numero mínimo de cortes (respectivo a arestas ou vértices) para a desconexão de $G$. Ou seja, não existe corte de vértices < $k$ para um grafo _k-conexo_. De mesmo modo, não existe um corte de arestas < $k$ para um grafo _k-conexo_.
 
@@ -295,11 +295,11 @@ Um grafo $G$ é _**k-conexo**_  em vértice ou arestas quando $k$ é o numero m�
  ![[grafo-planar.png]]
 Tomando como exemplo o grafo $K_4$ acima, temos que a figura (a) não e plana, pois há um cruzamento de arestas. Por outro lado o grafo isomorfo apresentado em (b) e (c) é planar.
 
-Percebe-se que cada ciclo (normalmente de cardinalidade 3) em $K_4$ gera um $f$ , como representado em (b). Cada aresta divide dois planos e cada plano (interno), está limitado por no mínimo 3 arestas exceto a face externa.
+Percebe-se que cada ciclo (normalmente de cardinalidade 3) em $K_4$ gera um $f$ , como representado em (b). Cada aresta é divida entre dois planos e cada plano, está limitado por no mínimo 3 arestas exceto a face externa.
 
 **Todo grafo planar** atende a condição $n+f=m+2$, sendo assim também conhecida pela formula de Euler como $n-m+f = 2$.
 ### Formula de Euler
-A formular de Euler e usada para manipulação e descobrimento de numero de faces, arestas ou vértices de um grafo completo. **O número de faces** pode ser denotado como:
+A formular de Euler e usada para manipulação e descobrimento de número de faces, arestas ou vértices de um grafo completo. **O número de faces** pode ser denotado como:
 $$f=m-n+2$$
 
 ### Grafo $K_n$ Planar
@@ -312,11 +312,11 @@ Isso e dado pela condição de que cada face e delimitada por no mínimo 3 arest
 
 Como cada aresta esta em dois planos $f$, ela sempre e contada 2x, como mostra na imagem acima na descrição de cada face. por isso $2m$.
 Percebe-se também, que o numero total de arestas das faces e de $12$. resultado que pode ser descrito como 3x o numero de faces. Por isso $3f$.
-Deste modo temos a notação $2m\leq3f$.
+Deste modo, temos a notação $2m\leq3f$.
 
 Aplicando na formula de Euler:
 $$f=m-n+2\Rightarrow \frac{2}{3}m \geq m-n+2 \Rightarrow m \leq3n-6$$
-Por isso o numero de arestas de um grafo planar e delimitado por:
+Por isso o número de arestas de um grafo planar e delimitado por:
 $$m\leq3n-6$$
 ### Grafo $K_{i,j}$ Planar
 Diferente de uma grafo planar completo, em um [[#Grafo Bipartido]] seu menor ciclo tem tamanho 4. Ou seja, cada plano $f$ é delimitado por no mínimo 4 arestas e sempre um numero par de arestas. Além disso, cada aresta pertence exatamente a duas faces. logo:
