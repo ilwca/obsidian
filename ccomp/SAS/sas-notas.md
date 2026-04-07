@@ -428,5 +428,78 @@ arquivos que armazenam credenciais de usuários:
 Comando de gerar  chave ssh usando algoritmo rsa
 `ssh-keygen -t rsa`
 
+---
 
+# 06/04
+
+## Vulnerabilidades de Hardware
+Resultado do modo de operacao de dispisitivos fisicos. Podem ser exploradas fisicamente ou remotamente.
+- CVE-2020-069 ()
+- CVE-2019-9800
+- CVE-2017-5754
+Com eleveda frequencia nao podem ser sanadas atras de atualizações a nível de software (), sendo necessario.
+
+## Vulnerabilidades de Kernel
+Referem-se a falhas de segurança ou fraquezas no núcleo do sistema operacional de um computador, conhecido como kernel.
+Quando ocorrem podem permitir que atacantes obtenham acesso a informações não autorizadas ou que assumam o controle administrativo da máquina alvo.
+Podem ser exploradas ate mesmo remotamente e sem qualquer interação do usuário (zero-click).
+O comando `uname -a` mostra as informações do kernel do atual SO.
+**Exemplo pratico:**
+Alguns kernels do ubunto tem vulnerabilidades.
+
+## Vulnerabilidades de Aplicações 
+Referem-se a falhas a nivel de codigo, de seguranca ou deficiências de configuração presentes em um produto de software.
+Exemplo:
+- CVE-2019-7304(Dirty Sock)
+Isto impacta versões do gerenciados de pacotes snapd inferiores a 2.37
+- [Exploit 1](https://exploit-db/exploits/46361 )
+- [Exploit 2](https://exploit-db/exploits/46362)
+Capaz de se registrar um novo usuario (dirty_sock)
+
+## Permissões de SUDO
+O usuário root em sistemas operacionais com kernel linux é o usuário que tem acesso de nível administrativo. Os usuários normais não tem este acesso por razões de segurança.
+
+Manual sudo: Permite que usuários devidamente autorizados de maneira segura e controlada execute comandos com privilégios de super usuários, conforme especificado pelas politicas de segurança do SÓ.
+```Qterminal
+sudo -l
+sudo nmap
+sudo apt install
+```
+
+
+## Tarefas Agendadas
+### Cron e Contab
+Cron do Linux é um utilitário que executa comandos ou scripts que são agendados por uma tabela chamada de Crontab.
+Quando iniciado o Cron procura por arquivos Crontab, com o objetivo de carrega-los em memoria, realizando a leitura do arquivo `/etc/crontab` e dos arquivos armazenados em `/etc/cron.d`.
+**Crontab** é um arquivo que contem informações sobre quando um comando ou script deve ser executado e quem é o responsável pela ação. Trata-se de um arquivo de texto com um formato especial para que o Cron entenda e trabalhe em sintonia.
+
+Estrutura do arquivo Crontab:
+![[blog-head_syntax-of-cron.webp]]
+
+Com o comando `Crontab -l` é exibido toda a lista de tarefas agendadas do linux.
+
+## Arquivos com permissões SUID
+## Arquivos em sistemas operacionais com kernel Linux
+No linux, quando um arquivo ou diretório é criado, algumas permissões são atribuídas automaticamente. Essas permissões são divididas em três grupos:
+- O usuário que criou o arquivo (usuário dono)
+- O grupo dono do arquivo (que pode conter vários usuários)
+- Os demais usuários que não pertencem ao grupo dono do arquivo.
+Essas permissões por sua vez podem ser de:
+- Leitura (r, read, 4) - Permite visualizar o conteúdo
+- Escrita (w, write, 2) - Permite alterar o conteúdo
+- Execução (x, execute, 1) - Torna o arquivo um executável
+
+![[sas-suid.jpeg]]
+
+Exist tambem uma opção equivalente ao SUID para grupos, a SGID (set group ID). Ela tem o mesmo comportamento que a SUID porem funciona com grupos.
+
+
+Execute o comando `find`para executar busca por arquivos ou diretórios, podendo também ser adicionado um ação ao efetuar tarefa com sucesso.
+
+**Exemplo Prático:***
+```Qterminal
+find /etc/passwd -exec "whoami" \;
+
+find /etc/passwd -exec "/bin/sh" -p \;
+```
 
