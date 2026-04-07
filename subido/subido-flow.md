@@ -38,35 +38,35 @@ Dropshipping ^1kvnxyln
 
 Métricas ^XfCUJoZz
 
-[[Notas de Curso#Leads| Leads]] ^EYnwewBE
+[[notas de curso#Leads| Leads]] ^EYnwewBE
 
-[[Notas de Curso#CTR|CTR]] ^WVAh6Vek
+[[notas de curso#CTR|CTR]] ^WVAh6Vek
 
-[[Notas de Curso#CPM|CPM]] ^TsNO52W2
+[[notas de curso#CPM|CPM]] ^TsNO52W2
 
-[[Notas de Curso#CPV|CPV]] ^G0y1dbY0
+[[notas de curso#CPV|CPV]] ^G0y1dbY0
 
-[[Notas de Curso#Alcance|alcance]] ^TeukCcpu
+[[notas de curso#Alcance|alcance]] ^TeukCcpu
 
-[[Notas de Curso#Impressões|Impressões]] ^rGIyBA0z
+[[notas de curso#Impressões|Impressões]] ^rGIyBA0z
 
-[[Notas de Curso#Frequência|Frequência]] ^aESaK4Gv
+[[notas de curso#Frequência|Frequência]] ^aESaK4Gv
 
-[[Notas de Curso#Connect Rate|Connect Rate]] ^64680w7F
+[[notas de curso#Connect Rate|Connect Rate]] ^64680w7F
 
-[[Notas de Curso#ROI|ROI]] ^0uVBJQCO
+[[notas de curso#ROI|ROI]] ^0uVBJQCO
 
-[[Notas de Curso#ROAS|ROAS]] ^FmNfGe5s
+[[notas de curso#ROAS|ROAS]] ^FmNfGe5s
 
-[[Notas de Curso#Ticket Médio|Ticket Médio]]
+[[notas de curso#Ticket Médio|Ticket Médio]]
 
  ^haLUf03M
 
-[[Notas de Curso#Taxa de Conversão|Taxa de Conversão]] ^qhWS12Wh
+[[notas de curso#Taxa de Conversão|Taxa de Conversão]] ^qhWS12Wh
 
-[[Notas de Curso#LTV|LTV]] ^lieLVJON
+[[notas de curso#LTV|LTV]] ^lieLVJON
 
-[[Notas de Curso#Margem|Margem]] ^oURzldRS
+[[notas de curso#Margem|Margem]] ^oURzldRS
 
 %%
 ## Drawing
