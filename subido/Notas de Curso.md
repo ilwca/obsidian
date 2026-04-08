@@ -145,3 +145,15 @@ Porém alguns anúncios podem ser promovidos de forma ativa, ou seja, quando se 
 - Relação
 
 Assim, podemos definir onde nosso publico principal esta localizado, se o produto/serviço que estamos trabalhando e mais buscado intencionalmente ou pode tentar chamar a atenção dos clientes.
+
+---
+# Metricas de Resultados de Campanha
+## Trackeamento de clientes
+como o trackeamento pode ser feito?
+- Pixel e API de Conversões (GTM)
+- Google Analytics + UTM´s
+- Páginas especificas para fontes especificas
+- canais de vendas específicos
+- Pergunta direta.
+- Criar lista das pessoas que compram.
+- Faturamento na sua ferramenta de recebimento.

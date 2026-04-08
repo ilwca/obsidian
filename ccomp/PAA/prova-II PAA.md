@@ -324,5 +324,3 @@ function CashRetur(V, target)
 	return solucao[]
 ```
 
-
-	
