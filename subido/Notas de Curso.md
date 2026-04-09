@@ -1,4 +1,4 @@
-Entregáveis em marketing
+- Entregáveis em marketing
 - Configuração de campanha
 - Criação de Conteúdos
 - Pesquisa / Referências
