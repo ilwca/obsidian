@@ -60,7 +60,7 @@ Denomina-se clique de um grafo $G$, um subgrafo de $G$ que seja completo.
 
 
 ## Problemas Computacionais
-Os problemas computacionais podem ser classificados em tres tipos:
+Os problemas computacionais podem ser classificados em três tipos:
 - Localização
 - Decisão
 - Otimização
@@ -144,9 +144,9 @@ Um grafo $G$ é biconexo se e somente se torna desconexo a partir da remoção d
 
 **Todo grafo biconexo é hamiltoniano, porém, nem todos biconexo é hamiltoniano**
 
-## Grafos Direcionados
+## Grafos Direcionados (Digrafos)
 Até então, examinamos grafos não direcionados. Estes são compostos por conjuntos de arestas $E$, formado por arestas $e_i$ que são pares não ordenados, sendo $e_i(v,w) = e_i(w,v)$.
-Porém em grafos direcionados, sendo conhecidos também por **Digrafos** as arestas possuem direção única, sendo $e_i(v,w) \neq e_i(w,v)$. pois agora as arestas são direcionadas.
+Porém em grafos direcionados, sendo conhecidos também por **Digrafos** $D(V,E)$, as arestas possuem direção única, sendo $e_i(v,w) \neq e_i(w,v)$. pois agora as arestas são direcionadas.
 $$v \rightarrow w$$
 ![[grafo-direcionado.png]]
 
@@ -155,5 +155,23 @@ $d^+(v)$ = grau de saída
 $d^-(v)$ = grau de entrada
 
 ### Grafo subjascente
-Caso retiremos o sentido das arestas, teremos um grafo subjascente.
+Caso retiremos o sentido das arestas, teremos um grafo subjacente.
 ### Fracamente conexo 
+.
+.
+.
+
+
+---
+# 09/04
+
+## Estruturas de adjacência em Dígrafo
+Dado um digrafo $D(V, E)$, denotaremos $p$ o vetor que fornece um vetor com tamanho $n$, que fornece os ponteiros iniciais para a lista de adjacência de $D$.
+_! A lista de adjacência esta relacionada a cada vértice $v_i$ !_
+Deste modo, em cada índice de $p_i$ teremos a lista de adjacência do vértice $v_i$. Cada nó da lista no índice $v_i$ da lista é composta pelos vértices adjacentes a $v_i$.
+.
+.
+.
+
+
+## Algoritmos de ordenação
