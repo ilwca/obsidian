@@ -324,12 +324,12 @@ verifique se _f(n)_ = 5n² + 20n + 100 ∈ θ(n²)
 
 por definição temos que:
 
-	∃ c¹, c² > 0 | c¹g(n) ≤ f(n) ≤ c²g(n) ∀n > n°
+$$∃ c¹, c² > 0 | c¹g(n) ≤ f(n) ≤ c²g(n) ∀n > n_0$$
 
 então temos:
 
-	c¹g(n) ≤ f(n) ≤ c²g(n)
-	c¹n² ≤ 5n² + 20n + 100 ≤ c²n² 
+$$c_1g(n) ≤ f(n) ≤ c_2g(n)$$
+$$c_2n² ≤ 5n² + 20n + 100 ≤ c_2n²$$ 
 
 dividindo as desigualdades por n²:
 
@@ -398,6 +398,9 @@ Para isso, existem 3 casos. Definimos
 
 ### $d = log_b^a$
 
+onde determina-se os coeficientes $a$ e $b$ em:
+$$T(n)=aT(\frac{n}{b})+f(n)$$
+
 agora compare com a função $f(n)$ com  ${n^d}$
 
 ---
@@ -430,11 +433,14 @@ $f(n) \in \Theta(n^d log^{k+1}n)$
 Exemplo clássico:
 $T(n) = 2T(n/2)+n$
 $d=\log_22=1$
-$f(n) = n \rightarrow T(n) \in \Theta(n\log n)$ 
+$f(n) = n \rightarrow T(n) \in \Theta(n^1\log^1 n)$ 
 
 aplicado no caso, teremos:
-$T(n) \in \Theta(n^d \log¹ n)$ onde k é o grua de $f(n)$
+
+$T(n) \in \Theta(n^d \log¹ n)$ onde k é o grau de $f(n)$
+
 portanto:
+
 $T(n) \in \Theta(n \log n)$
 
 
@@ -443,7 +449,7 @@ $T(n) \in \Theta(n \log n)$
 ### Caso III 
 $f(n) \in \Omega(n^{d-ε})$
 
-com condicao de regularidade:
+com condição de regularidade:
 
 $af(n/b) ≤ cf(n), c < 1$
 
@@ -456,11 +462,13 @@ exemplo:
 $T(n) = 2T(n/2)+n² \rightarrow T(n) \in \Theta(n²)$
 
 ---
+
+### Praticando..
 - $T(n)=4T(n/2)+n$
 - $T(n)=2T(n/2)+nlogn$
-- $T(n)=3T(n/3)+n$
+- $T(n)=3T(n/3)+n^2$
 
-1-
+1- $T(n)=4T(n/2)+n$
 a = 4
 b = 2
 f(n) =n
@@ -472,7 +480,7 @@ como $n² > n$. Caso 1, predominância da recorrência.
 
 $T(n) \in \Theta(n²)$
 
-2- 
+2- $T(n)=2T(n/2)+nlogn$
 a = 2
 b = 2
 f(n) = n log n
@@ -482,7 +490,7 @@ $d=\log_2​2=1$
 caso de empate
 $T(n)∈Θ(nlogn)$
 
-3- 
+3- $T(n)=3T(n/3)+n^2$
 a= 3
 b = 3
 f(n) = n²
@@ -490,7 +498,7 @@ f(n) = n²
 $d=\log_33=1$
 
 custo externo domina
-$T(n)∈Θ(n2)$
+$T(n)∈Θ(n^2)$
 
 
 
