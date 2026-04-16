@@ -1,4 +1,4 @@
-	# 23/02
+# 23/02
 
 **informação** : dados que possuem algum valor ( financeiro, )
 **exploits**: códigos, dados ou sequencias de comandos criados para tirar vantagens de vulnerabilidades em softwares, hardwares ou sistemas permitindo ações não autorizadas como roubo de dados ou instalação de malwares.
@@ -233,7 +233,6 @@ Para bloquear o navegador TOR e necessários encontrar IP's dos nos TOR ativos.
 
 
 ---
-
 # 16/03
 
 ## Portas

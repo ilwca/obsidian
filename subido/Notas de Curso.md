@@ -157,3 +157,14 @@ como o trackeamento pode ser feito?
 - Pergunta direta.
 - Criar lista das pessoas que compram.
 - Faturamento na sua ferramenta de recebimento.
+
+# Métricas - F78
+## Métrica Principal
+Uma única métrica que vai definir o sucesso ou fracasso da campanha, ou seja, a métrica que esta 100% relacionada ao seu objetivo. seja ele venda, mensagem, lead, etc.
+
+Impressão $\rightarrow$ Clique $\rightarrow$ Site $\rightarrow$ **WhatsApp** 
+## Métrica Secundária
+São as métrica que afetam métrica principal. Ou seja, todas as métricas anteriores a métrica principal, pois esta depende da métrica secundária.
+
+**Impressão** $\rightarrow$ **Clique** $\rightarrow$ **Site** $\rightarrow$ WhatsApp 
+(15:28)
