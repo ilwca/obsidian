@@ -105,7 +105,6 @@ Ex:
 _MetaADS encontre um publico semelhante aos meus 'seguidores do Instagram'._
 _Pessoas que clicaram em tal anuncio nos últimos 15 dias..._
 
-
 ## Geolocalização
 Segmentação baseada na localização do publico alvo, deste modo posso definir uma área em que quero que apareçam os anúncios.
 

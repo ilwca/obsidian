@@ -173,5 +173,44 @@ Deste modo, em cada índice de $p_i$ teremos a lista de adjacência do vértice 
 .
 .
 
+## Algoritmo Ótimo
+onde o limite inferior da complexidade do problema é igual ao limite superior de complexidade do algoritmo 
+.
+.
+.
 
 ## Algoritmos de ordenação
+- ordenação por comparação (limite inferior)
+- 
+
+---
+# 16/04
+
+## Busca em Grafos
+Como visto em buscas em arvore temos 3 maneiras para o percorrimento e busca de uma arvore, sendo eles:
+- pré-ordem
+- in-ordem
+- pós-ordem
+
+Mas quando aplicados em grafos, é necessário estabelecer marcadores para orientar a busca.
+Considerando uma arvore $T(V, E)$, quando demarcamos uma aresta $(v,w)$ a partir de um vértice $v$, dizemos que a aresta foi explorada e o vértice $w$ foi alcançado.
+...
+
+### Busca em Profundidade
+Uma busca e dita em profundidade quando:
+- obedece um criterio de exploração
+- Dentre os vertices marcados obve
+
+## Biconectividade
+
+### lowpt(v)
+![[grafos-lowpt.png]]
+
+| $v_i$        | $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ | $v_6$ | $v_7$ | $v_8$ | $v_9$ | $v_{10}$ |
+| ------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | -------- |
+| $lowpt(v_i)$ | $v_8$ | $v_8$ | $v_2$ | $v_2$ | $v_2$ | $v_8$ | $v_8$ | $v_8$ | $v_8$ | $v_1$    |
+
+$$G()$$
+| $v_i$    | $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ | $v_6$ | $v_7$ | $v_8$ | $v_9$ | $v_{10}$ |
+| -------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | -------- |
+| $G(v_i)$ | $v_1$ | $v_8$ | $v_2$ | $v_4$ | $v_2$ | $v_6$ | $v_8$ | $v_8$ | $v_8$ | $v_1$    |
