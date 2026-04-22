@@ -151,15 +151,23 @@ $$v \rightarrow w$$
 ![[grafo-direcionado.png]]
 
 Desta forma é justo pensar em graus de saída e graus de entradas, que são denotados como:
+### Grau de Saída de entrada
 $d^+(v)$ = grau de saída
 $d^-(v)$ = grau de entrada
+## Fonte
+A fonte e um vértice que possui grau de entrada nulo.
+## Sumidouro
+O sumidouro que o vértice que contem grau de saída nulo.
 
-### Grafo subjascente
-Caso retiremos o sentido das arestas, teremos um grafo subjacente.
-### Fracamente conexo 
-.
-.
-.
+## Grafo subjacente
+Dado um grafo direcionado $D(V,E)$, se retirarmos o direcionamento de suas arestas, teremos o grafo *subjacente* de $D$.
+## Fracamente conexo 
+Um grafo $D(V,E)$ é dito fracamente conexo ou desconexo, se seu grafo subjacente for também fracamente ou desconexo.
+
+## Fortemente Conexo
+Um grafo $D(V,E)$ é fortemente conexo se para todo par de vértices $v,w \in V$ existe um caminho de $v$ para $w$ e de $w$ para $v$. Caso isso seja atendido para todos os vértices de $V$ então $D$ e fortemente conexo e também unilateralmente conexo.
+
+Se um grafo é **Fortemente Conexo** então ele também e unilateralmente e fracamente conexo.
 
 
 ---
@@ -197,9 +205,8 @@ Considerando uma arvore $T(V, E)$, quando demarcamos uma aresta $(v,w)$ a partir
 ...
 
 ### Busca em Profundidade
-Uma busca e dita em profundidade quando:
-- obedece um criterio de exploração
-- Dentre os vertices marcados obve
+Uma busca e dita em profundidade quando obedece um critério de exploração:
+- Dentre os vértices marcados e incidentes a alguma aresta ainda não explorada, escolher aquele recentemente alcançado na busca.
 
 ## Biconectividade
 

@@ -258,7 +258,7 @@ Dado um grafo $G(V,E)$, visualmente :
 
 ---
 
-## Árvore
+# Árvore
 Denomina-se arvore $T(V, E)$ um grafo conexo e acíclico. Se um vértice deste grafo possui grau $\leq 1,$ então $v$ e uma folha. Caso contrario, $v$ e um vértice interior.
 
 Caso o grafo  $T$ seja desconexo e acíclico, este é uma floresta. Pode-se provar por indução que toda arvore com $n$ vértices, possui $n-1$ arestas.
@@ -320,4 +320,56 @@ Por isso o número de arestas de um grafo planar e delimitado por:
 $$m\leq3n-6$$
 ### Grafo $K_{i,j}$ Planar
 Diferente de uma grafo planar completo, em um [[#Grafo Bipartido]] seu menor ciclo tem tamanho 4. Ou seja, cada plano $f$ é delimitado por no mínimo 4 arestas e sempre um numero par de arestas. Além disso, cada aresta pertence exatamente a duas faces. logo:
-$$2m\geq4f$$ 
+$$2m\geq4f$$ ---
+# Grafos Direcionados (Digrafos)
+Até então, examinamos grafos não direcionados. Estes são compostos por conjuntos de arestas $E$, formado por arestas $e_i$ que são pares não ordenados, sendo $e_i(v,w) = e_i(w,v)$.
+Porém em grafos direcionados, sendo conhecidos também por **Digrafos** $D(V,E)$, as arestas possuem direção única, sendo $e_i(v,w) \neq e_i(w,v)$. pois agora as arestas são direcionadas.
+$$v \rightarrow w$$
+![[grafo-direcionado.png]]
+
+Desta forma é justo pensar em graus de saída e graus de entradas, que são denotados como:
+### Grau de Saída de entrada
+$d^+(v)$ = grau de saída
+$d^-(v)$ = grau de entrada
+## Fonte
+A fonte e um vértice que possui grau de entrada nulo.
+## Sumidouro
+O sumidouro que o vértice que contem grau de saída nulo.
+
+## Grafo subjacente
+Dado um grafo direcionado $D(V,E)$, se retirarmos o direcionamento de suas arestas, teremos o grafo *subjacente* de $D$.
+## Fracamente conexo 
+Um grafo $D(V,E)$ é dito fracamente conexo ou desconexo, se seu grafo subjacente for também fracamente ou desconexo.
+
+## Fortemente Conexo
+Um grafo $D(V,E)$ é fortemente conexo se para todo par de vértices $v,w \in V$ existe um caminho de $v$ para $w$ e de $w$ para $v$. Caso isso seja atendido para todos os vértices de $V$ então $D$ e fortemente conexo e também unilateralmente conexo.
+
+Se um grafo é **Fortemente Conexo** então ele também e unilateralmente e fracamente conexo.
+
+---
+
+# Busca em Profundidade
+Uma busca é dita em profundidade quando o critério de escolha do vértice marcado é:
+`"Dentre todos os vertices marcados e incidentes a alguma aresta ainda nao explorada, escolher aquele mais recentemente alcancado na busca."`
+
+## Biconectividade
+Para a aplicação da busca em profundidade em grafos, será aplicada um algoritmo para a identificação de componentes biconvexas em grafos.
+
+## _lowpt(v)_
+Seja o grafo $G(V,E)$ e $T(V,E_t)$ a arvore de profundidade de $G$,  definiremos a função $lowpt(v)$ igual ao vértice mais próximo da raiz de modo que a partir do vértice em questão $v \in V$ somente seja possível descer uma aresta na arvore de profundidade e em seguida retornar para cima, usando no máximo uma aresta de retorno.
+
+do grafo abaixo, definiremos a saída $lowpt(v)$:
+![[grafos-lowpt.png]]
+
+| $v_i$        | $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ | $v_6$ | $v_7$ | $v_8$ | $v_9$ | $v_{10}$ |
+| ------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | -------- |
+| $lowpt(v_i)$ | $v_8$ | $v_8$ | $v_2$ | $v_2$ | $v_2$ | $v_8$ | $v_8$ | $v_8$ | $v_8$ | $v_1$    |
+
+A função $lowpt(v)$ e utilizada na definição de articulações em arvores de profundidade, como será discorrido a seguir.
+
+## Articulações
+Seja um grafo $G(V, E)$ e uma arvore de profundidade $T(V, E)$ de $G$. Uma articulação é um vértice $v \in V$, se e somente se:
+
+1. se $v$ for raiz de $T$ e possuir mais de um filho, ou
+2. se $v$ não e raiz de $T$ e possuir um filho $w$, tal que $lowpt(w) = v$ ou $w$ .
+

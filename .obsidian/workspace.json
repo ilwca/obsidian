@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/TG/tg-notas.md",
+                "file": "ccomp/TG/Grafos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tg-notas"
+              "title": "Grafos"
             }
           }
         ],
@@ -213,13 +213,14 @@
   },
   "active": "4c772072bf6b83ee",
   "lastOpenFiles": [
+    "ccomp/TG/tg-notas.md",
+    "ccomp/TG/Grafos.md",
+    "subido/notas de curso.md",
+    "subido/subido-flow.md",
     "utils/img/grafos-lowpt.png",
     "utils/img/Captura de tela 2026-04-16 111107.png",
     "Excalidraw/grafos-planaridade.md",
-    "ccomp/TG/tg-notas.md",
-    "ccomp/TG/Grafos.md",
     "ccomp/TG/Demonstração.md",
-    "subido/notas de curso.md",
     "ccomp/SAS/sas-notas.md",
     "ccomp/PAA/prova-I.md",
     "Sem título.md",
@@ -232,7 +233,6 @@
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "Excalidraw/Drawing 2026-04-09 08.53.06.excalidraw.md",
     "adjuvo/documento de Adesão.md",
-    "subido/subido-flow.md",
     "utils/img/sas-suid.jpeg",
     "utils/img/Não confirmado 195374.crdownload",
     "utils/img/blog-head_syntax-of-cron.webp",
@@ -252,7 +252,6 @@
     "utils/img/tecnicas_demonstracao.pdf",
     "utils/img/Não confirmado 680286.crdownload",
     "utils/img/grafo-isomorfo.png",
-    "utils/img/XOR.png",
     "utils/Divisão e conquista.md",
     "Excalidraw/Drawing 2026-03-18 10.18.08.excalidraw.md",
     "Sem título.base",
