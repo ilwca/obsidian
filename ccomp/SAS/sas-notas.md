@@ -4,11 +4,11 @@
 **exploits**: códigos, dados ou sequencias de comandos criados para tirar vantagens de vulnerabilidades em softwares, hardwares ou sistemas permitindo ações não autorizadas como roubo de dados ou instalação de malwares.
 
 ## Três Pilares da Segurança
-**integridade**: refere-se a manutenção das condições iniciais das informações de acordo com a forma produzidas e armazenadas.
+**Integridade**: Refere-se a manutenção das condições iniciais das informações de acordo com a forma produzidas e armazenadas.
 
-**disponibilidade**:propriedade de resistência a flash (hardware, software, energia) objetivando manter os serviços disponibilizados o máximo de tempo possível
+**Disponibilidade**: Propriedade de resistência a flash (hardware, software, energia) objetivando manter os serviços disponibilizados o máximo de tempo possível
 
-**confiabilidade**: a informação sera somente acessível para indivíduos entidades ou processos devidamente autorizados. 
+**Confiabilidade**: A informação será somente acessível para indivíduos entidades ou processos devidamente autorizados. 
 
 `Um agente externo pode oferecer uma AMEAÇA a um sistema que se encontra em estado de vulnerabilidade, podendo efetuar um ataque. por isso é importante haver mecanismos de CONTROLE sobre as vulnerabilidades para minimizar a PROBABILIDADE de chances de falha e IMPACTOS indesejados.`
 
@@ -34,11 +34,11 @@
 
 
 ## Engenharia Social
-Método de ataque onde alguém faz uso da persuasão, muitas vezes abusando da ingenuidade ou confiança do usuário, para obter informacaões que podem ser utilizadas para ter acesso não autorizado aos ativos da informação.
+Método de ataque onde alguém faz uso da persuasão, muitas vezes abusando da ingenuidade ou confiança do usuário, para obter informações que podem ser utilizadas para ter acesso não autorizado aos ativos da informação.
 
 | Nome            | Descrição                                                                                                                                                                                                                                                  |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adware          | propaganda que e integrada ao software.                                                                                                                                                                                                                    |
+| Adware          | propaganda que é integrada ao software.                                                                                                                                                                                                                    |
 | Cavalo de Troia | Programa de computador que parece ter uma função útil, mas também tem uma função oculta e potencialmente que escapa aos mecanismos de segurança                                                                                                            |
 | Exploits        | Códigos específicos para uma unica vulnerabilidade ou conjunto de vulnerabilidades.                                                                                                                                                                        |
 | Flooders        | Usados para gerar grande volume de dados para atacar sistemas em rede executando alguma forma de ataque.                                                                                                                                                   |
@@ -60,19 +60,19 @@ _Ou seja, impossível obter o conteúdo que foi utilizado na geração daquele h
 
 
 ## Esteganografia
-E a pratica de ocultar informações secretas dentro de outros arquivos (imagnes, textos...), tornando a mensagem oculta invisível ou indetectável para quem não sabe da sua existência.
+É a prática de ocultar informações secretas dentro de outros arquivos (imagens, textos...), tornando a mensagem oculta invisível ou indetectável para quem não sabe da sua existência.
 
 ## Criptografia
-- termo de origem graga que significa "escrita secreta"
-		- Permite dois individuos troquem mensagens confidenciais por um canal inseguro
-- A mensagem so podera ser revelada com a presenca de uma chave secreta, conhecida apensa pelo remetente e pelo destinatario (usuarios autorizados)
+- termo de origem grega que significa "escrita secreta"
+- Permite dois indivíduos troquem mensagens confidenciais por um canal inseguro
+- A mensagem só poderá ser revelada com a presença de uma chave secreta, conhecida apenas pelo remetente e pelo destinatário (usuários autorizados)
 
-Diferente da esteganografia, na criptografia as pessoas sabem que ha um conteudo escondido.
+Diferente da esteganografia, na criptografia as pessoas sabem que há um conteúdo escondido.
 
 - Texto em claro ou dado decifrado
-	- informacao inteligivel ou desprotegida
-	- informacao antres de ser protegida
-	- recuperar o texto em claro e o objetivo do perito
+	- informação inteligível ou desprotegida
+	- informação antes de ser protegida
+	- recuperar o texto em claro é o objetivo do perito
 
 - Chave
 	- Sequencia de bits utilizada, em conjunto 
@@ -87,10 +87,8 @@ A relação entre o valor da chave e o texto cifrado é tão complexa que não �
 obs.:_na confusão, a chave não carrega características da criptografia._
 ### Efeito Avalanche
 Pequenas modificações no texto em claro ou na chave devem gerar grandes mudanças no criptograma.
-
 ### Aleatoriedade
 O criptograma não deve apresentar padrões ou quaisquer sequências inteligíveis: deve-se parecer com uma sequencia aleatória.
-
 ### Segurança Computacional
 O custo para quebrar é maior que o valor da informação codificada e o tempo de quebra é maior que a vida útil da informação. 
 **Segurança Incondicional** - Mesmo com tempo e poder computacional infinitos, o criptograma não pode ser decifrado.
@@ -103,7 +101,6 @@ O custo para quebrar é maior que o valor da informação codificada e o tempo d
 - Transposição
 - Substituição
 - Rotores eletromecânicos
-
 ### Cifras Modernas
 - Simétricas
 - Assimétricas
@@ -191,11 +188,11 @@ Resolvido em 1976 e publicado por Withfiel Diffie, Martin Hellman e Ralph Merkle
 
 # 09/03
 ### Privacidade e Internet - temas que não se misturam
-constante fornecimento de dados para fontes publicas e provadas aplicações captura dados de usuários sem autorização.
+constante fornecimento de dados para fontes públicas é provada aplicações captura dados de usuários sem autorização.
 - Stalker- expressão em lingual inglesa cuja a tradução se assemelha a "perseguidor"
-- reconhecimento facial em tempo real
-- sequestros digitais
-- fontes de informação OSINT(Open Source Inteligence)
+- Reconhecimento facial em tempo real
+- Sequestros digitais
+- Fontes de informação OSINT(Open Source Inteligence)
 
 ## Direito ao Esquecimento
 Direito que uma pessoa possui de não permitir que um fato ainda que verídico, ocorrido em determinado momento de sua vida, seja exposto ao publico em geral, causando-lhe sofrimento ou transtorno.
@@ -207,8 +204,9 @@ Uma rede P2P possui constantemente, uma imensa quantidade de usuários conectado
 Empresas de mídia e órgão de inteligência cibernética vem distribuindo arquivos falsos em redes de compartilhamento, objetivando proteger o arquivo original de ser distribuído ilegalmente ou para monitorar usuários.
 
 ## HTTP e HTTPS
-**HTTP** - Define dentre outras formalidades, como são requisitadas as paginas da Web, como são enviados os dados que o usuário insere m formulários e como o servidor envia mensagens para o navegador do usuário. 
+**HTTP** - Define dentre outras formalidades, como são requisitadas as paginas da Web, como são enviados os dados que o usuário inserem em formulários e como o servidor envia mensagens para o navegador do usuário. 
 No entanto como o http é um protocolo baseado em texto, ou seja, toda a informação transmitida esta em texto claro, os dados do usuário e do servidor podem ser interceptados oi alterados no meio do caminho.
+**HTTPS** - É a versão segura do http que utiliza criptografia SST/TLS para proteger a comunicação entre navegador e servidor. 
 
 ### Spoofing
 Spoofing e uma técnica usada para mascarar ou falsificar informações de identificação em comunicações eletrônicas. Pode incluir a falsificação de endereços MAC, IP, e-mails, números de telefone ou qualquer outro dado de identificação. O objetivo e enganar os destinatários e faze-los acreditarem que as comunicações são legitimas, permitindo ataques como: phishing, roubo de informações ou distribuição de malware.
@@ -219,17 +217,17 @@ Em redes de  computadores, um proxy ("procurador", "representante") é um servid
 Diferente das VPN's os proxies não criptografam o trafego, podendo deixa-lo vulnerável a riscos de segurança. Não são uma boa opção para ambientes P2P, pois não ocultam toda sua atividade do seu provedor de internet.
 
 ## Rede Privada Virtual - VPN
-A Rede de comunicações privada construída sobre uma rede de comunicações publica. Prove um canal de comunicações seguro entre dispositivos.
-Serviço de rede intermediário entre o usuário e a internet, que oferece ferramentas adicionais de criptografia e navegação sigilosa. Cria conexão segura e criptografada, que pode ser considerada como um túnel, entre o cliente e um servidor operando pelo serviço VPN. Ferramenta extremamente poderosa para a segurança das informações pessoais. Forma mais solida, segura e simples de prover considerável nível de privacidade e anonimato.
+A Rede de comunicações privada construída sobre uma rede de comunicações publica. Provê um canal de comunicações seguro entre dispositivos.
+Serviço de rede intermediário entre o usuário e a internet, que oferece ferramentas adicionais de criptografia e navegação sigilosa. Cria conexão segura e criptografada, que pode ser considerada como um túnel, entre o cliente e um servidor operando pelo serviço VPN. Ferramenta extremamente poderosa para a segurança das informações pessoais. Forma mais sólida, segura e simples de prover considerável nível de privacidade e anonimato.
 Quando adequadamente implementados, estes protocolos podem assegurar comunicações seguras através de redes de computadores.
 
 ## Projeto TOR (The Onion Router)
-Marinha norte americana como o objetivo de proteger as comunicaoes do governo.
-Redireciona o trafego de internet através de uma rede de servidores voluntários, distribuidos pelo mundo (mais de oito mil servidores).
-Garantir o anonimato e consequentemente a privacidade. Usuário poderá acessar paginas mesmo que estejam censuradas em seu pais e garantir que o seu trafego não será interceptado por terceiros. Vos a todas as pessoas ao longo do mundo, seja para lutar contra regimes ditatoriais empregados insatisfeitos com suas empresas, denuncia de autoridades de corrupção, entre muitos outros casos. !_6 nós ate a conexão com o serviço._
+Marinha norte americana como o objetivo de proteger as comunicações do governo.
+Redireciona o trafego de internet através de uma rede de servidores voluntários, distribuídos pelo mundo (mais de oito mil servidores).
+Garantir o anonimato e consequentemente a privacidade. Usuário poderá acessar paginas mesmo que estejam censuradas em seu pais e garantir que o seu trafego não será interceptado por terceiros. Dando voz a todas as pessoas ao longo do mundo, seja para lutar contra regimes ditatoriais, empregados insatisfeitos com suas empresas, denuncia de autoridades de corrupção, entre muitos outros casos. !_6 nós ate a conexão com o serviço._
 ### Bloquear TOR BrowserVM
-O navegador TOR não pode ser bloqueado impedindo trafego, pois nos TOP geralmente usam  a porta TCP 443(HTTPS)
-Para bloquear o navegador TOR e necessários encontrar IP's dos nos TOR ativos.
+O navegador TOR não pode ser bloqueado impedindo tráfego, pois nos TOP geralmente usam  a porta TCP 443(HTTPS)
+Para bloquear o navegador TOR e necessário encontrar IP's dos nos TOR ativos.
 
 
 ---
@@ -239,6 +237,8 @@ Para bloquear o navegador TOR e necessários encontrar IP's dos nos TOR ativos.
 Software ou processo servindo de ponto final de comunicações em um sistema operacional hospedeiro.
 Identifica aplicações e processos de um computador. A porta é identificada por um numero de 16 bits. E adicionado a um endereço de IP do computador, completando o endereço de destino para uma sessão de comunicação.
 Pacotes de dados são encaminhados através da rede para um endereço IP de destino, e em seguida, ao atingir o computador de destino, são encaminhadas para o processo específico ligado ao número de porta de destino.
+
+$$Rede\rightarrow IP \rightarrow Porta$$
 
 Aplicações e execuções de serviços comuns costumam ser especificamente reservadas, números bem conhecidos de porta para receber solicitações de serviços das maquinas.
 As primeiras  1024 portas são reservadas ("Well Known Ports"). Geralmente, estão reservadas para os processos sistema (daemon) ou aos programas executados por utilizadores privilegiados.
@@ -258,7 +258,7 @@ redireciona operações shell para um host de destino. Útil para execução rem
 
 
 ## Nmap
-Utilitário para mapeamento de rede e auditoria de segurança, utilizado por profissionais de segurança cibernética e iniciantes para auditar e descobrir portas abertas locais e remotas, alem de hosts e infromações de rede.
+Utilitário para mapeamento de rede e auditoria de segurança, utilizado por profissionais de segurança cibernética e iniciantes para auditar e descobrir portas abertas locais e remotas, além de hosts e informações de rede.
 Ideal para identificar serviços ou servidores em uma rede.
 ### Recursos
 Os recursos que o Nmap incluem:
@@ -275,8 +275,8 @@ Funciona coletando dados, armazenando-os e analisando (em tempo real) padrões d
 Existem modelos baseado em host e outro baseado em rede. A coleta de dados é feita de variadas formas, desde mecanismo de entrada e saída, como mouse e teclado, a arquivos salvos em seus computadores; tabelas de regras, etc. Também é possível analisar a camada de rede do protocolo TCP/IP e analisar o tipo de fluxo, pacotes que entram e saem conexões estabelecidas, dentre outros.
 
 ### Diferença de IDS e IPS
-Um IDS passivo é projetado para detectar ameaças e informar ao administrados da rede sobre a atividade maliciosa detectada.
-Os sistema de prevenção de intrusão (IPS), por outro lado, representa o comportamento de um IDS ativo, ou seja, é projetado com o objetivo de bloquear automaticamente a atividade maliciosa, seja por configuração de firewalls e computadores ou outras tecnicas, como encerramento de conexão via envio de pacores reset.
+Um IDS passivo é projetado para detectar ameaças e informar ao administrador da rede sobre a atividade maliciosa detectada.
+Os sistema de prevenção de intrusão (IPS), por outro lado, representa o comportamento de um IDS ativo, ou seja, é projetado com o objetivo de bloquear automaticamente a atividade maliciosa, seja por configuração de firewalls e computadores ou outras técnicas, como encerramento de conexão via envio de pacotes reset.
 [SNORT](https://www.snort.org) - Open Source Network-based instruction detection/prevention (IDS/IPS)
 
 
@@ -285,14 +285,15 @@ Base de dados internacional e publica para troca de informações sobre falhas d
 Seu objetivo e padronizar nomes para todas as vulnerabilidades e exposições.
 
 ## Honey Pots (Potes de Mel)
-Usados para enganar hacker exponto vulnerabilidades conhecidas deliberadamente. Uma vez que o hacker ache um pote de mel, é comum que esse hacker fique em torno desse pote por algum tempo. Durante esse tempo, pode-se catalogar as atividades do hacker para descobrir suas ações tecnicas. Geralmente possui servicos comuns em execução http(80) tcp(21), entre outros. Pode tambem haver a configuração do firewall para redirecionar o trafego em algumas portas para um pote de mel, onde o intruso estará pensando que esta se conectando a um servidor real.
-Como o pote de mel deve parecer real, devem ser criados alguns arquivos de dados contas de usuários, entre outros, todos FALSOS, para garantir que o hacker pense que se trata mesmo de um sistema real, o que fara com que o hacker se coise.
+Usados para enganar hacker expondo vulnerabilidades conhecidas deliberadamente. Uma vez que o hacker ache um pote de mel, é comum que esse hacker fique em torno desse pote por algum tempo. Durante esse tempo, pode-se catalogar as atividades do hacker para descobrir suas ações tecnicas. Geralmente possui servicos comuns em execução http(80) tcp(21), entre outros. Pode tambem haver a configuração do firewall para redirecionar o trafego em algumas portas para um pote de mel, onde o intruso estará pensando que esta se conectando a um servidor real.
+Como o pote de mel deve parecer real, devem ser criados alguns arquivos de dados contas de usuários, entre outros, todos FALSOS, para garantir que o hacker pense que se trata mesmo de um sistema real, o que fara com que o hacker se comprometa.
 
-
+---
 # 23/03
 
 ## Obtendo o IP
-usado o comando apos descobrir o IP da maquina alvo.
+usado o comando após
+descobrir o IP da maquina alvo.
 
 `sudo netdiscover -i vboxnet0 -r 192.168.56.0/24` 
 
