@@ -293,7 +293,7 @@ Como o pote de mel deve parecer real, devem ser criados alguns arquivos de dados
 
 ## Obtendo o IP
 usado o comando após
-descobrir o IP da maquina alvo.
+**descobrir** o IP da maquina alvo.
 
 `sudo netdiscover -i vboxnet0 -r 192.168.56.0/24` 
 

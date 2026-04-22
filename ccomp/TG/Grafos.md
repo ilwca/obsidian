@@ -373,3 +373,14 @@ Seja um grafo $G(V, E)$ e uma arvore de profundidade $T(V, E)$ de $G$. Uma artic
 1. se $v$ for raiz de $T$ e possuir mais de um filho, ou
 2. se $v$ não e raiz de $T$ e possuir um filho $w$, tal que $lowpt(w) = v$ ou $w$ .
 
+## $g(v)$
+Para o calculo de $lowpt(v)$, definimos a função $g(v)$ onde para um vértice ascendente $w$ de $v$ mais alto em $T$ tal que $(v,w)$ é uma aresta de retorno para aproximação da raiz ou $w$ é a própria raiz. Caso não exista aresta de retorno $g(v)=v$. Utilizando o exemplo da figura acima, temos a tabela de saída de $g(v)$ onde $v \in V$ de uma arvore de profundidade $T$ do grafo $G(V,E)$.
+
+| $v_i$    | $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ | $v_6$ | $v_7$ | $v_8$ | $v_9$ | $v_{10}$ |
+| -------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | -------- |
+| $g(v_i)$ | $v_1$ | $v_8$ | $v_2$ | $v_4$ | $v_2$ | $v_6$ | $v_8$ | $v_8$ | $v_8$ | $v_1$    |
+
+## Demarcadores
+sejam $v,w$ vértices de $G$, de modo que $v$ seja articulação, caso $lowpt(w)=v$ ou $w$, então $w$ é um demarcador de $v$. Uma articulação pode ser pai de um ou mais demarcadores.
+![[grafos-componentes-biconexaxs.png]]
+
