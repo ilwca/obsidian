@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/TG/Grafos.md",
+                "file": "subido/notas-subido.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Grafos"
+              "title": "notas-subido"
             }
           }
         ],
@@ -211,14 +211,14 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "4c772072bf6b83ee",
+  "active": "6c011cb0f5844fd0",
   "lastOpenFiles": [
+    "ccomp/TG/Grafos.md",
     "utils/img/grafos-componentes-biconexaxs.png",
     "utils/img/Captura de tela 2026-04-22 112437.png",
     "ccomp/SAS/sas-notas.md",
-    "ccomp/TG/Grafos.md",
     "ccomp/TG/tg-notas.md",
-    "subido/notas de curso.md",
+    "subido/notas-subido.md",
     "subido/subido-flow.md",
     "utils/img/grafos-lowpt.png",
     "utils/img/Captura de tela 2026-04-16 111107.png",
@@ -249,7 +249,6 @@
     "ccomp/PE",
     "utils/img/grafo-C-euleriano.png",
     "README.md",
-    "utils/img/grafo-arvore-geradora.png",
     "utils/img/Não confirmado 788159.crdownload",
     "utils/img/tecnicas_demonstracao.pdf",
     "utils/img/Não confirmado 680286.crdownload",

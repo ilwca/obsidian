@@ -146,7 +146,7 @@ Porém alguns anúncios podem ser promovidos de forma ativa, ou seja, quando se 
 Assim, podemos definir onde nosso publico principal esta localizado, se o produto/serviço que estamos trabalhando e mais buscado intencionalmente ou pode tentar chamar a atenção dos clientes.
 
 ---
-# Metricas de Resultados de Campanha
+# Métricas de Resultados de Campanha
 ## Trackeamento de clientes
 como o trackeamento pode ser feito?
 - Pixel e API de Conversões (GTM)
@@ -158,12 +158,47 @@ como o trackeamento pode ser feito?
 - Faturamento na sua ferramenta de recebimento.
 
 # Métricas - F78
-## Métrica Principal
-Uma única métrica que vai definir o sucesso ou fracasso da campanha, ou seja, a métrica que esta 100% relacionada ao seu objetivo. seja ele venda, mensagem, lead, etc.
+- ## Métrica Principal
+	Uma única métrica que vai definir o sucesso ou fracasso da campanha, ou seja, a métrica que esta 100% relacionada ao seu objetivo. seja ele venda, mensagem, lead, etc.
+	Impressão $\rightarrow$ Clique $\rightarrow$ Site $\rightarrow$ **WHATSAPP** 
+- ## Métrica Secundária
+	São as métrica que afetam métrica principal. Ou seja, todas as métricas anteriores a métrica principal, pois esta depende da métrica secundária.
+	**Impressão** $\rightarrow$ **Clique** $\rightarrow$ **SITE** $\rightarrow$ WhatsApp 
 
-Impressão $\rightarrow$ Clique $\rightarrow$ Site $\rightarrow$ **WhatsApp** 
-## Métrica Secundária
-São as métrica que afetam métrica principal. Ou seja, todas as métricas anteriores a métrica principal, pois esta depende da métrica secundária.
+## Cliques
+Dentro das métricas de cliques temos, temos:
+- ### CPM
+	Custo por mil cliques
+- ### Cliques Todos
+	Todos os cliques relacionados ao seu anuncio, seja em ver mais, saiba mais, e não necessariamente no link.
+- ### Cliques no Link
+	Cliques feitos no link do anuncio.
+- ### CTR 
+	o [[#CTR]] = $\frac{impressões}{cliques}\cdot1000$ sendo uma taxa percentual %.
 
-**Impressão** $\rightarrow$ **Clique** $\rightarrow$ **Site** $\rightarrow$ WhatsApp 
-(15:28)
+## CPV
+CPV é a taxa de retenção em % do vídeo (anuncio). Dado um anúncio de 1 minuto um CPV de 50% é a quantidade de pessoas que assistira 50% do vídeo, ou seja, 30s.
+Desta forma é possível criar públicos baseados no CPV de um vídeo/anúncio. Por exemplo, criar um publico de CPV 25%, ou seja, pessoas que assistiram pelo menos 25% do vídeo X.
+
+## Connect Rate
+Métrica de relação entre visualizações na página e cliques no link, onde cliques no link não necessariamente são visualizações pois, um pessoa pode clicar no link e fechar em seguida.
+ConnectRate = $\frac{visualizacões}{clique}$
+
+## Taxa de Conversão de Lista
+Quando em uma lista de Leads, é a relação entre os Leads e pessoas que compraram. sendo 
+%Conversão de Lista = $\frac{Leads}{Compras}$.
+
+## Taxa de Conversão de Site
+Da mesma forma taxa(%) de pessoas que clicaram no site e efetuaram a compra.
+%Converstao de Site = $\frac{Site}{Compras}$
+
+## ROI
+Esta é a taxa de lucro com o custo total com investimentos e custos fixos, como abaixo
+$$ROI=\frac{Faturamento}{CustoTotal}\cdot100$$
+
+## ROAS
+Esta é a taxa de lucro com o custo investido em campanha de marketing.
+$$ROI=\frac{Faturamento}{CustoMarketing}\cdot100$$
+## Ticket Médio
+Ticket médio é o valor em compras dividido pelo numero de compras. Ou seja, quanto em média um cliente gasta.
+Ticket Médio =$$\frac{ValorCompras}{Nº compras}$$
