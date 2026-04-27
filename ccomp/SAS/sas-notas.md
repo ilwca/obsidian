@@ -12,14 +12,15 @@
 
 `Um agente externo pode oferecer uma AMEAÇA a um sistema que se encontra em estado de vulnerabilidade, podendo efetuar um ataque. por isso é importante haver mecanismos de CONTROLE sobre as vulnerabilidades para minimizar a PROBABILIDADE de chances de falha e IMPACTOS indesejados.`
 
-
 ## Vulnerabilidades
+**confiabilidade**: a informação sera somente acessível para indivíduos entidades ou processos devidamente autorizados. 
 
 - Humanas (Elo mais fraco - engenharia social)
 
 - Físicas (perímetro de segurança fragilizado)
 
 - Naturais (Terremoto, maremoto, inundações, secas)
+
 
 - Hardware (Exemplo EDL, em chipset qualcomm)
 
@@ -284,7 +285,7 @@ Funciona coletando dados, armazenando-os e analisando (em tempo real) padrões d
 Existem modelos baseado em host e outro baseado em rede. A coleta de dados é feita de variadas formas, desde mecanismo de entrada e saída, como mouse e teclado, a arquivos salvos em seus computadores; tabelas de regras, etc. Também é possível analisar a camada de rede do protocolo TCP/IP e analisar o tipo de fluxo, pacotes que entram e saem conexões estabelecidas, dentre outros.
 
 ### Diferença de IDS e IPS
-Um IDS passivo é projetado para detectar ameaças e informar ao administrados da rede sobre a atividade maliciosa detectada.
+Um IDS passivo é projetado para detectar ameaças e informar ao administrador da rede sobre a atividade maliciosa detectada.
 Os sistema de prevenção de intrusão (IPS), por outro lado, representa o comportamento de um IDS ativo, ou seja, é projetado com o objetivo de bloquear automaticamente a atividade maliciosa, seja por configuração de firewalls e computadores ou outras tecnicas, como encerramento de conexão via envio de pacores reset.
 [SNORT](https://www.snort.org) - Open Source Network-based instruction detection/prevention (IDS/IPS)
 
@@ -294,7 +295,7 @@ Base de dados internacional e publica para troca de informações sobre falhas d
 Seu objetivo e padronizar nomes para todas as vulnerabilidades e exposições.
 
 ## Honey Pots (Potes de Mel)
-Usados para enganar hacker exponto vulnerabilidades conhecidas deliberadamente. Uma vez que o hacker ache um pote de mel, é comum que esse hacker fique em torno desse pote por algum tempo. Durante esse tempo, pode-se catalogar as atividades do hacker para descobrir suas ações tecnicas. Geralmente possui servicos comuns em execução http(80) tcp(21), entre outros. Pode tambem haver a configuração do firewall para redirecionar o trafego em algumas portas para um pote de mel, onde o intruso estará pensando que esta se conectando a um servidor real.
+Usados para enganar hacker expondo vulnerabilidades conhecidas deliberadamente. Uma vez que o hacker ache um pote de mel, é comum que esse hacker fique em torno desse pote por algum tempo. Durante esse tempo, pode-se catalogar as atividades do hacker para descobrir suas ações tecnicas. Geralmente possui servicos comuns em execução http(80) tcp(21), entre outros. Pode tambem haver a configuração do firewall para redirecionar o trafego em algumas portas para um pote de mel, onde o intruso estará pensando que esta se conectando a um servidor real.
 Como o pote de mel deve parecer real, devem ser criados alguns arquivos de dados contas de usuários, entre outros, todos FALSOS, para garantir que o hacker pense que se trata mesmo de um sistema real, o que fara com que o hacker se coise.
 
 
