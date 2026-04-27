@@ -236,8 +236,11 @@ O grau de efetividade da rede TOR depende diretamente do número de voluntários
 O navegador TOR não pode ser bloqueado impedindo trafego, pois nos TOP geralmente usam  a porta TCP 443(HTTPS)
 Para bloquear o navegador TOR e necessários encontrar IP's dos nós TOR ativos.
 
-Então um dos únicos cenários que conseguimos imaginar que a rede TOR tenha sua privacidade afetada é em caso de comprometimento de todas as máquinas nós no envolvidas nas camadas de conexão.
-
+### Cenários de Comprometimento da rede TOR
+- Um individuo ou organização podem ter controle de uma quantidade significativa dos nós da rede, uma vez que todos os nós são voluntários podendo assim, rastrear os dados.
+- Uma software adulterado (navegador) pode ser distribuído, e quando o usuário enganado fizer o uso deste, seus dados e trafego pode sem monitorados.
+- Derrubar a porta 443(https) do sistema, uma vez que é a porta utilizada pela rede TOR, é também usada pelo https, bloqueando assim o acesso a grande parte da internet, além do acesso a rede TOR.
+ 
 ---
 # 16/03
 
