@@ -4,23 +4,22 @@
 **exploits**: códigos, dados ou sequencias de comandos criados para tirar vantagens de vulnerabilidades em softwares, hardwares ou sistemas permitindo ações não autorizadas como roubo de dados ou instalação de malwares.
 
 ## Três Pilares da Segurança
-**integridade**: refere-se a manutenção das condições iniciais das informações de acordo com a forma produzidas e armazenadas.
+**integridade**: refere-se a manutenção das condições iniciais das informações de acordo com a forma que foram produzidas e armazenadas.
 
-**disponibilidade**:propriedade de resistência a flash (hardware, software, energia) objetivando manter os serviços disponibilizados o máximo de tempo possível
+**disponibilidade**: propriedade de resistência a flash (hardware, software, energia) objetivando manter os serviços disponibilizados o máximo de tempo possível
 
-**confiabilidade**: a informação sera somente acessível para indivíduos entidades ou processos devidamente autorizados. 
+**confiabilidade**: a informação será somente acessível para indivíduos entidades ou processos devidamente autorizados. 
 
 `Um agente externo pode oferecer uma AMEAÇA a um sistema que se encontra em estado de vulnerabilidade, podendo efetuar um ataque. por isso é importante haver mecanismos de CONTROLE sobre as vulnerabilidades para minimizar a PROBABILIDADE de chances de falha e IMPACTOS indesejados.`
 
 ## Vulnerabilidades
-**confiabilidade**: a informação sera somente acessível para indivíduos entidades ou processos devidamente autorizados. 
+**confiabilidade**: A informação sera somente acessível para indivíduos entidades ou processos devidamente autorizados. 
 
 - Humanas (Elo mais fraco - engenharia social)
 
 - Físicas (perímetro de segurança fragilizado)
 
 - Naturais (Terremoto, maremoto, inundações, secas)
-
 
 - Hardware (Exemplo EDL, em chipset qualcomm)
 
@@ -35,7 +34,6 @@
 
 ## Ransomware
 É um sequestro de informação, onde o atacante captura os dados da vítima e os criptografa, exigindo um pagamento para o resgate, apos isso libera uma chave especial capaz de descriptografar os dados.
-
 
 ## Engenharia Social
 Método de ataque onde alguém faz uso da persuasão, muitas vezes abusando da ingenuidade ou confiança do usuário, para obter informações que podem ser utilizadas para ter acesso não autorizado aos ativos da informação.
@@ -61,22 +59,22 @@ Método de ataque onde alguém faz uso da persuasão, muitas vezes abusando da i
 Um algoritmo de hash criptográfico é uma função matemática cujo o resultado é um valor de tamanho fixo, gerado a partir de uma entrada de tamanho arbitrário.
 Dado seu atributo de **unidirecionalidade**, a partir de seu resultado é impraticável produzir o parâmetro de entrada.
 _Ou seja, impossível obter o conteúdo que foi utilizado na geração daquele hash._
-### Resistênca a colisão
+### Resistência a colisão
 A propriedade da resistência a colisão diz que deve ser computacionalmente difícil ou impossível encontrar um par de $(m, n)$, de forma que $h(m) = h(n)$, em outras palavras, é difícil ou impossível encontrar duas mensagens diferentes que possuem o mesmo código hash, no entanto se isso ocorrer, seria categorizado como uma **colisão**, logo uma vulnerabilidade.
 
 ## Esteganografia
-E a pratica de ocultar informações secretas dentro de outros arquivos (imagens, textos...), tornando a mensagem oculta invisível ou indetectável para quem não sabe da sua existência.
+E a prática de ocultar informações secretas dentro de outros arquivos (imagens, textos...), tornando a mensagem oculta invisível ou indetectável para quem não sabe da sua existência.
 
 ## Criptografia
-- termo de origem graga que significa "escrita secreta"
-	 Permite dois individuos troquem mensagens confidenciais por um canal inseguro
-- A mensagem so podera ser revelada com a presenca de uma chave secreta, conhecida apensa pelo remetente e pelo destinatario (usuarios autorizados)
+- termo de origem grega que significa "escrita secreta"
+	 Permite dois indivíduos troquem mensagens confidenciais por um canal inseguro
+- A mensagem só poderá ser revelada com a presença de uma chave secreta, conhecida apenas pelo remetente e pelo destinatário (usuários autorizados)
 
-Diferente da esteganografia, na criptografia as pessoas sabem que ha um conteudo escondido.
+Diferente da esteganografia, na criptografia as pessoas sabem que ha um conteúdo escondido.
 
 - Texto em claro ou dado decifrado
-	- informacao inteligivel ou desprotegida
-	- informacao antres de ser protegida
+	- informação inteligível ou desprotegida
+		- informação antes de ser protegida
 	- recuperar o texto em claro e o objetivo do perito
 
 - Chave

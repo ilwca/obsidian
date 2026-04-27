@@ -1,4 +1,4 @@
-## Questao 1 
+ ## Questao 1 
 **Descreva a respeito das seguintes terminologias**
 ### Ransomware
 É um sequestro de informação, onde, o atacante criptografa os dados da vitima exigindo um valor como recompensa. Quando paga, é liberada uma chave para a vitima fazer a descriptografia.
