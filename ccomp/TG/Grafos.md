@@ -350,7 +350,8 @@ Se um grafo é **Fortemente Conexo** então ele também e unilateralmente e frac
 # Busca em Profundidade
 Uma busca é dita em profundidade quando o critério de escolha do vértice marcado é:
 `"Dentre todos os vertices marcados e incidentes a alguma aresta ainda nao explorada, escolher aquele mais recentemente alcancado na busca."`
-
+![[grafos-exemplo.png]]
+Considerando o grafo da figura 4.3, e seguindo o critério da busca em profundidade, se selecionarmos o vértice 1 como vértice inicial, e posteriormente explorarmos uma aresta incidente a 1 que não seja explorada, como (1,2), agora teremos o vértice 2 visitado. Assim, seguindo o critério da busca em profundidade, a próxima aresta a ser selecionada deve ser uma aresta não explorada e incidente ao ultimo vértice visitado, no caso o vértice 2. então escolhemos pro exemplo a aresta (2,4) para ser explorada.
 ## Biconectividade
 Para a aplicação da busca em profundidade em grafos, será aplicada um algoritmo para a identificação de componentes biconvexas em grafos.
 
