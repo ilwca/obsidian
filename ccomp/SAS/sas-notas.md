@@ -528,3 +528,86 @@ Para usar forca bruta na porta do Tomcat usando o Payload  65 :
  - RHOSTS - IP
  - VERBOSE - true
  - STOP_ON_SUCCCESS - true
+
+---
+04/05
+# WebHacking
+
+## Data Leak
+Exposição de dados sensíveis, resultante de falhas humanadas de processes ou de tecnologias.
+_"É possível obter a ficha cadastral na integra de pacientes, acessos a logins médicos, emails internos, planilhas financeiras exames de paciente e ate certidões de óbito e imagens de raio-x"_
+### Técnicas práticas de exploração de vulnerabilidades em ambientes Web
+- LFI - Local File Inclusion
+- RFI - remote File Inclusion
+- Command Injection
+- SQL Injection
+- XSS - Cross Site Scripting
+- Brute Force Attack
+- Google Hacking
+- Denial of Service Attack
+
+## Google Hacking
+**Buscando Falhas em sites com auxilio do google**
+O Google utiliza de uma tecnologia denominada spiders (ou webcrawlers):Robos que fazem a varredura na web buscando e indexando páginas.Quando  realizamos uma busca pela ferramenta, ela procura por este termo nas páginas indexadas. Cada resultado  retornado é composto por um titulo, uma URL e uma descrição. Um servidor mal configurado pode expor informações da empresa no Google.
+
+Google hackin nada mais é do que uma prática para encontrar arquivos e/ou falhas a partir do Google, utilizando-o como uma especia de scanner, o informando comandos e manipulando buscas avançadas por strings.
+
+## Google DORK's
+Com a composição de DORK's podemos retornar domínios específicos, títulos, palavras, arquivos e metadados.
+ex:
+`site:`
+`site:uft.edu.br noticias`-  estas tags irão pesquisar somente noticias com o domínio da UFT.
+
+`inurl:`
+`site:uft.edu.br inurl:noticias` - Somente sites com noticias na URL.
+
+`indexof:` - contém diretórios de arquivos.
+
+`intitle:`- Somente conteúdo no title.
+
+`filetype:pdf` - somente conteúdos com arquivos pdf.
+
+## Ataques de negação de Serviços - DoS
+Esse serviço esta relacionado a acessibilidade e a capacidade de utilização sob demanda por usuários autorizados.
+Um ataque de negação de serviço (Denial of service - DoS) é uma tentativa de comprometer a disponibilidade, impedindo ou bloqueando completamente o fornecimento de algum serviço. O ataque tenta exaurir algum recurso critico associado ao serviço. Um exemplo é inundar um servidor web com tantas requisições espúrias que ele é incapaz de responder a tempo as requisições válidas de usuários. O ataque de negação de serviços **Não é invasão**.
+
+### DDoS - Distribuited Denied of Services
+Reconhecendo as limitações de ataques de inundação gerados por um único sistema, uma das primeiras evoluções mais significativas em ferramentas de ataque de DoS foi a utilização de vários sistemas para gerar ataques.
+Esses sistemas eram tipicamente estações de trabalho ou PCs comprometidos de usuários (Zumbis).
+A _Computer Security Incident Handiling Guide_ do NIST define ataque de negação de servisos da seguinte maneira:
+_" É uma ação que impede ou prejudica a outro autorizada de redes, sistemas ou aplicação."_
+### Ataques de Inundação - Flooders
+Inundam o enlace da rede ligada ao servidor com um torrente de pacotes maliciosos os quais competem com o fluxo de tráfego válido até o servidor e usualmente atropelam, Em resposta ao congestionamento que isso causa em alguns reteadores no caminho até o servidor visado, muitos pacotes serão descartados.  Ataques de inundação comuns usam qualquer um dos tipos de pacote de ICMP, UDP ou TCP SYN.
+
+**Largura de Banda**
+A Largura de banda de rede está relaacionada a capacidade dos enlaces de rede que conectam um servidor a internet. Para a maioria das organizações, essa é a conexão com o provedor de serviços de Internet (Internet Service Provider - ISP). Usualmente, essa conexão terá capacidade mais baixa do que os enlaces dentro de roteadores do provedor de serviços de internet. Isso significa que é possivel chegar uma quantidade de trafego aos roteadores do ISO por esses enlaces de maior capacidade, que seja mais alta do que a  quantidade que pode ser transmitida pelo enlace com a organização.
+
+Outra forma de ataque  recursos de sistema usa pacotes cuja estrutura aciona um bug no software de tratamento de rede do sistema, causando sua interrupção. Isso significa que o sistema não pode mais se comunicar pela rede ate esse software ser reativado, em geral mediante a reinicialização do sistema-alvo. Isso é conhecido como pacote envenenado.
+Um ataque a uma aplicação especifica, como um servidor Web normalmente envolva varias requisições validas, cada uma das quais consome recursos significativos. Então isso limita a capacidade do servidor de responder a requisições
+
+Os clássicos ataques do Ping da Morte é da lágrima, dirigindo a sistemas windows (antigos e atuais), assumiam essa forma. Eles visavam bugs no código de rede do Windows que tratava.
+
+### Inundações HTTP
+Requisições HTTP de muitos bots diferentes podem ser projetadas para consumir recursos consideráveis. 
+### Ataques de largura de banda baseados em Aplicação
+Uma estratégia potencialmente efetiva para a negação de serviço é forcar o alvo a executar operações que consomem recursos de forma desproporcional ao esforço do ataque.
+Ex: Sites da web podem dedicar-se a operações longas como buscas, em resposta a uma requisição simples. `SELECT * FROM + join + WHERE` 
+### Slowloris 
+Servidores web utilizam threads para dar suporte a varias requisições. esse ataque tenta monopolizar todas as threads de tratamento de requisição disponíveis no servidor web, enviando requisições HTTP que nunca são concluídas. Visto que cada requisição consome um threads, a certa altura o ataque Slowloris consome toda a capacidade de conexão dos servidor Web, efetivamente negando acesso a usuários legítimos.
+
+## Ataques Refletores e Amplificadores 
+O atacante envia um pacote de rede com endereço de origem falsificado a um serviço que e executado em algum servidor de rede. O servidor responde a esse pacote enviando-o ao endereço de origem falsificado que pertence ao alvo do ataque propriamente dito. Se o atacante enviar varias requisições a vários servidores, todas com o mesmo endereço de origem falsificado, a inundação de respostas resultante pode sobrecarregar o enlace de rede do alvo. 
+Há duas variantes básicas desse tipo de ataque: o ataque de reflexão simples e o ataque de amplificação.
+### Ataques de reflexão
+O atacante envia pacotes a um serviço conhecido intermediário, com endereço de origem falsificado do sistema visado. Quando o intermediário responde, a resposta é enviada ao alvo. Efetivamente, isso causa a reflexão do ataque no intermediário, que é denominado refletor, e é por isso que esse ataque é denominado ataque de reflexão.
+### Ataques de Amplificação
+Também envolvem enviar a intermediários um pacote com o endereço de origem falsificado do sistema alvo. Eles diferem na geração de vários pacotes de resposta para cada pacote original enviado. Isso pode ser conseguido dirigindo a requisição original ao endereço BroadCast de alguma rede. O resultado é que todas as estações nessa rede podem potencialmente responder a requisição, gerando uma inundação de respostas.
+
+## Defesas contra ataques de Negação de Serviços.
+É importante reconhecer que esses ataques nao podem ser interiramente evitados. Se um atacante puder dirigir um volume de trafego legitimo suficintemente grande ao seu sistema, existe alta chance de que ele sobrecarregará a conexão de rede do seu sistema, e assim, limitará requisições de tráfego legitimas vindas de outros usuários.
+Em geral, há quatro linhas de fegeas contrar ataqeus DDoS:
+- Prevenção e preempção de ataque (Antes do ataque)
+- Detecção e filtragem de ataque (durante o ataque)
+- Rastreamento retroativo e identificação da fonte
+- Reação ao ataque
+
