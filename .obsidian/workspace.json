@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/SAS/sas-notas.md",
+                "file": "ccomp/TG/Grafos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sas-notas"
+              "title": "Grafos"
             }
           }
         ],
@@ -199,19 +199,23 @@
   },
   "active": "cc16034bcc307cb9",
   "lastOpenFiles": [
+    "utils/img/grafos-busca-prof.png",
+    "utils/img/Captura de tela 2026-05-06 210700.png",
+    "utils/Captura de tela 2026-05-06 210700.png",
+    "Captura de tela 2026-05-06 210700.png",
+    "subido/notas-subido.md",
+    "subido/subido-flow.md",
     "ccomp/TG/Grafos.md",
     "utils/img/grafos-exemplo.png",
     "utils/img/Captura de tela 2026-05-03 182514.png",
     "L2-GPS.md",
     "Sem título.md",
-    "subido/notas-subido.md",
     "Atividade Prática.pdf",
     "ccomp/SAS/sas-p1.md",
     "utils/img/grafos-componentes-biconexaxs.png",
     "utils/img/Captura de tela 2026-04-22 112437.png",
     "ccomp/SAS/sas-notas.md",
     "ccomp/TG/tg-notas.md",
-    "subido/subido-flow.md",
     "utils/img/grafos-lowpt.png",
     "utils/img/Captura de tela 2026-04-16 111107.png",
     "Excalidraw/grafos-planaridade.md",
@@ -228,12 +232,9 @@
     "adjuvo/documento de Adesão.md",
     "utils/img/sas-suid.jpeg",
     "utils/img/Não confirmado 195374.crdownload",
-    "utils/img/blog-head_syntax-of-cron.webp",
     "utils/img/Não confirmado 746874.crdownload",
     "Excalidraw/Drawing 2026-04-01 18.19.21.excalidraw.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
-    "utils/img/grafo-planar.png",
-    "utils/img/paa-fatorial.png",
     "utils/grafos-planaridade.md",
     "ccomp/PE/pe-notas.md",
     "ccomp/PE",

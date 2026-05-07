@@ -352,6 +352,41 @@ Uma busca é dita em profundidade quando o critério de escolha do vértice marc
 `"Dentre todos os vertices marcados e incidentes a alguma aresta ainda nao explorada, escolher aquele mais recentemente alcancado na busca."`
 ![[grafos-exemplo.png]]
 Considerando o grafo da figura 4.3, e seguindo o critério da busca em profundidade, se selecionarmos o vértice 1 como vértice inicial, e posteriormente explorarmos uma aresta incidente a 1 que não seja explorada, como (1,2), agora teremos o vértice 2 visitado. Assim, seguindo o critério da busca em profundidade, a próxima aresta a ser selecionada deve ser uma aresta não explorada e incidente ao ultimo vértice visitado, no caso o vértice 2. então escolhemos pro exemplo a aresta (2,4) para ser explorada.
+
+Exemplo do algoritm 4.3 do livro de busca em profundidade:
+``` Algoritmo 4.3
+Dados: G(V,E), conexo
+	Procedimento P(v,u)
+		marcar v
+		para w ∈ A(v) efetuar:
+	    if w é não marcado:
+		    visitar aresta de árvore (v,w) > arestas visitadas(I)
+			P(w,v)
+		else:
+	      if w ≠ u então visitar aresta de retorno (v,w) > arestas visitadas (II)
+	desmarcar todos os vertices
+	Escolher uma raiz s
+P(s,Ø)
+```
+
+Dado um grafo $G(V,E)$ conexo, este algoritmo gera um $T(V,E_t)$ onde $E_t$ é o conjunto de aresta da arvore $T$. O algoritmo divido o conjunto das arestas $E$ em dois grupos, sendo o grupo ($I$) das arestas visitadas no algoritmo _(arestas retas)_, e o grupo ($II$) das arestas de retorno, que são as arestas não visitadas pelo algoritmo mas que estão presentes em $E(G)$ _(As arestas curvas)_. Como vistas na imagem abaixo:
+![[grafos-busca-prof.png]]
+## Ordem de Vértices
+A ordem dos vértices que são inseridos ou retirados de $Q$ pode ser usadas as métricas de Profundidade de entrada $PE(v)$ e profundidade de saída $PS(v)$. sendo:
+### Profundidade de Entrada PE(v)
+Ordem que o vértice $v \in V$ entrou na pilha $Q$. Ou seja, quando o vértice foi visitado.
+### Profundidade de Saída PS(v)
+Ordem de saída de um vértice $v \in V$  da pilha $Q$. Um vértice $v$ só e retirado da pilha quando todos os seus vértices $A(v)$ foram visitados. Ou seja, só e retirado quando todos os vértices adjacentes a $v$ estão em $Q$.
+
+Considerando a arvore $T$ gerada em (c) de 4.4, podemos montar a seguinte tabela:
+
+| vértice | v₁  | v₂  | v₃  | v₄  | v₅  | v₆  |
+| ------- | --- | --- | --- | --- | --- | --- |
+| $PE(v)$ | 1   | 5   | 6   | 4   | 2   | 3   |
+| $PS(v)$ | 6   | 3   | 2   | 4   | 5   | 1   |
+
+
+
 ## Biconectividade
 Para a aplicação da busca em profundidade em grafos, será aplicada um algoritmo para a identificação de componentes biconvexas em grafos.
 
