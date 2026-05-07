@@ -386,7 +386,6 @@ Considerando a arvore $T$ gerada em (c) de 4.4, podemos montar a seguinte tabela
 | $PS(v)$ | 6   | 3   | 2   | 4   | 5   | 1   |
 
 
-
 ## Biconectividade
 Para a aplicação da busca em profundidade em grafos, será aplicada um algoritmo para a identificação de componentes biconvexas em grafos.
 
@@ -406,7 +405,7 @@ A função $lowpt(v)$ e utilizada na definição de articulações em arvores de
 Seja um grafo $G(V, E)$ e uma arvore de profundidade $T(V, E)$ de $G$. Uma articulação é um vértice $v \in V$, se e somente se:
 
 1. se $v$ for raiz de $T$ e possuir mais de um filho, ou
-2. se $v$ não e raiz de $T$ e possuir um filho $w$, tal que $lowpt(w) = v$ ou $w$ .
+2. se $v$ não e raiz de $T$ e possuir um filho $w$, tal que $lowpt(w) = v$ ou $w$.
 
 ## $g(v)$
 Para o calculo de $lowpt(v)$, definimos a função $g(v)$ onde para um vértice ascendente $w$ de $v$ mais alto em $T$ tal que $(v,w)$ é uma aresta de retorno para aproximação da raiz ou $w$ é a própria raiz. Caso não exista aresta de retorno $g(v)=v$. Utilizando o exemplo da figura acima, temos a tabela de saída de $g(v)$ onde $v \in V$ de uma arvore de profundidade $T$ do grafo $G(V,E)$.
