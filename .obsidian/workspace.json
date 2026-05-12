@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/TG/tg-notas.md",
+                "file": "ccomp/SAS/sas-notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tg-notas"
+              "title": "sas-notas"
             }
           }
         ],
@@ -199,8 +199,9 @@
   },
   "active": "cc16034bcc307cb9",
   "lastOpenFiles": [
-    "ccomp/TG/Grafos.md",
+    "ccomp/SAS/sas-notas.md",
     "ccomp/TG/tg-notas.md",
+    "ccomp/TG/Grafos.md",
     "utils/img/grafos-busca-prof.png",
     "utils/img/Captura de tela 2026-05-06 210700.png",
     "utils/Captura de tela 2026-05-06 210700.png",
@@ -215,7 +216,6 @@
     "ccomp/SAS/sas-p1.md",
     "utils/img/grafos-componentes-biconexaxs.png",
     "utils/img/Captura de tela 2026-04-22 112437.png",
-    "ccomp/SAS/sas-notas.md",
     "utils/img/grafos-lowpt.png",
     "utils/img/Captura de tela 2026-04-16 111107.png",
     "Excalidraw/grafos-planaridade.md",

@@ -611,3 +611,35 @@ Em geral, há quatro linhas de fegeas contrar ataqeus DDoS:
 - Rastreamento retroativo e identificação da fonte
 - Reação ao ataque
 
+---
+# 11/05
+## Web Hacking 
+### Local File Inclusion
+permite e inclusão de arquivo para explorar o mecanismo _Dynamic File Inclusion_ Implementando na aplicação web abaixo.
+### Remote File inclusion
+é o processo de inclusão de arquivos remoto, atravésda exploração dos processos de inclusão de vulnerabilidades.
+### Comand Injection
+A injeção de comando é um ataque em que o objetivos é a execução de comandos arbitrarios no sistema operacional alvo por meio de um aplicativo vulnerável
+São possíveis quando um aplicativo passa dados não seguros fornecidos pelo usuário (formulários, coockies, cabeçalhos HTTP etc.) para um shell.
+### File Upload 
+Vulnerabilidade presente em serviço web que permite uploads negligentes de arquivos maliciosos.
+O atacante poderá enviar arquivo contendo instruções maliciosas diversas.
+### Brute Force
+Método  exaustivo (tentativa e erro) utilizado para decodificar dados confidenciais (ex: arquivos criptografados) ou identificar credenciais de autenticação.
+São ataques relativamente simples de executar e, se houver tempo suficiente e nenhuma estrategia de mitigação para o alvo, possuem considerável probabilidade de sucesso.
+O que diferencia os ataques de forca bruta de outros métodos de quebra de segurança é que os ataques.
+**Ferramentas**
+#### Hydra
+Ferramenta para descoberta de credenciais por meio de forca bruta.
+
+### SQL-Injection
+Linguagem padrão universal para a manipulação de bancos de dados relacionais. Utilizada, dentre outras tarefas de linguagens relacionais.
+### Blind SQL-Injection
+Nem sempre o servidor alvo responde iterativamente as injeções do usuário. Por isso chamados _SQL Injection Cega_.
+
+### Cross Site Scripting (XSS)
+Tipo de ataque de injeção de código malicioso em aplicações web. Através de um XSS, o hacker injeta códigos JavaScritp em um campo de texto de uma página e este JS é executado pelo navegador do usuário. Em geral o ataque acontece em função de falha na validação dos dados de entrada do usuário e a resposta do servidor Web.
+Existe três tipos de CSS
+**Persistenete:** O script injetado pelo atacante fica alojado de forma permanente no servidor de destino.
+**Não Persistente:** O script nao fica alojado em um servidor de destino e por isso precisará ser entregue para cada vitimi (ex: Engenharia social ou um resultado de busca). Ao acionar o servidor, por meio do link, o script 
+**Refletido:** 
