@@ -202,3 +202,9 @@ $$ROI=\frac{Faturamento}{CustoMarketing}\cdot100$$
 ## Ticket Médio
 Ticket médio é o valor em compras dividido pelo numero de compras. Ou seja, quanto em média um cliente gasta.
 Ticket Médio =$$\frac{ValorCompras}{Nº compras}$$
+
+---
+# Leilão de Anúncios
+Um leilão de anúncios acontece quando dois ou mais anunciantes querem aparecer para o mesmo publico. Ou seja, o A e o anúncio B estão focados no mesmo publico, então o algoritmo irá analisar alguns fatores para decidir se vai mostrar o anuncio A ou o anuncio B. Os principais fatores são:
+## lance
+o quanto o anunciante esta disposto a pagar por um determinado resultado

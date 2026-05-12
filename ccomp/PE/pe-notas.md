@@ -28,3 +28,40 @@ Dentro dos Tipos de **Diagramas temos**:
 - Pontos
 entre outros.
 
+---
+07/05
+
+# Probabilidade
+## Espaço Amostral
+o lançamento de uma moeda tem o seguinte espaço amostral:
+$$S=\{Ca, Co\}$$
+
+O lançamento de um dado tem o seguinte espaço amostral:
+$$S=\{1,2,3,4,5,6\}$$
+Ou seja, o espaço amostra é o conjunto de resultados possíveis dentro de experimento aleatório.
+Dois lançamentos sucessivos de uma moeda pode-se obter o seguinte espaço amostral:
+$$S=\{(Ca, Co), (Ca, Co), (Ca, Co), (Ca, Co)\}$$
+## Evento
+Qualquer subconjunto do espaço amostral de um experimento aleatório. por exemplo, considerando o caso acima, $(Ca,Co)$ em S no experimento aleatório do lançamento das moedas, deste modo, podemos dizer que $A\subset S$.
+Exemplos:
+Considerando o experimento aleatorio do lancamento de um dado.
+1. obter um numero par na face superior.
+$$A = \{2,4,6\}$$
+2. Obter um numero menor ou igual a 6.
+$$A=\{1,2,3,4,5,6\}, A=S$$
+3. Obter o número 4 na face superior.
+$$A = \{4\}$$
+## Probabilidade
+Chama-se probabilidade de um evento $A(A\subset S)$ o número real $P(A)$, tal que:
+$$P(A)=\frac{n(A)}{n(S)}$$
+$n(A)$ = Número total de elementos de A
+$n(S)$ = Número total de elementos de S
+
+**Exemplo:**
+Considerando o lançamento de um dado.
+	Qual a probabilidade do evento A "obter um número par na face superior":
+$S = \{1,2,3,4,5,6\}, n(S) = 6$
+$A = \{2,4,6\}, n(A)=3$
+
+$$P(A)=\frac{n(A)}{n(S)}$$
+$$P(A)=\frac{3}{6}= \frac{1}{2}$$

@@ -222,9 +222,10 @@ $$G()$$
 | -------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | -------- |
 | $G(v_i)$ | $v_1$ | $v_8$ | $v_2$ | $v_4$ | $v_2$ | $v_6$ | $v_8$ | $v_8$ | $v_8$ | $v_1$    |
 
+---
 # 07/05
 
 ## Algoritmo de Busca em Profundidade em Digrafos
-De forma geral em um $D(V,E)$ partimos de um vertice $s$ de saída onde 
+De forma geral em um $D(V,E)$ partimos de um vértice $s$ de saída onde 
 
 ## Ordenação Topológica

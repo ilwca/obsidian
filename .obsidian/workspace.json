@@ -181,8 +181,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,14 +198,14 @@
   },
   "active": "cc16034bcc307cb9",
   "lastOpenFiles": [
-    "ccomp/SAS/sas-notas.md",
-    "ccomp/TG/tg-notas.md",
+    "subido/notas-subido.md",
     "ccomp/TG/Grafos.md",
+    "ccomp/TG/tg-notas.md",
+    "ccomp/PE/pe-notas.md",
     "utils/img/grafos-busca-prof.png",
     "utils/img/Captura de tela 2026-05-06 210700.png",
     "utils/Captura de tela 2026-05-06 210700.png",
     "Captura de tela 2026-05-06 210700.png",
-    "subido/notas-subido.md",
     "subido/subido-flow.md",
     "utils/img/grafos-exemplo.png",
     "utils/img/Captura de tela 2026-05-03 182514.png",
@@ -216,6 +215,7 @@
     "ccomp/SAS/sas-p1.md",
     "utils/img/grafos-componentes-biconexaxs.png",
     "utils/img/Captura de tela 2026-04-22 112437.png",
+    "ccomp/SAS/sas-notas.md",
     "utils/img/grafos-lowpt.png",
     "utils/img/Captura de tela 2026-04-16 111107.png",
     "Excalidraw/grafos-planaridade.md",
@@ -235,7 +235,6 @@
     "Excalidraw/Drawing 2026-04-01 18.19.21.excalidraw.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "utils/grafos-planaridade.md",
-    "ccomp/PE/pe-notas.md",
     "ccomp/PE",
     "README.md",
     "utils/img/Não confirmado 788159.crdownload",

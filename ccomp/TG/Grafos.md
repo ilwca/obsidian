@@ -405,8 +405,7 @@ A função $lowpt(v)$ e utilizada na definição de articulações em arvores de
 Seja um grafo $G(V, E)$ e uma arvore de profundidade $T(V, E)$ de $G$. Uma articulação é um vértice $v \in V$, se e somente se:
 
 1. se $v$ for raiz de $T$ e possuir mais de um filho, ou
-2. se $v$ não e raiz de $T$ e possuir um filho $w$, tal que $lowpt(w) = v$ ou $w$.
-
+2. se $v$ não é raiz de $T$ e possuir um filho $w$, tal que $lowpt(w) = v$ ou $w$.
 ## $g(v)$
 Para o calculo de $lowpt(v)$, definimos a função $g(v)$ onde para um vértice ascendente $w$ de $v$ mais alto em $T$ tal que $(v,w)$ é uma aresta de retorno para aproximação da raiz ou $w$ é a própria raiz. Caso não exista aresta de retorno $g(v)=v$. Utilizando o exemplo da figura acima, temos a tabela de saída de $g(v)$ onde $v \in V$ de uma arvore de profundidade $T$ do grafo $G(V,E)$.
 
@@ -417,3 +416,23 @@ Para o calculo de $lowpt(v)$, definimos a função $g(v)$ onde para um vértice 
 ## Demarcadores
 sejam $v,w$ vértices de $G$, de modo que $v$ seja articulação, caso $lowpt(w)=v$ ou $w$, então $w$ é um demarcador de $v$. Uma articulação pode ser pai de um ou mais demarcadores.
 ![[grafos-componentes-biconexaxs.png]]
+
+---
+# Busca em Profundidade em Digrafos
+A busca em profundidade em digrafos é análoga a busca em grafos não orientados, onde  a partir de um vértice $s=v_1$, sente este raiz _(start)_ constroem caminhos $Q=v_1,...,v_k$, caso haja um vértice divergente de $v_k$ ou seja $(v_k,w)$, assim teremos $Q=v_1,...,v_k,w$, caso não exista vértices a serem explorados como $w$, retira-se $v_k$ da pilha $Q$, tendo $Q=v_1,...,v_{k-1}$. O processo é repetido ate a retirada de $v_1$ de $Q$, ou seja, até o esvaziamento da pilha.
+
+## Arestas de Busca em Digrafos
+A busca em profunidade em digrafos, divide o conjunto de arestas em 4 conjuntos disjuntos. Onde temos:
+### Aresta de Arvore
+Dado um digrafo $D(V,E)$ considere a visita de uma aresta $(v,w)$ onde $v$ é alcançado antes de $w$ na busca em profundidade. Se $w$ não esta marcado então $(v,w)$ é chamado aresta de arvore.
+### Aresta de Avanço
+Considerando o mesmo contexto anterior, de uma aresta $(v,w)$ onde $v$ é alcançado antes de $w$ na busca em profundidade. Caso $w$ esteja, marcado $(v,w)$ é chamado aresta de avanço.
+### Aresta de Retorno
+Caso $w$ seja alcançado antes de $v$ na busca, Se $w \in Q$, ou seja, estiver na pilha no momento da visita, então $(v,w)$ é chamada aresta de retorno.
+### Aresta de Cruzamento
+Caso $w$ seja alcançado antes de $v$ na busca, se $w \in Q$, ou seja, fora da pilha no momento da visita, então $(v,w)$ e chamada aresta de retorno. Pois a aresta foi explorada no momento em que $w$ ja saiu de pilha ou seja toda a sub-arvore que $w$ esta incluso já foi explorada.
+
+—>
+--->
+\~~>
+==>
