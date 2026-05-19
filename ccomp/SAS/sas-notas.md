@@ -643,3 +643,85 @@ Existe três tipos de CSS
 **Persistenete:** O script injetado pelo atacante fica alojado de forma permanente no servidor de destino.
 **Não Persistente:** O script nao fica alojado em um servidor de destino e por isso precisará ser entregue para cada vitimi (ex: Engenharia social ou um resultado de busca). Ao acionar o servidor, por meio do link, o script 
 **Refletido:** 
+
+---
+# 18/05
+
+## Comparativo 
+Redes cabeadas nao utilizam nenhum recurso especial de seguranca, mas, mesmo assim, os dados são protegidos. O motivo é simples: tudo se passa dentro do cabo.
+
+## Segurança
+nem sempre é possivel evitar que as informações em redes sem fio sejam capturados. O que pode ser feito é criptografar, ou seja, transmitir as informações de tal forma que , mesmo que eleas sejam capturadas, não possam ser compreendidas.
+Esse trabalho é feito por protocolos de segurancas qeu codificam os dados que navegam entre o PC e o roteador para impedir ...
+
+## Protocolos 
+### WEP
+WIred Equivalent Privacy ou privacidade equivalente a de redes com fios
+### WPA
+Wi-Fi Protected Acess ou Acesso sem fio protegido.
+
+## WEP - Wired Equivalent Privacy
+Utiliza o algoritmo RC4 (cifra simetrica de fluxo) para criptografar os pacotes em redes sem fio. Implementa função detectora de erros que verifica se a mensagem recebida foi corrompida ou alterada no meio do caminho.
+O próprio algorimo de criptografia RC4 foi apontado como o principal calcanhar de Aquiles do protocolo, e mesmo sendo indiadas outras opções para substitui-lo, o WEP caiu em descrédito e deixou de ser usado em aplicações sérias.
+Desde 2004 o WEP é considerado "obsoleto". Apesar de estar obsoleto, muitos roteadores ainda trazem o WEP como opção, e alguns usuários ainda fazem uso do WEP devido à compatibilidade.
+O WEP utiliza algoritmo de criptografia simétrica (RC4), portanto, existe uma chave secreta que deve ser compartilhada entre as estações de trabalho e o concentrador, para cifrar e decifrar as mensagens trefegadas.
+Em outras palabras, cada computador de uma rede receve a mesma chave que está configurada no ponto de acesso sem fio, descrito como concentrador. A chave serve para cifrar uma mensagem enquanto ela é transmitida da base (roteador) para o computador ou vice-versa.
+### Falha na WEP
+O WEP utiliza o RC4, que é um codificador de fluxo, o que siginifica que a chave para criptografar os dados deve estar, pelo menos teoricamente, em constante mutação.
+A solução veio da seguinte maneira: a chave criptografica, usada pelo WEP, é composta por dois itens:
+- uma chave.
+- Um componente chamado _Initialization Vector_, que acompanha essa chave.
+Esse vetor de inicialização é permutado constantemente, oi seja, a cada transmissão temos um novo conjunto do vetor de inicialização, capturar as mensagens em que ele.
+Programas como o _aircrack-ng_ fazem isso em questão de minutos. Este possui métodos de burla do sistema.
+
+## WPA - (Wi-Fi Protected Access)
+Surgiu a partir de um esforço conjunto de membro da Aliança Wi-Fi e do IEEE para combater algumas das vulnerabilidades do WEP e aumentar o nivel de seguranca das redes sem fio.
+Lançado em 2003, utilizava criptografia TKIP (substituição do vetor de inicialização de 24 bits para 48 bits) era comumente chamado de WEP2.
+Em 2004 receveu atualização, adotando o algoritmo de cifra de bloco.
+Existem dois métodos de operçaão.
+- **Uso doméstico PSK** _(Pre-Shared Key)_: Chave previamente compartilhada é utilizada.
+- **Grandes Organizações**: Não depende de uma chave previamente compartilhada. Utiliza servidores de autenticação para validarem a conexão (ex: Eduraom/UFT).
+É considerada o padrão mais seguro atualmente e deve ser utilizado sempre que possivel.
+### Segurança no WPA/WPA2
+Técnicas de ataque aos padrões WPA/WPA2 exogem frequentemente a atualização de dicionarios. Um ataque de dicionário é um método que consiste em invadir um computador ou servidor protegido por senha (neste caso, uma rede Wi-Fi) inseridno sistematicamente cada palavra em um dicionário.
+### Ataques em Redes Wireless
+#### Modos operacionais de adaptadores sem fio
+- **Modo managed (Gerenciado):** Interface de rede Wi-Fi ignora todos os pacotes de dados , exceto aqueles especificamente endereçados a ela.
+- **Modo Monitor (Promiscuo):** O adaptador Wi-Fi captura todo o tráfego da rede sem fio(em um determinado canal Wi-Fi) independentemente do destino. Pode capturar pacotes sem sequer estar conectado a qualquer ponto de acesso. É um agente livre farejando e bisbilhotando todos os dados no ar.
+[AirCrack-ng ](https://www.aircrack-ng.org)
+Conjunto de ferramentas para avaliar seguranças de redes Wi-Fi.
+- airmon-ng
+- airodump-ng
+- aireplay-ng
+- aircrack-ng
+
+### Identificando...
+identificando  modo de operação do adaptador wireless:
+```shell
+iwconfig wlan0
+```
+
+### Modo monitor
+``` terminal
+sudo airmon-ng check
+sudo airmon-ng check kill
+sudo airmon-ng start wlan0
+```
+Identificando redes wifi ao alcance.
+```terminal
+sudo airodump-ng wlan0mon
+```
+
+### Quabrando redes com criptografias WPA2
+Ao contrario do WEP nao existe uma metodologia tao simples e direta para a obtenção da senha.
+AES - seguro e eficiente. Uso recomendável para quem desejava alto grau de permissão.
+
+```terminal
+sudo airodump-ng -c 11  --bssid 14:5B:D1:47:0E:04 -w arquivo_captura_wpa2 wlan0mon
+```
+
+
+## Fake Access Point
+Técnica que visa a criação de um falso Acess Point, imitando as configurações básicas de uma rede alvo. Também conhecidos como _Rougue Acess Point_.
+### Evil Twin
+Consiste na clonagem de um Access Point verdadeiro. Depois busca forcar os clientes conetados ao AP verdadeiro a se desconectarem e em seguida conectar ao nosso Evil Twin.
