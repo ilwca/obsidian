@@ -229,3 +229,11 @@ $$G()$$
 De forma geral em um $D(V,E)$ partimos de um vértice $s$ de saída onde 
 
 ## Ordenação Topológica
+
+---
+# 21/05
+Conteudo da P3 - 11/06
+### Aula 11
+- emparelhamentos em cobertura
+- teorema de berge
+- Teorema de Konig

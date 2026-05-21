@@ -41,6 +41,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "ccomp/TG/Grafos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Grafos"
+            }
+          },
+          {
+            "id": "54d2c894c2b92f17",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "ccomp/TG/tg-notas.md",
                 "mode": "source",
                 "source": false
@@ -50,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -107,8 +121,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246.5110321044922,
-    "collapsed": true
+    "width": 246.5110321044922
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -212,15 +225,19 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "15a9ba97dca28c8f",
+  "active": "54d2c894c2b92f17",
   "lastOpenFiles": [
     "ccomp/TG/Grafos.md",
+    "ccomp/TG/tg-notas.md",
+    "ccomp/PAA/prova-I.md",
+    "ccomp/PAA/prova-II PAA.md",
+    "ccomp/PAA/Análise de Complexidade.md",
+    "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "trafego/mkt-assessoria/Publicos.md",
     "ccomp/SAS/sas-notas.md",
     "trafego/mkt-assessoria",
     "trafego",
     "trafego/subido/notas-subido.md",
-    "ccomp/TG/tg-notas.md",
     "ccomp/PE/pe-notas.md",
     "utils/img/grafos-busca-prof.png",
     "utils/img/Captura de tela 2026-05-06 210700.png",
@@ -238,20 +255,16 @@
     "utils/img/Captura de tela 2026-04-16 111107.png",
     "Excalidraw/grafos-planaridade.md",
     "ccomp/TG/Demonstração.md",
-    "ccomp/PAA/prova-I.md",
     "ccomp/PAA/notas-PAA.md",
     "ccomp/PAA/Greedy algorithm.md",
     "ccomp/PAA/Glossary.md",
     "ccomp/PAA/Dynamic Programin.md",
-    "ccomp/PAA/prova-II PAA.md",
-    "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "Excalidraw/Drawing 2026-04-09 08.53.06.excalidraw.md",
     "adjuvo/documento de Adesão.md",
     "utils/img/Não confirmado 195374.crdownload",
     "utils/img/Não confirmado 746874.crdownload",
     "Excalidraw/Drawing 2026-04-01 18.19.21.excalidraw.md",
-    "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "utils/grafos-planaridade.md",
     "ccomp/PE",
     "README.md",

@@ -415,6 +415,11 @@ Para o calculo de $lowpt(v)$, definimos a função $g(v)$ onde para um vértice 
 sejam $v,w$ vértices de $G$, de modo que $v$ seja articulação, caso $lowpt(w)=v$ ou $w$, então $w$ é um demarcador de $v$. Uma articulação pode ser pai de um ou mais demarcadores.
 ![[grafos-componentes-biconexaxs.png]]
 
+## Determinando Componentes Biconexas
+A raiz é articulação. Todos os vértices filhos da raiz são demarcadores. Dito isso, para o processo de definição das componentes biconexas usaremos o seguintes Lema:
+	_"Dada Arvore $T$ de profundidade de $G$. Sejam $v,w \in V$, com $w$ um demarcador de $v$ tal que a sub-arvore $T_w$, que tem $w$ como raiz não contêm articulações de $G$."_
+Deste modo, a aplicação deste lema sucessivamente define as componentes biconexas. A principio, definimos os [[#Demarcadores]] e [[#Articulações]] como vistos anteriormente. Com isso, escolhemos o demarcador $w$ de modo que se $T_w$ nao possuir articulações, $v+T_w$ formam uma componente biconexa em $G$. Onde toda ponte é uma componente biconexa.
+
 ---
 # Busca em Profundidade em Digrafos
 A busca em profundidade em digrafos é análoga a busca em grafos não orientados, onde  a partir de um vértice $s=v_1$, sendo $s$ raiz _(start)_ constroem caminhos $Q=v_1,...,v_k$, caso haja um vértice divergente de $v_k$ ou seja $(v_k,w)$, assim teremos $Q=v_1,...,v_k,w$, caso não exista vértices a serem explorados como $w$, retira-se $v_k$ da pilha $Q$, tendo $Q=v_1,...,v_{k-1}$. O processo é repetido ate a retirada de $v_1$ de $Q$, ou seja, até o esvaziamento da pilha.
@@ -443,3 +448,4 @@ Arestas $(v,w)$ é tio quando $nivel(w)=nivel(v)+1$ e $(v,w)\notin E_T$.
 Quando existe aresta $(v,w)$ em que $v$ possui o mesmo pai que $w$ em $T$.
 ### Aresta Primo
 $(v,w)$ é aresta primo quando $nivel(v)=nivel(w)$ e $v$ e $w$ não possuem o mesmo pai em $T$.
+
