@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/TG/tg-notas.md",
+                "file": "ccomp/PAA/Greedy algorithm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tg-notas"
+              "title": "Greedy algorithm"
             }
           }
         ],
@@ -227,12 +227,18 @@
   },
   "active": "54d2c894c2b92f17",
   "lastOpenFiles": [
-    "ccomp/TG/Grafos.md",
-    "ccomp/TG/tg-notas.md",
+    "ccomp/PAA/notas-PAA.md",
     "ccomp/PAA/prova-I.md",
     "ccomp/PAA/prova-II PAA.md",
-    "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
+    "ccomp/PAA/Greedy algorithm.md",
+    "ccomp/PAA/Glossary.md",
+    "ccomp/PAA/Dynamic Programin.md",
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+    "ccomp/PAA/Análise de Complexidade.md",
+    "Excalidraw/grafos-planaridade.md",
+    "ccomp/TG/tg-notas.md",
+    "ccomp/TG/Grafos.md",
     "trafego/mkt-assessoria/Publicos.md",
     "ccomp/SAS/sas-notas.md",
     "trafego/mkt-assessoria",
@@ -253,13 +259,7 @@
     "utils/img/Captura de tela 2026-04-22 112437.png",
     "utils/img/grafos-lowpt.png",
     "utils/img/Captura de tela 2026-04-16 111107.png",
-    "Excalidraw/grafos-planaridade.md",
     "ccomp/TG/Demonstração.md",
-    "ccomp/PAA/notas-PAA.md",
-    "ccomp/PAA/Greedy algorithm.md",
-    "ccomp/PAA/Glossary.md",
-    "ccomp/PAA/Dynamic Programin.md",
-    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "Excalidraw/Drawing 2026-04-09 08.53.06.excalidraw.md",
     "adjuvo/documento de Adesão.md",
     "utils/img/Não confirmado 195374.crdownload",

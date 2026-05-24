@@ -1,6 +1,5 @@
 
   4 - Considere   o seguinte algoritmo, chamado count, cujo o input é um numero inteiro positivo n:
-
 ```pseudocodigo
 função count(n)
 	count = 0

@@ -77,15 +77,13 @@ Este limite superior classifica o grau de complexidade e crescimento da função
 ## Exemplo Prático 
 Analise a complexidade do algoritmo Bubble Short
 
-```bubble Short
-```
+```buble sort
 function bubbleSort(arr):
 	  n = tamanho(arr)
 	  para i de 0 até n-1:
 	    para j de 0 até n-i-1:
 	      se arr[j] > arr[j+1]:
 	        troca arr[j] e arr[j+1]
-```
 ```
 
 ## Análise de Complexidade
