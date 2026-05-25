@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PAA/Greedy algorithm.md",
+                "file": "ccomp/PAA/Divide and conquer - Atividade PAA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Greedy algorithm"
+              "title": "Divide and conquer - Atividade PAA"
             }
           }
         ],
@@ -227,13 +227,14 @@
   },
   "active": "54d2c894c2b92f17",
   "lastOpenFiles": [
+    "Pasted image 20260525124215.png",
+    "ccomp/PAA/Dynamic Programin.md",
+    "ccomp/PAA/prova-II PAA.md",
+    "ccomp/PAA/Greedy algorithm.md",
     "ccomp/PAA/notas-PAA.md",
     "ccomp/PAA/prova-I.md",
-    "ccomp/PAA/prova-II PAA.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
-    "ccomp/PAA/Greedy algorithm.md",
     "ccomp/PAA/Glossary.md",
-    "ccomp/PAA/Dynamic Programin.md",
     "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "ccomp/PAA/Análise de Complexidade.md",
     "Excalidraw/grafos-planaridade.md",

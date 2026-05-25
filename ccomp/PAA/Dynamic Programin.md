@@ -1,3 +1,11 @@
+A programação dinâmica consiste em dividir o problema principal em subproblemas e resolve-los separadamente, armazenando o resultado em uma tabela como uma espécie de memorização. 
+A programação dinâmica e normalmente feita em três passos principais:
+- **Dividir o Problema**
+- **Resolver cada Subproblema apenas um vez**
+- **Combinar as Soluções dos Subproblemas**
+Umas das características que definem a eficiência da programação dinâmica são as características de 
+- **Subproblemas Sobrepostos** - Alguns subproblemas aparecem varias vezes durante a resolução do problema.
+- **Optimalidade de Subestrutura** - A solução do problema maior e formada a partir da solucao dos problemas menores.
 
 # Problema SSAP
 O problema SSAP significa Shelf-Space Allocation Problem que no português significa problema de alocação de espaço. Este problema é comumente enfrentado por varejistas no posicionamento de produtos em espaços limitados na prateleiras. Estes produtos devem ser alocados seguindo regras de marketing visando uma maior lucratividade, então alem do espaço do produto são considerados outros parâmetros para a alocação.

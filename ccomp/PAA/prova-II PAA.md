@@ -126,29 +126,20 @@ pra isso, usei uma funcao de binary search recursiva
 ```
 def heap_find(list, target):
 
-mid = (len(list) // 2)
-
-rigth = list[mid:]
-
-left = list[:mid]
-
-  
-
-if target == list[mid]:
-
-return f"numero na lista"
-
-else:
-
-print(left, mid, rigth)
-
-if target < list[mid]:
-
-return heap_find(left, target)
-
-else:
-
-return heap_find(rigth, target)
+	mid = (len(list) // 2)
+	
+	rigth = list[mid:]
+	
+	left = list[:mid]
+	
+	if target == list[mid]:
+		return f"numero na lista"
+	else:
+		print(left, mid, rigth)
+		if target < list[mid]:
+		return heap_find(left, target)
+	else:
+		return heap_find(rigth, target)
 ```
 
 complexidade O(log n) 
@@ -164,9 +155,8 @@ $b_i$ = Inicio da atividade
 $f_i$ = término da atividade
 
 Algoritmo pensado para o problema da selação de atividades:
-
 ```pseudoalgoritmo
-funcao sceduling(lista[])
+funcao scheduling(lista[])
 	lista[] = Mergesort(f) #O(n log n)
 	solucao[] = lista[1]
 	fim_atual = lista[1].f_1
@@ -195,7 +185,6 @@ funcao countFreq(list)
 	
 	return merge(esquerda, direita)
 	
-
 function merge(listA, listB)
 	
 	result[] = listA[]
@@ -207,7 +196,6 @@ function merge(listA, listB)
 			result[i] = listB[i]
 	
 	return resultado
-
 ```
 
 
@@ -239,7 +227,6 @@ $\theta(n log n)$ é complexidade total.
 ## Exercício
 Período mais lucrativo
 a partir de uma lista $L = [2, -3, 4, -1, 2, -5, 6]$. Determinar qual foi o período mais lucrativo usando **divisão e conquista**.
-
 ```pseudo
 funcao countFreq(list)
 	mid = len(list)//2
@@ -253,7 +240,7 @@ funcao countFreq(list)
 		countFreq(direita)
 	
 	return merge(esquerda, direita)
-				
+	
 merge(mapA, mapB)
 	first = 0
 	second = 0
@@ -282,7 +269,7 @@ $j$ : 0 a $T/2$
 
 ### Exemplo
 $S=\{1,3,4\}$ 
-formar a tabela $dp[i[j]$ onde:
+formar a tabela $dp[i][j]$ onde:
 $i$ : 0 a 3
 $j$ : 0 a 4
 
@@ -309,7 +296,7 @@ entrada $V = \{ 100, 50, 20, 10, 5, 2, 1 \}$
 ### Resposta
 A) 
 ```
-function CashRetur(V, target)
+function CashReturn(V, target)
 	mergeSort(V, -1) # ordenar vator de moedas de forma decrescente
 	valor_atual = 0
 	solucao = 0

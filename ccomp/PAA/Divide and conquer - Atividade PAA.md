@@ -72,3 +72,6 @@ Predecessores indica qual o índice que veio o valor atual dentro da subsequenci
 | 3                | 2     | [1, 2]                     | 2 (porque 1 vem antes de 2)   |
 | 4                | 5     | [1, 2, 5]                  | 3                             |
 | 5                | 4     | [1, 2, 4]                  | 3                             |
+
+
+
