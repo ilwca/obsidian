@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+                "file": "ccomp/SAS/sas-notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Divide and conquer - Atividade PAA"
+              "title": "sas-notas"
             }
           }
         ],
@@ -227,6 +227,7 @@
   },
   "active": "54d2c894c2b92f17",
   "lastOpenFiles": [
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "Pasted image 20260525124215.png",
     "ccomp/PAA/Dynamic Programin.md",
     "ccomp/PAA/prova-II PAA.md",
@@ -235,7 +236,6 @@
     "ccomp/PAA/prova-I.md",
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "ccomp/PAA/Glossary.md",
-    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "ccomp/PAA/Análise de Complexidade.md",
     "Excalidraw/grafos-planaridade.md",
     "ccomp/TG/tg-notas.md",
@@ -259,7 +259,6 @@
     "utils/img/grafos-componentes-biconexaxs.png",
     "utils/img/Captura de tela 2026-04-22 112437.png",
     "utils/img/grafos-lowpt.png",
-    "utils/img/Captura de tela 2026-04-16 111107.png",
     "ccomp/TG/Demonstração.md",
     "Excalidraw/Drawing 2026-04-09 08.53.06.excalidraw.md",
     "adjuvo/documento de Adesão.md",

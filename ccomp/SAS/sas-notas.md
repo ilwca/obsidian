@@ -725,3 +725,39 @@ sudo airodump-ng -c 11  --bssid 14:5B:D1:47:0E:04 -w arquivo_captura_wpa2 wlan0m
 Técnica que visa a criação de um falso Acess Point, imitando as configurações básicas de uma rede alvo. Também conhecidos como _Rougue Acess Point_.
 ### Evil Twin
 Consiste na clonagem de um Access Point verdadeiro. Depois busca forcar os clientes conetados ao AP verdadeiro a se desconectarem e em seguida conectar ao nosso Evil Twin.
+
+---
+# 25/05
+
+## Buffer
+buffer e uma seção continua de memoria que armazena dados. Problemas surgem quando tentamos colocar mais dados no buffer do que ele pode acomodar (capacidade)
+Quando um programa renta colocar mais dados em um buffer ele substitui os locais de memoria adjacentes.
+Criar um buffer e uma tarefa relativamente simples para desenvolvedores. Basta definir um array de determinado tamanho. Um exemplo em linguagem C pode ser o seguinte: 
+`char buffer[8]`
+Se excedermos a capacidade do `buffer[8]` poderemos alcançar partes da memoria que leem o código executável em um endereço especifico.
+
+### Buffer Overflow
+Condição na qual um buffer recebe uma quantidade de entrada maior do que a capacidade alocada, sobrescrevendo outras informações .
+Essas posições poderiam conter outras vaiareis, parâmetros ou controles de fluxo de dados, como endereços de retorno e ponteiros para estruturas de pilha anteriores.
+As consequências desse erro incluem corrupção de dados pelo programa, transferências  inesperada de controle no programa, possíveis violações de acesso à memoria e muito provavelmente, a eventual finalização do programa.
+
+Computadores gerenciam pulha atraves de registradores. Em arquiteturas 64 bits os registradores RSP(Register Stack Point) e RBP(Register Base Point) são especialmente importantes.
+
+Muitas funçõe s de biblioteacas comuns e amplamente usadas especialmente as relacionadas a entrada de processamento de cadeias de caracteres, não executavam verificações do tamanho dos buffers sendo usados.
+
+O grau de seriedade disso dependará muito da estrutura lógica do programa atacado. Para explorar o atacante precisa:
+- identificar uma vulnerabilidade de estouro de capacidade de um buffer em algum programa, a qual possa ser acionada usadno dadaos fornecidos por uma fonte externa sob o controle dos atacantes.
+- Estender, como esse buffer sera armazenado na memória de processos e, portanto, o potencial  de execução.
+Para fins didáticos,, faz se necessario desativar o _Adressing space layout Randomization (ASLR)_. O ASLR seleciona aleatoriamente onde os dados associadso ao programa estao na memoriam dificultando a determinação de onde as coisas estão localizadas e como vamos assumir o controle do programa.
+Para desativar o ASLR:
+`echo 0 > /proc/sys/kernel/randomize_va_space`
+
+## GDB (Gnu Debbuger)
+Permite depurar (monitorar em nicel mais refinado) aplicativos.
+`gdb -q [nome do Programa]`
+
+
+### Exemplo Real - ChimayRed
+CIA(NSA) Hacking Toolds Revealed
+Exploit utilizando contra roteadores Mikrotik executando sistema operacional RouterOS. Usado para enviar Payload (TinShell) para o roteador.
+
