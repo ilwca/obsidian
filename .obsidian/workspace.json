@@ -53,18 +53,30 @@
             "id": "54d2c894c2b92f17",
             "type": "leaf",
             "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/grafos-planaridade.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "grafos-planaridade"
+            }
+          },
+          {
+            "id": "641b10bb5c6ce3ae",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/SAS/sas-notas.md",
+                "file": "ccomp/TG/Grafos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sas-notas"
+              "title": "Grafos"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -225,10 +237,15 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "54d2c894c2b92f17",
+  "active": "641b10bb5c6ce3ae",
   "lastOpenFiles": [
-    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+    "Excalidraw/grafos-emparelhamento.md",
+    "Excalidraw/grafos-planaridade.md",
+    "ccomp/TG/Grafos.md",
+    "utils/img/grafos-emparelhamento.jpg",
+    "utils/img/Não confirmado 42486.crdownload",
     "Pasted image 20260525124215.png",
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
     "ccomp/PAA/Dynamic Programin.md",
     "ccomp/PAA/prova-II PAA.md",
     "ccomp/PAA/Greedy algorithm.md",
@@ -237,9 +254,7 @@
     "ccomp/PAA/Roteiro de Apresentação_ Programação Dinâmica Aplicada ao SSAP.md",
     "ccomp/PAA/Glossary.md",
     "ccomp/PAA/Análise de Complexidade.md",
-    "Excalidraw/grafos-planaridade.md",
     "ccomp/TG/tg-notas.md",
-    "ccomp/TG/Grafos.md",
     "trafego/mkt-assessoria/Publicos.md",
     "ccomp/SAS/sas-notas.md",
     "trafego/mkt-assessoria",
@@ -258,7 +273,6 @@
     "ccomp/SAS/sas-p1.md",
     "utils/img/grafos-componentes-biconexaxs.png",
     "utils/img/Captura de tela 2026-04-22 112437.png",
-    "utils/img/grafos-lowpt.png",
     "ccomp/TG/Demonstração.md",
     "Excalidraw/Drawing 2026-04-09 08.53.06.excalidraw.md",
     "adjuvo/documento de Adesão.md",
@@ -271,7 +285,6 @@
     "utils/img/Não confirmado 788159.crdownload",
     "utils/img/tecnicas_demonstracao.pdf",
     "utils/img/Não confirmado 680286.crdownload",
-    "Sem título.base",
     "utils/h.chomsky.canvas",
     "helpti/pages.canvas",
     "helpti/helpti.canvas"

@@ -418,7 +418,7 @@ sejam $v,w$ vértices de $G$, de modo que $v$ seja articulação, caso $lowpt(w)
 ## Determinando Componentes Biconexas
 A raiz é articulação. Todos os vértices filhos da raiz são demarcadores. Dito isso, para o processo de definição das componentes biconexas usaremos o seguintes Lema:
 	_"Dada Arvore $T$ de profundidade de $G$. Sejam $v,w \in V$, com $w$ um demarcador de $v$ tal que a sub-arvore $T_w$, que tem $w$ como raiz não contêm articulações de $G$."_
-Deste modo, a aplicação deste lema sucessivamente define as componentes biconexas. A principio, definimos os [[#Demarcadores]] e [[#Articulações]] como vistos anteriormente. Com isso, escolhemos o demarcador $w$ de modo que se $T_w$ nao possuir articulações, $v+T_w$ formam uma componente biconexa em $G$. Onde toda ponte é uma componente biconexa.
+Deste modo, a aplicação deste lema sucessivamente define as componentes biconexas. A principio, definimos os [[#Demarcadores]] e [[#Articulações]] como vistos anteriormente. Com isso, escolhemos o demarcador $w$ de modo que se $T_w$ não possuir articulações, $v+T_w$ formam uma componente biconexa em $G$. Onde toda ponte é uma componente biconexa.
 
 ---
 # Busca em Profundidade em Digrafos
@@ -448,4 +448,29 @@ Arestas $(v,w)$ é tio quando $nivel(w)=nivel(v)+1$ e $(v,w)\notin E_T$.
 Quando existe aresta $(v,w)$ em que $v$ possui o mesmo pai que $w$ em $T$.
 ### Aresta Primo
 $(v,w)$ é aresta primo quando $nivel(v)=nivel(w)$ e $v$ e $w$ não possuem o mesmo pai em $T$.
+
+---
+# Emparelhamento
+Dado um grafo $G(V,E)$ um emparelhamento $M$ é um subconjunto de arestas $(E)$, emparelhadas duas a duas de modo que não incidem sobre o mesmo vértice, assim sendo o as arestas de $E$ $M-emparelhado$. Desta forma um vértice incidente a uma aresta emparelhada é dito $M-saturado$, aqueles não incidentes a uma aresta $M$ são ditos $M-expostos$.
+O conjunto $M = \varnothing$ é válido e o menor conjunto de emparelhamento.
+$$M \subseteq E \text{ é emparelhamento e } M' \subseteq M \text{ também}$$
+Isso implica um conjunto $M$ válido de arestas emparelhadas de $E$. $M'$ é um conjunto contido em $M$, ou seja, menor ou igual a $M$ e também é válido.
+
+Um emparelhamento $M$ é maximal se todas as arestas não emparelhadas possuem extremidades em um vértice em $M$. Quando todas os vértices de $V$ são saturados $M$ é perfeito.
+
+## Emparelhamentos Perfeitos
+
+O Teorema de Hall(8.1) diz que: Dado um grafo bipartido $G(V,E)$ com partições $V_1$ e $V_2$  onde $V_1 \cup V_2 = V$ e $|V_1| = |V_2|$. O grafo $G$ possui emparelhamento que satura todos os vértices de $V$ se $A(V'_1) \geq |V'_1|$ para um $V' \subseteq V_1$.
+Ou seja, a cardinalidade da vizinhança (adjacente) de $V'$ tem que ser maior ou igual numero de vértices do conjunto $V'$.
+**Prova:***
+_Aplicando o Teorema 8.1, temos o emparelhamento M que satura todos os vértices de $V_1$ e como $|V_1| = |V_2|$ logo todos os vértices de $V_2$ também serão saturados._
+
+## Caminho M-alternantes
+São caminhos de $G$ em que as arestas estão alternadamente em $E$ e $M$.
+Da figura abaixo o caminho $\{1, 2, 3, 4, 5\}$ é $M-alternante$
+## Caminhos M-aumentantes
+Caminho cujo os vértices extremos são $M-expostos$. ou seja o caminho inicia e termina em arestas $M-insaturadas$.
+Da figura abaixo o caminho $\{1,2,3,4,5,6\}$ é $M-aumentante$
+
+![[grafos-emparelhamento]]
 
