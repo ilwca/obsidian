@@ -1,4 +1,4 @@
-# 26/02
+	# 26/02
 
 
 **O que é um problema fácil em computação**: problemas resolvidos em tempo polinomial, ou seja, de complexidade conhecida. Das mesma forma, um problema difícil é um problema que é resolvido em tempo exponencial.

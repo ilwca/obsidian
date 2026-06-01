@@ -459,7 +459,6 @@ Isso implica um conjunto $M$ válido de arestas emparelhadas de $E$. $M'$ é um 
 Um emparelhamento $M$ é maximal se todas as arestas não emparelhadas possuem extremidades em um vértice em $M$. Quando todas os vértices de $V$ são saturados $M$ é perfeito.
 
 ## Emparelhamentos Perfeitos
-
 O Teorema de Hall(8.1) diz que: Dado um grafo bipartido $G(V,E)$ com partições $V_1$ e $V_2$  onde $V_1 \cup V_2 = V$ e $|V_1| = |V_2|$. O grafo $G$ possui emparelhamento que satura todos os vértices de $V$ se $A(V'_1) \geq |V'_1|$ para um $V' \subseteq V_1$.
 Ou seja, a cardinalidade da vizinhança (adjacente) de $V'$ tem que ser maior ou igual numero de vértices do conjunto $V'$.
 **Prova:***
@@ -469,8 +468,10 @@ _Aplicando o Teorema 8.1, temos o emparelhamento M que satura todos os vértices
 São caminhos de $G$ em que as arestas estão alternadamente em $E$ e $M$.
 Da figura abaixo o caminho $\{1, 2, 3, 4, 5\}$ é $M-alternante$
 ## Caminhos M-aumentantes
-Caminho cujo os vértices extremos são $M-expostos$. ou seja o caminho inicia e termina em arestas $M-insaturadas$.
+Caminho $M-alternante$ cujo os vértices extremos são $M-expostos$. ou seja o caminho inicia e termina em arestas $M-insaturadas$.
 Da figura abaixo o caminho $\{1,2,3,4,5,6\}$ é $M-aumentante$
 
 ![[grafos-emparelhamento]]
 
+## Teorema de Berge 
+"Um emparelhamento $M$ em um grafo $G$ é um emparelhamento perfeito se e somente se $G$ **não** contém caminho $M-aumentante$".
