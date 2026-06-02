@@ -761,3 +761,27 @@ Permite depurar (monitorar em nicel mais refinado) aplicativos.
 CIA(NSA) Hacking Toolds Revealed
 Exploit utilizando contra roteadores Mikrotik executando sistema operacional RouterOS. Usado para enviar Payload (TinShell) para o roteador.
 
+---
+# Engenharia Social
+Engenharia Reversa é a obtencão de um modelo de alto nivel a partir do produto final. Não esta restrita a TI: Se aplica em diversos contextos e industrias como máquinas, moveis, armas de fogo e ate roupas.
+**Motivação**: Análise de malware, reimplantação de software e de protocolos, correção de bugs, analise de vulnerabilidades, adição/alteração de recursos, proteção anti-pirataria, educacional.
+Na maioria das vezes, não é possivel obter o programa fonte original, completamente reconstruido, a partir do binário executavel.
+A reversçao completa é dificil, ou mesmo impossivel, porque muita informalçao é perdida durante o processo de compilação:
+- Nomes de métodos, funções, variáveis.
+- Otimização a nível de compilador.
+No entanto pe possivel determinar o comportamento do binário e até mesmo produzir codigo fonte .
+
+Pode gerar uma falsa expectativa de se obter codigo fonte de facil leitura e interpretação. Engenharia Reversa com escopo muito amplo (muitos binários) será demorado e caro, com pouca chance de sucesso.
+
+## Táticas de Engenharia Reversa
+### Análise Estática de Software
+Abordagem que envolve a inspeção do codigo fonte, geralmente obtido a partir de um disassembler (desmontador). Utiliza para examinar e compreender a estrtura, o comportamente e o funcionamento de um software sem depender de sua exevução em um ambiente em tempo real.
+**Tem suas limitações**: Não fornce informações sobre o comportament dinâmico do software durante a execução e pode não revelar completamente a lógica subjascente em casos de ofuscação de código.
+### Análise Dinâmica de Código
+Abordagem que envolve a execução de um programa ou sistema em um ambiente controlado, geralmente com auxilio de um debugger (depurador) para obter informações sobre seu comportamento em tempo de execução.
+pode Incluir a captura de dadso de entrada e saida, monitoramento de chamadas de função, rastreamento.
+
+
+| Estatica                                                | Dinamica |
+| ------------------------------------------------------- | -------- |
+| Desmontagem do código binário (com uso de disassembler) | Exel     |
