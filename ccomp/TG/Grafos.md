@@ -307,7 +307,7 @@ Deste modo, observa-se que  quanto maior a quantidade de arestas de um grafo, ma
 Seja um grafo planar. Então $m\leq 3n-6$.
 
 Isso e dado pela condição de que cada face e delimitada por no mínimo 3 arestas, e cada aresta pertence a exatamente duas faces.
-![[Excalidraw/grafos-planaridade|grafos-planaridade]]
+![[utils/Excalidraw/grafos-planaridade|grafos-planaridade]]
 
 Como cada aresta esta em dois planos $f$, ela sempre e contada 2x, como mostra na imagem acima na descrição de cada face. por isso $2m$.
 Percebe-se também, que o numero total de arestas das faces e de $12$. resultado que pode ser descrito como 3x o numero de faces. Por isso $3f$.
@@ -475,3 +475,55 @@ Da figura abaixo o caminho $\{1,2,3,4,5,6\}$ é $M-aumentante$
 
 ## Teorema de Berge 
 "Um emparelhamento $M$ em um grafo $G$ é um emparelhamento perfeito se e somente se $G$ **não** contém caminho $M-aumentante$".
+
+**Destrinchando o teorema...**
+`M é perfeito` $\Longleftrightarrow$   `Não possui M-aumentante ` 
+bicondicional, deve ser provada ida $(P\Rightarrow Q)$ e volta $(Q \Rightarrow P)$, que será feita da seguinte maneira:
+$(P\Rightarrow Q)$ por contrapositiva. $(\rightharpoondown Q \Rightarrow \rightharpoondown P)$ 
+$(Q \Rightarrow P)$ por contrapositiva $(\rightharpoondown P \Rightarrow \rightharpoondown Q)$
+
+### $(\Rightarrow)$
+$(\rightharpoondown Q \Rightarrow \rightharpoondown P)$ "se existe caminho aumentante em $M$, então, $M$ e não máximo"
+
+Como existe um caminho aumentante, entao seja um caminho aumentante $P$ e um $M$ nao maximo.
+
+Entao exite um matching $M'$ contendo a diferenca simetrica de $M$ e $P$
+sendo $M\Delta P$:
+![[grafos-diferenca-simetrica.svg.png]]
+Desta forma a diferença simétrica $\Delta = \{M \cup P\} - \{M \cap P \}$
+
+## Exemplo da Operação
+![[grafos-berge]]
+$M=\{(2,3),(4,5),(7,8)\}\text{  }\text{  }\text{  }\text{  }|M|=3$
+$P=\{1,2,3,4,5,6\}$
+$M'=M - E(P) = \{(1,2), (3,4), (5,6), (7,8)\}\text{  }\text{  }\text{  } |M'|=4$
+
+Percebe-se
+$$|M'|> |M|$$
+Assim provamos que $M$ não é máximo.
+
+### $(\Leftarrow)$
+se $M$ não e máximo então existe $M-aumentante$.
+$(\rightharpoondown P \Rightarrow \rightharpoondown Q)$
+
+Se $M$ não e máximo, vamos supor um $M^{*}$ que seja máximo.
+
+Definimos o grafo $H$ como $H = G[M\Delta M^{*}]$
+
+Como o grafo induzido $H$ é formado por dois emparelhamentos, por propriedade sabemos que **Um emparelhamentos não pode conter arestas que incidem sobre o mesmo vértice**.
+
+Como temos 2 emparelhamentos induzindo um conjunto de vértices, o grau dos vértices tem que ser $d(v)\leq 2$. Ou seja, os vértices podem ter grau 0, 1 ou 2. Então cada componente conexas só pode ser um ciclo ou um caminho.
+![[grados-ciclo-caminho.png]] Em ciclos, a diferença entre arestas alternantes é 0.
+E como supomos que  $|M^{*}|>|M|$
+
+Nestes tipos de componentes a diferença é 0, a menos que haja um caminho que comece em $M^{*}$ e termine em $M^{*}$
+$$v_1 - M^{*} - v_2 - M - v_3 - M^{*} - v_{k}$$
+Como os vértices de extremidade são insaturados por $M$.
+
+Concluindo, para este caminho as arestas são:
+- $M$ expostas no inicio.
+- Alternam entre $M^{*}$ e $M$, ou seja, $M-alternante$
+- Aresta $M$ exposta no final.
+
+Ou seja, todas as propriedades de $M-aumentante$, então:
+**$M$ não é máximo** $\Rightarrow$ Existe caminho aumentante para $M$.

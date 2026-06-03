@@ -67,16 +67,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/SAS/sas-notas.md",
+                "file": "ccomp/TG/Demonstração.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sas-notas"
+              "title": "Demonstração"
+            }
+          },
+          {
+            "id": "6b6f074f02c997d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ccomp/TG/Grafos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Grafos"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -133,7 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246.5110321044922
+    "width": 310.5
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -237,12 +251,21 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "641b10bb5c6ce3ae",
+  "active": "6b6f074f02c997d1",
   "lastOpenFiles": [
-    "ccomp/TG/Grafos.md",
+    "utils/img/grados-ciclo-caminho.png.~tmp",
+    "utils/img/grados-ciclo-caminho.png",
+    "utils/grados-ciclo-caminho.png",
+    "utils/Excalidraw/grafos-berge.md",
+    "utils/Excalidraw/grafos-emparelhamento.md",
     "ccomp/TG/tg-notas.md",
-    "Excalidraw/grafos-planaridade.md",
-    "Excalidraw/grafos-emparelhamento.md",
+    "ccomp/TG/grafos-lista-3.md",
+    "ccomp/TG/Grafos.md",
+    "utils/Excalidraw/grafos-planaridade.md",
+    "utils/img/grafos-diferenca-simetrica.svg.png",
+    "Excalidraw/Drawing 2026-06-02 20.42.55.excalidraw.md",
+    "Excalidraw",
+    "ccomp/TG/Demonstração.md",
     "utils/img/grafos-emparelhamento.jpg",
     "utils/img/Não confirmado 42486.crdownload",
     "Pasted image 20260525124215.png",
@@ -267,24 +290,15 @@
     "Captura de tela 2026-05-06 210700.png",
     "trafego/subido/subido-flow.md",
     "utils/img/grafos-exemplo.png",
-    "utils/img/Captura de tela 2026-05-03 182514.png",
     "L2-GPS.md",
     "Atividade Prática.pdf",
     "ccomp/SAS/sas-p1.md",
-    "utils/img/grafos-componentes-biconexaxs.png",
-    "utils/img/Captura de tela 2026-04-22 112437.png",
-    "ccomp/TG/Demonstração.md",
     "Excalidraw/Drawing 2026-04-09 08.53.06.excalidraw.md",
-    "adjuvo/documento de Adesão.md",
     "utils/img/Não confirmado 195374.crdownload",
     "utils/img/Não confirmado 746874.crdownload",
-    "Excalidraw/Drawing 2026-04-01 18.19.21.excalidraw.md",
-    "utils/grafos-planaridade.md",
     "ccomp/PE",
-    "README.md",
     "utils/img/Não confirmado 788159.crdownload",
     "utils/img/tecnicas_demonstracao.pdf",
-    "utils/img/Não confirmado 680286.crdownload",
     "utils/h.chomsky.canvas",
     "helpti/pages.canvas",
     "helpti/helpti.canvas"
