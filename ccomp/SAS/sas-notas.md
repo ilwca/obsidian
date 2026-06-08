@@ -548,7 +548,7 @@ _"É possível obter a ficha cadastral na integra de pacientes, acessos a logins
 
 ## Google Hacking
 **Buscando Falhas em sites com auxilio do google**
-O Google utiliza de uma tecnologia denominada spiders (ou webcrawlers):Robos que fazem a varredura na web buscando e indexando páginas.Quando  realizamos uma busca pela ferramenta, ela procura por este termo nas páginas indexadas. Cada resultado  retornado é composto por um titulo, uma URL e uma descrição. Um servidor mal configurado pode expor informações da empresa no Google.
+O Google utiliza de uma tecnologia denominada spiders (ou webcrawlers): Robôs que fazem a varredura na web buscando e indexando páginas. Quando realizamos uma busca pela ferramenta, ela procura por este termo nas páginas indexadas. Cada resultado  retornado é composto por um titulo, uma URL e uma descrição. Um servidor mal configurado pode expor informações da empresa no Google.
 
 Google hackin nada mais é do que uma prática para encontrar arquivos e/ou falhas a partir do Google, utilizando-o como uma especia de scanner, o informando comandos e manipulando buscas avançadas por strings.
 
@@ -577,10 +577,9 @@ Esses sistemas eram tipicamente estações de trabalho ou PCs comprometidos de u
 A _Computer Security Incident Handiling Guide_ do NIST define ataque de negação de servisos da seguinte maneira:
 _" É uma ação que impede ou prejudica a outro autorizada de redes, sistemas ou aplicação."_
 ### Ataques de Inundação - Flooders
-Inundam o enlace da rede ligada ao servidor com um torrente de pacotes maliciosos os quais competem com o fluxo de tráfego válido até o servidor e usualmente atropelam, Em resposta ao congestionamento que isso causa em alguns reteadores no caminho até o servidor visado, muitos pacotes serão descartados.  Ataques de inundação comuns usam qualquer um dos tipos de pacote de ICMP, UDP ou TCP SYN.
-
-**Largura de Banda**
-A Largura de banda de rede está relaacionada a capacidade dos enlaces de rede que conectam um servidor a internet. Para a maioria das organizações, essa é a conexão com o provedor de serviços de Internet (Internet Service Provider - ISP). Usualmente, essa conexão terá capacidade mais baixa do que os enlaces dentro de roteadores do provedor de serviços de internet. Isso significa que é possivel chegar uma quantidade de trafego aos roteadores do ISO por esses enlaces de maior capacidade, que seja mais alta do que a  quantidade que pode ser transmitida pelo enlace com a organização.
+Inundam o enlace da rede ligada ao servidor com um torrente de pacotes maliciosos os quais ecompetem com o fluxo de tráfego válido até o servidor e usualmente atropelam, Em resposta ao congestionamento que isso causa em alguns reteadores no caminho até o servidor visado, muitos pacotes serão descartados.  Ataques de inundação comuns usam qualquer um dos tipos de pacote de ICMP, UDP ou TCP SYN.
+### Largura de Banda
+A Largura de banda de rede está relacionada a capacidade dos enlaces de rede que conectam um servidor a internet. Para a maioria das organizações, essa é a conexão com o provedor de serviços de Internet (Internet Service Provider - ISP). Usualmente, essa conexão terá capacidade mais baixa do que os enlaces dentro de roteadores do provedor de serviços de internet. Isso significa que é possivel chegar uma quantidade de trafego aos roteadores do ISO por esses enlaces de maior capacidade, que seja mais alta do que a  quantidade que pode ser transmitida pelo enlace com a organização.
 
 Outra forma de ataque  recursos de sistema usa pacotes cuja estrutura aciona um bug no software de tratamento de rede do sistema, causando sua interrupção. Isso significa que o sistema não pode mais se comunicar pela rede ate esse software ser reativado, em geral mediante a reinicialização do sistema-alvo. Isso é conhecido como pacote envenenado.
 Um ataque a uma aplicação especifica, como um servidor Web normalmente envolva varias requisições validas, cada uma das quais consome recursos significativos. Então isso limita a capacidade do servidor de responder a requisições
@@ -604,8 +603,8 @@ O atacante envia pacotes a um serviço conhecido intermediário, com endereço d
 Também envolvem enviar a intermediários um pacote com o endereço de origem falsificado do sistema alvo. Eles diferem na geração de vários pacotes de resposta para cada pacote original enviado. Isso pode ser conseguido dirigindo a requisição original ao endereço BroadCast de alguma rede. O resultado é que todas as estações nessa rede podem potencialmente responder a requisição, gerando uma inundação de respostas.
 
 ## Defesas contra ataques de Negação de Serviços.
-É importante reconhecer que esses ataques nao podem ser interiramente evitados. Se um atacante puder dirigir um volume de trafego legitimo suficintemente grande ao seu sistema, existe alta chance de que ele sobrecarregará a conexão de rede do seu sistema, e assim, limitará requisições de tráfego legitimas vindas de outros usuários.
-Em geral, há quatro linhas de fegeas contrar ataqeus DDoS:
+É importante reconhecer que esses ataques não podem ser inteiramente evitados. Se um atacante puder dirigir um volume de trafego legitimo suficientemente grande ao seu sistema, existe alta chance de que ele sobrecarregará a conexão de rede do seu sistema, e assim, limitará requisições de tráfego legitimas vindas de outros usuários.
+Em geral, há quatro linhas de fugas contra ataques DDoS:
 - Prevenção e preempção de ataque (Antes do ataque)
 - Detecção e filtragem de ataque (durante o ataque)
 - Rastreamento retroativo e identificação da fonte
@@ -631,37 +630,38 @@ O que diferencia os ataques de forca bruta de outros métodos de quebra de segur
 **Ferramentas**
 #### Hydra
 Ferramenta para descoberta de credenciais por meio de forca bruta.
-
 ### SQL-Injection
 Linguagem padrão universal para a manipulação de bancos de dados relacionais. Utilizada, dentre outras tarefas de linguagens relacionais.
 ### Blind SQL-Injection
 Nem sempre o servidor alvo responde iterativamente as injeções do usuário. Por isso chamados _SQL Injection Cega_.
 
-### Cross Site Scripting (XSS)
+### Cross Site Scripting - XSS
 Tipo de ataque de injeção de código malicioso em aplicações web. Através de um XSS, o hacker injeta códigos JavaScritp em um campo de texto de uma página e este JS é executado pelo navegador do usuário. Em geral o ataque acontece em função de falha na validação dos dados de entrada do usuário e a resposta do servidor Web.
 Existe três tipos de CSS
-**Persistenete:** O script injetado pelo atacante fica alojado de forma permanente no servidor de destino.
-**Não Persistente:** O script nao fica alojado em um servidor de destino e por isso precisará ser entregue para cada vitimi (ex: Engenharia social ou um resultado de busca). Ao acionar o servidor, por meio do link, o script 
-**Refletido:** 
+### Persistente - Stored XSS
+O script injetado pelo atacante fica alojado de forma permanente no servidor de destino.
+### Refletido - Reflected XSS
+O script não fica alojado em um servidor de destino e por isso precisará ser entregue para cada vitima (ex: Engenharia social ou um resultado de busca). Ao acionar o servidor, por meio do link, o script 
+### Baseado em DOM
+A vulnerabilidade ocorre no navegador, manipulando o DOM via Java Script sem interação com o servidor.
 
 ---
 # 18/05
 
 ## Comparativo 
-Redes cabeadas nao utilizam nenhum recurso especial de seguranca, mas, mesmo assim, os dados são protegidos. O motivo é simples: tudo se passa dentro do cabo.
+Redes cabeadas não utilizam nenhum recurso especial de segurança, mas, mesmo assim, os dados são protegidos. O motivo é simples: tudo se passa dentro do cabo.
 
 ## Segurança
-nem sempre é possivel evitar que as informações em redes sem fio sejam capturados. O que pode ser feito é criptografar, ou seja, transmitir as informações de tal forma que , mesmo que eleas sejam capturadas, não possam ser compreendidas.
-Esse trabalho é feito por protocolos de segurancas qeu codificam os dados que navegam entre o PC e o roteador para impedir ...
+nem sempre é possível evitar que as informações em redes sem fio sejam capturados. O que pode ser feito é criptografar, ou seja, transmitir as informações de tal forma que , mesmo que elas sejam capturadas, não possam ser compreendidas.
+Esse trabalho é feito por protocolos de seguranças que codificam os dados que navegam entre o PC e o roteador para impedir ...
 
 ## Protocolos 
 ### WEP
-WIred Equivalent Privacy ou privacidade equivalente a de redes com fios
+Wired Equivalent Privacy ou privacidade equivalente a de redes sem fios
 ### WPA
 Wi-Fi Protected Acess ou Acesso sem fio protegido.
-
 ## WEP - Wired Equivalent Privacy
-Utiliza o algoritmo RC4 (cifra simetrica de fluxo) para criptografar os pacotes em redes sem fio. Implementa função detectora de erros que verifica se a mensagem recebida foi corrompida ou alterada no meio do caminho.
+Utiliza o algoritmo RC4 (cifra simétrica de fluxo) para criptografar os pacotes em redes sem fio. Implementa função detectora de erros que verifica se a mensagem recebida foi corrompida ou alterada no meio do caminho.
 O próprio algorimo de criptografia RC4 foi apontado como o principal calcanhar de Aquiles do protocolo, e mesmo sendo indiadas outras opções para substitui-lo, o WEP caiu em descrédito e deixou de ser usado em aplicações sérias.
 Desde 2004 o WEP é considerado "obsoleto". Apesar de estar obsoleto, muitos roteadores ainda trazem o WEP como opção, e alguns usuários ainda fazem uso do WEP devido à compatibilidade.
 O WEP utiliza algoritmo de criptografia simétrica (RC4), portanto, existe uma chave secreta que deve ser compartilhada entre as estações de trabalho e o concentrador, para cifrar e decifrar as mensagens trefegadas.
@@ -677,13 +677,13 @@ Programas como o _aircrack-ng_ fazem isso em questão de minutos. Este possui m�
 ## WPA - (Wi-Fi Protected Access)
 Surgiu a partir de um esforço conjunto de membro da Aliança Wi-Fi e do IEEE para combater algumas das vulnerabilidades do WEP e aumentar o nivel de seguranca das redes sem fio.
 Lançado em 2003, utilizava criptografia TKIP (substituição do vetor de inicialização de 24 bits para 48 bits) era comumente chamado de WEP2.
-Em 2004 receveu atualização, adotando o algoritmo de cifra de bloco.
-Existem dois métodos de operçaão.
+Em 2004 recebeu atualização, adotando o algoritmo de cifra de bloco.
+Existem dois métodos de operação.
 - **Uso doméstico PSK** _(Pre-Shared Key)_: Chave previamente compartilhada é utilizada.
 - **Grandes Organizações**: Não depende de uma chave previamente compartilhada. Utiliza servidores de autenticação para validarem a conexão (ex: Eduraom/UFT).
 É considerada o padrão mais seguro atualmente e deve ser utilizado sempre que possivel.
 ### Segurança no WPA/WPA2
-Técnicas de ataque aos padrões WPA/WPA2 exogem frequentemente a atualização de dicionarios. Um ataque de dicionário é um método que consiste em invadir um computador ou servidor protegido por senha (neste caso, uma rede Wi-Fi) inseridno sistematicamente cada palavra em um dicionário.
+Técnicas de ataque aos padrões WPA/WPA2 exigem frequentemente a atualização de dicionários. Um ataque de dicionário é um método que consiste em invadir um computador ou servidor protegido por senha (neste caso, uma rede Wi-Fi) inserindo sistematicamente cada palavra em um dicionário.
 ### Ataques em Redes Wireless
 #### Modos operacionais de adaptadores sem fio
 - **Modo managed (Gerenciado):** Interface de rede Wi-Fi ignora todos os pacotes de dados , exceto aqueles especificamente endereçados a ela.
@@ -755,7 +755,6 @@ Para desativar o ASLR:
 ## GDB (Gnu Debbuger)
 Permite depurar (monitorar em nicel mais refinado) aplicativos.
 `gdb -q [nome do Programa]`
-
 
 ### Exemplo Real - ChimayRed
 CIA(NSA) Hacking Toolds Revealed

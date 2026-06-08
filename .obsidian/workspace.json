@@ -76,21 +76,35 @@
             }
           },
           {
-            "id": "6b6f074f02c997d1",
+            "id": "ede1eda6831bbcd9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/TG/Grafos.md",
+                "file": "ccomp/SAS/sas-notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Grafos"
+              "title": "sas-notas"
+            }
+          },
+          {
+            "id": "a4a655718c91b7a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ccomp/SAS/sas-notas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sas-notas"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -147,7 +161,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -251,16 +266,20 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "6b6f074f02c997d1",
+  "active": "cc16034bcc307cb9",
   "lastOpenFiles": [
+    "ccomp/SAS/sas-p2.md",
+    "ccomp/SAS/sas-notas.md",
+    "sas-p2.md",
+    "ccomp/SAS/sas-p1.md",
+    "ccomp/TG/grafos-lista-3.md",
+    "ccomp/TG/Grafos.md",
     "utils/img/grados-ciclo-caminho.png.~tmp",
     "utils/img/grados-ciclo-caminho.png",
     "utils/grados-ciclo-caminho.png",
     "utils/Excalidraw/grafos-berge.md",
     "utils/Excalidraw/grafos-emparelhamento.md",
     "ccomp/TG/tg-notas.md",
-    "ccomp/TG/grafos-lista-3.md",
-    "ccomp/TG/Grafos.md",
     "utils/Excalidraw/grafos-planaridade.md",
     "utils/img/grafos-diferenca-simetrica.svg.png",
     "Excalidraw/Drawing 2026-06-02 20.42.55.excalidraw.md",
@@ -279,7 +298,6 @@
     "ccomp/PAA/Glossary.md",
     "ccomp/PAA/Análise de Complexidade.md",
     "trafego/mkt-assessoria/Publicos.md",
-    "ccomp/SAS/sas-notas.md",
     "trafego/mkt-assessoria",
     "trafego",
     "trafego/subido/notas-subido.md",
@@ -292,13 +310,10 @@
     "utils/img/grafos-exemplo.png",
     "L2-GPS.md",
     "Atividade Prática.pdf",
-    "ccomp/SAS/sas-p1.md",
-    "Excalidraw/Drawing 2026-04-09 08.53.06.excalidraw.md",
     "utils/img/Não confirmado 195374.crdownload",
     "utils/img/Não confirmado 746874.crdownload",
     "ccomp/PE",
     "utils/img/Não confirmado 788159.crdownload",
-    "utils/img/tecnicas_demonstracao.pdf",
     "utils/h.chomsky.canvas",
     "helpti/pages.canvas",
     "helpti/helpti.canvas"
