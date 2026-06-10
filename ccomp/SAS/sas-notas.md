@@ -641,7 +641,7 @@ Existe três tipos de CSS
 ### Persistente - Stored XSS
 O script injetado pelo atacante fica alojado de forma permanente no servidor de destino.
 ### Refletido - Reflected XSS
-O script não fica alojado em um servidor de destino e por isso precisará ser entregue para cada vitima (ex: Engenharia social ou um resultado de busca). Ao acionar o servidor, por meio do link, o script 
+O script não fica alojado em um servidor de destino e por isso precisará ser entregue para cada vitima (ex: Engenharia social ou um resultado de busca). Ao acionar o servidor, por meio do link, contendo o scritp.
 ### Baseado em DOM
 A vulnerabilidade ocorre no navegador, manipulando o DOM via Java Script sem interação com o servidor.
 
