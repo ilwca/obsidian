@@ -119,15 +119,17 @@ Os problemas de **Otimização** podem derivar em mais dois subproblemas
 
 # Conjuntos Minimal e Maximal
 Seja um conjunto $S'\subset S$. Diz-se que $S'$ e maximal em relação a uma certa propriedade $P$.
-
 ### Maximal
-maximal é denotado pelo conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$,. Ou seja, $S'$ deve ser o **maior** conjunto que atenta a $P$ para ser maximal.
+maximal é denotado pelo conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$,. Ou seja, $S'$ deve ser o **maior** conjunto que atenda a $P$ para ser maximal.
 $S'$ pode ser maximal e não ser máximo. Pode existir um outro conjunto $S''$ que contenha **ou** **não** $S'$ e que satisfaça a propriedade $P$.
 ### Revisando
 Para um conjunto ser maximal ele deve:
 - Atender a propriedade  $P$;
 - Ser o **maior** conjunto a fazer isso para ser maximal e máximo;
 
+Separando definições:
+- **Máximo** = Maior em Tamanho
+- **Maximal** = Não pode ser expandido
 ### Minimal
 De mesmo modo, denomina-se minimal um conjunto $S' \subset S$ de modo que $S$ atenda a propriedade $P$, e quando não existe um subconjunto $S''$ que também atenda à $P$ e que não seja $S''\supseteq S'$. De mesmo modo, $S'$ pode ser minimal e não ser mínimo.
 ### Revisando
@@ -138,6 +140,7 @@ Para um conjunto ser minimal ele deve:
 ### Lembrando:
 - **minimal** → remover qualquer vértice faz perder $P$.
 - **maximal** → não é possível adicionar vértices sem perder $P$.
+
 
 
 # Problemas de Maximização e Minimização
@@ -182,7 +185,7 @@ Este também seria um conjunto minimal de corte de arestas com relação ao vér
  Sega um grafo $G$, emparelhamento e um conjunto de arestas com extremidades distintas duas a duas em que não possuem vértices em comum.
 
 ## Cobertura por Vértices
-dado um grafo $G(V, E)$, a cobertura por vértices consiste em um subconjunto de vértices $C \subseteq V$, de modo que cara aresta tenha extremidade em um vértice de $C$, sempre buscando a cardinalidade mínima do conjunto.
+dado um grafo $G(V, E)$, a cobertura por vértices consiste em um subconjunto de vértices $C \subseteq V$, de modo que cada aresta tenha extremidade em um vértice de $C$, sempre buscando a cardinalidade mínima do conjunto.
 
 ![[6n-graf.svg.png]]
 
@@ -459,6 +462,8 @@ Isso implica um conjunto $M$ válido de arestas emparelhadas de $E$. $M'$ é um 
 Um emparelhamento $M$ é maximal se todas as arestas não emparelhadas possuem extremidades em um vértice em $M$. Quando todas os vértices de $V$ são saturados $M$ é perfeito.
 
 ## Emparelhamentos Perfeitos
+Por definição um emparelhamento só é perfeito se satura todos os vértices de um grafo.
+
 O Teorema de Hall(8.1) diz que: Dado um grafo bipartido $G(V,E)$ com partições $V_1$ e $V_2$  onde $V_1 \cup V_2 = V$ e $|V_1| = |V_2|$. O grafo $G$ possui emparelhamento que satura todos os vértices de $V$ se $A(V'_1) \geq |V'_1|$ para um $V' \subseteq V_1$.
 Ou seja, a cardinalidade da vizinhança (adjacente) de $V'$ tem que ser maior ou igual numero de vértices do conjunto $V'$.
 **Prova:***
@@ -485,14 +490,14 @@ $(Q \Rightarrow P)$ por contrapositiva $(\rightharpoondown P \Rightarrow \righth
 ### $(\Rightarrow)$
 $(\rightharpoondown Q \Rightarrow \rightharpoondown P)$ "se existe caminho aumentante em $M$, então, $M$ e não máximo"
 
-Como existe um caminho aumentante, entao seja um caminho aumentante $P$ e um $M$ nao maximo.
+Como existe um caminho aumentante, então seja um caminho aumentante $P$ e um $M$ não máximo.
 
-Entao exite um matching $M'$ contendo a diferenca simetrica de $M$ e $P$
+Então existe um matching $M'$ contendo a diferença simétrica de $M$ e $P$
 sendo $M\Delta P$:
 ![[grafos-diferenca-simetrica.svg.png]]
 Desta forma a diferença simétrica $\Delta = \{M \cup P\} - \{M \cap P \}$
 
-## Exemplo da Operação
+### Exemplo da Operação
 ![[grafos-berge]]
 $M=\{(2,3),(4,5),(7,8)\}\text{  }\text{  }\text{  }\text{  }|M|=3$
 $P=\{1,2,3,4,5,6\}$
@@ -527,3 +532,33 @@ Concluindo, para este caminho as arestas são:
 
 Ou seja, todas as propriedades de $M-aumentante$, então:
 **$M$ não é máximo** $\Rightarrow$ Existe caminho aumentante para $M$.
+
+# Teorema de Konig
+"Seja $\alpha (G)$ a cobertura mínima e $\beta(G)$ o emparelhamento máximo. Provar que se $G$ é um grafo bipartido, então $\alpha (G) = \beta(G)$"
+### Prova Direta
+dado um grafo bipartido $G[X, Y ]$ e um emparelhamento máximo dado por $M^{*}$. 
+Definimos $U$, como o conjunto de todos os vértices não saturados por $M^{*}$, e um $Z$ sendo o caminho $M-alternante$ dos vértices alcançados a partir de $U$.
+
+Assim podemos criar dois conjuntos de vértices, sendo:
+$$R = Z \cup X$$
+$$B = Z \cup Y$$
+ou seja, $R$ contém todos os vértices de $X$ alcançados por um caminho alternante $Z$ de origem em $U$.
+e $B$ contém todos os vértices de $Y$ alcançados por um caminho alternante $Z$ de origem em $U$
+Propomos uma cobertura candidata:
+$$K^{*} = (X-R)\cup B$$
+ou seja, todos os vértices de $X$ que não foram alcançados por $Z$ e todos os de $Y$ que foram.
+
+**Por que $K^{*}$ cobre todas as arestas?**
+Considere uma aresta $(x,y)$, se ela não estiver coberta por $K^{*}$, então $x\in R$ (alcançado) e $y\in B$ (não alcançado).
+- Se $(x,y)$ estiver em $M^{*}$, $y$ teria sido alcançado a partir de $x$ pelo caminho alternante, logo $y\in B.$
+- Se $(x,y)$ não estiver em $M^{*}$, o caminho que chega em $x$ poderia ser estendido ate $y$, logo $y\in B.$
+Portanto, $K^{*}$ é uma cobertura.
+
+**Por que $|K^{*}| = |M^{*}|$?**
+- Não existe vértice saturado em $K^{*}$ que não seja saturado por $M^{*}$
+- Cada aresta de $M^{*}$ toca $B$ e sua outra extremidade, esta em $R$ (portanto fora de $X-R$).
+- E se não toca $B$ sua extremidade em $X$ deve estar em $X-R$.
+
+Portanto construímos uma cobertura $K^{*}$, com o mesmo número de elementos do emparelhamento máximo $M^{*}$. E sabemos que não existe cobertura menos que $K^{*}$, portanto $K^{*}$ e cobertura mínima. logo...
+$$\alpha (G) = \beta(G)$$
+Esta provada para grafos bipartidos.
