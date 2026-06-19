@@ -155,7 +155,8 @@ Os problemas a seguir são problemas de minimização ou de minimização
 
 ## Conjunto Dominante
 Um conjunto $S$ é considerado dominante se todas os vértices estão em $S$ ou todo vértice tem um vizinho contido em $S$.
-
+![[6n-graf.svg.png]]
+considerando o grafo acima, um conjunto dominante seria $C_1=\{4,2\}$ ou $C_2=\{4,1\}$
 ## Conjunto Independente
 Um par de vértices (se houver) é independente se e somente se não são adjacentes, ou seja, não possuem arestas entre si.
 Por definição temos que:
@@ -191,9 +192,9 @@ dado um grafo $G(V, E)$, a cobertura por vértices consiste em um subconjunto de
 
 
 Considerando o grafo acima, buscamos um conjunto minimal de $S$ que cubra todos os vértices de $V$. Assim, podemos propor:
-$$C_1=\{4,2\}$$
+$$C_1=\{4,2,1\}$$
 ou 
-$$C_2=\{4,1\}$$
+$$C_2=\{4,1,5\}$$
 
 a seguir, exercícios envolvendo maximal e minimal...
 
@@ -207,7 +208,7 @@ A ----- B
  \    /  
    C ----- D ----- E
 ```
-A propriedade PPP será:
+A propriedade P será:
 
 $P(S):S$ eˊ um conjunto independente.
 
@@ -241,7 +242,7 @@ Agora considere a propriedade:
 $P(S):S$ eˊ um conjunto dominante
 ou seja:
 
-todo vértice **está em $S$** ou é **vizinho de algum vértice de $S$**.z
+todo vértice **está em $S$** ou é **vizinho de algum vértice de $S$**.
 ### Pergunta
 Encontre **um conjunto dominante minimal**.
 
@@ -497,7 +498,7 @@ sendo $M\Delta P$:
 ![[grafos-diferenca-simetrica.svg.png]]
 Desta forma a diferença simétrica $\Delta = \{M \cup P\} - \{M \cap P \}$
 
-### Exemplo da Operação
+### Exemplo da Operação 
 ![[grafos-berge]]
 $M=\{(2,3),(4,5),(7,8)\}\text{  }\text{  }\text{  }\text{  }|M|=3$
 $P=\{1,2,3,4,5,6\}$
