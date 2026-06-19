@@ -65,3 +65,15 @@ $A = \{2,4,6\}, n(A)=3$
 
 $$P(A)=\frac{n(A)}{n(S)}$$
 $$P(A)=\frac{3}{6}= \frac{1}{2}$$
+---
+# Regressão 
+função definida pelos valores de $X$ e $Y$ onde $Y$ é a variável dependente da variável independente de $X$. Onde os valores da função para $Y$ é dado por:
+$$Y = aX+b$$
+onde $a$ e $b$ são os parâmetros da função definidos por:
+$$a = \frac{n \sum x_i y_i \text{ }-\text{ }\sum x_i \sum y_i}{n \sum x_i^2 -(\sum x_i)²}$$
+$$b = \overline{y} + a\overline{x}$$
+Assim definimos a equação de regressão linear, denotada por:
+$$\widehat{Y}=aX+b$$
+que definirá os valores aproximados para a função.
+
+### Exemplo
