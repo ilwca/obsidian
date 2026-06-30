@@ -755,3 +755,31 @@ c) substitua o "8" do primeiro laco por "7", obtenha a nova recorrencia e mostr 
 **A)** $T(n) = 8T(n/2) + O(n³)$ 
 
 **B)** temos que provar agora o limite inferior da funcao.
+
+
+# Arvore de Recursão
+Identifica o custo de $T(n)$, que normalmente é:
+$$T(n)=aT(\frac{n}{b})+f(n)$$
+onde, $a$ determina o numero de filhos em cada nó.
+e
+$(\frac{n}{b})$ determina o custo do nó.
+exemplificando com
+$a=2$
+$b=2$
+![[paa-recursive-tree.png]]
+
+### Custo por Nível
+o custo por nível e determinado por:
+$$\boxed{C_i=a^i\cdot f(\frac{n}{b^i})}$$
+onde $i$ é o nível da arvore.
+
+## Altura da Árvore
+Determinada quando a chamada recursiva retorna resultado:
+$$\boxed{h=log_b^n}$$
+
+Em seguida, some:
+$$\sum_{i=0}^{h}C_i$$
+e veja quem domina:
+- Raiz
+- Todos os níveis
+- Folhas

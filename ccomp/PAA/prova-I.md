@@ -22,6 +22,25 @@ Logo,
 
 $\boxed{ 2^{f(n)} = O(2^{g(n)}) }​$
 
+se assumirmos $f(n)=2n$ e $O(n)$, então teremos:
+$$2^{f(n)}\leq(2^{g(n)})\cdot c$$
+$$2^{2n}\leq(2^{n})\cdot c$$
+se dividirmos ambos os lados da desigualdade por $2^n$, teremos
+$$2^n \leq c$$
+o que $\nexists c \in \mathbb{R}$ que atenda a igualdade.
+Provamos por Contraexemplo:
+$$\boxed{f(n)=2n, \text{ }\text{ } g(n)=n}$$
+
+---
+## Questão
+Sejam $f_1(n), f_2(n), g_1(n) \text{ e } g_2(n)$ funções assintoticamente não negativas definidas para $n$ suficientemente grande. Suponha que:
+$$f_1(n) = \Theta(g_1(n)) \text{ }\text{ e }\text{ } f_2(n)=\Theta(g_2(n))$$
+A) prove formalmente, a partir da definição de $\Theta$, que:
+$$f_1(n) \cdot f_2(n) = \Theta(g_1(n)\cdot g_2(n))$$
+B) Analise a seguinte preposição análoga:
+$$f_1(n) + f_2(n) = \Theta(g_1(n) + g_2(n))$$
+Ela é sempre verdadeira sob as mesma hipóteses? Prove ou refute.
+
 ## Questão II
 
 considere o algoritmo abaixo que recebe um array A de inteiros de tamanho $n\geq1$ e devolve o maior elemento.

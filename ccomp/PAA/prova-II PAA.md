@@ -310,3 +310,20 @@ function CashReturn(V, target)
 	return solucao[]
 ```
 
+
+## Questao
+``` algorithm
+Procedure(V, inicio, fim)
+	if inicio == fim
+		return V[inicio]
+	else 
+		meio len(V)//2
+		x = Procedure(V, inicio, meio)
+		y = Procedure(V, meio+1, fim)
+		z = 0
+		
+		for i = inicio to fim
+			z = z + V[i]
+			return x + y + z
+		
+```
