@@ -1,5 +1,5 @@
 oi
-Este é um repositório das minhas anotações particulares (Apesar de público) como anotações de aulas e estudos.
+Este é um repositório das minhas anotações particulares (Apesar de público) como anotações de aulas e estudos do curso de Ciência da Computação.
 Ele é composto por uma estrutura  de pastas para a divisão de estudos da faculdade, projetos pessoais e profissionais. As principais pastas são:
 
 # ccomp
