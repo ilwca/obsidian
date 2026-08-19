@@ -47,3 +47,5 @@ A solução tem que satisfazer os requerimentos nutricionais:
 | vitamina  | 32          |
 | proteina  | 36          |
 
+---
+# 11/08

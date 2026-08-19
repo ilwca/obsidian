@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PI/pi-notas.md",
+                "file": "ccomp/PI/processamento-de-imagens.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pi-notas"
+              "title": "processamento-de-imagens"
             }
           }
         ],
@@ -216,14 +216,15 @@
   "active": "349a8b7e83ecc5dc",
   "lastOpenFiles": [
     "ccomp/PI/pi-notas.md",
-    "ccomp/PO/po-notas.md",
-    "ccomp/PI",
-    "README.md",
-    "ccomp/TG/tg-notas.md",
+    "ccomp/PI/processamento-de-imagens.md",
     "ccomp/TG/Grafos.md",
+    "ccomp/PO/po-notas.md",
     "utils/Excalidraw/grafos-berge.md",
     "utils/Excalidraw/grafos-planaridade.md",
     "utils/Excalidraw/grafos-emparelhamento.md",
+    "ccomp/PI",
+    "README.md",
+    "ccomp/TG/tg-notas.md",
     "ccomp/TG/Demonstração.md",
     "Excalidraw/Drawing 2026-06-02 20.42.55.excalidraw.md",
     "ccomp/PO",
@@ -246,7 +247,6 @@
     "graf.md",
     "ccomp/SAS/sas-p2.md",
     "sas-p2.md",
-    "ccomp/SAS/sas-p1.md",
     "utils/img/grados-ciclo-caminho.png.~tmp",
     "utils/img/grados-ciclo-caminho.png",
     "utils/grados-ciclo-caminho.png",
