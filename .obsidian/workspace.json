@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PG-I/pg1-notas.md",
+                "file": "ccomp/PO/po-notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pg1-notas"
+              "title": "po-notas"
             }
           }
         ],
@@ -257,17 +257,20 @@
   },
   "active": "1e36e2d7b9494b00",
   "lastOpenFiles": [
+    "ccomp/PO/po-estudos.md",
+    "ccomp/PAA/Dynamic Programin.md",
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+    "ccomp/PAA/Análise de Complexidade.md",
+    "ccomp/PO/po-notas.md",
+    "ccomp/PG-I/pg1-notas.md",
     "ccomp/PG-I/pg-desenvolvimento.md",
     "ccomp/PG-I/pg-todo.md",
-    "ccomp/PG-I/pg1-notas.md",
     "adjuvo/things to study.md",
     "adjuvo/documento de Adesão.md",
     "trafego/subido/subido-flow.md",
     "trafego/subido/notas-subido.md",
     "helpti/pages.canvas",
     "helpti/helpti-fluxo.md",
-    "ccomp/PO/po-notas.md",
-    "ccomp/PO/po-estudos.md",
     "ccomp/PI/processamento-de-imagens.md",
     "ccomp/PI/pi-notas.md",
     "ccomp/Redes/REDES - slide.md",
@@ -284,12 +287,9 @@
     "Excalidraw/Drawing 2026-06-02 20.42.55.excalidraw.md",
     "ccomp/PO",
     "ccomp/TG/grafos-lista-3.md",
-    "ccomp/PAA/Análise de Complexidade.md",
     "ccomp/SAS/sas-notas.md",
     "utils/img/undergradmath.pdf",
     "utils/img/Não confirmado 90496.crdownload",
-    "ccomp/PAA/prova-I.md",
-    "ccomp/PAA/prova-II PAA.md",
     "utils/img/paa-recursive-tree.png",
     "utils/img/Não confirmado 913815.crdownload",
     "utils/img/grados-ciclo-caminho.png.~tmp",
