@@ -94,4 +94,15 @@ $$A = (a_1,a_2,a_3,a_4,a_5)=\begin{pmatrix}
 e $c=(3,5,0,0,0)$
 Onde o $c$ é definido a partir da função a ser minimizada, como: $$z=3x_1+5x_2+0x_3+0x_4+0x_5$$
 $$c=(3,5,0,0,0)$$
-Agora vamos definir a matriz base($I_b$) e a não base($I_n$), para definir 
+Agora vamos definir a matriz base($I_b$) e a não base($I_n$), para definir.
+Como ja temos uma matriz de indentidade em A, esta mais facil decidir quem é $I_b$ e $I_n$.
+$$I_n=\begin{pmatrix}
+1&0\\
+0&1\\
+3&2
+\end{pmatrix},\ \
+I_b=\begin{pmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1\\
+\end{pmatrix}$$
