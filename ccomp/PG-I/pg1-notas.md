@@ -67,3 +67,22 @@ O pooling global, é quando um mapa de caracteristicas inteiro é reduzido a um 
 
 ### Capsulas
 Estruturas de capsulas, são uma alternativa ao pooling, que ao inves de substituir o mapa de caracteristicas, o substitui por um produto escalar, ou seja, um vetor armazenando caracteristicas principais, como formato, tramanho e posição de objetos.
+
+---
+## Resultados de Poda em Redes TOP-1
+
+
+### Normalizacao em Lote (BN)
+"Usando parâmetros BN, as distâncias dos canais do mapa de características podem ser calculadas por camada. Usando uma [abordagem de agrupamento](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/computer-science/clustering-approach) para distância, as características próximas podem ser ajustadas. Uma vantagem do agrupamento é que a redundância não é medida com uma distância absoluta, mas com um [valor relativo](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/computer-science/relative-value) . Com cerca de 60 épocas de treinamento, eles conseguiram podar a rede, resultando em uma redução de 50% em FLOPs (incluindo operações não convolucionais) com uma redução na precisão de apenas 1% tanto para o top-1 quanto para o top-5 no conjunto de dados ImageNet"
+
+### Metodo de reutilização
+"O método de redução e reutilização (também descrito como outbound) elimina filtros inteiros calculando a variância estatística da saída de cada filtro usando um [conjunto de calibração](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/computer-science/calibration-set) . Filtros com baixa variância são eliminados. O método outbound obteve2.37×aceleração com perda de precisão de 1,52% no conjunto de dados Labeled Faces in the Wild (LFW) no campo do [reconhecimento facial](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/biochemistry-genetics-and-molecular-biology/facial-recognition) .
+
+Um método que remove iterativamente neurônios redundantes para FCLs sem exigir dados de validação especiais. Essa abordagem mede a similaridade de grupos de pesos após uma normalização. Ela remove pesos redundantes e mescla os pesos em um único valor. Isso levou a uma redução de 34,89% nos pesos FCL na AlexNet com uma perda de precisão top-1 de 2,24% no ILSVRC-2012."
+
+### Poda por Busca Gulosa
+"A ThiNet adota informações estatísticas da camada seguinte para determinar a importância dos filtros. Ela usa uma busca gulosa para podar o canal que tem o menor custo de reconstrução na camada seguinte. A ThiNet poda camada por camada, em vez de globalmente, para minimizar grandes erros na [precisão da classificação](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/engineering/classification-accuracy) . Ela também poda menos durante cada época de treinamento para permitir a [estabilidade dos coeficientes](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/engineering/stability-coefficient) . A taxa de poda é um hiperparâmetro predefinido e a complexidade de tempo de execução está diretamente relacionada a essa taxa. A ThiNet comprimiu o número de operações de ponto flutuante (FLOPs) da ResNet-50 para 44,17%, com uma redução de 1,87% na precisão top-1."
+
+---
+## Poda combinada com Tuning e Retraining
+"_Treinamento do zero:_ Observações mostram que a eficiência e a precisão do treinamento da rede são inversamente proporcionais à esparsidade da estrutura. Quanto mais densa a rede, menor o tempo de treinamento. Esta é uma das razões pelas quais as técnicas de poda atuais tendem a seguir um pipeline de treinamento-poda-ajuste em vez de treinar uma estrutura podada do zero."

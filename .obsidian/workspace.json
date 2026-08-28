@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PG-I/pg-desenvolvimento.md",
+                "file": "ccomp/PG-I/pg1-notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pg-desenvolvimento"
+              "title": "pg1-notas"
             }
           }
         ],
@@ -257,8 +257,8 @@
   },
   "active": "1e36e2d7b9494b00",
   "lastOpenFiles": [
-    "ccomp/PG-I/pg-todo.md",
     "ccomp/PG-I/pg-desenvolvimento.md",
+    "ccomp/PG-I/pg-todo.md",
     "ccomp/PG-I/pg1-notas.md",
     "adjuvo/things to study.md",
     "adjuvo/documento de Adesão.md",
