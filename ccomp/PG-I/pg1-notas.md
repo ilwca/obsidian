@@ -68,7 +68,6 @@ O pooling global, é quando um mapa de caracteristicas inteiro é reduzido a um 
 ### Capsulas
 Estruturas de capsulas, são uma alternativa ao pooling, que ao inves de substituir o mapa de caracteristicas, o substitui por um produto escalar, ou seja, um vetor armazenando caracteristicas principais, como formato, tramanho e posição de objetos.
 
----
 ## Resultados de Poda em Redes TOP-1
 
 
@@ -83,6 +82,28 @@ Um método que remove iterativamente neurônios redundantes para FCLs sem exigir
 ### Poda por Busca Gulosa
 "A ThiNet adota informações estatísticas da camada seguinte para determinar a importância dos filtros. Ela usa uma busca gulosa para podar o canal que tem o menor custo de reconstrução na camada seguinte. A ThiNet poda camada por camada, em vez de globalmente, para minimizar grandes erros na [precisão da classificação](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/engineering/classification-accuracy) . Ela também poda menos durante cada época de treinamento para permitir a [estabilidade dos coeficientes](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/engineering/stability-coefficient) . A taxa de poda é um hiperparâmetro predefinido e a complexidade de tempo de execução está diretamente relacionada a essa taxa. A ThiNet comprimiu o número de operações de ponto flutuante (FLOPs) da ResNet-50 para 44,17%, com uma redução de 1,87% na precisão top-1."
 
----
 ## Poda combinada com Tuning e Retraining
 "_Treinamento do zero:_ Observações mostram que a eficiência e a precisão do treinamento da rede são inversamente proporcionais à esparsidade da estrutura. Quanto mais densa a rede, menor o tempo de treinamento. Esta é uma das razões pelas quais as técnicas de poda atuais tendem a seguir um pipeline de treinamento-poda-ajuste em vez de treinar uma estrutura podada do zero."
+
+## Poda Dinamica
+Podas estaticas destroem de forma irreverssivel a estrutura original da rede. Uma vez podada e retreinada, e impossivel de recuperar informacoes apagadas. A poda dinamica, controla em tempo de execucao quais camadas e conexoes serao ativadas o que pode diminuir a computacao, dissipacao energetica e a largura da banda.
+### Composicao da rede
+Para Isso deve-se existir um sistema que controla em tempo de execucao o que podar durante o treinamento. Este componente de decisao e composto por:
+- **Conexoes adicionais** criadas na fase de inferencia ou treinamento;
+- **Caracteristicas das conexoes** que podem ser aprendidos por algoritmos de retropropagacao;
+- **Rede de decisao lateral** de dificil treinamento mas otimo desempenho.
+### Tipos/Niveis de poda
+O nivel de poda escolhido influencia no projeto de hardware, sendo ele por:
+- Por canal;
+- Camada;
+- bloco;
+- Rede.
+
+A desvantagem da poda dinamica e que exige uma camada extra de decisao rodando em tempo real durante o treinamento, exigindo maior computacao, largura de banda e eneergia.
+
+## Shrinkbench
+O Shrinkbench e um sistema de benchmark unificado para fazer comparacoes de desempenhos de poda disponivel no [github](https://github.com/jjgo/shrinkbench).
+
+## Quantizacao
+A quantizacao e um famoso processo de substituir valores continuos por um aproximado ou normalizado simbolos ou valores discreto ou inteiros. O [[#Pooling | pooling]] e o compartilhamento de parametros tambem se enquadram neste processo.
+A **Quantizacao Parcial** utiliza de algortmos de agrupamento como o [[Kmeans]] para quantizar o estado dos pesos e em seguida armazenar parametros em arquivos compactados.
