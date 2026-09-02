@@ -39,4 +39,18 @@ TCC
 └── 7. CONCLUSÃO
 ``` 
 
+## Consumo energetico
+Estabelecer uma base, modelo original contendo informacoes, como:
 
+|Métrica|Modelo original|
+|---|--:|
+|Acurácia|98.x%|
+|Tamanho|X MB|
+|Número de parâmetros|X|
+|MACs|X|
+|Latência|X ms|
+|Energia*|opcional|
+
+Para a metrica de energia, podemos acompanhar o treinamento e inferencia por meio de software:
+- **NVIDIA Management Library (`nvidia-smi` / `pynvml`):** Reporta o consumo em Watts da placa em tempo real diretamente do driver da GPU.
+- **CodeCarbon:** Pacote em Python que monitora o consumo do hardware (GPU/CPU) durante a execução e estima a pegada de carbono do modelo.

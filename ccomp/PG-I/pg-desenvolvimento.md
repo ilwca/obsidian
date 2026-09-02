@@ -18,3 +18,4 @@ Number of Parameters
 MACs
 Inference Latency
 ``` 
+
