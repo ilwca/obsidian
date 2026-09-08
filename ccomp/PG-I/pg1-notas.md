@@ -37,7 +37,56 @@ A quantização de rede envolve a substituição de tipos de dados por tipos de 
 Proposta em 1990, a quantizacao e um famoso processo de substituir valores continuos por um aproximado ou normalizado simbolos ou valores discreto ou inteiros. O [[#Pooling |pooling]] e o compartilhamento de parametros tambem se enquadram neste processo.
 A **Quantizacao Parcial** utiliza de algortmos de agrupamento como o [[Kmeans]] para quantizar o estado dos pesos e em seguida armazenar parametros em arquivos compactados.
 A maioria das redes atualmente usa uma representacao de FP32 (float point de 32 bits ou seja 8 casas decimais) que e informacaoa mais do que necessaria na amarioria das vezes. Desta forma, aproximacoes com menos bits melhoram a eficiencia com pouca perca de informacao como uso de FP16 ou INT8. 
+A quantizacao voltou a ser estudada em 2010, quando a quantizacao de INT8 foi implementada para a aceleracao da inferência sem impacto significativo na precisão de uma rede.
 
+### PTQ (Pos-Training Quantization)
+processo convencional de quantizacao em uma rede apos seu periodo de treinamento
+```
+                 TREINAMENTO
+                     ↓
+              Rede FP32 treinada
+                     ↓
+                QUANTIZAÇÃO
+                     ↓
+              Rede quantizada
+``` 
+
+### QAT (Quantization-Aware Training)
+Em português significa, treinamento com reconhecimento de quantizacao. Desta forma, diferente da **PTQ**, a rede esta sendo treinada, sabendo que futuramente sera quantizada e tera um _erro_ que irá aparecer na inferencia. Assim, a rede é treinada considerando os impactos da quantizacao, porem envolve um treinamento adicional.
+
+### Granularidade
+Por definição geral, granularidade é o nivel de deetalhe ou grau de divisao de um sistema, modelou ou conjunto de dados em partes menores. Assim a aplicação de ajuste de dimensão e escala de dados define a precisão de referencia de um valor com relacao a sua escala de ajuste. Exemplo: $w=\{0.02,\ 0.003,\ 0.00,\ 5.0\}$. Desta forma, podemos definir a escala de variação destes dados é de 0 ----- 5. Porêm, concordamos que a precisao de referencia para o valor $0.003$ diminui.
+Assim, teremos duas formas de abordar isso na quantizacao de redes, que é quantização por canal e por camada.
+#### per-layer
+Na quantização **Por Camada**, o peso da camada inteira é adotada por um unico scale.
+$$W=​\begin{bmatrix}0.1 & 0.2 & 0.3 \\
+1.0 & 1.2 & 1.5 \\
+-0.4 & 0.5 & 0.6 \\
+\end{bmatrix}$$
+Então sera definido um unico $S$ para aquela camada, não importa se varia de `0 --- 1` ou de `-1 --- 5`. 
+#### Per-channel
+Na quantização por canal, cada canal possui seu próprio paramêtro de escala, então teremos $S_1, S_2, S_3, ...$ Ao inves de um unico $S$.
+
+". . . Pensando de forma holisitica é hierárquica, temos como foco de estudo e abordagem:"
+```
+Quantização
+│
+├── Quando?
+│   ├── PTQ
+│   └── QAT
+│
+├── Granularidade?
+│   ├── Per-layer
+│   └── Per-channel
+│
+└── Precisão?
+    ├── INT8
+    ├── INT4
+    ├── INT2
+    └── ...
+```
+
+Desta forma podemos estudar e trabalhar configurações diferentes no processo de treinamento e inferencia da rede.
 ### Pooling
 O pooling pega um conjunto de valores e os reduz a um mesmo valor.
 A selação do valor de substituição pode ser a media dos valores substituidos, isso é o **Pooling Médio** ou simplismente selecionado o valor máximo entre eles, **Pooling Máximo**.
