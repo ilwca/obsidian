@@ -87,6 +87,9 @@ Quantização
 ```
 
 Desta forma podemos estudar e trabalhar configurações diferentes no processo de treinamento e inferencia da rede.
+
+
+
 ### Pooling
 O pooling pega um conjunto de valores e os reduz a um mesmo valor.
 A selação do valor de substituição pode ser a media dos valores substituidos, isso é o **Pooling Médio** ou simplismente selecionado o valor máximo entre eles, **Pooling Máximo**.
@@ -157,3 +160,23 @@ A desvantagem da poda dinamica e que exige uma camada extra de decisao rodando e
 
 ## Shrinkbench
 O Shrinkbench e um sistema de benchmark unificado para fazer comparacoes de desempenhos de poda disponivel no [github](https://github.com/jjgo/shrinkbench).
+
+### INT8 training
+[[pg-referencias#Jacob |Jacob]] Utilizou INT8 tanto para treinamento quanto para inferencia e obteve perca de precisa de 1,5% no ResNet-50.
+
+# Glossary
+## DataSets
+**MNIST -** Dataset com mais de 60k imagens de numeros de 0 a 9 manuscritos. treinamento basico, apenas para validar o funcionamento da rede.
+**CIFAR-10** - Dataset de imagens 32x32 coloridas com 10 classes.
+**SVHN -** Dataset com fotos reais de numeros de casas capturadas no Google StreetView.
+**ImageNet / ILSVRC-2012 -** mais de 1 milhao de imagens de alta resolucao com mais de 1000 classes diferentes.
+
+## Arquiteturas de Rede
+### LeNet-5
+Uma das primeiras CNN feita para conhecer digitos manuscritos, a propria MNIST. Pequena e simples.
+### AlexNet / GoogleNet
+Sao CNNs bem maiores e mais modernas.Desenhadas com foco na ImageNet. Tem muito mais camadas e muito mais parametros.
+
+## Acuracia
+**TOP-1** : quando a rede define a resposta correta como maior probabilidade de veracidade entre as outras opcoes.
+**TOP-5** : Quando a resposta correta esta entre as 5 opcoes de probabilidade de resposta.
