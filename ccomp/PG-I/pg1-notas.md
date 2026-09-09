@@ -88,8 +88,6 @@ Quantização
 
 Desta forma podemos estudar e trabalhar configurações diferentes no processo de treinamento e inferencia da rede.
 
-
-
 ### Pooling
 O pooling pega um conjunto de valores e os reduz a um mesmo valor.
 A selação do valor de substituição pode ser a media dos valores substituidos, isso é o **Pooling Médio** ou simplismente selecionado o valor máximo entre eles, **Pooling Máximo**.
@@ -125,14 +123,14 @@ $1 + 0 + 3 + 0 + 5 + 0 + 7 + 0 + 9 = 25$
 ### Capsulas
 Estruturas de capsulas, são uma alternativa ao pooling, que ao inves de substituir o mapa de caracteristicas, o substitui por um produto escalar, ou seja, um vetor armazenando caracteristicas principais, como formato, tramanho e posição de objetos.
 
-## Resultados de Poda em Redes TOP-1
+## Resultados de Poda em Redes
 
 
 ### Normalizacao em Lote (BN)
 "Usando parâmetros BN, as distâncias dos canais do mapa de características podem ser calculadas por camada. Usando uma [abordagem de agrupamento](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/computer-science/clustering-approach) para distância, as características próximas podem ser ajustadas. Uma vantagem do agrupamento é que a redundância não é medida com uma distância absoluta, mas com um [valor relativo](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/computer-science/relative-value) . Com cerca de 60 épocas de treinamento, eles conseguiram podar a rede, resultando em uma redução de 50% em FLOPs (incluindo operações não convolucionais) com uma redução na precisão de apenas 1% tanto para o top-1 quanto para o top-5 no conjunto de dados ImageNet"
 
 ### Metodo de reutilização
-"O método de redução e reutilização (também descrito como outbound) elimina filtros inteiros calculando a variância estatística da saída de cada filtro usando um [conjunto de calibração](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/computer-science/calibration-set) . Filtros com baixa variância são eliminados. O método outbound obteve2.37×aceleração com perda de precisão de 1,52% no conjunto de dados Labeled Faces in the Wild (LFW) no campo do [reconhecimento facial](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/biochemistry-genetics-and-molecular-biology/facial-recognition) .
+"O método de redução e reutilização (também descrito como outbound) elimina filtros inteiros calculando a variância estatística da saída de cada filtro usando um [conjunto de calibração](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/computer-science/calibration-set) . Filtros com baixa variância são eliminados. O método outbound obteve 2.37×aceleração com perda de precisão de 1,52% no conjunto de dados Labeled Faces in the Wild (LFW) no campo do [reconhecimento facial](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/biochemistry-genetics-and-molecular-biology/facial-recognition) .
 
 Um método que remove iterativamente neurônios redundantes para FCLs sem exigir dados de validação especiais. Essa abordagem mede a similaridade de grupos de pesos após uma normalização. Ela remove pesos redundantes e mescla os pesos em um único valor. Isso levou a uma redução de 34,89% nos pesos FCL na AlexNet com uma perda de precisão top-1 de 2,24% no ILSVRC-2012."
 
@@ -180,3 +178,19 @@ Sao CNNs bem maiores e mais modernas.Desenhadas com foco na ImageNet. Tem muito 
 ## Acuracia
 **TOP-1** : quando a rede define a resposta correta como maior probabilidade de veracidade entre as outras opcoes.
 **TOP-5** : Quando a resposta correta esta entre as 5 opcoes de probabilidade de resposta.
+
+## Processo de treinamento de uma rede
+### Feed Foward Propagation
+processo de alimentacao de pesos de forma consecutiva a partir de uma entrada ate a saída, sempre alimentando a rede para frente.
+
+Considerando o caso de treinamento em uma MNIST. Caso a precisao da rede seja 85% de chance de ser o numero 7, mas o resultado correto é 3, houve um grande erro. Quando isso acontece, é calculado o gradiente da função de erro para identificar qual camada influenciou mais para a previsão do atual resultado. em seguida seus pesos são reajustados.
+### Back Propagation
+Este processo de voltar em camada na rede a partir da camada de output no sentido do gradiente de erro, é chamada de back propagation. 
+
+``` 
+Input --- FowardP. --- Output/Error ---- BackP. ---- ajusta peso
+``` 
+
+## Resultados em Quantizacão
+Explorando redes de pesos binários [[pg-referencias#Rastegari |Rastegari]].
+Aplicaram a binarizacao de pesos em ResNet-18 e GoogleNet resultando 9.5% e 5.8% de perca em comparacao com pesos FP32. Eles tambem extenderam a binarização para a funcao de ativação, a chamada XNOR-Net  e avaliaram ela em larga escala no dataset ILSVRC-1012. A XNOR-Net alcancou 44.2% de acuracia em classificacao top-1 no ILSVRC-2012 com Alex-Net, e teve uma aceleracao no tempo de execução de 58x.
