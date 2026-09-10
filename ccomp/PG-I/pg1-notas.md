@@ -191,6 +191,39 @@ Este processo de voltar em camada na rede a partir da camada de output no sentid
 Input --- FowardP. --- Output/Error ---- BackP. ---- ajusta peso
 ``` 
 
+## Algebra da Quantizacao
+## Quantizacao Simetrica e Assimetrica
+### Sem Deslocamento / Simetrica
+Na quantização simetrica, a ideia é simples. Trabalhamos com pesos de valores em um intervalo simetrico que varia em uma escala $s$.
+Exemplo: com um $s = 1$ teremos uma variancia nos pesos de vai de $-1$ a $1$. Considerando $x$ como o valor do peso temos:
+$$x\in [-1; 1]$$
+com o "meio" em $z$, que e 0.
+Porem pode ser trabalhado com qualquer escala de $s$ nos graus dos pesos.
+
+### Com Deslocamento / Assimetrica
+Neste caso, trabalhamos com uma escala $s$ que nao possui "meio" em 0. Por exemplo.
+$$x \in [-0.2; 1]$$
+Entao e definido para a quantizacao, que sera tratado com outros valores, o zero real. Exemplo:
+``` INT8
+         43
+         ↓
+0 ------ 43 ---------------- 255
+         ↑
+       x = 0
+``` 
+$z = 43$
+$s=255$
+
+Assim, a forma de extração do zero point e do valor de peso quantizadao é dada por:
+$$\hat{x} = round(\frac{x}{s})$$
+$\hat{x}$ = peso quantizado
+$s$ = escala
+$x$ = peso sem quantizar
+
+Quando se tratando de deslocamento temos:
+$$\hat{x} = round(\frac{x}{s}+z)$$
+$z$ = ponto zero.
+
 ## Resultados em Quantizacão
 Explorando redes de pesos binários [[pg-referencias#Rastegari |Rastegari]].
 Aplicaram a binarizacao de pesos em ResNet-18 e GoogleNet resultando 9.5% e 5.8% de perca em comparacao com pesos FP32. Eles tambem extenderam a binarização para a funcao de ativação, a chamada XNOR-Net  e avaliaram ela em larga escala no dataset ILSVRC-1012. A XNOR-Net alcancou 44.2% de acuracia em classificacao top-1 no ILSVRC-2012 com Alex-Net, e teve uma aceleracao no tempo de execução de 58x.
