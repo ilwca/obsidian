@@ -143,7 +143,7 @@ Um método que remove iterativamente neurônios redundantes para FCLs sem exigir
 ## Poda Dinamica
 Podas estaticas destroem de forma irreverssivel a estrutura original da rede. Uma vez podada e retreinada, e impossivel de recuperar informacoes apagadas. A poda dinamica, controla em tempo de execucao quais camadas e conexoes serao ativadas o que pode diminuir a computacao, dissipacao energetica e a largura da banda.
 ### Composicao da rede
-Para Isso deve-se existir um sistema que controla em tempo de execucao o que podar durante o treinamento. Este componente de decisao e composto por:
+Para isso, deve-se existir um sistema que controla em tempo de execucao o que podar durante o treinamento. Este componente de decisao e composto por:
 - **Conexoes adicionais** criadas na fase de inferencia ou treinamento;
 - **Caracteristicas das conexoes** que podem ser aprendidos por algoritmos de retropropagacao;
 - **Rede de decisao lateral** de dificil treinamento mas otimo desempenho.
@@ -224,6 +224,40 @@ Quando se tratando de deslocamento temos:
 $$\hat{x} = round(\frac{x}{s}+z)$$
 $z$ = ponto zero.
 
+## Ativção
+
 ## Resultados em Quantizacão
 Explorando redes de pesos binários [[pg-referencias#Rastegari |Rastegari]].
 Aplicaram a binarizacao de pesos em ResNet-18 e GoogleNet resultando 9.5% e 5.8% de perca em comparacao com pesos FP32. Eles tambem extenderam a binarização para a funcao de ativação, a chamada XNOR-Net  e avaliaram ela em larga escala no dataset ILSVRC-1012. A XNOR-Net alcancou 44.2% de acuracia em classificacao top-1 no ILSVRC-2012 com Alex-Net, e teve uma aceleracao no tempo de execução de 58x.
+
+
+
+### Kernels Eficientes
+```
+Imagem
+  │
+  ▼
+┌────────────────────┐
+│ Conv Layer         │
+│ INT8 × INT8        │
+└────────────────────┘
+  │
+  │ resultado convertido
+  ▼
+FP32
+  │
+  ▼
+┌────────────────────┐
+│ Conv Layer         │
+│ INT8 × INT8        │
+└────────────────────┘
+  │
+  ▼
+FP32
+  │
+  ▼
+...
+``` 
+
+### Quantizacao Reduz Overfitting
+segundo [[pg-referencias#Liang|Liang]], além de acelerar as redes neurais, a quantização também demonstrou, em alguns casos, resultar em maior precisão. Como exemplos: 1) VGG-16 com pesos de 3 bits supera sua contraparte de precisão total em 1,1% no top-1 [144](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0720) , 2) AlexNet reduz o erro top-1 de referência em 1,0% com pesos de 2 bits e ativações de 8 bits [66](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0330) , 3) ​​ResNet-34 com pesos e ativações de 4 bits obteve 74,52% de acurácia top-1, enquanto a versão de 32 bits obteve 73,59% [174](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0870) , 4) Zhou mostrou que um modelo quantizado reduziu o erro de classificação em 0,15%, 2,28%, 0,13%, 0,71% e 1,59% em AlexNet, VGG-16, GoogLeNet, ResNet-18 e ResNet-50, respectivamente [269](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1345) , e 5) Xu mostrou que redes quantizadas com redução de bits ajudam a reduzir o overfitting em Redes Totalmente Conectadas (FCNs).
