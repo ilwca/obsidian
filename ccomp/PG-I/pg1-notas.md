@@ -155,7 +155,7 @@ O nivel de poda escolhido influencia no projeto de hardware, sendo ele por:
 - Rede.
 
 A desvantagem da poda dinamica e que exige uma camada extra de decisao rodando em tempo real durante o treinamento, exigindo maior computacao, largura de banda e eneergia.
-
+a
 ## Shrinkbench
 O Shrinkbench e um sistema de benchmark unificado para fazer comparacoes de desempenhos de poda disponivel no [github](https://github.com/jjgo/shrinkbench).
 
@@ -261,3 +261,26 @@ FP32
 
 ### Quantizacao Reduz Overfitting
 segundo [[pg-referencias#Liang|Liang]], além de acelerar as redes neurais, a quantização também demonstrou, em alguns casos, resultar em maior precisão. Como exemplos: 1) VGG-16 com pesos de 3 bits supera sua contraparte de precisão total em 1,1% no top-1 [144](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0720) , 2) AlexNet reduz o erro top-1 de referência em 1,0% com pesos de 2 bits e ativações de 8 bits [66](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0330) , 3) ​​ResNet-34 com pesos e ativações de 4 bits obteve 74,52% de acurácia top-1, enquanto a versão de 32 bits obteve 73,59% [174](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0870) , 4) Zhou mostrou que um modelo quantizado reduziu o erro de classificação em 0,15%, 2,28%, 0,13%, 0,71% e 1,59% em AlexNet, VGG-16, GoogLeNet, ResNet-18 e ResNet-50, respectivamente [269](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1345) , e 5) Xu mostrou que redes quantizadas com redução de bits ajudam a reduzir o overfitting em Redes Totalmente Conectadas (FCNs).
+
+## Ativação
+A ativação é dada por uma funcao de ativação do resultade de uma combinação lienar
+![[Drawing 2026-09-11 10.54.52.excalidraw]]
+Considerand estas camadas onde a primeira possui 3 neuronios $a$ e a segunda apenas dois neuronios, vamos analisar a ativação do primeiro neuronio da segunda camada, que sera dividaida em 3 passos, sendo o primeiro definido por definido por:
+1 -$$z = a_1w_{11}+a_2w_{21}+a_3w_{31} + b$$
+onde:
+- $x$ → entrada da camada;
+- $b$ → viés;
+- $z$ → resultado da combinação linear;
+- $f$ → função de ativação;
+- $a$ → **ativação**, ou saída da camada.
+
+  2 - $$f(z)$$ Onde $f$ é a funcao de ativação. Assim:
+  3 - $$a=f(z)$$
+  ### Funções de ativação
+  As funções de ativação são transformações aplicadas ao valor recevido da camada anterior para garantie a não linearidade da rede. Principais: ReLU, Sigmoid, Tanh.
+  
+  #### ReLU
+  A função de ativação ReLU *(Retificated Linear Unity)* aplica a $z$:
+  $$ReLU\ =\ max(0,z) \Rightarrow a=ReLU(0,z)$$
+  Portanto a função zera vcalores negativos e propaga valores positivos.
+  
