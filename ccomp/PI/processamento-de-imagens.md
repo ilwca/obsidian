@@ -34,15 +34,67 @@ Para ser efetuado o processo de digitalização, o alvo deve estar bem iluminado
 
 ## Amostragem
 É o processo de converter uma imagem contínua (do mundo real) em uma matriz discreta de pontos, definindo a resolução espacial por meio da quantização.
+![[pi-amostragem.png]]
 
-## Vizinhanca-4
+A quantidade de linhas e colunas que envolvem a amostragem de uma representacao real e a resolucao espacial da (amostragem) imagem.
+## Vizinhanca-4 $N_4(p)$ 
 Dado um pixel $P$ definido por $(x,y)$, sua vizinhança-4 é dada por :$\{(x+1,y), (x,y+1), (x-1,y), (x,y-1)\}$. sendo os pixels adjacentes horizontais e verticais.
-## Vizinhanca Diagonal
+## Vizinhanca Diagonal $N_D(p)$
 á Vizinhança diagonal é, considerando o mesmo $P$, sua vizinhança diagonal seria $\{(x+1,y+1),(x+1,y-1),(x-1,y+1) , (x-1,y-1)\}$, ou seja, os pixels adjacentes diagonais.
-## Vizinhanca-8
+## Vizinhanca-8 $N_8(p)$
 A vizinhança de 8 é a junção de vizinhança-4 e diagonal. Para o mesmo $P$, temos $\{(x+1,y), (x,y+1), (x-1,y) (x+1,y+1),(x+1,y-1),(x-1,y+1),(x-1,y-1)\}$. Assim sendo, todos os pixels adjacentes a $P$.
 
-## Interpolação
+---
+
+# Interpolação
 Interpolação é o processo de usar dados conhecidos para estimar valores em locais desconhecidos. Interpolação é extensivamente usada em tarefas como ampliação (zoom), redução, rotação e correções geométricas.
 
----
+## Interpolação por
+### Vizinho Mais Proximo
+A **redução** é o processo de eliminação dos pixels proximos por meio da remoção de linhas ou colunas.
+Na **ampliação** acontece inserindo colunas e linhas com indice 0. Exeemplo, na matrix  a seguir foram adicionadas a linha 1 e 3.
+$$\begin{bmatrix} 1 & 3 & 5 & 6 & 1\\ 0 & 0 & 0 & 0 & 0\\ 7 & 2 & 5 & 4 & 1\\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}$$
+Em seguida os valores nulos recebem o vizinho mais proximo.
+$$\begin{bmatrix} 1 & 3 & 5 & 6 & 1\\ 1 & 3 & 5 & 6 & 1\\ 7 & 2 & 5 & 4 & 1\\ 7 & 2 & 5 & 4 & 1 \end{bmatrix}$$
+### Bilinear
+Na **Redução** bilinear, considerando a imagem:
+$$\begin{bmatrix} f(x,y) & f(x,y+1) \\ f(x+1,y) & f(x+1, y+1) \\ \end{bmatrix}$$
+Ira gerar um unico pixel dado pela media dos 4, ou seja
+$$\frac{f(x,y) + f(x,y+1) + f(x+1,y) + f(x+1, y+1)}{4}$$
+
+Para a **Ampliação** Considerandoa imagem :
+### Interpolação Bilinear
+
+Considere os quatro pixels vizinhos:
+$$
+\begin{array}{ccc}
+f(i,j) & a & f(i,j+1) \\[6pt]
+b & c & d \\[6pt]
+f(i+1,j) & e & f(i+1,j+1)
+\end{array}
+$$
+
+
+Substitua os valores intermediários pelas seguintes expressões:
+
+$$
+a = \frac{f(i,j) + f(i,j+1)}{2}
+$$
+
+$$
+e = \frac{f(i+1,j) + f(i+1,j+1)}{2}
+$$
+
+$$
+b = \frac{f(i,j) + f(i+1,j)}{2}
+$$
+
+$$
+d = \frac{f(i,j+1) + f(i+1,j+1)}{2}
+$$
+
+$$
+c = \frac{
+f(i,j) + f(i,j+1) + f(i+1,j) + f(i+1,j+1)
+}{4}
+$$

@@ -55,19 +55,19 @@ processo convencional de quantizacao em uma rede apos seu periodo de treinamento
 Em português significa, treinamento com reconhecimento de quantizacao. Desta forma, diferente da **PTQ**, a rede esta sendo treinada, sabendo que futuramente sera quantizada e tera um _erro_ que irá aparecer na inferencia. Assim, a rede é treinada considerando os impactos da quantizacao, porem envolve um treinamento adicional.
 
 ### Granularidade
-Por definição geral, granularidade é o nivel de deetalhe ou grau de divisao de um sistema, modelou ou conjunto de dados em partes menores. Assim a aplicação de ajuste de dimensão e escala de dados define a precisão de referencia de um valor com relacao a sua escala de ajuste. Exemplo: $w=\{0.02,\ 0.003,\ 0.00,\ 5.0\}$. Desta forma, podemos definir a escala de variação destes dados é de 0 ----- 5. Porêm, concordamos que a precisao de referencia para o valor $0.003$ diminui.
+Por definição geral, granularidade é o nivel de detalhe ou grau de divisao de um sistema, modelou ou conjunto de dados em partes menores. Assim a aplicação de ajuste de dimensão e escala de dados define a precisão de referencia de um valor com relacao a sua escala de ajuste. Exemplo: $w=\{0.02,\ 0.003,\ 0.00,\ 5.0\}$. Desta forma, podemos definir a escala de variação destes dados é de 0 ----- 5. Porêm, concordamos que a precisao de referencia para o valor $0.003$ diminui.
 Assim, teremos duas formas de abordar isso na quantizacao de redes, que é quantização por canal e por camada.
-#### per-layer
+#### per-layer / Por Camada
 Na quantização **Por Camada**, o peso da camada inteira é adotada por um unico scale.
 $$W=​\begin{bmatrix}0.1 & 0.2 & 0.3 \\
 1.0 & 1.2 & 1.5 \\
 -0.4 & 0.5 & 0.6 \\
 \end{bmatrix}$$
 Então sera definido um unico $S$ para aquela camada, não importa se varia de `0 --- 1` ou de `-1 --- 5`. 
-#### Per-channel
+#### Per-channel / Por Canal
 Na quantização por canal, cada canal possui seu próprio paramêtro de escala, então teremos $S_1, S_2, S_3, ...$ Ao inves de um unico $S$.
 
-". . . Pensando de forma holisitica é hierárquica, temos como foco de estudo e abordagem:"
+". . . Pensando de forma holisitica e hierárquica, temos como foco de estudo e abordagem:"
 ```
 Quantização
 │
@@ -265,7 +265,7 @@ segundo [[pg-referencias#Liang|Liang]], além de acelerar as redes neurais, a qu
 ## Ativação
 A ativação é dada por uma funcao de ativação do resultade de uma combinação lienar
 ![[Drawing 2026-09-11 10.54.52.excalidraw]]
-Considerand estas camadas onde a primeira possui 3 neuronios $a$ e a segunda apenas dois neuronios, vamos analisar a ativação do primeiro neuronio da segunda camada, que sera dividaida em 3 passos, sendo o primeiro definido por definido por:
+Considerand estas camadas onde a primeira possui 3 neuronios $a$ e a segunda apenas dois neuronios, vamos analisar a ativação do primeiro neuronio (1) da segunda camada, que sera dividaida em 3 passos, sendo o primeiro definido por definido por:
 1 -$$z = a_1w_{11}+a_2w_{21}+a_3w_{31} + b$$
 onde:
 - $x$ → entrada da camada;
@@ -283,4 +283,31 @@ onde:
   A função de ativação ReLU *(Retificated Linear Unity)* aplica a $z$:
   $$ReLU\ =\ max(0,z) \Rightarrow a=ReLU(0,z)$$
   Portanto a função zera vcalores negativos e propaga valores positivos.
-  
+
+# Resumo
+## Poda
+com base nas tecnicas de poda analisada, o recomendado para uma pode eficaz e:
+- Definir tacade de poda para variar por camadas
+- ==A poda dinâmica pode resultar em maior precisão== e manter maior capacidade de rede [246](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1230) .
+- Treinar um modelo podado do zero às vezes, mas nem sempre (ver [Seção 3.3](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#s0090) ), é mais eficiente do que ajustar a partir dos pesos não podados [160](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0800) .
+- A poda baseada em penalidades normalmente reduz a perda de precisão em comparação com a poda baseada em magnitude [255](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1275) . No entanto, esforços recentes estão reduzindo a diferença [72](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0360).
+## Quantização
+Com relacao a poda foram discutidos resultados de redes binarizadas e de precisão reduzida. Também a eficiencia de frameworks de quantização populares. Apesar da quantização diminuir a precisão da rede, devido a perca de informção algumas redes quantizadas podem superar a rede original (ver: [Seção 4.4](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#s0160) ).
+A quantização de 8 bits é amplamente aplicada na pratica com uma boa razao entre a precisão e a compressão, e é amaplamente aplicada  em processadoers atuais e em hardware personalizadao. A perca de precisão é minima quando o [[#QAT (Quantization-Aware Training) |treinamento com reconhecimento de quantização]] esta ativado. Redes binarizadas alcancaram resultados satisfatorios com hardware especializado.
+
+Para obter melhores resultados em quantização é recomendado:
+- ==Use quantização assimétrica==. Ela preserva a flexibilidade ao longo do intervalo de quantização, embora tenha sobrecarga computacional [120](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0600) .
+- ==Quantize os pesos em vez das ativações==. A ativação é mais sensível à precisão numérica [75](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0375) .
+- ==Não quantize os vieses==. Eles não requerem armazenamento significativo. Vieses de alta precisão em todas as camadas [114](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0570) e nas primeiras/últimas camadas [200](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1000) , [272](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1360) mantêm uma precisão de rede mais alta.
+- Quantizar kernels por canal em vez de por camada para melhorar significativamente a precisão [131](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0655) .
+- Ajustar o modelo quantizado. Isso reduz a lacuna de precisão entre o modelo quantizado e o modelo de valor real [244](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1220) .
+- Inicialmente, treine usando um modelo de ponto flutuante de 32 bits. Modelos quantizados de baixa quantidade de bits podem ser difíceis de treinar do zero - especialmente modelos compactos em conjuntos de dados de grande escala [272](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1360) .
+- A sensibilidade da quantização é ordenada como gradientes, ativações e, em seguida, pesos [272](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1360) .
+- A quantização estocástica de gradientes é necessária ao treinar modelos quantizados [89](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0445) , [272](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1360) .
+
+
+a pesquesa atual sobre compressao esta focada principalmeente em cnns. mais especificamentte a pesquisa e direcionamen principalemnte para taredfas de clasificaçlão em cnns. trabaçlhos futuros deve considerar outros ripos de aplicações como detecç~ao de  objetos, reconhecimento de fala , traducao de idicomas, etc. a relacao entre compressao de rede e proecisao para diferentes aplicações e uma area de pesquisa interessante,
+adaptação de hardweaer, as implementações de hardware podem limitar a eficacia dos algoritmos de poda. po ecemplo a poda eleemnto a elemnto praticamente nao refduz os calculos ou largurea de bancda ao usar o imwcolgell,, em processadores de uso geral, da mesm forma a poda por forma normalmente nao pode ser implementada em aceleradores de cnn dedicados. o projeto conjunnto de hardware e fogrware de tecnicas de compressao para aceleradodees de hardware deve ser considerado para alcancar a melhor ewfgiciencia do sistema.
+metodos blobais, As otimizações de rede são normalemtne aplicadas separadamento sem que a informação de uma otimizazao influencia qualquer outra,. Redentem,ente foram propostas abordagensque considram a eficação da ortimização em multiplas camadas, fiscute a poda combinada com a fatoração de tensores que resulta em ma melghor compressao geral. Tecnmicas semelhantes podem ser consideradas usadno diferentes tipos e niveis de compressao e fatoração.
+
+# Conclusões
