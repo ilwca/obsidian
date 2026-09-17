@@ -1,4 +1,4 @@
-
+ 
 # Imagens, Visão
 
 ## Processo de formação de imagens no Olho humano
@@ -63,7 +63,6 @@ Ira gerar um unico pixel dado pela media dos 4, ou seja
 $$\frac{f(x,y) + f(x,y+1) + f(x+1,y) + f(x+1, y+1)}{4}$$
 
 Para a **Ampliação** Considerandoa imagem :
-### Interpolação Bilinear
 
 Considere os quatro pixels vizinhos:
 $$
@@ -98,3 +97,173 @@ c = \frac{
 f(i,j) + f(i,j+1) + f(i+1,j) + f(i+1,j+1)
 }{4}
 $$
+### Bicubica
+A interpolaação bicubica é o metodo mais sofisiticado de interpolação, porém exige uma maior custo para o calculo. Na **Redução** é feita uma media de um quadrante 3x3, ou seja, a media de 9 pixels vizinhos. Assim como na bilinear, so que maior.
+![[pi-bicubica.png]]
+
+### Interpolação Bilinear — Acréscimo de linhas e colunas
+
+Considere a seguinte disposição dos pixels:
+
+$$\begin{bmatrix}
+\begin{array}{ccc}
+f(i,j) & f(i,j+1) & f(i,j+2) \\[6pt]
+f(i+1,j) & f(i+1,j+1) & f(i+1,j+2) \\[6pt]
+f(i+2,j) & f(i+2,j+1) & f(i+2,j+2)
+\end{array}
+\end{bmatrix}$$
+
+Os novos valores são calculados pela média dos pixels vizinhos.
+$$\begin{bmatrix}
+\begin{array}{ccc}
+f(i,j) & a & f(i,j+2) \\[6pt]
+b & c & d \\[6pt]
+f(i+2,j) & e & f(i+2,j+2)
+\end{array}
+\end{bmatrix}$$
+
+### Valores intermediários
+
+Para o ponto $a$:
+
+$$
+a =
+\frac{
+f(i,j) + f(i,j+1) + f(i,j+2)
+}{3}
+$$
+
+Para o ponto $e$:
+
+$$
+e =
+\frac{
+f(i+1,j) + f(i+1,j+1) + f(i+1,j+2)
+}{3}
+$$
+
+Para o ponto $b$:
+
+$$
+b =
+\frac{
+f(i,j) + f(i+1,j) + f(i+2,j)
+}{3}
+$$
+
+Para o ponto $d$:
+
+$$
+d =
+\frac{
+f(i,j+1) + f(i+1,j+1) + f(i+2,j+1)
+}{3}
+$$
+
+Para o ponto $c$, é calculada a média de todos os **9 pixels**:
+
+$$
+c =
+\frac{
+\begin{aligned}
+&f(i,j) + f(i,j+1) + f(i,j+2) \\
+&+ f(i+1,j) + f(i+1,j+1) + f(i+1,j+2) \\
+&+ f(i+2,j) + f(i+2,j+1) + f(i+2,j+2)
+\end{aligned}
+}{9}
+$$
+---
+# Quantização
+Como tambem utilizado em tecnicas de compressão de redes [[pg1-notas#Quantização |quantização]]. Imagine que temos um problema. Precisamos representar uma imagem que possui 256 niveis de cinza para um espaco que contem apenas 2 niveis. Uma solução possivel seria:
+```
+para todo pixel da imagem
+
+for x in weigth
+	for y in heigth
+		if f(x,y) < 127
+			f'(x,y) = 0
+		else
+			f(x,y) = 255
+``` 
+
+Ou seja, se o valor do pixel for menor que 127, passas aser 0 agora, se for maior, passa a ser 255.
+
+O valor do numero de niveis, representado por $L$ deve ser sempres um inteiro potência de 2:
+$$L=2^k$$
+Assim os numeros entre o invervalo quantizado, devem ser espacados de forma igual. no intervalo $[0,...,L-1]$ .
+
+### Representação Digital
+A represendação digital de uma imagem é dada pela sua quantidade de bits que define a quantidade de cores nela presente. Quando dito que uma imagem é de 8 bits, significa que ela possui $2⁸$ cores. Se $n$ for a quantidade de bits de uma imagem, sua quantidade de cores pode ser denotada por:
+$$n\ bits=2^ncores$$ ---
+# Criterios de Conectividade entre Pixels
+Dois pixels estao conectasdos se:
+- Sao vizinnhos. Isto é [[#Vizinhanca-4 $N_4(p)$ |N4]], [[#Vizinhanca-8 $N_8(p)$| N8]] ou [[#Vizinhanca Diagonal $N_D(p)$| Nd]].
+- Seus niveis de cinza satisfazem algum criterio de similaridade. (Isto é, se os niveis de cinza são proximos)
+### Tons de Cinza
+Um pixel $p(x,y)$ pertence a um conjunto $V$, se seu valor estiver contido no cojunto.
+$V={80,85,90,95,100,120,125}$
+Ou no caso de uma imagem binaria com 0 e 1
+$V={1}$
+
+## Adjacencia entre pixels
+tipos de adjacencia:
+- 4-adjacencia
+- 8-adjacencia
+- M-adjacencia
+
+### 4-Adjacencia
+Dois pixels $p$ e $q$ com valores de tom de cinza em $V$, sao 4-adjacentes se $q\in N_4(p)$. Ou seja, deve se atender os DOIS criterios, o de Vizinhanca e o de Ton de Cinza. Exemplo:
+$V={1}$
+$q\in N_4(p)$
+
+### 8-Adjacencia
+Dois pixels $p$ e $q$ com valores de tom de cinza em $V$, sao 8-adjacentes se $q\in N_8(p)$. Ou seja, deve se atender os DOIS criterios, o de Vizinhanca e o de Ton de Cinza. Exemplo:
+$V={1}$
+$q\in N_8(p)$
+
+### M-Adjacencia
+m-conectados se satisfazem $Cs$ e
+1. $q\in N_4(p)$ ou
+2. $q\in N_D(p)\ e\ N_4(p)\bigcap N_4(q)\ é\ vazio$. 
+Ou seja, um pixel $q$ em relação a $p$ só é $m-adjacente$ se ele for 4-adjacente ou for D-adjacente e a 4-vizinhanca de p e a 4-vizinhanca de q, não possuem pixels em comum.
+
+## Conectividade
+Considerando agora um subconjunto $S$ de pixels em uma imagem, dois pixels $p$ e $q$ são conectados em $S$ se todos os pixels do caminho entre $p$ e $q$ tambem estao contidos em $S$.
+
+O conjunto $S$ pode conter uma ou mais regiões. Estas regiões podem ser adjacentes.
+### Regiões
+Seja $R$ um subconjunto de pixels, $R$ é uma região, se:
+- $R$ é um subconjunto conectado.
+- Sua borda ou contorno, é um subconjunto de pixels, onde cada pixel deve conter pelo menos um pixel fora do conjunto.
+
+---
+# Distância
+Metricas de distancia entre pixels podem ser medidos por formas diferentes. Considerando pixels $p(x,y)$ e $q(v,w)$. podemos calcular a distancia entre eles por:
+### Distancia Euclidiana
+$$D_e(p,q)=\sqrt{(x-v)²+(y-w)²}$$
+### Distancia City-Block (Distancia $D_4$)
+$$D_{cb}(p,q)=|x-v|+|y-w|$$
+### Distancia ChessBoard(Distancia $D_8$)
+$$D_{ch}(p,q)=max(|x-v|,|y-w|)$$
+---
+# Dominio Espacial
+Refere-se ao proprio plano da imagem.
+Por meio dos **Metodos** e feito a manipulacao diretamento nos pixels de uma imagem
+
+## Metodos
+Os principais metodos de intensidade sao:
+- Transformacao de itensidade
+- Filtragem Espacial
+### Transformacao de Itensidade
+Operam diretamento nos pixels de uma imagem, para fins de manipulacao de contraste e limiarizacao da imagem.
+### Filtragem Espacial
+Trabalham diretamente na vizinhanca de cada pixel, em operacoes como o realce de imagens.
+
+## Funcoes de transformacao de Itensidade
+Podem ser clasificadas como:
+### Pontual
+Quando o valor de saida na coordenada, depende somente do valor de entrada da mesma cordenada.
+### Local
+Quando o valor de saida de uma cordenada depende dos valores da vizinhanca desta cordeanda.
+### Global
+Quando o valor de saida especificada depende de todos os valores de entrada da imagem.
