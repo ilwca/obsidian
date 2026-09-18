@@ -249,7 +249,6 @@ $$D_{ch}(p,q)=max(|x-v|,|y-w|)$$
 # Dominio Espacial
 Refere-se ao proprio plano da imagem.
 Por meio dos **Metodos** e feito a manipulacao diretamento nos pixels de uma imagem
-
 ## Metodos
 Os principais metodos de intensidade sao:
 - Transformacao de itensidade
