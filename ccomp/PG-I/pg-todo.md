@@ -54,3 +54,27 @@ Estabelecer uma base, modelo original contendo informacoes, como:
 Para a metrica de energia, podemos acompanhar o treinamento e inferencia por meio de software:
 - **NVIDIA Management Library (`nvidia-smi` / `pynvml`):** Reporta o consumo em Watts da placa em tempo real diretamente do driver da GPU.
 - **CodeCarbon:** Pacote em Python que monitora o consumo do hardware (GPU/CPU) durante a execução e estima a pegada de carbono do modelo.
+
+# Referencial Teorico
+- [ ] CNN
+- [ ] base de Dados - CIFAR 10
+- [ ] LeNet
+- [ ] Qauntizacao 
+- [ ] Poda
+
+com base em [[pg-referencias#Young | Transform Quantization for CNN Compression]]
+## CNN
+Ao falar de CNNs, alem de axplica;'ao tecnica do que é, como funciona, destacar suas limitações, como:
+- Calculos
+- Parametros
+- Implementações
+
+Para o treinamento e inferencia destas sao realizadaos milhares de **calculos** por minuto, onde os pesos ja nao cabem mais na memoria de rapido acesso (cache), necessidade de memoria externa aumentando o consumo energetico
+
+As centenas de milhoes de parametros, sendo ativados simultaneamente e seu volume de armazenamento impossibilita a implementação em dispositivos moveis.
+
+### Quantização
+- Definição
+- PTQ
+- QAT
+- Transform Qantization

@@ -1,5 +1,5 @@
-# Artigos
-## Poda e quantização para aceleração de redes neurais profundas: uma revisão
+
+# Poda e quantização para aceleração de redes neurais profundas: uma revisão
 [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0925231221010894)
 
 **Contribuições deste Artigo:**
@@ -311,3 +311,22 @@ adaptação de hardweaer, as implementações de hardware podem limitar a eficac
 metodos blobais, As otimizações de rede são normalemtne aplicadas separadamento sem que a informação de uma otimizazao influencia qualquer outra,. Redentem,ente foram propostas abordagensque considram a eficação da ortimização em multiplas camadas, fiscute a poda combinada com a fatoração de tensores que resulta em ma melghor compressao geral. Tecnmicas semelhantes podem ser consideradas usadno diferentes tipos e niveis de compressao e fatoração.
 
 # Conclusões
+
+---
+
+# Transfom QUantization for CNN Compression
+[arxiv](https://arxiv.org/abs/2009.01174) 
+
+**Primeiro**, propomos a **quantização por transformação** para a compressão de pesos de CNNs — somos os primeiros a considerar a quantização dos **pesos transformados e da base**, além de otimizar ambos após o treinamento.
+**Segundo**, apresentamos uma teoria de **taxa e distorção para a quantização de CNNs**, com base na qual os **ganhos da codificação por transformação** podem ser calculados. Em seguida, derivamos uma transformação aprendida **de ponta a ponta (end-to-end)** que maximiza esses ganhos.
+**Terceiro**, avançamos o estado da arte na compressão de CNNs, tanto em cenários **com retreinamento** quanto **sem retreinamento**, para tarefas de classificação de imagens — **AlexNet** [1], **ResNets** [60] e **DenseNets** [61] — e para tarefas de visão de baixo nível, **DRUNet** (remoção de ruído) [62] e **EDSR** (super-resolução) [63].
+
+### Qantização por Transformação
+Na transformação por quantização os pesos não são diretamente quantizados como na quantização convencional `PF32 -> INT8`; Antes é feito um processo de transformação destes pesos `FP32 -> Transform -> W' -> INT8`.
+A transformação ela "salienta" algumas propriedades que ajudam a definir a importancia do peso, assim pesos menos importantes são mais proximos de 0.
+
+É nesta hora que entra a [[#Poda|poda]]. Pesos mais proximos de zero, em caso de quantização com uma menor taxa de bits, acabam se tornando nulos.
+
+No artigo é trabalhado com duas camadas convulacionais, a camada base (basis-layer) e a camada transformada (transform domain layer), pois a partir delas é possivel reconstruir a camaada original.
+## Quantização Pos-Transformação
+A aplicação de uma transformação a uma camada convulacional ou a unma camada totalmente conectada permite uma reducai de dimensionalidade. 

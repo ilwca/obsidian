@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PI/pi-p1.md",
+                "file": "ccomp/PG-I/pg1-notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pi-p1"
+              "title": "pg1-notas"
             }
           }
         ],
@@ -137,8 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -154,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ccomp/PI/pi-p1.md",
+                "file": "ccomp/PG-I/pg1-notas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ccomp/PI/pi-p1.md",
+                "file": "ccomp/PG-I/pg1-notas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -244,24 +243,25 @@
   },
   "active": "9abd4558ddee37b9",
   "lastOpenFiles": [
+    "ccomp/PG-I/pg-todo.md",
+    "ccomp/PG-I/pg1-notas.md",
+    "ccomp/PG-I/pg-referencias.md",
+    "ccomp/PG-I/article.md",
     "ccomp/PI/processamento-de-imagens.md",
     "ccomp/PI/pi-p1.md",
+    "ccomp/Compiladores/todo - compiladores.md",
     "utils/Transform Quantization for CNN Compression.pdf",
     "Excalidraw/Drawing 2026-09-15 17.31.26.excalidraw.md",
     "ccomp/PI/pi-notas.md",
-    "ccomp/PG-I/article.md",
     "Pasted Image 20260915173154_225.png",
     "utils/pi-bicubica.png",
     "utils/Captura de tela de 2026-09-14 23-44-55.png",
     "utils/img/pi-amostragem.png",
-    "ccomp/PG-I/pg1-notas.md",
     "article.md",
     "Excalidraw/Drawing 2026-09-11 10.54.52.excalidraw.md",
     "Excalidraw/Drawing 2026-06-02 20.42.55.excalidraw.md",
     "66.md",
-    "ccomp/PG-I/pg-referencias.md",
     "ccomp/TG/Grafos.md",
-    "ccomp/PG-I/pg-todo.md",
     "utils/Excalidraw/grafos-planaridade.md",
     "utils/Excalidraw/grafos-emparelhamento.md",
     "utils/Excalidraw/grafos-berge.md",
