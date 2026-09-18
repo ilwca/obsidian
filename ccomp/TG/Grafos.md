@@ -311,7 +311,7 @@ Deste modo, observa-se que  quanto maior a quantidade de arestas de um grafo, ma
 Seja um grafo planar. Então $m\leq 3n-6$.
 
 Isso e dado pela condição de que cada face e delimitada por no mínimo 3 arestas, e cada aresta pertence a exatamente duas faces.
-![[utils/Excalidraw/grafos-planaridade|grafos-planaridade]]
+![[Excalidraw/grafos-planaridade|grafos-planaridade]]
 
 Como cada aresta esta em dois planos $f$, ela sempre e contada 2x, como mostra na imagem acima na descrição de cada face. por isso $2m$.
 Percebe-se também, que o numero total de arestas das faces e de $12$. resultado que pode ser descrito como 3x o numero de faces. Por isso $3f$.
