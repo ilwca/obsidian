@@ -330,3 +330,79 @@ A transformação ela "salienta" algumas propriedades que ajudam a definir a imp
 No artigo é trabalhado com duas camadas convulacionais, a camada base (basis-layer) e a camada transformada (transform domain layer), pois a partir delas é possivel reconstruir a camaada original.
 ## Quantização Pos-Transformação
 A aplicação de uma transformação a uma camada convulacional ou a unma camada totalmente conectada permite uma reducai de dimensionalidade. 
+"A quantização por transformação busca primeiro obter uma representação dos pesos com menor correlação e, então, quantizar essa representação de forma otimizada, permitindo explorar simultaneamente redução de dimensionalidade e redução da precisão numérica."
+
+
+E destacado no artigo que o foco da compressão da rede são os pesos dos neuronios, pois os vieses tem pouca importancia e as ativações não são o foco da compressão.
+
+## Quantização de CNNs
+A representação de uma rede pode ser feita de forma matemática,  principalmente para a representação de pesos de uma camada. No artigo as camadas são representadas por $\Theta_l$ onde:
+- $\Theta \rightarrow$ parametros da rede
+- $L \rightarrow$ Numeors de camada da rede
+- $x \rightarrow$ entrada
+- $y \rightarrow$ saída
+
+assim
+$$\boxed{Entrada\ x \rightarrow \Theta_1 \rightarrow \Theta_2 \rightarrow \ldots \rightarrow \Theta_L \rightarrow\ Saida\ y}$$
+E como ja mencionado anteriormente, o foco da quantização é $\Theta$ pois viéses e ativações nao tem impacto significativo na compressão.
+
+Mas qual a estrutura de $\Theta$?
+O formato de $\Theta$ depende do tipo da camada, podendo ser uma cada de convulacional, uma FLC.
+No caso de uma camada convulacional, $\Theta$ é um tensor de pesos. Seguindo notação do artigo: $$\Theta \in \mathbb{R}^{a\times b}_{n\times m}$$ sendo:
+-  $a\times b \rightarrow$ tamanho espacial do kernel
+- $n \rightarrow$ numero de canais de entrada
+- $m \rightarrow$ numero de canais de saida
+
+Considerando o caso de uma AlexNet com kernels $a\times b = 11\times11$ e uma entrada de uma imagem RGB, ou seja, uma entrada para cada cor R,G,B, assim $n=3$ e 64 saidas, $m=64$. 
+```
+                 3 canais de entrada
+                       ↓
+              ┌─────────────────┐
+              │ Kernel 1         │ → canal de saída 1
+              │ 11 × 11          │
+              ├─────────────────┤
+              │ Kernel 2         │ → canal de saída 2
+              │ 11 × 11          │
+              ├─────────────────┤
+              │       ...        │
+              └─────────────────┘
+                       ↓
+                 64 saídas
+```
+
+Isto para uma unica camada inicial com $n=3$. Assim teremos:
+$$\Theta_1\in \mathbb{R}^{11\times11\times64\times3}$$
+por tanto a quantidade total de pesos para esta camda é:
+$$64×3×11×11=23232$$
+
+Em uma FLC assim, é mais parecido com uma matriz convencional, pois teremos a multiplicação de $n\times m$ formando uma matriz bidimensional.
+$$\Theta_L\in \mathbb{R}^{1\times1}_{1000\times4096}$$
+pesos:$$1000×4096=4096000$$
+
+### Quantização por camada (Layer-Wise Quantization)
+Este é um metodo que busca encontrar como ddistribuir os bits entre as diferentes camadas. Ou seja, a quantização sera aplicada em cada camada de forma independente e dinamica com a determinada precisão. Exemplo: $$R_l=2$$
+Determina que na camada $L$ a precisao dos pesos sera de 2 bits. Desta forma, $R_l$ pode ser derminado de maneira dinamica para cada camada $\Theta_l$, assim como tambem pode ser feita a poda integral da camdad com $R_l=0$.
+Esta distribuição pode ser feita para as camadas como neste exemplo. Suponha as camadas:
+$$\Theta_1, \Theta_2, \Theta_3$$
+Pode ser definido:
+$$R_1=8, R_2=4,R_3=2$$
+Mas pode acontecer, que determinadas camadas sejam mais senciveis a quantização que outras.
+### Distorição
+A distorção da rede é calculada pela função $$D(R_1,\ldots,R_L)=\mathbb{E}||\hat{y}-y||_2^2$$
+onde $y$ é a saida da rede original e $\hat{y}$ da rede quantizada. portanto $\mathbb{E}||\hat{y}-y||_2^2$ mede quanto a saida foi afetada pela quantização.
+
+## Transform Quantization
+Na transform quantization, temos o seguinte processo
+$$\Theta \rightarrow T \rightarrow quantization$$
+Assim os pesos sao transformados antes de serem quantizadas. Este processo de transformação salienta caracteristicas dos pesos de mais importancia e reduz o valor de pesos pouco significantes para evitar a redundancia de informações de alguns pesos. por exemplo:$$\Theta=[0.80,0.82,0.79,0.81,0.83]$$
+$$T=[4.05,0.03,−0.01,0.02,0.00]$$
+Percebemos que o valor agora esta concentrado no primeiro peso, assim os posteriores podem receber poucos bits ou ate 0.
+```
+Coeficientes transformados
+ │
+ ├── informação principal █████████
+ ├── informação pequena   ██
+ ├── informação pequena   ▏
+ ├── quase nada           ▏
+ └── quase nada           ▏
+```

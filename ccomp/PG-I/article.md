@@ -199,6 +199,203 @@ b
 
 2bits avg with transform
 
+---
+
+Gao et al. [73] estudam os limites da compressão de CNNs a partir de uma perspectiva de **taxa-distorção**, reinterpretando a compressão como um problema de **alocação de taxa**, de maneira semelhante à abordagem deste trabalho.
+
+Entretanto, o estudo deles não considera o uso de uma **transformação como parte da quantização**. A Seção 4 mostra que aplicar uma **transformação de descorrelação antes da quantização** é fundamental para obter uma boa compressão.
+
+# 3 NOTAÇÃO E OBSERVAÇÕES
+
+Vamos estabelecer nossa notação definindo um **espaço vetorial** sobre as entradas, saídas e pesos de uma CNN, equipado com operações baseadas em **convoluções multi-entrada-multi-saída (MIMO — multi-input-multi-output)** [74].
+
+Denotamos por
+
+$$x∈Rma×bx \in \mathbb{R}^{a \times b}_m$$
+
+um **sinal com mm canais**, cujos elementos são matrizes de tamanho $a \times b$, isto é,
+
+$$xk∈Ra×b,k=1,…,m.x_k \in \mathbb{R}^{a \times b}, \quad k = 1, \ldots, m.$$
+
+Denotamos por
+
+$$Θ∈Rn×ma×b\Theta \in \mathbb{R}^{a \times b}_{n \times m}$$
+
+uma **camada convolucional com mm canais de entrada e nn canais de saída**, cujos kernels de convolução
+
+$$θkj∈Ra×b\theta_{kj} \in \mathbb{R}^{a \times b}$$
+
+são definidos para
+
+$$k=1,…,nk = 1, \ldots, n$$
+
+e
+
+$$j=1,…,m.j = 1, \ldots, m.$$
+
+Agora podemos equipar os dois espaços
+
+$$Rma×b\mathbb{R}^{a \times b}_m$$
+
+e
+
+$$Rn×ma×b\mathbb{R}^{a \times b}_{n \times m}$$
+
+com as seguintes operações de espaço vetorial.
+
+### Definição 1: Produto interno
+
+O produto interno de dois sinais de mm canais dados,
+
+$$x,y∈Rma×b,x,y \in \mathbb{R}^{a \times b}_m,$$
+
+pode ser definido como
+
+$$⟨x,y⟩=⟨x1,y1⟩F+⋯+⟨xm,ym⟩F∈R,(1)\langle x,y\rangle = \langle x_1,y_1\rangle_F +\cdots+ \langle x_m,y_m\rangle_F \in \mathbb{R}, \tag{1}$$
+
+em que
+
+$$⟨x,y⟩F\langle x,y\rangle_F$$
+
+denota o **produto interno de Frobenius** dos elementos matriciais
+
+$x,y∈Ra×b.x,y \in \mathbb{R}^{a \times b}.$
+
+### Definição 2: Norma Euclidiana
+
+A norma Euclidiana de um sinal de mm canais dado,
+
+$x∈Rma×b,x \in \mathbb{R}^{a \times b}_m,$
+
+pode ser definida utilizando (1) como
+
+$∥x∥2=⟨x,x⟩=∥x1∥F2+⋯+∥xm∥F2∈R+,(2)\|x\|_2 = \sqrt{\langle x,x\rangle} = \sqrt{ \|x_1\|_F^2 +\cdots+ \|x_m\|_F^2 } \in \mathbb{R}_+, \tag{2}$
+
+em que
+
+$$∥x∥F\|x\|_F$$
+
+denota a **norma de Frobenius** de
+
+$$x∈Ra×b.x \in \mathbb{R}^{a \times b}.$$
+
+### Definição 3: Produto camada–camada
+
+O **produto camada–camada**
+
+$$Z=XYZ = XY$$
+
+de
+
+$$X∈Ro×na×bX \in \mathbb{R}^{a \times b}_{o \times n}$$
+
+e
+
+$$Y∈Rn×mc×dY \in \mathbb{R}^{c \times d}_{n \times m}$$
+
+é definido como
+
+$$Zkj=(xk1⋆y1j+⋯+xkn⋆ynj)∈R(∣a−c∣+1)×(∣b−d∣+1)(3)Z_{kj} = (x_{k1}\star y_{1j} +\cdots+ x_{kn}\star y_{nj}) \in \mathbb{R}^{(|a-c|+1)\times(|b-d|+1)} \tag{3}$$
+
+para
+
+$$k=1,…,ok = 1,\ldots,o$$
+
+e
+
+$j=1,…,m,j = 1,\ldots,m,$
+
+onde ⋆\star representa a **convolução 2D válida (_valid_)** — em oposição às convoluções _full_ ou _same_.
+
+Observe que
+
+$$x⋆y=⟨x,y⟩Fx\star y = \langle x,y\rangle_F$$
+
+quando xx e yy possuem as mesmas dimensões.
+
+Em contraste com as Definições 1–2, a Definição 3 pode envolver elementos de dois espaços vetoriais (possivelmente diferentes). Analogamente, podemos derivar as definições de **produto camada–sinal** e **produto externo** a partir da Definição 3.
+
+A **transposta**
+
+$$Θt∈Rm×na×b\Theta^t \in \mathbb{R}^{a\times b}_{m\times n}$$
+
+de uma camada
+
+$$Θ∈Rn×ma×b\Theta \in \mathbb{R}^{a\times b}_{n\times m}$$
+
+é definida por
+
+$$(Θt)jk=Θkj,(\Theta^t)_{jk}=\Theta_{kj},$$
+
+de maneira análoga à transposta de uma matriz convencional.
+
+Com as definições acima, podemos expressar de forma compacta o mapeamento de uma imagem de mm canais
+
+$$x∈Rmc×dx\in\mathbb{R}^{c\times d}_m$$
+
+por uma camada convolucional
+
+$$Θ∈Rn×ma×b\Theta\in\mathbb{R}^{a\times b}_{n\times m}$$
+
+com mm entradas e nn saídas como
+
+$$x↦Θx.x\mapsto\Theta x.$$
+
+Observe que, como os filtros formam um **anel** (mas não um **corpo**) em relação à convolução, decomposições matriciais clássicas, como **LU** e **QR**, não podem ser aplicadas à camada convolucional Θ\Theta.
+
+Entretanto, uma transformação linear
+
+$$Θ=ST\Theta=ST$$
+
+continua sendo bem definida.
+
+Neste trabalho, essencialmente transformamos todos os mapeamentos convolucionais da forma
+
+$$x↦Θxx\mapsto\Theta x$$
+
+para
+
+$$x↦STxx\mapsto STx$$
+
+e quantizamos SS e TT.
+
+Veja a Figura 1 (à esquerda), onde
+
+$$Θ,T∈Rn×m2×2\Theta,T\in\mathbb{R}^{2\times2}_{n\times m}$$
+
+representam camadas convolucionais 2×22\times2, e
+
+$$S∈Rn×n1×1S\in\mathbb{R}^{1\times1}_{n\times n}$$
+
+representa uma **camada de base (basis layer)**, que é equivalente a uma camada convolucional $1×11\times1$.
+
+## 4 QUANTIZAÇÃO DE CNNs
+
+Este trabalho aborda o problema de compressão das matrizes de pesos de uma CNN. Podemos expressar o mapeamento de ponta a ponta de uma CNN feed-forward de L camadas como
+
+$$y = f(x|\Theta_1,\ldots,\Theta_L) = f_L(\cdots f_2(\Theta_2 f_1(\Theta_1x))), \tag{4}$$
+
+em que $x \in \mathbb{R}^{a\times b}_M$ e $y \in \mathbb{R}^{c\times d}_N$ são, respectivamente, a entrada e a saída da rede, e $Θl=1,…,L\Theta_{l=1,\ldots,L}$ são as L matrizes de pesos convolucionais e totalmente conectadas que parametrizam f.
+
+As não linearidades entre as convoluções, como _pooling_, ativação (ReLU ou tanh) e normalização, foram incorporadas às funções $f_l$, juntamente com os _biases_.
+
+Embora os parâmetros de _bias_ também sejam aprendíveis e, portanto, também precisem ser quantizados e armazenados, eles são suficientemente poucos em relação aos pesos, de modo que seu impacto no tamanho quantizado das CNNs é desprezível.
+
+Quando uma CNN de classificação está sendo quantizada, assume-se que a saída y corresponde aos _logits_, isto é, ao resultado obtido antes da ativação _softmax_.
+
+Para fornecer um exemplo concreto, o AlexNet [1] parametriza f utilizando L=8 conjuntos de pesos convolucionais e totalmente conectados. A entrada $x \in \mathbb{R}^{224\times224}_3$ representa uma imagem colorida com $224\times224$ pixels, enquanto a saída $y \in \mathbb{R}^{1\times1}_{1000}$ representa as 1000 log-probabilidades não normalizadas de pertencimento da entrada x às 1000 classes predefinidas (_tench_, ..., _toilet paper_).
+
+A primeira camada convolucional
+
+$$\Theta_1 \in \mathbb{R}^{11\times11}_{64\times3}$$
+
+possui $64\times3$ kernels convolucionais de tamanho $11\times11$, enquanto a última camada totalmente conectada pode ser representada por
+
+$$\Theta_8 \in \mathbb{R}^{1\times1}_{1000\times4096}.$$
+
+---
+
+
 Fig. 1. Transform quantization of CNN layers. Given weight matrices Θ1, Θ2, . . . , ΘL of an L-layer CNN, we represent each one as Θl = SlTl (a) and
 quantize both the kernel matrix Tl and the basis Sl optimally (b). In (b), the bar lengths illustrate the bit-depths needed to quantize Θl directly (gray
 bars), or SlTl in the transform domain (blue and orange bars) for the same performance. Elements corresponding to zero bit-depth assignments
