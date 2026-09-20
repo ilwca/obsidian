@@ -406,3 +406,12 @@ Coeficientes transformados
  ├── quase nada           ▏
  └── quase nada           ▏
 ```
+
+No artigo, é feito um calculo para a medição de eficiencia da trasnformação e comparação com a quantização direta. Então é calculado um $G$ que define a taxa de distorção da rede denotado por:
+$$G = \frac{D_{pcm}}{R_{tc}}$$
+que de grosso modo significa:
+$$G = \frac{distorção\ sem\ transformacao}{distorcao\ com\ transformacao}$$
+- caso $G\approx 1$ a transformação nao teve impacto significativo.
+- Caso $G>1$ a transformação teve impacto significativo. Quando maior o $G$, melhor a transformação.
+
+

@@ -95,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -200,8 +199,10 @@
   },
   "active": "bfa5cd3fbea71471",
   "lastOpenFiles": [
-    "ccomp/PG-I/article.md",
+    "ccomp/PG-I/pg-todo.md",
+    "ccomp/TG/Grafos.md",
     "ccomp/PG-I/pg1-notas.md",
+    "ccomp/PG-I/article.md",
     "helpti/pages.canvas",
     "helpti/helpti-fluxo.md",
     "ccomp/PO/po-notas.md",
@@ -211,7 +212,6 @@
     "Excalidraw/grafos-planaridade.md",
     "Excalidraw/grafos-emparelhamento.md",
     "Excalidraw/cnn-ativacao.md",
-    "ccomp/PG-I/pg-todo.md",
     "ccomp/PG-I/pg-referencias.md",
     "ccomp/PI/processamento-de-imagens.md",
     "ccomp/PI/pi-p1.md",
@@ -224,7 +224,6 @@
     "utils/img/pi-amostragem.png",
     "article.md",
     "66.md",
-    "ccomp/TG/Grafos.md",
     "ccomp/TG/tg-notas.md",
     "ccomp/IA/Q-Learning.md",
     "ccomp/IA/notes-ia.md",
