@@ -1,4 +1,4 @@
-
+ 
 # Poda e quantização para aceleração de redes neurais profundas: uma revisão
 [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0925231221010894)
 
@@ -136,10 +136,8 @@ Um método que remove iterativamente neurônios redundantes para FCLs sem exigir
 
 ### Poda por Busca Gulosa
 "A ThiNet adota informações estatísticas da camada seguinte para determinar a importância dos filtros. Ela usa uma busca gulosa para podar o canal que tem o menor custo de reconstrução na camada seguinte. A ThiNet poda camada por camada, em vez de globalmente, para minimizar grandes erros na [precisão da classificação](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/engineering/classification-accuracy) . Ela também poda menos durante cada época de treinamento para permitir a [estabilidade dos coeficientes](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/topics/engineering/stability-coefficient) . A taxa de poda é um hiperparâmetro predefinido e a complexidade de tempo de execução está diretamente relacionada a essa taxa. A ThiNet comprimiu o número de operações de ponto flutuante (FLOPs) da ResNet-50 para 44,17%, com uma redução de 1,87% na precisão top-1."
-
 ## Poda combinada com Tuning e Retraining
 "_Treinamento do zero:_ Observações mostram que a eficiência e a precisão do treinamento da rede são inversamente proporcionais à esparsidade da estrutura. Quanto mais densa a rede, menor o tempo de treinamento. Esta é uma das razões pelas quais as técnicas de poda atuais tendem a seguir um pipeline de treinamento-poda-ajuste em vez de treinar uma estrutura podada do zero."
-
 ## Poda Dinamica
 Podas estaticas destroem de forma irreverssivel a estrutura original da rede. Uma vez podada e retreinada, e impossivel de recuperar informacoes apagadas. A poda dinamica, controla em tempo de execucao quais camadas e conexoes serao ativadas o que pode diminuir a computacao, dissipacao energetica e a largura da banda.
 ### Composicao da rede
@@ -414,4 +412,23 @@ $$G = \frac{distorção\ sem\ transformacao}{distorcao\ com\ transformacao}$$
 - caso $G\approx 1$ a transformação nao teve impacto significativo.
 - Caso $G>1$ a transformação teve impacto significativo. Quando maior o $G$, melhor a transformação.
 
+## Fine-Tunning
+Embora o fine-tunning nao devolva precisao de redes comprimidas devido a perca de dados no momento da compressao, o artigo mostra que a realizacao do fine-tunning em redes  quantizadas por quantização devolve a precisao proxima as das redes originais.
 
+### Redes comparadas
+- ResNet-18
+- ResNet-34
+- ResNet-50
+- AlexNet
+- DenseNet-121
+
+==O problema enfrentado é que redes quantizadas diminuem a acurácio e no momento do re-treinamento a rede tem que calcular o gradiente de erro no backpropagation. porem com pesos quantizados isso fica mais dificil.== Para isso, são utilizados métodos no artigo, como o _Striaght-Through Estimator (STE)_ para que o treinamento consiga continuar mesmo com a quantização.
+### Um resultado importante
+O artigo observa que, com retreinamento:
+- **2 bits:** a acurácia pode voltar para valores próximos aos da rede original;
+- **3 bits:** a perda de acurácia é praticamente eliminada.
+Isso mostra que a quantização, por si só, não determina necessariamente a perda final de desempenho. O **retreinamento pode recuperar parte do desempenho perdido**.
+
+O artigo levanta um ponto ja abordado no artigo passado. 
+"Portanto, podemos ser capazes de obter uma aceleração adicional caso seja possível desenvolver **hardware especializado** para facilitar operações aritméticas com baixa profundidade de bits." 
+Ou seja, o uso de hardware especializado para operações de baixa precisão ajuda a aceleração da rede.

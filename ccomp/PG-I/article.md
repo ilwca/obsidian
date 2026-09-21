@@ -1452,6 +1452,65 @@ lists the procedure for optimal quantization step-size search
 on T. Step-size searches on S is similar, but involves S𝑞 and
 T instead of T𝑞 and S (being S𝑘 now the 𝑘th column of S).
 
+---
+### TABELA 1
+
+**Tempos de quantização de diferentes CNNs no Intel Xeon 6132 @ 2,60 GHz + Nvidia Quadro RTX 8000**
+
+|Modelo|Pesos|Camadas|Blocos|Passos|Máx. bits|Desemp.|Custo|
+|---|--:|--:|--:|--:|--:|--:|--:|
+|AlexNet|62.378k|8|8|8|16|7,0 ms|1,6 h|
+|ResNet-18|11.679k|21|8|8|16|7,0 ms|4,2 h|
+|ResNet-34|21.780k|37|8|8|16|7,1 ms|7,5 h|
+|ResNet-50|25.503k|54|8|8|16|7,2 ms|10,9 h|
+|DenseNet-121|7.894k|121|4|8|16|7,6 ms|13,1 h|
+
+---
+
+# 5 OTIMIZAÇÃO DA QUANTIZAÇÃO
+
+Agora discutimos a **quantização escalar ótima** dos elementos de
+
+$$t=U^t\theta.$$
+
+Embora quantizadores vetoriais [77] e quantizadores com **zona morta** (_dead-zone_) [78] possam melhorar ainda mais o desempenho taxa–acurácia da quantização por transformação, optamos por utilizar uma **quantização escalar uniforme** simples, a fim de acelerar a inferência utilizando diretamente aritmética inteira sobre os índices de quantização.
+
+## 5.1 Encontrando os tamanhos de passo ótimos
+
+Para encontrar o tamanho de passo de quantização ótimo $\Delta$ para uma fonte aleatória t, em uma determinada profundidade de bits R, podemos avaliar, em um intervalo de valores de $\Delta$, a distorção de saída
+
+$$2D_{\mathrm{out}} = \mathbb{E}\left\| y-\hat{y} \right\|_2^2$$
+
+causada pela quantização da fonte
+
+$$t^q(\Delta),$$
+
+e encontrar um valor de $\Delta$ que minimize $D_{\mathrm{out}}$. O número de níveis de quantização é fixado em
+
+$$2^R.$$
+
+Os tamanhos de passo que minimizam a distorção
+
+$$D_{\mathrm{src}} = \mathbb{E}\left\| t-t^q \right\|_2^2$$
+
+da própria fonte diferem significativamente daquele que minimiza a distorção de saída $D_{\mathrm{out}}$.
+
+A **Fig. 8 (esquerda)** mostra isso para a fonte KLT tt da nona camada da ResNet-18. Essa discrepância entre os tamanhos de passo resulta em uma **perda de taxa de 1–2 bits** (Fig. 8, direita).
+
+As curvas características em forma de **V** nos gráficos da direita são atribuídas a uma diminuição inicial da **distorção por sobrecarga** (_overload distortion_) à medida que o tamanho de passo $\Delta$ aumenta, seguida por um aumento da **distorção granular** (_granular distortion_) após o $\Delta$ ótimo — consulte [77] para uma discussão adicional sobre as distorções granular e por sobrecarga.
+
+Banner et al. [38] derivaram uma expressão para relacionar os tamanhos de passo de quantização ótimos à variância da fonte aleatória no caso de uma distribuição de Laplace.
+
+Entretanto, a **Fig. 8** sugere que o tamanho de passo de quantização deve ser otimizado explicitamente sobre a distorção de saída utilizando uma **busca em grade** (_grid search_).
+
+Essa busca explícita também elimina a necessidade de ajustar uma distribuição paramétrica à fonte subjacente e também é aplicável a quantizadores com **zonas mortas** [78] e a **células não uniformes** [79, 80].
+
+O **Algoritmo 2** apresenta o procedimento para a busca do tamanho de passo de quantização ótimo em T.
+
+A busca do tamanho de passo em SS é semelhante, mas envolve $S^q$ e T, em vez de $T^q$ e S, sendo $S_k$ agora a **k-ésima coluna de S**.
+
+---
+
 5.2  Reducing Quantization Complexity
 
 To maximize compression, one could allocate an individual

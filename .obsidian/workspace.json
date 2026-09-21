@@ -95,7 +95,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -199,10 +200,10 @@
   },
   "active": "bfa5cd3fbea71471",
   "lastOpenFiles": [
+    "ccomp/PG-I/article.md",
+    "ccomp/PG-I/pg1-notas.md",
     "ccomp/PG-I/pg-todo.md",
     "ccomp/TG/Grafos.md",
-    "ccomp/PG-I/pg1-notas.md",
-    "ccomp/PG-I/article.md",
     "helpti/pages.canvas",
     "helpti/helpti-fluxo.md",
     "ccomp/PO/po-notas.md",
