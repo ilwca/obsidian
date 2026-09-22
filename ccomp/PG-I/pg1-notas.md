@@ -320,16 +320,22 @@ metodos blobais, As otimizações de rede são normalemtne aplicadas separadamen
 **Terceiro**, avançamos o estado da arte na compressão de CNNs, tanto em cenários **com retreinamento** quanto **sem retreinamento**, para tarefas de classificação de imagens — **AlexNet** [1], **ResNets** [60] e **DenseNets** [61] — e para tarefas de visão de baixo nível, **DRUNet** (remoção de ruído) [62] e **EDSR** (super-resolução) [63].
 
 ### Qantização por Transformação
-Na transformação por quantização os pesos não são diretamente quantizados como na quantização convencional `PF32 -> INT8`; Antes é feito um processo de transformação destes pesos `FP32 -> Transform -> W' -> INT8`.
+Na transformação por quantização os pesos não são diretamente quantizados como na quantização convencional $PF32 \rightarrow INT8$; Antes é feito um processo de transformação destes pesos $FP32 \rightarrow Transform \rightarrow W' \rightarrow INT8$.
 A transformação ela "salienta" algumas propriedades que ajudam a definir a importancia do peso, assim pesos menos importantes são mais proximos de 0.
 
 É nesta hora que entra a [[#Poda|poda]]. Pesos mais proximos de zero, em caso de quantização com uma menor taxa de bits, acabam se tornando nulos.
 
 No artigo é trabalhado com duas camadas convulacionais, a camada base (basis-layer) e a camada transformada (transform domain layer), pois a partir delas é possivel reconstruir a camaada original.
-## Quantização Pos-Transformação
-A aplicação de uma transformação a uma camada convulacional ou a unma camada totalmente conectada permite uma reducai de dimensionalidade. 
-"A quantização por transformação busca primeiro obter uma representação dos pesos com menor correlação e, então, quantizar essa representação de forma otimizada, permitindo explorar simultaneamente redução de dimensionalidade e redução da precisão numérica."
+Portanto camadas transformadas pode ser representadas como:
+$$\Theta'=ST$$
+onde:
+$T \rightarrow$ camada transformada (transform domain layer)
+$S \rightarrow$ camada base (basis-layer)
+$\Theta' \rightarrow$ camada de pesos quantizado
 
+## Quantização Pos-Transformação
+A aplicação de uma transformação a uma camada convulacional ou a unma camada totalmente conectada permite uma redução de dimensionalidade. 
+"A quantização por transformação busca primeiro obter uma representação dos pesos com menor correlação e, então, quantizar essa representação de forma otimizada, permitindo explorar simultaneamente redução de dimensionalidade e redução da precisão numérica."
 
 E destacado no artigo que o foco da compressão da rede são os pesos dos neuronios, pois os vieses tem pouca importancia e as ativações não são o foco da compressão.
 
@@ -344,7 +350,7 @@ assim
 $$\boxed{Entrada\ x \rightarrow \Theta_1 \rightarrow \Theta_2 \rightarrow \ldots \rightarrow \Theta_L \rightarrow\ Saida\ y}$$
 E como ja mencionado anteriormente, o foco da quantização é $\Theta$ pois viéses e ativações nao tem impacto significativo na compressão.
 
-Mas qual a estrutura de $\Theta$?
+**Mas qual a estrutura de $\Theta$?**
 O formato de $\Theta$ depende do tipo da camada, podendo ser uma cada de convulacional, uma FLC.
 No caso de uma camada convulacional, $\Theta$ é um tensor de pesos. Seguindo notação do artigo: $$\Theta \in \mathbb{R}^{a\times b}_{n\times m}$$ sendo:
 -  $a\times b \rightarrow$ tamanho espacial do kernel
@@ -356,13 +362,13 @@ Considerando o caso de uma AlexNet com kernels $a\times b = 11\times11$ e uma en
                  3 canais de entrada
                        ↓
               ┌─────────────────┐
-              │ Kernel 1         │ → canal de saída 1
-              │ 11 × 11          │
+              │ Kernel 1        │ → canal de saída 1
+              │ 11 × 11         │
               ├─────────────────┤
-              │ Kernel 2         │ → canal de saída 2
-              │ 11 × 11          │
+              │ Kernel 2        │ → canal de saída 2
+              │ 11 × 11         │
               ├─────────────────┤
-              │       ...        │
+              │       ...       │
               └─────────────────┘
                        ↓
                  64 saídas
@@ -380,6 +386,7 @@ pesos:$$1000×4096=4096000$$
 ### Quantização por camada (Layer-Wise Quantization)
 Este é um metodo que busca encontrar como ddistribuir os bits entre as diferentes camadas. Ou seja, a quantização sera aplicada em cada camada de forma independente e dinamica com a determinada precisão. Exemplo: $$R_l=2$$
 Determina que na camada $L$ a precisao dos pesos sera de 2 bits. Desta forma, $R_l$ pode ser derminado de maneira dinamica para cada camada $\Theta_l$, assim como tambem pode ser feita a poda integral da camdad com $R_l=0$.
+## Alocação Não Uniforme de Bits
 Esta distribuição pode ser feita para as camadas como neste exemplo. Suponha as camadas:
 $$\Theta_1, \Theta_2, \Theta_3$$
 Pode ser definido:
@@ -432,3 +439,45 @@ Isso mostra que a quantização, por si só, não determina necessariamente a pe
 O artigo levanta um ponto ja abordado no artigo passado. 
 "Portanto, podemos ser capazes de obter uma aceleração adicional caso seja possível desenvolver **hardware especializado** para facilitar operações aritméticas com baixa profundidade de bits." 
 Ou seja, o uso de hardware especializado para operações de baixa precisão ajuda a aceleração da rede.
+
+## Comparacao visual
+pela figura 11. do artigo que faz uma comparação visual entre as redes DRUNet que tem objetivo de remoção de ruido e reconstruição, envolvendo imagens e a capacidade da rede dereconstrui-las por meio de diferentes **taxas** de bits, como 32, 2, 1 e 0.5.
+Lembrando que a taxa de bits é dada pela relação quantos bits os pesos estão sendo representados e a quantidade de pesos. Exemplo:
+$$\frac{4\ bits}{8\ pesos}=0.5\ bit\ peso$$
+Na figura, são analisados dois parametros, o **PSNR** (Peak Signal-to-Noise Ratio)  e o **SSIM** (Structural Similarity Index Measure).
+### PSNR
+O PSNR mede quanto a imagem distorcida, se parece com a imagem reconstruida numericamente, então, quanto menor o erro, maior o PSNR. este parametro e medido em dB, pois a unidade de medida decibel, é uma escala logaritmica para representar razões.
+### SSIM
+O SSIM tenta avaliar se a estrutura da imagem original foi preservada, como fatores como liminescencia, contraste e estrutura. Ou seja, a diferenca visual da imagem reconstruída para a imagem original.
+
+## Discussão
+Na discussão o artigo apresenta direções que podem ser estudadas, como:
+- Extensão para Transformação 2D.
+- Exetensão para Transformação Intre-Kernel
+
+## Limitações e Trabalhos Futuros
+problema de ordenação de linhas e colunas, onde deve-se propor um $U$ ideal para cada camada, pois o resultado otmio para a camada $\Theta_1$ nao necessariamente otimo para a camada $\Theta_2$, onde $U^t_1\Theta_1$ produza uma matriz boa e esparsa. o mesmo nao e valho para $U^t_1\Theta_2$.
+É ai que os autores propoem uma especie de QAT.
+
+|Estratégia|Treinamento depois/durante|
+|---|---|
+|PTQ|Não necessariamente|
+|QAT|Sim, durante treinamento|
+|PTQ + fine-tuning|Sim, depois da quantização|
+Ou seja,  PQT sem fine-tunning pode gerar significativa perca de acuracia.
+
+## Conclusão
+O citado trabalho propoe a compressão de redes neurais CNN usando de metodos de quantização por transformação no cenário pos-treinamento.
+Com o principal criterio de analise sendo a [[#Distorição|taxa de distorção]], foram aperfeicoadas as tecnicas de compressão e quantização, com relação a profunidade de bits atribuidas aos pesos.
+A estrutura estudada avanca o estado da arte em compressão de CNNs em diversos modelos de CNN.
+Então o principal ponto deste artigo que os autores demonstraram é que:
+
+**transformar os pesos antes da quantização melhora a compressão**.
+
+E o ponto importante é que eles não escolhem simplesmente um número de bits igual para tudo.A quantidade de bits é determinada considerando o impacto na saída da rede.
+
+Portanto um resumo geral deste artigo seria:
+
+**Como a transformação antes da quantização de pesos de uma rede pode melhorar o processo de compressão baseado em uma alocação nao uniforme de pesos considerando a taxa de distorção da rede.**
+
+---
