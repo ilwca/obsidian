@@ -90,12 +90,14 @@ Desta forma podemos estudar e trabalhar configurações diferentes no processo d
 
 ### Pooling
 O pooling pega um conjunto de valores e os reduz a um mesmo valor.
-A selação do valor de substituição pode ser a media dos valores substituidos, isso é o **Pooling Médio** ou simplismente selecionado o valor máximo entre eles, **Pooling Máximo**.
+A selação do valor de substituição pode ser a media dos valores substituidos, isso é o **Pooling Médio** ou simplismente selecionado o valor máximo entre eles, **Pooling Máximo** ou o menor, **Pooling minimo**. Ou seja, o pooling é um processo de agrupamento de informação.
 Em processamento de imagens o pooling pode substituir valores de sua vizinhanca, normalmente sendo uma janela quadrada de 9px, como em [[processamento-de-imagens#Vizinhanca-8 | vizinhanca de 8]] em caso de agrupamento 3x3.
 O pooling global, é quando um mapa de caracteristicas inteiro é reduzido a um valor, o GAP _(Global Avarage Pooling)_ pode ser usado como uma forma de poda dinámica.
 
+
+
 ### Hiperparametro
-Parametro pre-definido antres do treinamento da rede ou do ajuste fino (fine-tuning)
+Parametro pre-definido antes do treinamento da rede ou do ajuste fino (fine-tuning)
 ### Kernel
 Pequena matriz de numeros que percorre uma imagem ou outra matriz de dedaos para extrair caracteristicas.
 
@@ -118,7 +120,10 @@ multiplicando posicao por posição teremos:
 + (7×1) + (8×0) + (9×1)
 ``` 
 Resultado:
-$1 + 0 + 3 + 0 + 5 + 0 + 7 + 0 + 9 = 25$
+$1 + 0 + 3 + 0 + 5 + 0 + 7 + 0 + 9 = 25$ 
+
+O resultado para este determinado pixel da nova matriz sera somado ao viés e depois entrará na função de ativação.
+exemplo: $ReLU(25+b)$
 
 ### Capsulas
 Estruturas de capsulas, são uma alternativa ao pooling, que ao inves de substituir o mapa de caracteristicas, o substitui por um produto escalar, ou seja, um vetor armazenando caracteristicas principais, como formato, tramanho e posição de objetos.
@@ -261,7 +266,7 @@ FP32
 segundo [[pg-referencias#Liang|Liang]], além de acelerar as redes neurais, a quantização também demonstrou, em alguns casos, resultar em maior precisão. Como exemplos: 1) VGG-16 com pesos de 3 bits supera sua contraparte de precisão total em 1,1% no top-1 [144](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0720) , 2) AlexNet reduz o erro top-1 de referência em 1,0% com pesos de 2 bits e ativações de 8 bits [66](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0330) , 3) ​​ResNet-34 com pesos e ativações de 4 bits obteve 74,52% de acurácia top-1, enquanto a versão de 32 bits obteve 73,59% [174](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0870) , 4) Zhou mostrou que um modelo quantizado reduziu o erro de classificação em 0,15%, 2,28%, 0,13%, 0,71% e 1,59% em AlexNet, VGG-16, GoogLeNet, ResNet-18 e ResNet-50, respectivamente [269](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1345) , e 5) Xu mostrou que redes quantizadas com redução de bits ajudam a reduzir o overfitting em Redes Totalmente Conectadas (FCNs).
 
 ## Ativação
-A ativação é dada por uma funcao de ativação do resultade de uma combinação lienar. Vamos propor duas camadas FCL, assim como um grafo [[Grafos#Grafo Bipartido|bipartido]] completo $K_{3,2}$. 
+A ativação é dada por uma funcao de ativação do resultado de uma combinação lienar. Vamos propor duas camadas FCL, assim como um grafo [[Grafos#Grafo Bipartido|bipartido]] completo $K_{3,2}$. 
 ![[cnn-ativacao]]
 Considerando estas camadas onde a primeira possui 3 neuronios $a$ e a segunda apenas dois neuronios, vamos analisar a ativação do primeiro neuronio (1) da segunda camada, que sera dividaida em 3 passos, sendo o primeiro definido por definido por:
 1 -$$z = a_1w_{11}+a_2w_{21}+a_3w_{31} + b$$
@@ -481,3 +486,6 @@ Portanto um resumo geral deste artigo seria:
 **Como a transformação antes da quantização de pesos de uma rede pode melhorar o processo de compressão baseado em uma alocação nao uniforme de pesos considerando a taxa de distorção da rede.**
 
 ---
+
+# Energy-Efficient CNNs on FPGA via Convolutional Weight Quantization
+[IEEE](https://doi.org/10.1109/EngiTek68245.2025.11567639)

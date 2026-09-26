@@ -60,3 +60,65 @@ EXPORT DATE: 08 September 2026
 	year={2021},
 	pages={1–1} 
    }
+
+## O'Shea
+@article{DBLP:journals/corr/OSheaN15,
+	  author  = {Keiron O'Shea and Ryan Nash},
+	  title   = {An Introduction to Convolutional Neural Networks},
+	  journal = {CoRR},
+	  volume  = {abs/1511.08458},
+	  year    = {2015},
+	  url     = {[http://arxiv.org/abs/1511.08458](http://arxiv.org/abs/1511.08458)},
+	  eprintty= {arXiv},
+	  eprint  = {1511.08458},
+	  timesta = {Mon, 13 Aug 2018 16:46:52 +0200},
+	  biburl  = {https://dblp.org/rec/journals/corr/OSheaN15.bib},
+	  bibsourc= {dblp computer science bibliography, https://dblp.org}
+}
+
+## krenker
+@article{krenker2011introduction,
+	  title={Introduction to the artificial neural networks},
+	  author={Krenker, Andrej and Be{\v{s}}ter, Janez and Kos, Andrej},
+	  journal={Artificial neural networks: methodological advances and biomedical applications. InTech},
+	  pages={1--18},
+	  year={2011}
+}
+## Lima
+@article{lima2026introduccao,
+	  title={Introdu{\c{c}}{\~a}o {\`a}s redes neurais para F{\'\i}sicos},
+	  author={Lima, Gubio G de and Miranda, Gustavo Caf{\'e} de and Farias, Tiago de S},
+	  journal={Revista Brasileira de Ensino de F{\'\i}sica},
+	  volume={48},
+	  pages={e20250183},
+	  year={2026},
+	  publisher={SciELO Brasil}
+}
+
+## Song
+@article{Song03072019,
+	author = {Jia Song and Shaohua Gao and Yunqiang Zhu and Chenyan Ma},
+	title = {A survey of remote sensing image classification based on CNNs},
+	journal = {Big Earth Data},
+	volume = {3},
+	number = {3},
+	pages = {232--254},
+	year = {2019},
+	publisher = {Taylor \& Francis},
+	doi = {10.1080/20964471.2019.1657720},
+	URL = { https://doi.org/10.1080/20964471.2019.1657720},
+	eprint = { https://doi.org/10.1080/20964471.2019.1657720}
+}
+
+## Bassam
+@INPROCEEDINGS{11567639,
+	  author={Mohd, Bassam J. and Yousef, Khalil M. Ahmad},
+	  booktitle={2025 International Conference on Engineering and Computing Technologies (EngiTek)}, 
+	  title={Energy-Efficient CNNs on FPGA via Convolutional Weight Quantization}, 
+	  year={2025},
+	  volume={},
+	  number={},
+	  pages={1-6},
+	  keywords={Quantization (signal);Design methodology;Timing;Modeling;Field programmable gate arrays;Accuracy;Convolutional neural networks;Printing;Convolution;Computer architecture;Machine Learning;Neural Networks;Quantization;FPGA;CNN},
+	  doi={10.1109/EngiTek68245.2025.11567639}
+  }

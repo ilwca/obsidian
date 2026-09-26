@@ -13,26 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "ccomp/PG-I/pg-todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "pg-todo"
             }
           },
           {
-            "id": "bfa5cd3fbea71471",
+            "id": "779403b6b0025dd1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PG-I/pg1-notas.md",
+                "file": "ccomp/PG-I/pg-desenvolvimento.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pg1-notas"
+              "title": "pg-desenvolvimento"
             }
           }
         ],
@@ -197,40 +197,81 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "bfa5cd3fbea71471",
+  "floating": {
+    "id": "4de178a20d4d3abd",
+    "type": "floating",
+    "children": [
+      {
+        "id": "3b3cf329b852f50d",
+        "type": "window",
+        "children": [
+          {
+            "id": "8fac6bef08676332",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f71ccdb4f14c6c63",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ccomp/PG-I/pg1-notas.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "pg1-notas"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 10,
+        "y": 10,
+        "width": 960,
+        "height": 1080,
+        "maximize": false,
+        "zoom": 2.5
+      }
+    ]
+  },
+  "active": "779403b6b0025dd1",
   "lastOpenFiles": [
+    "ccomp/PI/sobel.md",
+    "ccomp/PG-I/pg-desenvolvimento.md",
+    "ccomp/PI/filtro_media.md",
+    "ccomp/PI/laplaciano.md",
+    "ccomp/PG-I/pg-referencias.md",
+    "utils/img/mohd1-21-small.gif",
+    "utils/img/Não confirmado 465216.crdownload",
+    "ccomp/PG-I/pg-todo.md",
+    "ccomp/PG-I/pg1-notas.md",
+    "ccomp/PG-I/article.md",
+    "README.md",
+    "ccomp/PG-I/pg-referencias.md.tmp.13079.313a7d93dcf5",
+    "ccomp/PO/po-notas.md",
+    "ccomp/PI/processamento-de-imagens.md",
+    "ccomp/PI/pi-p1.md",
+    "ccomp/PI/pi-notas.md",
     "ccomp/PE/pe-notas.md",
     "ccomp/SAS/sas-notas.md",
     "ccomp/SAS/sas-p1.md",
     "ccomp/SAS/sas-p2.md",
-    "ccomp/PG-I/pg1-notas.md",
-    "ccomp/PG-I/article.md",
-    "ccomp/PG-I/pg-todo.md",
     "ccomp/TG/Grafos.md",
     "helpti/pages.canvas",
     "helpti/helpti-fluxo.md",
-    "ccomp/PO/po-notas.md",
     "Excalidraw/Drawing 2026-09-15 17.31.26.excalidraw.md",
     "Excalidraw/grafos-intersec.md",
     "Excalidraw/grafos-berge.md",
     "Excalidraw/grafos-planaridade.md",
     "Excalidraw/grafos-emparelhamento.md",
     "Excalidraw/cnn-ativacao.md",
-    "ccomp/PG-I/pg-referencias.md",
-    "ccomp/PI/processamento-de-imagens.md",
-    "ccomp/PI/pi-p1.md",
-    "ccomp/Compiladores/todo - compiladores.md",
     "utils/Transform Quantization for CNN Compression.pdf",
-    "ccomp/PI/pi-notas.md",
     "Pasted Image 20260915173154_225.png",
     "utils/pi-bicubica.png",
     "utils/Captura de tela de 2026-09-14 23-44-55.png",
     "utils/img/pi-amostragem.png",
-    "article.md",
-    "66.md",
-    "ccomp/TG/tg-notas.md",
-    "ccomp/IA/Q-Learning.md",
-    "ccomp/IA/notes-ia.md",
     "Sem título",
     "ccomp/PG-I",
     "ccomp/PI",
@@ -239,13 +280,10 @@
     "utils/img/Não confirmado 90496.crdownload",
     "utils/img/paa-recursive-tree.png",
     "utils/img/Não confirmado 913815.crdownload",
-    "utils/img/grados-ciclo-caminho.png.~tmp",
     "utils/img/grados-ciclo-caminho.png",
     "utils/grados-ciclo-caminho.png",
     "utils/img/grafos-diferenca-simetrica.svg.png",
-    "Excalidraw",
     "utils/img/grafos-emparelhamento.jpg",
-    "Pasted image 20260525124215.png",
     "utils/h.chomsky.canvas",
     "helpti/helpti.canvas"
   ]
