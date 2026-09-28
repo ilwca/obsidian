@@ -309,7 +309,7 @@ Para obter melhores resultados em quantização é recomendado:
 - A quantização estocástica de gradientes é necessária ao treinar modelos quantizados [89](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b0445) , [272](https://www-sciencedirect-com.ez6.periodicos.capes.gov.br/science/article/pii/S0925231221010894?via%3Dihub#b1360) .
 
 
-a pesquesa atual sobre compressao esta focada principalmeente em cnns. mais especificamentte a pesquisa e direcionamen principalemnte para taredfas de clasificaçlão em cnns. trabaçlhos futuros deve considerar outros ripos de aplicações como detecç~ao de  objetos, reconhecimento de fala , traducao de idicomas, etc. a relacao entre compressao de rede e proecisao para diferentes aplicações e uma area de pesquisa interessante,
+a pesquesa atual sobre compressao esta focada principalmeente em cnns. mais especificamentte a pesquisa e direcionamen principalemnte para taredfas de clasificaçlão em cnns. trabaçlhos futuros deve considerar outros ripos de aplicações como detecç~ao de  objetos, reconhecimento de fala , traducao de idiomas, etc. a relacao entre compressao de rede e proecisao para diferentes aplicações e uma area de pesquisa interessante,
 adaptação de hardweaer, as implementações de hardware podem limitar a eficacia dos algoritmos de poda. po ecemplo a poda eleemnto a elemnto praticamente nao refduz os calculos ou largurea de bancda ao usar o imwcolgell,, em processadores de uso geral, da mesm forma a poda por forma normalmente nao pode ser implementada em aceleradores de cnn dedicados. o projeto conjunnto de hardware e fogrware de tecnicas de compressao para aceleradodees de hardware deve ser considerado para alcancar a melhor ewfgiciencia do sistema.
 metodos blobais, As otimizações de rede são normalemtne aplicadas separadamento sem que a informação de uma otimizazao influencia qualquer outra,. Redentem,ente foram propostas abordagensque considram a eficação da ortimização em multiplas camadas, fiscute a poda combinada com a fatoração de tensores que resulta em ma melghor compressao geral. Tecnmicas semelhantes podem ser consideradas usadno diferentes tipos e niveis de compressao e fatoração.
 
@@ -317,7 +317,7 @@ metodos blobais, As otimizações de rede são normalemtne aplicadas separadamen
 
 ---
 
-# Transfom QUantization for CNN Compression
+# Transfom Quantization for CNN Compression
 [arxiv](https://arxiv.org/abs/2009.01174) 
 
 **Primeiro**, propomos a **quantização por transformação** para a compressão de pesos de CNNs — somos os primeiros a considerar a quantização dos **pesos transformados e da base**, além de otimizar ambos após o treinamento.
@@ -389,7 +389,7 @@ $$\Theta_L\in \mathbb{R}^{1\times1}_{1000\times4096}$$
 pesos:$$1000×4096=4096000$$
 
 ### Quantização por camada (Layer-Wise Quantization)
-Este é um metodo que busca encontrar como ddistribuir os bits entre as diferentes camadas. Ou seja, a quantização sera aplicada em cada camada de forma independente e dinamica com a determinada precisão. Exemplo: $$R_l=2$$
+Este é um metodo que busca encontrar como distribuir os bits entre as diferentes camadas. Ou seja, a quantização sera aplicada em cada camada de forma independente e dinamica com a determinada precisão. Exemplo: $$R_l=2$$
 Determina que na camada $L$ a precisao dos pesos sera de 2 bits. Desta forma, $R_l$ pode ser derminado de maneira dinamica para cada camada $\Theta_l$, assim como tambem pode ser feita a poda integral da camdad com $R_l=0$.
 ## Alocação Não Uniforme de Bits
 Esta distribuição pode ser feita para as camadas como neste exemplo. Suponha as camadas:

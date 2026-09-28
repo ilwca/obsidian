@@ -122,3 +122,38 @@ EXPORT DATE: 08 September 2026
 	  keywords={Quantization (signal);Design methodology;Timing;Modeling;Field programmable gate arrays;Accuracy;Convolutional neural networks;Printing;Convolution;Computer architecture;Machine Learning;Neural Networks;Quantization;FPGA;CNN},
 	  doi={10.1109/EngiTek68245.2025.11567639}
   }
+## Lecun
+@article{lecun1998gradient,
+	title={Gradient-based learning applied to document recognition},
+	author={LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and Haffner, Patrick},
+	journal={Proceedings of the IEEE},
+	volume={86},
+	number={11},
+	pages={2278--2324},
+	year={1998},
+	publisher={Ieee}
+}
+## Zewen
+@ARTICLE{9451544,
+	  author={Li, Zewen and Liu, Fan and Yang, Wenjie and Peng, Shouheng and Zhou, Jun},
+	  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+	  title={A Survey of Convolutional Neural Networks: Analysis, Applications, and Prospects}, 
+	  year={2022},
+	  volume={33},
+	  number={12},
+	  pages={6999-7019},
+	  keywords={Convolutional neural networks;Feature extraction;Neurons;Deep learning;Computer vision;Computer vision;convolutional neural networks (CNNs);deep learning;deep neural networks},
+	  doi={10.1109/TNNLS.2021.3084827}
+  }
+
+## Choudhary
+@article{choudhary2020comprehensive,
+	  title={A comprehensive survey on model compression and acceleration: T. Choudhary et al.},
+	  author={Choudhary, Tejalal and Mishra, Vipul and Goswami, Anurag and Sarangapani, Jagannathan},
+	  journal={Artificial Intelligence Review},
+	  volume={53},
+	  number={7},
+	  pages={5113--5155},
+	  year={2020},
+	  publisher={Springer}
+}

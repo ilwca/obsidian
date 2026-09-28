@@ -79,8 +79,8 @@ TCC
 2.6 Quantização de redes neurais
     2.6.1 Conceito de quantização
     2.6.2 Quantização de pesos e ativações
-    2.6.3 Precisão e representação numérica
-    2.6.4 Quantização uniforme
+    2.6.3 Precisão e representação numérica ****
+    2.6.4 Quantização uniforme e Layer-Wise
     2.6.5 Escala e zero-point
     2.6.6 Quantização simétrica e assimétrica
     2.6.7 Granularidade da quantização
@@ -126,12 +126,12 @@ TCC
     2.10.5 Relação com somadores e multiplicadores aproximados 
 ```
 
-- [ ] Redes Neurais 
-- [ ] CNN
-- [ ] base de Dados - CIFAR 10
-- [ ] LeNet
-- [ ] Qauntizacao 
-- [ ] Poda
+- [x] Redes Neurais 
+- [x] CNN
+- [x] base de Dados - CIFAR 10
+- [x] LeNet
+- [x] Qauntizacao 
+- [x] Poda
 ## Consumo energetico
 Estabelecer uma base, modelo original contendo informacoes, como:
 
