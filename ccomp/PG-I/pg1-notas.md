@@ -489,3 +489,8 @@ Portanto um resumo geral deste artigo seria:
 
 # Energy-Efficient CNNs on FPGA via Convolutional Weight Quantization
 [IEEE](https://doi.org/10.1109/EngiTek68245.2025.11567639)
+
+## Resumo
+Obteve melhor equilibrio na quantização de pesos de 6 bits. manteve alta precisão e redução no consumo de energia em 17% em comparação com 8bits.
+
+Aplicaram quantização bruta, com foco nas camadas convolucionais, especialmente na primeira camada. Onde serão quantizados os pesos dos filtros convolucionais, com foco na redução de complexidade de operções MAC.

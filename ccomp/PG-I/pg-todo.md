@@ -166,8 +166,5 @@ Para o treinamento e inferencia destas sao realizadaos milhares de **calculos** 
 
 As centenas de milhoes de parametros, sendo ativados simultaneamente e seu volume de armazenamento impossibilita a implementação em dispositivos moveis.
 
-### Quantização
-- Definição
-- PTQ
-- QAT
-- Transform Qantization
+# Metodologia
+- planejamento

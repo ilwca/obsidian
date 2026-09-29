@@ -48,10 +48,10 @@ As redes neurais possuem tres tipos de paradigma de aprendizado de máquina; o n
 O aprendizado supervisionados de redes neurais consiste no constante ajuste de pesos dos neurónios por época. O ajuste é definido com base no erro obtido na saída para qualquer tipo de entrada valida para aquele conjunto de treinamento [[pg-referencias#krenker|03]].
 
 ## 2.2 CNNs
-As redes neurais convolucionais *(Convolutional Neural Network - CNNs)* são redes neurais feed-forwar, ou seja, de propagação direta, que utillizam de uma camada de convulação de da entrada com kernels para obterem caracteristicas e padrões abstratos das entradas [[pg-referencias#Rastegari|04]][[##Song|05]]. As CNNs tem apresentados otimos resultados em tarefas de visão computacional e classificação [[pg-referencias#Song|05]]. Porém o processo de treinamento destas redes envolve uma quantidade massiva de dados de hiperparametros e milhares de operações aritiméticas como no caso da convulação da rede.
+As redes neurais convolucionais *(Convolutional Neural Network - CNNs)* são redes neurais feed-forwar, ou seja, de propagação direta, que utillizam de uma camada de convulação de da entrada com kernels para obterem caracteristicas e padrões abstratos das entradas [[pg-referencias#Rastegari|04]],[[##Song|05]]. As CNNs tem apresentados otimos resultados em tarefas de visão computacional e classificação [[pg-referencias#Song|05]]. Porém o processo de treinamento destas redes envolve uma quantidade massiva de dados de hiperparametros e milhares de operações aritiméticas como no caso da convulação da rede.
 ### 2.2.1 Convulação
 A convolução é um processo iterativo realizado na entrada de uma camada convulacional para obtenção de valores continuos que serão somados ao viés e aplicados na função de ativação. Este processo, ira gerar os mapas de carcteristicas _(feature maps)_ ou ativações que funcionam como os dados de entrada para a camada seguinte. A formula da convolução de um determinado kernel aplicado em uma matriz de entrada é:
-$$a_i = \Omega(z_i), z_i = \sum^k_{i=1}w_i\times a_i+b \tag{1}\label{eq.conv}$$
+$$a_i = \Omega(z_i), z_i = \sum^k_{i=1}w_i\times a_i+b \tag{1}\label{eqconv}$$
 A função de ativação esta sendo está sendo representada por $\Omega$. Note que $w_i\times a_i$ denota a multiplicacao de uma matriz de menor tamanho pelos respectivos valores da matriz de entrada. 
 ### 2.2.2 Kernels
 Os kernel são pequenas matrizes de pesos, que percorrem toda a matriz de entrada, executando a operação da _figura(1)_ em cada posição da matriz. o resultado obtido $a_i$ irá compor a matriz de saída da camada convolucional, ou seja, o mapa de caracteristica da entrada.
@@ -69,7 +69,7 @@ O pooling é o agrupamento dos mapas de caracterisiticas, reduzindo o tamanho da
 ### 2.2.5 Camadas Totalmente Conectadas
 O maior nivel de abstração dos pesos de uma rede origina as FCL *(Fully Connected Layers),* que são as camadas totalmente conectadas. Apos a ultima camada convulacional, as matrizes de entrada são reduzidas de dimensão $\mathbb{R}^2\rightarrow\mathbb{R}^1$. Desta forma, cada indice da matriz de entrada se torna um neurónio com peso de seu índice.
 ### 2.2.6 Custo Computacional
-Como visto, o processo convolucional é composto por uma grande quantidade de multiplicações acumuladas *(MACs)*. Considerando $\ref{eq.conv}$, temos que $w$ é uma matrix de pesos $32\times32$ e $a$ sendo 16 filtros $3\times3$; para obtermos 1 mapa de caracterisitcas seria necessário fazer $27$ operações MAC. Calculando as operações que existe na saída para cada posição do kernel na matriz de entrada teremos $14.400$ operações a serem executadas $27$ vezes, resultanddo em $388.800$ operações de multiplicação e acumulação para geração de $16$ mapas de cacteristicas em uma unica camada. 
+Como visto, o processo convolucional é composto por uma grande quantidade de multiplicações acumuladas *(MACs)*. Considerando $\ref{eqconv}$, temos que $w$ é uma matrix de pesos $32\times32$ e $a$ sendo 16 filtros $3\times3$; para obtermos 1 mapa de caracterisitcas seria necessário fazer $27$ operações MAC. Calculando as operações que existe na saída para cada posição do kernel na matriz de entrada teremos $14.400$ operações a serem executadas $27$ vezes, resultanddo em $388.800$ operações de multiplicação e acumulação para geração de $16$ mapas de cacteristicas em uma unica camada. 
 Esta simulação é apenas um simples exemplo com uma entrada razoavel. Estes numeros podem crescer exponencialmente de acordo com o tamanho da matriz do mapa de entrada, número de canais, tamanho do kernel e numero de filtros.
 Como as CNNs realizam grandes numeros de operações aritmeticas, o tamanho da representação numerica impacta de forma significativa o custo computacional e o armazenamento da rede.
 
@@ -150,5 +150,4 @@ A poda estruturada remove grupos inteiros de neuronios, filtros, linhas ou colun
 Após a constatação de que pesos com valores grandes tem maior impacto no resultado, a poda por magnitude implementada em tempo de execução, faz a busca por pesos ou caracterisitcas desnecessárias para e as remove durante a predição, removendo valores tanto no kernel ou nos mapas de características.
 ### 2.6.3 Retreinamento pós Poda
 Segundo Liang et al.(2021), a maioria dos paramêtros removidos em redes podadas são oriúndos das FCLs e que o retreinamento, apesar de computacionalmente oneroso, resulta em ganhos satisfatórios na acurácia, alem de uma compressão de até $13\times$ da rede.
-
-
+## 2.7 Métricas
