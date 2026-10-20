@@ -9,7 +9,7 @@ Uma metalúrgica deseja maximizar sua receita bruta. A Tabela abaixo ilustra a p
 | Preco ($R\$$ po tonelada) | $R\$$ 3.000            | $R\$$ 5.000           | $\frac{T. minério}{T. liga}$ |
 - como misturar os materiais para fazer liga com menos custo?
 
-- a mistura atende as disponibilidades da materia?
+- a mistura atende as disponibilidades da materia?                          
 
 Agora precisamos definir algumas coisas...
 - **Variaveis**

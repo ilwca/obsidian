@@ -8,59 +8,34 @@
         "type": "tabs",
         "children": [
           {
-            "id": "779403b6b0025dd1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ccomp/PG-I/pg-desenvolvimento.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "pg-desenvolvimento"
-            }
-          },
-          {
             "id": "6b630bf6123496a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PG-I/pg-referencias.md",
+                "file": "ccomp/PG-I/pg-todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pg-referencias"
-            }
-          },
-          {
-            "id": "5f1b0378410e8164",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ccomp/PO/po-estudos.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "po-estudos"
+              "title": "pg-todo"
             }
           },
           {
             "id": "f71ccdb4f14c6c63",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "type": "markdown",
+              "state": {
+                "file": "ccomp/PG-I/pg-todo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "pg-todo"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -135,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ccomp/PI/RESUMO-sobel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ccomp/PG-I/pg-desenvolvimento.md",
+                "file": "ccomp/PI/RESUMO-sobel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -182,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ccomp/PO/po-estudos.md",
+                "file": "ccomp/PG-I/pg-desenvolvimento.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -222,14 +198,29 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5f1b0378410e8164",
+  "active": "6b630bf6123496a2",
   "lastOpenFiles": [
-    "ccomp/PO/po-notas.md",
-    "ccomp/PG-I/pg-todo.md",
-    "ccomp/PG-I/pg-desenvolvimento.md",
     "ccomp/PG-I/pg-referencias.md",
+    "ccomp/PG-I/pg-desenvolvimento.md",
+    "ccomp/PG-I/pg-todo.md",
+    "ccomp/PO/po-estudos.md",
+    "arefer.md",
+    "ccomp/Compiladores/todo - compiladores.md",
     "ccomp/PG-I/pg1-notas.md",
+    "ccomp/PI/pi-eq-histograsma.md",
+    "ccomp/PI/RESUMO-laplaciano.md",
+    "ccomp/PI/RESUMO-sobel.md",
+    "ccomp/PAA/Análise de Complexidade.md",
+    "ccomp/PAA/Divide and conquer - Atividade PAA.md",
+    "ccomp/PO/po-notas.md",
+    "ccomp/PE-II/Pesquisa.md",
+    "ccomp/PE-II",
+    "ccomp/PAA/notas-PAA.md",
     "ccomp/PG-I/article.md",
+    "ccomp/PO/po-p1.md",
+    "ccomp/PI/pi-p1.md",
+    "ccomp/PI/processamento-de-imagens.md",
+    "ccomp/PI/pi-notas.md",
     "ccomp/PI/sobel.md",
     "ccomp/PI/filtro_media.md",
     "ccomp/PI/laplaciano.md",
@@ -237,28 +228,14 @@
     "utils/img/Não confirmado 465216.crdownload",
     "README.md",
     "ccomp/PG-I/pg-referencias.md.tmp.13079.313a7d93dcf5",
-    "ccomp/PI/processamento-de-imagens.md",
-    "ccomp/PI/pi-p1.md",
-    "ccomp/PI/pi-notas.md",
     "ccomp/PE/pe-notas.md",
     "ccomp/SAS/sas-notas.md",
-    "ccomp/SAS/sas-p1.md",
-    "ccomp/SAS/sas-p2.md",
-    "ccomp/TG/Grafos.md",
     "helpti/pages.canvas",
-    "helpti/helpti-fluxo.md",
-    "Excalidraw/Drawing 2026-09-15 17.31.26.excalidraw.md",
-    "Excalidraw/grafos-intersec.md",
-    "Excalidraw/grafos-berge.md",
-    "Excalidraw/grafos-planaridade.md",
-    "Excalidraw/grafos-emparelhamento.md",
-    "Excalidraw/cnn-ativacao.md",
     "utils/Transform Quantization for CNN Compression.pdf",
     "Pasted Image 20260915173154_225.png",
     "utils/pi-bicubica.png",
     "utils/Captura de tela de 2026-09-14 23-44-55.png",
     "utils/img/pi-amostragem.png",
-    "Sem título",
     "ccomp/PG-I",
     "ccomp/PI",
     "ccomp/PO",

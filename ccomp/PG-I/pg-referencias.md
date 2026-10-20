@@ -76,7 +76,7 @@ EXPORT DATE: 08 September 2026
 	  bibsourc= {dblp computer science bibliography, https://dblp.org}
 }
 
-## krenker
+## Krenker
 @article{krenker2011introduction,
 	  title={Introduction to the artificial neural networks},
 	  author={Krenker, Andrej and Be{\v{s}}ter, Janez and Kos, Andrej},

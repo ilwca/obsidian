@@ -135,14 +135,14 @@ TCC
 ## Consumo energetico
 Estabelecer uma base, modelo original contendo informacoes, como:
 
-|Métrica|Modelo original|
-|---|--:|
-|Acurácia|98.x%|
-|Tamanho|X MB|
-|Número de parâmetros|X|
-|MACs|X|
-|Latência|X ms|
-|Energia*|opcional|
+| Métrica              | Modelo original |
+| -------------------- | --------------: |
+| Acurácia             |           98.x% |
+| Tamanho              |            X MB |
+| Número de parâmetros |               X |
+| MACs                 |               X |
+| Latência             |            X ms |
+| Energia*             |        opcional |
 
 Para a metrica de energia, podemos acompanhar o treinamento e inferencia por meio de software:
 - **NVIDIA Management Library (`nvidia-smi` / `pynvml`):** Reporta o consumo em Watts da placa em tempo real diretamente do driver da GPU.
@@ -168,3 +168,95 @@ As centenas de milhoes de parametros, sendo ativados simultaneamente e seu volum
 
 # Metodologia
 - planejamento
+
+Dentro do escopo da metodologia iremos abordar:
+## Tecnologias
+- Ferramentas = pytorch, Scikitlearn
+- Técnicasw
+- Bibliotecas
+## Decisões do Projeto
+- Arquiteturas
+- Trade-Offs de implementação
+## Obter Resultados
+- Relação de causa e efeito
+- Limitação de uma Tecnologia
+- Benchmarks comparativos
+
+No desenvolvimento da metodologia, buscaremos responder:
+- Qual tecnologia é mais eficaz?
+- Pra quem?
+- Realizando qual atividade especifica?
+- Em qual tipo de sistema?
+- Sob qual conjunto de circunstâncias?
+
+O que estaremos analisando aqui? Quais variáveis?
+- Accuracia
+- Erro (principal)
+- Largura de Bits
+
+## Tipos de Pergunta
+Com  isso, dessas variáveis teremos que analisar alguns âmbitos:
+### Taxa base
+- Como X normalmente se comporta
+### Correlação
+- Y e X estão relacionados
+### Relação Causal
+- X causa Y? Causa mais Y do que Z?
+Ex:"A estratégia QAT reduz mais o erro do que PTQ".
+### Projeto
+- Qual a forma mais eficaz de alcançar X?
+## Experimento Controlado
+Método rigoroso de obter relação de causalidade entre variáveis. O pesquisador manipula deliberadamente variáveis independentes (que são os tratamentos aplicados ao método, como técnica de busca, otimização) e mede o efeito sobre as variáveis dependentes (variável de resposta, variável ao qual tenho interesse, como erro, largura de bit).
+
+Ex: "Avaliar se a técnica de design space exploration input-aware (IHA) reduz mais recursos de hardware (LUT + FF) do que abordagem baseada em modelo DFG, para a mesma aplica;'ao e o mesmo limiar de erro."
+
+## Teoria e Observação 
+Ex: Tratamento; Resultado = Consumo de LUT + FF.
+A teoria por trás (constructo causal $\Rightarrow$ Efeito) é "Aproximação reduz custo de hardware" - mas só observamos sua operacionalização: tratamento $\rightarrow$ resultado medido.
+
+Desta forma, para a aplicação de operações de estudo deve-se justificar teoricamente seu efeito. 
+
+## Terminologia
+### Erro Experimental
+Ao avaliarmos, por exemplo, a velocidade de execução de um programa, devemos considerar que este compete hardware com o sistema opercaional. Deste modo, é inerente que a cada nova execução teremos um resultado de tempo diferente, sendo este o erro experimental.
+Para tratarmos isso, devemos considerar o erro por meio de uma grande quantidade de execuções deste programa, afim de termo uma amostra de execução para que obtenhamos uma média ponderada ou mediana do tempo de execução. A consideração do erro experimental, agrega credibilidade estatística ao dados apresentados.
+
+### Unidade Experimental
+Objeto sobre o qual experimento é executado, Ex: Projetos de software, processo de desenvolvimento, configuração de um circuito, etc.
+### Sujeito Experimental
+Pessoa que aplica os métodos, como equipes de desenvolvimento.
+
+## Hipóteses Estatísticas
+### Hipótese Nula ($H_0$)
+Nenhuma diferença entre os dois tramamentos, ou seja, não existe relação causal entre as variáveis.
+### Hipótese Alternativa ($H_1$)
+Postula uma diferença significativa entre dois tramamentos. Alega-se que existe uma relação aos dois tramamentos diferentes.
+
+Então o objetivo do experimento é **Negar** a $H_0$ através de testes estatísticos dos resultados dentro das respostas do experimento. Porém os resultados para a negação da hipótese nula devem atender a uma taxa de significância.  
+
+## Variável de Resposta
+As **Variáveis de Resposta (dependente)** é o resultado medido; Sempre quantitativo.
+Ex: LUT+FF, Potencia, SSIM, tempo de execução.
+### Trade-off
+Dois fatores A e B interagem se o efeito de um depende do valor de outro. E preciso examinar o efeito de cada fator isoladamente **e** a interação entre eles sobre a variável de resposta.
+=="Como estas variáveis interagem entre si, e qual o efeito destas atuando isoladamente na variável de resposta ?"==
+Ex: O ganho de aceleração depende do equilíbrio entre a redução do tamanho e a perda de acurácia variando também conforme a arquitetura da rede.
+
+
+## Delineamento experimental
+- Quais variáveis serão examinadas?
+- Quais dados serão coletados?
+- Quantos experimentos elementares precisam ser executados?
+- **Quantas vezes o experimento será organizado?** (Arranjo dos tratamentos x Unidades x Sujeitos)
+
+## Ameaças à Validade
+Todo experimento controlado exige abordar as ameaças a validade da pesquisa e dos resultados. O que pode invalidar meu experimento? O que pode ter sido feito de errado?
+Esta é uma forma de criar ciência irrefutável, agregando não desconfiança, mas valor a sua pesquisa.
+### Validade Interna
+Fatores não controlados podem explicar o resultado observado. Ex: _Seed de otimização não fixada; diferença da versão de ferramentas entre as execuções e etc_.
+### Validade Externa
+Limitações na generalização dos resultados para outros contextos. Ex: _Resultados obtidos em sobel valem para CNNs? Para outras familias de FPGA?_.
+### Validade Construto
+As métricas realmente medem o que se pretende medir? Ex: _O SSIM realmente captura a "qualidade aceitavel" para a aplicação-alvo?_.
+### Validade de Conclusões
+As analises estatísticas foram aplicadas corretamente?

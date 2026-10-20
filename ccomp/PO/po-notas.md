@@ -1,7 +1,7 @@
 ---
 
 ---
- ---
+  ---
 # 04/08
 ## Introdução
 A **Pesquisa Operacional** é um ramo da ciência que lida com a otimização do desempenho de sistemas.
@@ -150,7 +150,7 @@ $$\bar{z}=ub=(0,0,0)\cdot \begin{pmatrix}
 6\\
 18\\
 \end{pmatrix} = 0$$
-Agora aplicando $z_j$ onde é em relacao aos indices da não base ${1,2}$ .
+Agora aplic ando $z_j$ onde é em relação aos indices da **não base** ${1,2}$ .
 Aplicando a:  $$z_j = ua_j$$
 e verificar se $z_j - c_j \geq 0$
 $$z_1 = ua_1=(0,0,0)\begin{pmatrix}1\\0\\3\end{pmatrix} = 0\ \ \Rightarrow \ \ z_1-c_1 = 0 - 3 = -3 \ngeq 0$$
@@ -190,10 +190,10 @@ $$y_2=B^{-1}a_2 = \begin{pmatrix}
 1\\
 2\\
 \end{pmatrix}$$
-Agora faremos o teste da razao minima para definir quem sai em quem entra em $B$.
-Escolhemos um indice para ter seu valor aumentado. Assim, a proxima variavel que zerar primeirou ou esta mais proxima de 0, sua coluna deixa a base.
+Agora faremos o teste da razão minima para definir quem sai em quem entra em $B$.
+Escolhemos um índice para ter seu valor aumentado. Assim, a próxima variável que zerar primeiro ou esta mais próxima de 0, sua coluna deixa a base.
 
- Como estamos considerando $y_2$ para fins didaticos consideremos  $y_{2 1}$ apesar de ser 0, consideraremos as variaveis a serem exposta somente $L=\{1,2,3\}$ , assim $\alpha_2$:
+ Como estamos considerando $y_2$ para fins didáticos consideremos  $y_{2 1}$ apesar de ser 0, consideraremos as variáveis a serem exposta somente $L=\{1,2,3\}$ , assim $\alpha_2$:
 $$\alpha_2=\min\begin{Bmatrix}\frac{x_{B(1)}}{y_{21}},\frac{x_{B(2)}}{y_{22}}, \frac{x_{B(3)}}{y_{23}}\end{Bmatrix} = \begin{Bmatrix}\frac{4}{0},\frac{6}{1},\frac{18}{2}\end{Bmatrix}$$
 como $\frac{4}{0}$ e constantemente 4, nao existe aumento de $a_2$ que o torne 0. Desta forma, para a funcao $\alpha_2$ adotaremos o minmo de:
 $$\alpha_2 = \min \begin{Bmatrix}{6},9\end{Bmatrix} = 6$$

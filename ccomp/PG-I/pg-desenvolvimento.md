@@ -160,3 +160,9 @@ A largura de bits, define a quantidade de bits usada para representar pesos ou a
 O Erro é diretamente causado pela redução da representação dos valores numéricos. Cada valor $x$, ao ser quantizado $Q(x)$ passa a ter um erro. O erro individual do peso é a diferenca do valor quantizado para o valor original, que é denotada por $e$ [[pg-referencias#Liang|03]]. Nes trabalho, observaresmo até que ponto as alterações de largura de bits e precisão numérica afetam o comportamento da rede, sendo esta a métrica mais importante do estudo.
 ### 2.7.4 Acurácia
 A acuracia é uma metrica que mede a razão do total de previsões e os acertos da rede, sendo uma consequencia palpável das alterações anteriores. Desta forma, a acuracia é dada por $\text{acc}= \frac{N_{corretas}}{N_total}\times100$. Liang et al. (2021), afirma que tecnicas de compressão podem ser realizadas com pouca ou nenhuma perca de accurácia, e em alguns casos ate a melhoria da rede foram constatadas.
+
+---
+
+# Metodologia
+Hipotese nula $H_0$. Aplicação de tecnicas de compressao e aceleracao aplicadas juntas ou separadas nao causam efeito significativo nas variaveis de desempenho avaliadas (erro e acuracia).
+Hipotese alternatiava $H_1$ a aplicacao de tecnicas de quantizacao e poda, aplicadas separadas ou juntas podem trazer diferencas estatisticamente significativas nas variaveis de de desempenho avaliadas em condicoes experimentais.
