@@ -8,34 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6b630bf6123496a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ccomp/PG-I/pg-todo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "pg-todo"
-            }
-          },
-          {
             "id": "f71ccdb4f14c6c63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccomp/PG-I/pg-todo.md",
+                "file": "ccomp/PG-I/pg1-notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pg-todo"
+              "title": "pg1-notas"
+            }
+          },
+          {
+            "id": "884d7e10f95a74a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ccomp/PG-I/pg-desenvolvimento.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "pg-desenvolvimento"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 200
   },
   "right": {
     "id": "b27cf46feeee8199",
@@ -158,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ccomp/PG-I/pg-desenvolvimento.md",
+                "file": "ccomp/PI/extracao-de-contornos.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -198,16 +199,27 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "6b630bf6123496a2",
+  "active": "884d7e10f95a74a9",
   "lastOpenFiles": [
-    "ccomp/PG-I/pg-referencias.md",
+    "mohd1-21-large.jpg",
+    "utils/img/mohd1-21.pdf",
     "ccomp/PG-I/pg-desenvolvimento.md",
+    "ccomp/PI/extracao-de-contornos.md",
+    "ccomp/PI/README.md",
+    "ccomp/PG-I/pg-referencias.md",
+    "mohd1-21-large.svg",
+    "mohd1-21-large.gif",
+    "ccomp/PG-I/article.md",
+    "file:/home/luca/Downloads/Videos/roteiros-videos.md",
+    "mohd1-21-small.pdf",
+    "mohd1-21-small.gif",
+    "ccomp/PI/processamento-de-imagens.md",
+    "ccomp/PG-I/pg1-notas.md",
     "ccomp/PG-I/pg-todo.md",
     "ccomp/PO/po-estudos.md",
+    "ccomp/PI/pi-eq-histograsma.md",
     "arefer.md",
     "ccomp/Compiladores/todo - compiladores.md",
-    "ccomp/PG-I/pg1-notas.md",
-    "ccomp/PI/pi-eq-histograsma.md",
     "ccomp/PI/RESUMO-laplaciano.md",
     "ccomp/PI/RESUMO-sobel.md",
     "ccomp/PAA/Análise de Complexidade.md",
@@ -216,20 +228,14 @@
     "ccomp/PE-II/Pesquisa.md",
     "ccomp/PE-II",
     "ccomp/PAA/notas-PAA.md",
-    "ccomp/PG-I/article.md",
     "ccomp/PO/po-p1.md",
     "ccomp/PI/pi-p1.md",
-    "ccomp/PI/processamento-de-imagens.md",
     "ccomp/PI/pi-notas.md",
     "ccomp/PI/sobel.md",
     "ccomp/PI/filtro_media.md",
-    "ccomp/PI/laplaciano.md",
     "utils/img/mohd1-21-small.gif",
     "utils/img/Não confirmado 465216.crdownload",
-    "README.md",
     "ccomp/PG-I/pg-referencias.md.tmp.13079.313a7d93dcf5",
-    "ccomp/PE/pe-notas.md",
-    "ccomp/SAS/sas-notas.md",
     "helpti/pages.canvas",
     "utils/Transform Quantization for CNN Compression.pdf",
     "Pasted Image 20260915173154_225.png",
@@ -240,13 +246,7 @@
     "ccomp/PI",
     "ccomp/PO",
     "utils/img/undergradmath.pdf",
-    "utils/img/Não confirmado 90496.crdownload",
     "utils/img/paa-recursive-tree.png",
-    "utils/img/Não confirmado 913815.crdownload",
-    "utils/img/grados-ciclo-caminho.png",
-    "utils/grados-ciclo-caminho.png",
-    "utils/img/grafos-diferenca-simetrica.svg.png",
-    "utils/img/grafos-emparelhamento.jpg",
     "utils/h.chomsky.canvas",
     "helpti/helpti.canvas"
   ]

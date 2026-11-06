@@ -494,3 +494,7 @@ Portanto um resumo geral deste artigo seria:
 Obteve melhor equilibrio na quantização de pesos de 6 bits. manteve alta precisão e redução no consumo de energia em 17% em comparação com 8bits.
 
 Aplicaram quantização bruta, com foco nas camadas convolucionais, especialmente na primeira camada. Onde serão quantizados os pesos dos filtros convolucionais, com foco na redução de complexidade de operções MAC.
+
+---
+# Quantização de Redes Profundas com Compensação de Erros
+[IEEE](10.1109/TNNLS.2021.3064293)

@@ -2,8 +2,27 @@
 # Pesquisa
 Qual o impacto que a poda e quantizacao pode trazer a acuracia, latencia e tamanho do modelo, e qual a proporcao ideal entre estes metodos de otimizacao em detrito da eficiencia computacional e desempenho.
 
+# Introdução
+### Contexto
+- redes neurais
+- Aprendizado de Maquina
+- Classificação e Regressão e Aplicação de Redes Neurais
+- Inteligencia Artificial e DNNs ([[pg-referencias#Liang|survey]])
+### Problema
+- Consumo Energético
+- Consumo para Resfriamento
+- Encontrara razão entre variáveis
+### Proposta
+- utilizar frameworks e confguracoes.
+- 
+#### Resultados Esperados..
+
+## Trabalhos Relacionados
+- O que já existe do conteúdo?
+- Conclusões de cada trabalho
+- tabela comparativa
 ## Objetivos Gerais
-fazer analise e avaliacao pratica de tipos de podas estruturadas e tecnicas de quantização, com intuito de encontrar o melhor balanço entre a eficiencia energética e perca de desempenho da rede por meio de tecnicas de computação aproximada.
+fazer analise e avaliação pratica de tipos de podas estruturadas e tecnicas de quantização, com intuito de encontrar o melhor balanço entre a eficiencia energética e perca de desempenho da rede por meio de tecnicas de computação aproximada.
 
 ## Objetivos Especificos
 1. Implementar e avaliar modelos de pequeno e médio porde de redes neurais CNN e MLP, fazer o levantamento de seus resultados, latência e consumo.
