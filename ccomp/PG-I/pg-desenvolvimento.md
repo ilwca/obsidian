@@ -1,6 +1,6 @@
 [[pg-todo]]
 # Pesquisa
-Qual o impacto que a poda e quantizacao pode trazer a acuracia, latencia e tamanho do modelo, e qual a proporcao ideal entre estes metodos de otimizacao em detrito da eficiencia computacional e desempenho.
+Qual o impacto que a poda e quantização pode trazer a acurácia, latência e tamanho do modelo, e qual a proporção ideal entre estes métodos de otimização em detrito da eficiência computacional e desempenho.
 
 # Introdução
 ### Contexto
@@ -21,6 +21,22 @@ Qual o impacto que a poda e quantizacao pode trazer a acuracia, latencia e taman
 - O que já existe do conteúdo?
 - Conclusões de cada trabalho
 - tabela comparativa
+
+
+
+
+
+### Contexto
+- redes neurais
+- Aprendizado de Maquina
+- Classificação e Regressão e Aplicação de Redes Neurais
+- Inteligencia Artificial e DNNs ([[pg-referencias#Liang|survey]])
+
+ can machine think? este foi um questionamento feito por alan turing em 1950, pensamento este que reverbera ate hoje no universo da computação, adentrando ate em questões filosóficas da anatomia do pensamento. Como uma especie de a artificial do sistema nervoso humano foram criadas as redes neurais, com o intuito de fazer com que as maquinas "pensassem" a fim de classificar ou tentar prever um resultado.
+
+
+
+
 ## Objetivos Gerais
 fazer analise e avaliação pratica de tipos de podas estruturadas e tecnicas de quantização, com intuito de encontrar o melhor balanço entre a eficiencia energética e perca de desempenho da rede por meio de tecnicas de computação aproximada.
 
